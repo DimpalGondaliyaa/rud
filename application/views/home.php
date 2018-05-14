@@ -45,18 +45,14 @@
 			</table>
 			</div> 
 
-  <!-- Modal Structure -->
-  <div id="contactedit" class="modal">
-    <div class="modal-content">
-    	
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat editcontact">Agree</a>
-    </div>
-  </div>
-
-
-
-
+	  <!-- Modal Structure -->
+	  <div id="contactedit" class="modal">
+	    <div class="modal-content">
+	    	
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-close waves-effect waves-green btn-flat editcontact">Agree</a>
+	    </div>
+	  </div>
 	</div>
 </div>

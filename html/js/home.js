@@ -1,5 +1,6 @@
 $(function(){
 
+
 	$('#example').DataTable();
 
 	var baseurl = $("#base_url").val();
@@ -13,8 +14,7 @@ $(function(){
     setTimeout(autoplay, 7500);
 	 }
 	 
-	 
-	 $(".editcontact").on("click",function()
+   $(".editcontact").on("click",function()
 	{
 		var edtcontactfrm = new FormData($("#edtcontactfrm")[0]); 
 		$.ajax({
