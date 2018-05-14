@@ -140,6 +140,12 @@ class Home extends CI_Controller {
 		$this->db->update("contactdetails",$data);
 	}
 
+	public function deletecon($id)
+	{
+		$this->db->where("c_id",$id);
+		$this->db->delete("contactdetails");
+	}
+
 
 }
 
