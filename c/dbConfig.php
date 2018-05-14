@@ -3,7 +3,7 @@
 $dbHost = 'localhost';
 $dbUsername = 'root';
 $dbPassword = '';
-$dbName = 'codexworld';
+$dbName = 'contactdata';
 
 //Connect and select the database
 $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);

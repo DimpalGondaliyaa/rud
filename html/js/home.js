@@ -24,7 +24,6 @@ $(function(){
 		 });
     });
 	
-
 	$("#example").on("click",".conedtbtn", function()
 	{
 		$(".modal").modal();
