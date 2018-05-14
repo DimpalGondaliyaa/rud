@@ -5,7 +5,7 @@ $(function(){
 
 	 $('.modal').modal();
 	
-   $("#example").on("click",".editcontact", function()
+   $(".editcontact").on("click", function()
 	{
 		var edtcontactfrm = new FormData($("#edtcontactfrm")[0]); 
 		$.ajax({
@@ -24,8 +24,7 @@ $(function(){
 		 });
     });
 	
-
-	$(".conedtbtn").on("click",function()
+     $("#example").on("click",".conedtbtn", function()
 	{
 		$(".modal").modal();
 		$("#contactedit").modal("open");

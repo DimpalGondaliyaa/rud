@@ -7,9 +7,7 @@
 <link type="text/css" rel="stylesheet" href="style.css"/>
 <script src="jquery.min.js"></script>
 
-<?php
-$file = file_get_contents('../application/view/home.php', true);
-?>
+
 
 </head>
 <body>
