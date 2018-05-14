@@ -6,13 +6,15 @@ class Home extends CI_Controller {
 
 	public function index()
 	{		
-
+		if($this->session->userdata('email')==''){
+			header('Location:'.base_url().'UserLogin');
+		}
 
 		$this->load->model('User_model');
 		$data=$this->User_model->getDetails();
 		$headerData = array(
 			"pageTitle" => "Home",
-			"stylesheet" => array("home.css","style.css")
+			"stylesheet" => array("home.css")
 		);
 		$footerData = array(
 			"jsFiles" => array("home.js")

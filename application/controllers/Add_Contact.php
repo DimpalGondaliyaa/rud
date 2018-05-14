@@ -6,6 +6,10 @@ class Add_Contact extends CI_Controller {
 	
 	public function index()
 	{		
+		if($this->session->userdata('email')==''){
+			header('Location:'.base_url().'UserLogin');
+		}
+		
 		$headerData = array(
 			"pageTitle" => "Add_Contact",
 			"stylesheet" => array("add_Contact.css","home.css","style.css")

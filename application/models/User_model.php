@@ -25,7 +25,8 @@ class User_model extends CI_Model{
     }
 
     public function getDetails(){
-        $q=$this->db->query("SELECT * FROM contactdetails WHERE u_email='test@me.com'");
+        $e=$this->session->userdata("email");
+        $q=$this->db->query("SELECT * FROM contactdetails WHERE u_email='".$e."'");
         $data=$q->result_array();
         return $data;
     }

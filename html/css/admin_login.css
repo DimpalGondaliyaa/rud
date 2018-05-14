@@ -35,3 +35,11 @@
 		width:100%;
 	}
 }
+
+.row-odd {
+    position: relative;
+    height: auto;
+    min-height: 500px;
+    padding: 25px;
+    margin-top: 150px;
+}

@@ -8,7 +8,7 @@ class UserLogin extends CI_Controller {
 	{		
 		$headerData = array(
 			"pageTitle" => "Login",
-			"stylesheet" => array("admin_login.css")
+			"stylesheet" => array("admin_login.css","style.css")
 		);
 		$footerData = array(
 			"jsFiles" => array("admin_login.js")
@@ -30,13 +30,13 @@ class UserLogin extends CI_Controller {
 		echo json_encode($ress);
 	}
 
-	public function admin_logout()
+	public function user_logout()
 	{
 		$this->session->unset_userdata('email');
         $this->session->sess_destroy();
     	$this->session->unset_userdata('userData');
 		$this->session->unset_userdata('google_code');
-		header("Location:".base_url()."Admin_Login");
+		header("Location:".base_url()."UserLogin");
 	}
 }
 ?>

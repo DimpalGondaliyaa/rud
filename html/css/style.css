@@ -215,7 +215,7 @@ span.badge-box {
 .page-footer {
     padding-top: 20px;
     color: #fff;
-    background-color: #402059;
+    background-color: #402059 !important;
 }
 .page-footer .footer-copyright{
     background-color: rgba(0, 0, 0, 0.20);
