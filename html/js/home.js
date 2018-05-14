@@ -5,7 +5,7 @@ $(function(){
 
 	 $('.modal').modal();
 	
-   $(".editcontact").on("click",function()
+   $("#example").on("click",".editcontact", function()
 	{
 		var edtcontactfrm = new FormData($("#edtcontactfrm")[0]); 
 		$.ajax({
@@ -37,7 +37,7 @@ $(function(){
 	    }); 
 	});
 
-	$(".condltbtn").on("click",function()
+	$("#example").on("click",".condltbtn", function()
 	{
 		 var id = $(this).data("id");
 
@@ -60,7 +60,10 @@ $(function(){
 				{
 					swal("Poof! Your Data has been deleted!", {
 					          icon: "success",
-					      }); 
+					    });
+					$('.swal-button').on('click',function(){
+							window.location.reload();
+						});       
 				}
 			});
 			} else {

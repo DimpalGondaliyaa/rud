@@ -38,7 +38,7 @@
 					<td><?php echo $value['city']; ?></td>
 					<td><?php echo $value['zipcode']; ?></td>
 					<td><?php echo $value['state']; ?></td>
-					<td><a data-id="<?php echo $value['c_id']; ?>" class="conedtbtn btn" href="#!<?php echo $value['c_id']; ?>"><i class="fas fa-edit"></i></a> | <a href="#!" data-id="<?php echo $value['c_id']; ?>"  class="condltbtn btn"><i class="fas fa-trash"></i></a> </td>
+					<td><a data-id="<?php echo $value['c_id']; ?>" class="conedtbtn btn" href="#!"><i class="fas fa-edit"></i></a> | <a href="#!" data-id="<?php echo $value['c_id']; ?>"  class="condltbtn btn"><i class="fas fa-trash"></i></a> </td>
 				</tr>
 				<?php } ?>
 				</tbody>
