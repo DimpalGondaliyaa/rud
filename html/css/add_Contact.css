@@ -1,0 +1,14 @@
+.contacttitle {
+    text-transform:  capitalize;
+    font-size:  34px;
+    color: #36184e;
+    font-weight: 500;
+}
+.row.conrow {
+    border: 1px dashed #3b1c5352;
+    padding: 15px;
+    overflow: hidden;
+    position: relative;
+    top: 44px;
+    margin-bottom: 95px;
+}

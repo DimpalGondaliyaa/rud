@@ -90,5 +90,11 @@ class Home extends CI_Controller {
 
 		}
 	}
-}
+	public function fetchcondata($id)
+		{
+			$t = $this->db->query("select * from contactdetails where c_id='$id'");
+			$y = $t->row_array();
+			 $this->load->view("editcontactdata",$y);
+		}
+	}
 ?>

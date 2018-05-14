@@ -221,11 +221,14 @@ span.badge-box {
     background-color: rgba(0, 0, 0, 0.20);
 }
 
+
 .main-box {
     position: relative;
     min-height: 500px;
     display: block;
     overflow: hidden;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 .max-width {
     max-width: 1280px;
