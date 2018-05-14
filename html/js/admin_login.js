@@ -15,10 +15,10 @@ $(function(){
 				{
 					swal("Good job!", "Login Success!", "success");
 					$('.swal-button').on('click',function(){
-						window.location.href=baseurl+"AddCategories";
+						window.location.href=baseurl+"home";
 					});
 					$('.swal-overlay').on('click',function(){
-						window.location.href=baseurl+"AddCategories";
+						window.location.href=baseurl+"home";
 					});
 					
 					/*$('form[name=signinFrom]').html('');*/

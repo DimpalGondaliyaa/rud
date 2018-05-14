@@ -1,19 +1,10 @@
 $(function(){
 
-
 	$('#example').DataTable();
-
 	var baseurl = $("#base_url").val();
+
 	 $('.modal').modal();
-
-	$('.tv-slider').carousel({fullWidth: true, padding:0},setTimeout(autoplay, 4500));
-
-  function autoplay() {
-    $('.carousel').carousel('next');
-    new WOW().init();
-    setTimeout(autoplay, 7500);
-	 }
-	 
+	
    $(".editcontact").on("click",function()
 	{
 		var edtcontactfrm = new FormData($("#edtcontactfrm")[0]); 
@@ -31,9 +22,7 @@ $(function(){
 				});
 			}
 		 });
-
-
-});
+    });
 	
 
 	$(".conedtbtn").on("click",function()
@@ -50,7 +39,34 @@ $(function(){
 
 	$(".condltbtn").on("click",function()
 	{
+		 var id = $(this).data("id");
 
-	});
-	
+		 swal({
+				  title: "Are you sure?",
+				  text: "Once deleted, you will not be able to recover this Product!",
+				  icon: "warning",
+				  buttons: true,
+				  dangerMode: true,
+				})
+				.then((willDelete) => {
+				  if (willDelete) {
+				$.ajax({
+
+				url : baseurl+"home/deletecon/"+id,
+				type :"POST",
+				contentType:false,
+				processData:false,
+				success:function(res)
+				{
+					swal("Poof! Your Data has been deleted!", {
+					          icon: "success",
+					      }); 
+				}
+			});
+			} else {
+			      swal("Your Data is safe!");
+			  }
+			});
+    }); 
 });
+	

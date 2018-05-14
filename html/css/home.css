@@ -1,142 +1,22 @@
-.carousel.carousel-slider.center {
-    min-height: 550px;
+div#example_length label {
+    display:  none;
 }
-
-.subcarodsds .carousel-item>img {
-    width: 100%;
-    height: 140%;
-    object-fit: cover;
+a.conedtbtn.btn {
+    background: #3e1e561f;
+    border-radius: 48px;
+    width: 50px;
+    height: 50px;
+    padding-top: 6px;
+    color: #3e1e56;
+    border: 1px solid;
 }
-.carousel.carousel-item>img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+a.condltbtn.btn
+{
+ background: #3e1e561f;
+    border-radius: 48px;
+    width: 50px;
+    height: 50px;
+    padding-top: 6px;
+    color: #f10000;
+    border: 1px solid;
 }
-
-
-
-.subcarodsds .carousel-item>img {
-    width: 100%;
-    height: 100%;
-    object-fit: scale-down;
-    background: transparent !important;
-}
-
-
-.titleBox a h4{
-    text-shadow: 0px 2px 3px #0b4a5a73;
-    padding: 10px;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    background: linear-gradient(0deg,#f4f4f4,#f4f4f4);
-    border-radius: 50px;
-    border: 1px solid #f4f4f4;
-}
-.titleBox a h4:hover {
-    background: linear-gradient(0deg,#005884,#4480dc) !important;
-    color: #f4f4f4 !important;
-    box-shadow: 0px 8px 25px #0000005c;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    border: 1px solid #286fb7;
-}
-a.waves-effect.waves-light.btn.wherebtn {
-    position:  relative;
-    margin-top: 100px;
-    background: #a634ad;
-    box-shadow: 2px 3px 5px #887979;
-}
-
-.right-side-img img {
-    height: 250px;
-    width: auto;
-    object-fit: cover;
-}
-
-/*Producta Css*/
-
-.card-container {
-  	-webkit-perspective: 1000;
-    perspective: 1000;
-  	margin: 0 auto 0px;
- 	height: 400px;
-}
-
-.col.s12.m12.titleBox.center {
-    border: 2px dashed #0079b533;
-    border-top: none;
-    height: 90px;
-}
-
-.front, .back {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  padding: 30px;
-  box-sizing: border-box;
-  transition-delay: 0.15s;
-  transition: 0;
-  cursor: pointer;
-}
-
-.front {
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
-}
-
-.back {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-  opacity: 0;
-  padding-top: 60px;
-  -webkit-backface-visibility: visible;
-          backface-visibility: visible;
-/*  background: #333741;*/
-background: #8d2994;
-  color: white;
-}
-
-/*.card {
-  position: relative;
-  width: 400px;
-  height: 450px;
-  background: white;
-  border-radius: 5px;
-  box-shadow: 0 40px 110px rgba(0, 0, 0, 0.45);
-  overflow: hidden;
-  transition: 0.5s;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}*/
- .card{  
-    position: relative;
-    width: auto;
-    height: 400px;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
-    overflow: hidden;
-    transition: 0.5s;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-   }
-   /*
-.card:hover {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-.card:hover .front {
-  opacity: 0;
-}
-.card:hover .back {
-  opacity: 1;
-}
-*/
