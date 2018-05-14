@@ -16,11 +16,11 @@ $(function(){
 	 
 	 $(".editcontact").on("click",function()
 	{
-		var subbfrm = new FormData($("#subfrm")[0]); 
+		var edtcontactfrm = new FormData($("#edtcontactfrm")[0]); 
 		$.ajax({
-			url : baseurl+"Home/sendsubscriber",
+			url : baseurl+"Home/edtcontactdata",
 			type :"POST",
-			data :subbfrm,	
+			data :edtcontactfrm,	
 			contentType:false,
 			processData:false,
 			success:function(res)
@@ -46,6 +46,11 @@ $(function(){
 	    	 $("#contactedit .modal-content").html(id);
 
 	    }); 
+	});
+
+	$(".condltbtn").on("click",function()
+	{
+
 	});
 	
 });

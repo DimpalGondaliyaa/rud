@@ -54,11 +54,13 @@
 
          <div class="input-field col s6 m6">
           <input placeholder="zipcode" name="zipcode" type="text" value="<?php echo $zipcode; ?>" class="validate">
-        </div>
+        </div>c_id
 
          <div class="input-field col s6 m6">
           <input placeholder="timeofresidency" name="timeofresidency" value="<?php echo $timeofresidency; ?>" type="text" class="validate">
         </div>
+
+         <input placeholder="c_id" name="c_id" type="hidden" value="<?php echo $c_id; ?>" class="validate">
 
        </div>
    </form>

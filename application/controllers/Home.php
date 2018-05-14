@@ -91,10 +91,53 @@ class Home extends CI_Controller {
 		}
 	}
 	public function fetchcondata($id)
+	{
+		$t = $this->db->query("select * from contactdetails where c_id='$id'");
+		$y = $t->row_array();
+		 $this->load->view("editcontactdata",$y);
+	}
+
+	public function edtcontactdata()
+	{
+		$this->load->helper('date');
+		date_default_timezone_set("UTC");
+    	$date=gmdate("F j, Y");
+		if (function_exists('date_default_timezone_set'))
 		{
-			$t = $this->db->query("select * from contactdetails where c_id='$id'");
-			$y = $t->row_array();
-			 $this->load->view("editcontactdata",$y);
+		  date_default_timezone_set('Asia/Kolkata');
 		}
+
+		date_default_timezone_set('Asia/Kolkata');
+		/*$currentDate = date('Y-M-D H:i:s',time());*/
+		$currentDate =time();
+
+		$datestring = '%Y-%m-%d - %h:%i %a';
+		$time = time();
+		$better_date= mdate($datestring, $time);
+		$c_date=date("Y-m-d H:i:s");
+
+		$current_Date=date('y-m-d',time());
+		$time= date("h:i:a");
+
+		$data = array('f_name' => $_POST['f_name'] ,
+		'l_name' => $_POST['l_name'] ,
+		'u_email' => $_POST['u_email'] ,
+		'gender' => $_POST['gender'] ,
+		'phone' => $_POST['phone'] ,
+		'mobile' => $_POST['mobile'] , 
+		'income' => $_POST['income'] ,
+		'dob' => $_POST['dob'] ,
+		'address' => $_POST['address'] ,
+		'city' => $_POST['city'] ,
+		'zipcode' => $_POST['zipcode'] ,
+		'state' => $_POST['state'] ,
+		'timeofresidency' => $c_date);
+
+		$id = $_POST['c_id'];
+		$this->db->where("c_id",$id);
+		$this->db->update("contactdetails",$data);
+	}
+
+
 }
 ?>
