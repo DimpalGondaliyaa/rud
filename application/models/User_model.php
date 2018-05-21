@@ -30,4 +30,28 @@ class User_model extends CI_Model{
         $data=$q->result_array();
         return $data;
     }
+
+    public function userlogin_data($data)
+    {
+          $email=$data['email'];
+        $password=$data['password'];
+        $query=$this->db->query("select * from userlist where email='$email' and passwords='$password'");
+        if($query->num_rows()==1){
+            $check=array(
+                "status"=>"ok",
+                "message"=>"Login Successfully.."
+                );
+            $sellerRow = $query->row_array();
+            $this->session->set_userdata('email', $email);
+            
+        }
+        else{
+            $check=array(
+                "status"=>"fail",
+                "message"=>"Please check your login details"
+
+                );          
+        }
+        return $check;
+    }
 }

@@ -1,0 +1,45 @@
+.adminBox {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border: 2px solid #ddd;
+    box-shadow: 0px 7px 35px #9a2fa229;
+    max-width: 500px;
+    margin: 0 auto;
+    height: 250px;
+    padding: 50px 25px;
+}
+.btn_admin_login {
+    position: relative;
+    background: linear-gradient(60deg,#720ece,#9246da,#7f1ed6);
+    margin: 15px 0px;
+    box-shadow: 0px 5px 18px #6420a08f;
+    -webkit-transition:all 0.2s ease-in-out;
+    -moz-transition:all 0.2s ease-in-out;
+    -o-transition:all 0.2s ease-in-out;
+    transition:all 0.2s ease-in-out;
+    letter-spacing: 3px;
+}
+.btn_admin_login:hover,.btn_admin_login:focus {
+    position: relative;
+    background: linear-gradient(60deg,#7f1ed6,#9246da,#720ece);
+    box-shadow: 0px 3px 10px #6420a08f;
+    -webkit-transition:all 0.2s ease-in-out;
+    -moz-transition:all 0.2s ease-in-out;
+    -o-transition:all 0.2s ease-in-out;
+    transition:all 0.2s ease-in-out;
+}
+
+@media(max-width:768px){
+	.btn_admin_login{
+		width:100%;
+	}
+}
+
+.row-odd {
+    position: relative;
+    height: auto;
+    min-height: 500px;
+    padding: 25px;
+    margin-top: 150px;
+}
