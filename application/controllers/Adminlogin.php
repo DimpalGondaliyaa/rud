@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class UserLogin extends CI_Controller {
+class Adminlogin extends CI_Controller {
 
 
 	public function index()
@@ -19,7 +19,7 @@ class UserLogin extends CI_Controller {
 			"headerData" => $headerData,
 			"footerData" => $footerData	
 		);
-		$this->load->view('template',$viewData);
+		$this->load->view('admintemplate',$viewData);
 	}
 
 	public function login()
@@ -36,7 +36,7 @@ class UserLogin extends CI_Controller {
         $this->session->sess_destroy();
     	$this->session->unset_userdata('userData');
 		$this->session->unset_userdata('google_code');
-		header("Location:".base_url()."UserLogin");
+		header("Location:".base_url()."Adminlogin");
 	}
 }
 ?>

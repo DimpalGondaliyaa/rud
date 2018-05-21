@@ -6,7 +6,7 @@
 	{
 		$email = $data['email'];
 		$password = $data['password'];
-		$sql = $this->db->query("SELECT * FROM userlist WHERE email='$email' and passwords ='$password'");
+		$sql = $this->db->query("SELECT * FROM admin WHERE email='$email' and password ='$password'");
 		if($sql->num_rows()==1)
 		{
 			$sql= array('status' => "ok",

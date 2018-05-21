@@ -8,7 +8,7 @@ $(function(){
 			'password' : $("#a_password").val()
 		};
 			/*$.post(baseurl+"login/dologin/",{data:data},function(data){*/
-			$.post(baseurl+"UserLogin/login",{data:data},function(data){
+			$.post(baseurl+"Adminlogin/login",{data:data},function(data){
 
 				var check = jQuery.parseJSON(data);
 				if(check.status=='ok')
