@@ -24,7 +24,7 @@ $(function(){
 		 });
     });
 	
-     $("#example").on("click",".conedtbtn", function()
+	$("#example").on("click",".conedtbtn", function()
 	{
 		$(".modal").modal();
 		$("#contactedit").modal("open");
