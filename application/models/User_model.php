@@ -4,7 +4,7 @@ class User_model extends CI_Model{
     public function login($data){
         $email=$data['email'];
         $password=$data['password'];
-        $query=$this->db->query("select * from seller where email='$email' and password='$password'");
+        $query=$this->db->query("select * from users where u_email='$email' and passwords='$password'");
         if($query->num_rows()==1){
             $check=array(
                 "status"=>"ok",
@@ -35,7 +35,7 @@ class User_model extends CI_Model{
     {
           $email=$data['email'];
         $password=$data['password'];
-        $query=$this->db->query("select * from userlist where email='$email' and passwords='$password'");
+        $query=$this->db->query("select * from users where u_email='$email' and passwords='$password'");
         if($query->num_rows()==1){
             $check=array(
                 "status"=>"ok",
