@@ -22,6 +22,8 @@ echo timespan($post_date, $now) . ' ago';
 <div class="main-box">
 	<div class="main-menu">
 			<div class="max-width">
+				<div class="table-box">
+				<h5>List of Contact Details Inserted by Admin</h5>
 				<table id="example" class="ui celled table responsive nowrap" style="width:100%">
 		        <thead>
 		            <tr>
@@ -65,6 +67,7 @@ echo timespan($post_date, $now) . ' ago';
 				</tbody>
 			</table>
 			</div> 
+		</div>
 
 	  <!-- Modal Structure -->
 	  <div id="contactedit" class="modal">

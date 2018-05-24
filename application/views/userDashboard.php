@@ -60,7 +60,6 @@
 			        </thead>
 			        <tbody>
 					<?php
-					var_dump($assignedData);
 					$i=1;
 					foreach ($assignedData as $key => $value) { ?>
 					<tr>

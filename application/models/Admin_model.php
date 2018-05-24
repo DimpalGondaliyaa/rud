@@ -12,6 +12,7 @@
 			$sql= array('status' => "ok",
 			'message' => "login ok" );
 			$this->session->set_userdata('email',$email);
+			$this->session->set_userdata('admin','admin');
 		}
 		else
 		{

@@ -77,8 +77,8 @@ class UserDashboard extends CI_Controller {
 			  'protocol' => 'smtp',
 			  'smtp_host' => 'ssl://smtp.googlemail.com',
 			  'smtp_port' => 465,
-			  'smtp_user' => 'dimpal.v.gondaliyaa14@gmail.com', // change it to yours
-			  'smtp_pass' => 'dimpalgondaliyaa', // change it to yours
+			  'smtp_user' => 'test@gmail.com', // change it to yours
+			  'smtp_pass' => 'test', // change it to yours
 			  'mailtype' => 'html',
 			  'charset' => 'iso-8859-1',
 			  'wordwrap' => TRUE
