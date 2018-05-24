@@ -87,7 +87,7 @@ class UserDashboard extends CI_Controller {
 			        $message = '';
 			      $this->load->library('email', $config);
 			      $this->email->set_newline("\r\n");
-			      $this->email->from('dimpal.v.gondaliyaa14@gmail.com','dBright'); // change it to yours
+			      $this->email->from('test@gmail.com','dBright'); // change it to yours
 			      $this->email->to($email);// change it to yours
 			      $this->email->subject('Welcome to Debra M Bright');
 			      $this->email->message("Dear, <b>$email</b> <br>Thank You for showing your interest into Debra M Bright. To see more enter the Bright Club and stay 
