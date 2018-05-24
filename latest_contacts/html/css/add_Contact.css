@@ -1,0 +1,28 @@
+.contacttitle {
+    text-transform:  capitalize;
+    font-size:  34px;
+    color: #36184e;
+    font-weight: 500;
+}
+.row.conrow {
+    padding: 15px;
+    overflow: hidden;
+    position: relative;
+    top: 44px;
+    margin-bottom: 95px;
+
+    border: 2px dashed #ddd;
+    border-radius: 7px;
+    box-shadow: 0px 7px 23px -5px #00000047;
+}
+
+
+.addcontactdata {
+    background: linear-gradient(60deg,#a84cf1 0%,#601d96 50%,#a84cf1 100%);
+    padding: 10px 50px;
+    height: 50px;
+}
+
+.addcontactdata:hover,.addcontactdata:focus, {
+    background: linear-gradient(60deg,#601d96 0%,#a84cf1 50%,#a84cf1 0%) !important;
+}
