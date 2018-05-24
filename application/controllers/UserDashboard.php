@@ -21,12 +21,20 @@ class UserDashboard extends CI_Controller {
 	    $assignedData = $this->db->get();*/
 		/*$query->result_array();*/
 
-		$aw=$this->db->query("SELECT * FROM assigned_user WHERE asgn_email='".$email."' ORDER BY asgn_id DESC");
-		$assignedData=$aw->result_array();
 
+		$this->db->select('*');
+	    $this->db->from('assigned_user');
+	    $this->db->where('assigned_user.asgn_email',$email);
+	    $this->db->join('contactdetails', 'assigned_user.user_email = contactdetails.u_email');
+	    $query = $this->db->get();
+		$assignedData=$query->result_array();
+
+/*		$aw=$this->db->query("SELECT * FROM assigned_user WHERE asgn_email='".$email."' ORDER BY asgn_id DESC");
+		$assignedData=$aw->result_array();
+*/
 		$headerData = array(
 			"pageTitle" => "UserDashboard",
-			"stylesheet" => array("home.css")
+			"stylesheet" => array("assignUser.css","userDashboard.css")
 		);
 		$footerData = array(
 			"jsFiles" => array("userDashboard.js")

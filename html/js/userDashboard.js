@@ -1,6 +1,13 @@
 $(function(){
 
 	$('#example').DataTable();
+	$('#example1').DataTable({
+
+		"paging":   false,
+        "ordering": false,
+        "info":     false
+
+	});
 	var baseurl = $("#base_url").val();
 
 	 $('.modal').modal();
@@ -24,7 +31,7 @@ $(function(){
 		 });
     });
 	
-	$("#example").on("click",".conedtbtn", function()
+	$("#example1").on("click",".conedtbtn", function()
 	{
 		$(".modal").modal();
 		$("#contactedit").modal("open");

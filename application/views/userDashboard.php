@@ -1,8 +1,10 @@
 <div class="main-box">
 	<div class="main-menu">
 			<div class="max-width">
+				<div class="row">
+				<div class="table-box">
 				<h5>Welcome, <span class="purple-text"><?= $this->session->userdata('email');?></span></h5>
-				<table id="example-user" class="ui celled table responsive nowrap" style="width:100%">
+				<table id="example1" class="ui celled table responsive nowrap" style="width:100%">
 		        <thead>
 		            <tr>
 		            	<th>#</th>
@@ -39,34 +41,45 @@
 					<td><?php echo $value['city']; ?></td>
 					<td><?php echo $value['zipcode']; ?></td>
 					<td><?php echo $value['state']; ?></td>
-					<td><a data-id="<?php echo $value['u_id']; ?>" class="conedtbtn btn" href="#!"><i class="fas fa-edit"></i></a> <!-- | <a href="#!" data-id="<?php // echo $value['u_id']; ?>"  class="condltbtn btn"><i class="fas fa-trash"></i></a>  --></td>
+					<td><a data-id="<?php echo $value['u_id']; ?>" class="conedtbtn btn-flat" href="#!"><i class="fas fa-edit purple-text"></i></a> <!-- | <a href="#!" data-id="<?php // echo $value['u_id']; ?>"  class="condltbtn btn"><i class="fas fa-trash"></i></a>  --></td>
 				</tr>
 				<?php } ?>
 				</tbody>
 			</table>
+			</div>
+			</div>
 
 			<div class="asgn-container">
 			<div class="row">
-				<div class="asgn-box">
-					<h5>You have been Assigned with :</span></h5>
+				<div class="asgn-box table-box">
+					<h5>You have been Assigned with :</h5>
 					<table id="example" class="ui celled table responsive nowrap" style="width:100%">
 			        <thead>
 			            <tr>
 			            	<th>#</th>
-			            	<th>User Name</th>
-			            	<th>Assigned with</th>
-			            	<th>Status</th>
+			            	<th>Name</th>
+			            	<th>Email</th>
+			            	<th>Mobile</th>
+			            	<th>Gender</th>
+			            	<th>State</th>
+			            	<th>City</th>
+			            	<th>Assigned On</th>
 			            </tr>
 			        </thead>
 			        <tbody>
 					<?php
+					
 					$i=1;
 					foreach ($assignedData as $key => $value) { ?>
 					<tr>
 						<td><?php echo $i++; ?></td>
-						<td><?php echo $value['user_email']; ?></td>
-						<td><a href="mailto:<?php echo $value['user_email']; ?>"><i class="fas fa-envelope grey-text">&nbsp; <?php echo $value['user_email']; ?></i></a></td>
-						<td><?php echo $value['status']; ?></td>
+						<td><?php echo $value['f_name']; ?></td>
+						<td><a href="mailto:<?php echo $value['user_email']; ?>"><i class="fas fa-envelope green-text">&nbsp; <?php echo $value['user_email']; ?></i></a></td>
+						<td><?php echo $value['mobile']; ?></td>
+						<td><?php if($value['gender']==0) echo 'Female'; else{ echo 'Male';}; ?></td>
+						<td><?php echo $value['state']; ?></td>
+						<td><?php echo $value['city']; ?></td>
+						<td><?php echo $value['assignedOn']; ?></td>
 					</tr>
 					<?php } ?>
 					</tbody>
