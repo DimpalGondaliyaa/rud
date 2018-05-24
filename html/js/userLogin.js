@@ -15,10 +15,10 @@ $(function(){
 				{
 					swal("Good job!", "Login Success!", "success");
 					$('.swal-button').on('click',function(){
-						window.location.href=baseurl+"Home";
+						window.location.href=baseurl+"UserDashboard";
 					});
 					$('.swal-overlay').on('click',function(){
-						window.location.href=baseurl+"Home";
+						window.location.href=baseurl+"UserDashboard";
 					});
 					
 					/*$('form[name=signinFrom]').html('');*/
@@ -47,7 +47,7 @@ $(function(){
 			processData:false,
 			success:function(res)
 			{
-				swal("Good job!", "Contact Added to Our Contact List Successfully!", "success")
+				swal("Good job!", "Account has been created successfully!", "success")
 				$('.swal-button--confirm').on('click',function(){
 					window.location.reload();
 				});

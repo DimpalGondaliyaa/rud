@@ -9,7 +9,7 @@ $(function(){
 	{
 		var edtcontactfrm = new FormData($("#edtcontactfrm")[0]); 
 		$.ajax({
-			url : baseurl+"Home/edtcontactdata",
+			url : baseurl+"UserDashboard/edtcontactdata",
 			type :"POST",
 			data :edtcontactfrm,	
 			contentType:false,
@@ -30,7 +30,7 @@ $(function(){
 		$("#contactedit").modal("open");
 		 $("#contactedit .modal-content").html("");
 		  var id = $(this).data("id");
-	    $.post(baseurl+"home/fetchcondata/"+id,function(id){
+	    $.post(baseurl+"UserDashboard/fetchcondata/"+id,function(id){
 	    	 $("#contactedit .modal-content").html(id);
 
 	    }); 
@@ -42,7 +42,7 @@ $(function(){
 
 		 swal({
 				  title: "Are you sure?",
-				  text: "Once deleted, you will not be able to recover this Product!",
+				  text: "Once deleted, you will not be able to recover this Record!",
 				  icon: "warning",
 				  buttons: true,
 				  dangerMode: true,
@@ -51,7 +51,7 @@ $(function(){
 				  if (willDelete) {
 				$.ajax({
 
-				url : baseurl+"home/deletecon/"+id,
+				url : baseurl+"UserDashboard/deletecon/"+id,
 				type :"POST",
 				contentType:false,
 				processData:false,

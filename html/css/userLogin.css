@@ -43,3 +43,8 @@
     padding: 25px;
     margin-top: 150px;
 }
+
+
+.row-odd{
+    height: 60vh;
+}

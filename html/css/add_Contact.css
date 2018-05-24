@@ -12,3 +12,14 @@
     top: 44px;
     margin-bottom: 95px;
 }
+
+
+.addcontactdata {
+    background: linear-gradient(60deg,#a84cf1 0%,#601d96 50%,#a84cf1 100%);
+    padding: 10px 50px;
+    height: 50px;
+}
+
+.addcontactdata:hover,.addcontactdata:focus, {
+    background: linear-gradient(60deg,#601d96 0%,#a84cf1 50%,#a84cf1 0%) !important;
+}

@@ -64,13 +64,13 @@
  
         <nav>
           <div class="nav-wrapper">
-            <a href="#" class="brand-logo"><img src="<?php echo base_url(); ?>html/images/logo.png" class=responsive-img"></a>
+            <a href="<?php echo base_url(); ?>home" class="brand-logo"><img src="<?php echo base_url(); ?>html/images/logo.png" class=responsive-img"></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
               <li><a href="<?php echo base_url(); ?>Add_Contact">Add Contact</a></li>
               <li><a href="<?php echo base_url(); ?>Home">Home</a></li>
-              
+              <li><a href="<?php echo base_url(); ?>AssignUser">Assign</a></li>
               <?php if($this->session->userdata("email")!=''){ ?>
-              <li><a href="<?php echo base_url(); ?>Adminlogin/user_logout">LogOut</a></li>
+              <li><a href="<?php echo base_url(); ?>UserLogin/user_logout">LogOut</a></li>
               <?php } ?>
             </ul>
           </div>

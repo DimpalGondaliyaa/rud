@@ -2,63 +2,64 @@
     <form class="col s12" id="usereg">
       <div class="row">
         <div class="input-field col s6">
-          <input placeholder="f_name" name="f_name" type="text" class="validate">
+          <input placeholder="First Name" name="f_name" type="text" class="validate">
         </div>
 
          <div class="input-field col s6">
-          <input placeholder="l_name" name="l_name" maxlength="10" type="text" class="validate">
+          <input placeholder="Last Name" name="l_name" maxlength="10" type="text" class="validate">
         </div>
 
         <div class="input-field col s6">
-          <input placeholder="u_email" name="u_email" type="text" class="validate">
+          <input placeholder="Email" name="u_email" type="text" class="validate" id="u_email">
+          <div id="MobileMsg"></div>
         </div>
 
         <div class="input-field col s6">
-          <input placeholder="passwords" name="passwords" type="text" class="validate">
+          <input placeholder="Passwords" name="passwords" type="text" class="validate">
         </div>
 
-          <div class="input-field col s6">
+        <div class="input-field col s6">
 		    <select name="gender">
-		      <option value="" disabled selected>Choose your gender</option>
-		      <option value="male">male</option>
-		      <option value="female">female</option>
+		      <option value="" disabled selected>Choose your Gender</option>
+		      <option value="male">Male</option>
+		      <option value="female">Female</option>
 		    </select>
 		  </div>
 
 		<div class="input-field col s6">
-          <input placeholder="phone" name="phone" maxlength="10" type="text" class="validate">
+          <input placeholder="Phone" name="phone" maxlength="10" type="text" class="validate">
         </div>
 
         <div class="input-field col s6">
-          <input placeholder="mobile" name="mobile" maxlength="10" type="text" class="validate">
+          <input placeholder="Mobile" name="mobile" maxlength="10" type="text" class="validate" maxlength="10" minlength="10">
         </div>
 
         <div class="input-field col s6">
-          <input placeholder="income" name="income"  type="text" class="validate">
+          <input placeholder="Income" name="income"  type="text" class="validate">
         </div>
 
         <div class="input-field col s6">
-          <input type="text" class="datepicker" placeholder="bod" name="dob">
+          <input type="text" class="datepicker" placeholder="Date Of Birth" name="dob">
         </div>
 
          <div class="input-field col s6">
-          <input type="text" class="datepicker" placeholder="timeofresidency" name="timeofresidency">
+          <input type="text" class="datepicker" placeholder="Time of Residency" name="timeofresidency">
         </div>
 
         <div class="input-field col s6">
-          <input placeholder="state" name="state" type="text" class="validate">
+          <input placeholder="State" name="state" type="text" class="validate">
         </div>
 
         <div class="input-field col s6">
-          <input placeholder="city" name="city" type="text" class="validate">
+          <input placeholder="City" name="city" type="text" class="validate">
         </div>
 
         <div class="input-field col s6">
-          <input placeholder="zipcode" name="zipcode" type="text" class="validate">
+          <input placeholder="Zipcode" name="zipcode" type="text" class="validate">
         </div>
 
         <div class="input-field col s6">
-          <input placeholder="address" name="address" type="text" class="validate">
+          <input placeholder="Address" name="address" type="text" class="validate">
         </div>
 
      </div>

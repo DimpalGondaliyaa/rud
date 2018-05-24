@@ -1,28 +1,8 @@
-<?php 
-/*
-$this->load->helper('date');
-$email=$this->session->userdata('email');
-
-$datestring = ('%Y-%m-%d - %h:%i %a');
-$time = time();
-$better_date= mdate($datestring, $time,strtotime("-1 day"));
-
-echo $c_date=date("Y-m-d H:i:s",strtotime("-24 hour"));
-
-echo '<br>';
-
-$post_date = ('%Y-%m-%d');
-$now = time();
-
-echo timespan($post_date, $now) . ' ago';
-*/
-?>
-
-
 <div class="main-box">
 	<div class="main-menu">
 			<div class="max-width">
-				<table id="example" class="ui celled table responsive nowrap" style="width:100%">
+				<h5>Welcome, <span class="purple-text"><?= $this->session->userdata('email');?></span></h5>
+				<table id="example-user" class="ui celled table responsive nowrap" style="width:100%">
 		        <thead>
 		            <tr>
 		            	<th>#</th>
@@ -59,11 +39,42 @@ echo timespan($post_date, $now) . ' ago';
 					<td><?php echo $value['city']; ?></td>
 					<td><?php echo $value['zipcode']; ?></td>
 					<td><?php echo $value['state']; ?></td>
-					<td><a data-id="<?php echo $value['c_id']; ?>" class="conedtbtn btn" href="#!"><i class="fas fa-edit"></i></a> | <a href="#!" data-id="<?php echo $value['c_id']; ?>"  class="condltbtn btn"><i class="fas fa-trash"></i></a> </td>
+					<td><a data-id="<?php echo $value['u_id']; ?>" class="conedtbtn btn" href="#!"><i class="fas fa-edit"></i></a> <!-- | <a href="#!" data-id="<?php // echo $value['u_id']; ?>"  class="condltbtn btn"><i class="fas fa-trash"></i></a>  --></td>
 				</tr>
 				<?php } ?>
 				</tbody>
 			</table>
+
+			<div class="asgn-container">
+			<div class="row">
+				<div class="asgn-box">
+					<h5>You have been Assigned with :</span></h5>
+					<table id="example" class="ui celled table responsive nowrap" style="width:100%">
+			        <thead>
+			            <tr>
+			            	<th>#</th>
+			            	<th>User Name</th>
+			            	<th>Assigned with</th>
+			            	<th>Status</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+					<?php
+					var_dump($assignedData);
+					$i=1;
+					foreach ($assignedData as $key => $value) { ?>
+					<tr>
+						<td><?php echo $i++; ?></td>
+						<td><?php echo $value['user_email']; ?></td>
+						<td><a href="mailto:<?php echo $value['user_email']; ?>"><i class="fas fa-envelope grey-text">&nbsp; <?php echo $value['user_email']; ?></i></a></td>
+						<td><?php echo $value['status']; ?></td>
+					</tr>
+					<?php } ?>
+					</tbody>
+				</table>
+				</div>	
+			</div>
+			</div>
 			</div> 
 
 	  <!-- Modal Structure -->

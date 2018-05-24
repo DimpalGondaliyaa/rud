@@ -30,6 +30,16 @@ class UserLogin extends CI_Controller {
 		echo json_encode($ress);
 	}
 
+
+	function getEmail(){
+	    $this->db->where('u_email', $this->input->post('ref_code'));
+	    $query = $this->db->get('users');
+	    if($query->num_rows() >= 1){
+	       echo 'Email Already Exist';
+	    }
+	}
+
+
 	public function adduserdata()
 	{
 		$data = array('f_name' => $_POST['f_name'] ,
@@ -48,6 +58,15 @@ class UserLogin extends CI_Controller {
 		'timeofresidency' => $_POST['timeofresidency']);
 
 		$this->db->insert("users",$data);
+	}
+
+	public function user_logout()
+	{
+		$this->session->unset_userdata('email');
+        $this->session->sess_destroy();
+    	$this->session->unset_userdata('userData');
+		$this->session->unset_userdata('google_code');
+		header("Location:".base_url()."UserLogin");
 	}
 }
 ?>

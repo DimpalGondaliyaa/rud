@@ -21,5 +21,12 @@
 		return $sql;
 	}
 
+
+	public function getUser($search){
+	  $this->load->database();
+	  $query = $this->db->query("SELECT * FROM contactdetails where f_name like '%$search%' ");
+	  return $query->result();
+	 }
+
 }
 ?>
