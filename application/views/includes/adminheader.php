@@ -61,6 +61,8 @@
             <ul id="nav-mobile" class="right hide-on-med-and-down">
               <li><a href="<?php echo base_url(); ?>Add_Contact">Add Contact</a></li>
               <li><a href="<?php echo base_url(); ?>Home">Home</a></li>
+              <li><a href="<?php echo base_url(); ?>CreateCompany">Create Company</a></li>
+              
               </ul>
             </div>
         </nav>
