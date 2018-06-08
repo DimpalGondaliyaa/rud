@@ -6,8 +6,8 @@ class Add_Contact extends CI_Controller {
 	
 	public function index()
 	{		
-		if($this->session->userdata('email')==''){
-			header('Location:'.base_url().'UserLogin');
+		if($this->session->userdata('email')=='' | $this->session->userdata('admin')==''){
+			header('Location:'.base_url().'Adminlogin');
 		}
 		
 		$headerData = array(

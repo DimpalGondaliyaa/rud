@@ -1,4 +1,4 @@
-<?php include_once('functions.php');
+<?php include('functions.php');
 $config['base_url1'] = 'http://localhost/cont/';
  ?>
 <!DOCTYPE html>
@@ -7,32 +7,23 @@ $config['base_url1'] = 'http://localhost/cont/';
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>PHP Event Calendar by CodexWorld</title>
 <link type="text/css" rel="stylesheet" href="style.css"/>
-<script src="jquery.min.js"></script>
+<link type="text/css" rel="stylesheet" href="http://freelancerprojectleads.com/crm/html/css/style.css"/>
+
 
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
 </head>
 <body>
 	 <nav class="top-header">
-          <div class="nav-wrapper">
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="Add_Contact">Add Contact</a></li>
-              <li><a href="Home">Home</a></li>
-              </ul>
-            </div>
-        </nav>
-
-
          <nav>
           <div class="nav-wrapper">
-            <a href="#" class="brand-logo"><img src="http://localhost/cont/html/images/logo.png" class=responsive-img"></a>
+            <a href="#" class="brand-logo"><img src="http://freelancerprojectleads.com/crm/calendar/logo.png" class=responsive-img"></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="Add_Contact">Add Contact</a></li>
-              <li><a href="Home">Home</a></li>
-               <li><a href="calendar">calender</a></li>
-              <li><a href="UserLogin/user_logout">LogOut</a></li>
+              <li><a href="http://freelancerprojectleads.com/crm/UserDashboard">UserDashboard</a></li>
+               <li><a href="http://freelancerprojectleads.com/crm/calendar">calender</a></li>
+              <li><a href="http://freelancerprojectleads.com/crm/UserLogin/user_logout">Logout</a></li>
             </ul>
           </div>
         </nav>
@@ -355,5 +346,26 @@ span.badge-box {
 a.brand-logo img {
     height: 80px;
     padding: 10px;
+}
+nav ul a:hover {
+    color: ghostwhite;
+    text-decoration: none;
+}
+
+/*li.date_cell span {
+    color: rebeccapurple;
+    border: 1px solid#ddd;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    line-height: 50px;
+    background: #6633990d;
+}*/
+
+li.date_cell span {
+    color: rebeccapurple;
+}
+.date_window a {
+    color: rebeccapurple !important;
 }
 </style>

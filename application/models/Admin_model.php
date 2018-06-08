@@ -12,6 +12,7 @@
 			$sql= array('status' => "ok",
 			'message' => "login ok" );
 			$this->session->set_userdata('email',$email);
+			$this->session->set_userdata('admin','admin');
 		}
 		else
 		{
@@ -20,6 +21,13 @@
 		}
 		return $sql;
 	}
+
+
+	public function getUser($search){
+	  $this->load->database();
+	  $query = $this->db->query("SELECT * FROM contactdetails where f_name like '%$search%' ");
+	  return $query->result();
+	 }
 
 }
 ?>

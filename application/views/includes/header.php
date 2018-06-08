@@ -38,6 +38,9 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
+    <!-- Link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
    <!-- Data Table --> 
 
 
@@ -52,20 +55,30 @@
     <link href="<?php echo base_url(); ?>html/css/<?php echo $fileName; ?>?<?php echo time(); ?>" rel="stylesheet">
     <?php } ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <?php if($this->session->userdata('email')!='') {?>
     <header>
-        <nav class="top-header">
+       <!--  <nav class="top-header hide-on-med-and-down">
           <div class="nav-wrapper">
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-               <li><a href="<?php echo base_url(); ?>Home">Home</a></li>
-              </ul>
+              <li><a class="waves-effect" href="<?php //echo base_url(); ?>UserDashboard">UserDashboard</a></li>
+              <li><a class="waves-effect" href="<?php //echo base_url(); ?>UserDashboard">UserDashboard</a></li>
+            </ul>
             </div>
-        </nav>
- 
-        <nav>
+        </nav> -->
+      <nav>
           <div class="nav-wrapper">
-            <a href="#" class="brand-logo"><img src="<?php echo base_url(); ?>html/images/logo.png" class=responsive-img"></a>
+            <a href="<?php echo base_url(); ?>home" class="brand-logo"><img src="<?php echo base_url(); ?>html/images/logo.png" class=responsive-img"></a>
+            <ul id="slide-out" class="sidenav">
+              <li><a class="waves-effect" href="<?php echo base_url(); ?>UserDashboard">UserDashboard</a></li>
+               <li><a class="waves-effect" href="<?php echo base_url(); ?>calendar">Calendar</a></li>
+               <?php if($this->session->userdata("email")!=''){ ?>
+               <li><a class="waves-effect" href="<?php echo base_url(); ?>UserLogin/user_logout">Logout</a></li>
+             <?php } ?>
+            </ul>
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="<?php echo base_url(); ?>Home">Home</a></li>
+              <li><a href="<?php echo base_url(); ?>UserDashboard">UserDashboard</a></li>
                <li><a href="<?php echo base_url(); ?>calendar">calender</a></li>
               <?php if($this->session->userdata("email")!=''){ ?>
               <li><a href="<?php echo base_url(); ?>UserLogin/user_logout">LogOut</a></li>
@@ -74,6 +87,11 @@
           </div>
         </nav>
     </header>
+  <?php } else{ ?>
+    <header>
+      <nav style="background:transparent;box-shadow: none;"></nav>
+    </header>
+  <?php } ?>
 </head>
 <body>
 <style type="text/css">

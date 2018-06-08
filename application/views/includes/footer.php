@@ -23,31 +23,11 @@
 	 <footer class="page-footer">
           <div class="container">
             <div class="row">
-              <div class="col col s12 m4">
-                <h5 class="white-text">Contacts</h5>
-                <div class="col s12 m12">
-                  <p class="grey-text text-lighten-4 col s2 m1"><i class="fas fa-mobile-alt"></i></p>
-                  <p class="grey-text text-lighten-4 col s10 m11"> 0423 191 084</p>
-                </div>
-                <div class="col s12 m12">
-                  <p class="grey-text text-lighten-4 col s2 m1"><i class="far fa-envelope"></i></p>
-                  <p class="grey-text text-lighten-4 col s10 m11">  debrabright88@icloud.com</p>
-                </div>
-              </div>
-              <div class="col s12 m4 socialLinks">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/debra.bright.77" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
-                  <li><a class="grey-text text-lighten-3" href="https://twitter.com/debrabrightm" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
-                  <li><a class="grey-text text-lighten-3" href="https://plus.google.com/+DebraMBright" target="_blank"><i class="fab fa-google-plus-square"></i></a></li>
-                  <!--<li><a class="grey-text text-lighten-3" href="#!"><i class="fab fa-instagram"></i>  </a></li> -->
-                </ul>
-              </div>
             </div>
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2018 Debra Bright | All Right Reserved
+            © 2018 inContact | All Right Reserved
             <a class="grey-text text-lighten-4 right" href="#!"></a>
             </div>
           </div>

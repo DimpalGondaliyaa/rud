@@ -1,31 +1,40 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class UserDashboard extends CI_Controller {
 
 
 	public function index()
 	{		
-		if($this->session->userdata('email')=='' | $this->session->userdata('admin')==''){
-			header('Location:'.base_url().'Adminlogin');
+		$email=$this->session->userdata('email');
+		if($this->session->userdata('email')==''){
+			header('Location:'.base_url().'UserLogin');
 		}
 
-		$this->load->model('User_model');
-		$data=$this->User_model->getDetails();
+		$u=$this->db->query("SELECT * FROM users WHERE u_email='".$email."'");
+		$data=$u->result_array();
+
+		$this->db->select('*');
+	    $this->db->from('assigned_user');
+	    $this->db->where('assigned_user.asgn_email',$email);
+	    $this->db->join('contactdetails', 'assigned_user.user_email = contactdetails.u_email');
+	    $query = $this->db->get();
+		$assignedData=$query->result_array();
+
 		$headerData = array(
-			"pageTitle" => "Home",
-			"stylesheet" => array("home.css")
+			"pageTitle" => "UserDashboard",
+			"stylesheet" => array("assignUser.css","userDashboard.css")
 		);
 		$footerData = array(
-			"jsFiles" => array("home.js")
+			"jsFiles" => array("userDashboard.js")
 		);
 		$viewData = array(
-			"viewName" => "home",
-            "viewData" => array('data'=>$data),
+			"viewName" => "userDashboard",
+            "viewData" => array('data'=>$data,'assignedData'=>$assignedData),
 			"headerData" => $headerData,
 			"footerData" => $footerData	
 		);
-		$this->load->view('admintemplate',$viewData);
+		$this->load->view('template',$viewData);
 	}
 
 	public function addregdata()
@@ -38,11 +47,12 @@ class Home extends CI_Controller {
 		$this->db->insert("users",$data);
 	}
 	
+	
 	public function fetchcondata($id)
 	{
-		$t = $this->db->query("select * from contactdetails where c_id='$id'");
+		$t = $this->db->query("select * from users where u_id='$id'");
 		$y = $t->row_array();
-		 $this->load->view("editcontactdata",$y);
+		 $this->load->view("editUserDashboard",$y);
 	}
 
 	public function edtcontactdata()
@@ -70,7 +80,6 @@ class Home extends CI_Controller {
 		$data = array('f_name' => $_POST['f_name'] ,
 		'l_name' => $_POST['l_name'] ,
 		'u_email' => $_POST['u_email'] ,
-		'password' => $_POST['password'] ,
 		'gender' => $_POST['gender'] ,
 		'phone' => $_POST['phone'] ,
 		'mobile' => $_POST['mobile'] , 
@@ -82,15 +91,15 @@ class Home extends CI_Controller {
 		'state' => $_POST['state'] ,
 		'timeofresidency' => $c_date);
 
-		$id = $_POST['c_id'];
-		$this->db->where("c_id",$id);
-		$this->db->update("contactdetails",$data);
+		$id = $_POST['u_id'];
+		$this->db->where("u_id",$id);
+		$this->db->update("users",$data);
 	}
 
 	public function deletecon($id)
 	{
-		$this->db->where("c_id",$id);
-		$this->db->delete("contactdetails");
+		$this->db->where("u_id",$id);
+		$this->db->delete("users");
 	}
 
 

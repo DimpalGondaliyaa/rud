@@ -1,3 +1,23 @@
+<style type="text/css">
+.create-acc a{
+	color: rebeccapurple;
+	font-family: unset;
+	font-size: 15px;
+	-webkit-transition:all 0.2s ease-in-out;
+    -moz-transition:all 0.2s ease-in-out;
+    -o-transition:all 0.2s ease-in-out;
+    transition:all 0.2s ease-in-out;
+}
+.create-acc a:hover {
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    -webkit-transition:all 0.2s ease-in-out;
+    -moz-transition:all 0.2s ease-in-out;
+    -o-transition:all 0.2s ease-in-out;
+    transition:all 0.2s ease-in-out;
+}
+</style>
 <div class="mainBox">
 	<div class="row-odd">		
 		<div class="row">
@@ -11,12 +31,14 @@
 							<input type="text" name="email" id="u_email" placeholder="Email">
 						</div>
 						<div class="col s12 m12">
-							<input type="text" name="password" id="u_password" placeholder="Passwords">
+							<input type="password" name="password" id="u_password" placeholder="Passwords">
 						</div>
 						<div class="col s12 m12 center">
 							<input type="button" name="admin_login" value="Authintication" class="btn btn_user_login">
 						</div>
-						<a href="#" class="register">user register</a>
+						<div class="col s12 m12 create-acc">
+						<p class="center">Don't have Account? &nbsp;<a href="#" class="register">Create Account</a></p>
+						</div>
 					</form>
 					</div>
 				</div>

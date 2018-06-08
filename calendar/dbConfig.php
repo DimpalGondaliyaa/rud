@@ -1,9 +1,9 @@
 <?php
 //db details
 $dbHost = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '';
-$dbName = 'contactdata';
+$dbUsername = 'haris7ya_crm';
+$dbPassword = 'crm@12354';
+$dbName = 'haris7ya_crm';
 
 //Connect and select the database
 $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);

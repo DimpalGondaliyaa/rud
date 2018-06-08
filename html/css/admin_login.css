@@ -39,7 +39,7 @@
 .row-odd {
     position: relative;
     height: auto;
-    min-height: 500px;
+    min-height: 65vh;
     padding: 25px;
     margin-top: 150px;
 }
