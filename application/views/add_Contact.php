@@ -8,26 +8,35 @@
 		    <form class="col s12" id="contactfrm">
 		      <div class="row">
 
-		        <div class="input-field col s6 m6">
+		        <div class="input-field col s6 m4">
 		          <input placeholder="first name" name="f_name" type="text" class="validate">
 		        </div>
 
-		         <div class="input-field col s6 m6">
+		         <div class="input-field col s6 m4">
 		          <input placeholder="last name" name="l_name" type="text" class="validate">
 		        </div>
 
-		         <div class="input-field col s6 m6">
+		         <div class="input-field col s6 m4">
 		          <input placeholder="user email" name="u_email" type="text" class="validate">
 		        </div>
 
-		        <div class="input-field col s6 m6">
-				    <select name="gender">
-				      <option value="" disabled selected>Choose your gender</option>
-				      <option value="0">Male</option>
-				      <option value="1">Female</option>
-				      <option value="2">Other</option>
-				    </select>
-			    </div>
+		        <div class=" col s6 m6">
+		        	<label><span>Select Gender : </span>&nbsp;&nbsp;</label>
+		        	<label>
+				        <input name="gender" value="0" type="radio" checked />
+				        <span>Male</span>
+				      </label>
+				      &nbsp;&nbsp;
+				      <label>
+				        <input name="gender" value="1" type="radio" />
+				        <span>Female</span>
+				      </label>
+				      &nbsp;&nbsp;
+				      <label>
+				        <input name="gender" value="2" type="radio" />
+				        <span>Other</span>
+				      </label>
+				</div>
 
 		         <div class="input-field col s6 m6">
 		          <input placeholder="phone" name="phone" maxlength="12" type="text" class="validate">
@@ -65,9 +74,9 @@
 		          <input placeholder="timeofresidency" name="timeofresidency" type="text" class="validate">
 		        </div>
 
-
-				<a class="waves-effect waves-light btn addcontactdata">button</a>
-
+		        <div class="input-field col s6 m6">
+				<a class="waves-effect waves-light btn addcontactdata">Save</a>
+				</div>
 		       </div>
 		   </form>
 	    </div>

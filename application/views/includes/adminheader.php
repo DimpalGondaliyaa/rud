@@ -89,7 +89,6 @@
   </ul>
   <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="<?php echo base_url(); ?>Add_Contact">Add Contact</a></li>
               <li><a href="<?php echo base_url(); ?>Home">Home</a></li>
               <li><a href="<?php echo base_url(); ?>AssignUser">Assign</a></li>
               <li><a href="<?php echo base_url(); ?>UploadFile">Upload File</a></li>

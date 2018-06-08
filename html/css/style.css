@@ -287,3 +287,9 @@ a.brand-logo img {
     height: 80px;
     padding: 10px;
 }
+
+input {
+    border: 1px solid #ddd !important;
+    padding-left: 15px !important;
+    width: calc(100% - 15px) !important;
+}
