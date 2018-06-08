@@ -65,7 +65,12 @@
             </div>
         </nav>
         
-   <ul id="slide-out" class="sidenav">
+  
+     
+        <nav>
+          <div class="nav-wrapper">
+            <a href="<?php echo base_url(); ?>home" class="brand-logo"><img src="<?php echo base_url(); ?>html/images/logo.png" class=responsive-img"></a>
+             <ul id="slide-out" class="sidenav">
     <li><div class="user-view">
       <div class="background">
         <img src="images/office.jpg">
@@ -81,14 +86,11 @@
     <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
   </ul>
   <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-     
-        <nav>
-          <div class="nav-wrapper">
-            <a href="<?php echo base_url(); ?>home" class="brand-logo"><img src="<?php echo base_url(); ?>html/images/logo.png" class=responsive-img"></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
               <li><a href="<?php echo base_url(); ?>Add_Contact">Add Contact</a></li>
               <li><a href="<?php echo base_url(); ?>Home">Home</a></li>
               <li><a href="<?php echo base_url(); ?>AssignUser">Assign</a></li>
+              <li><a href="<?php echo base_url(); ?>UploadFile">Upload File</a></li>
               <?php if($this->session->userdata("email")!=''){ ?>
               <li><a href="<?php echo base_url(); ?>Adminlogin/user_logout">LogOut</a></li>
               <?php } ?>

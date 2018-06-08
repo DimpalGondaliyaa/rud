@@ -30,7 +30,6 @@ class UserLogin extends CI_Controller {
 		echo json_encode($ress);
 	}
 
-
 	function getEmail(){
 	    $this->db->where('u_email', $this->input->post('ref_code'));
 	    $query = $this->db->get('users');
