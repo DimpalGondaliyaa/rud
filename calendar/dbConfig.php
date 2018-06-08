@@ -1,9 +1,14 @@
 <?php
 //db details
-$dbHost = 'localhost';
+/*$dbHost = 'localhost';
 $dbUsername = 'haris7ya_crm';
 $dbPassword = 'crm@12354';
-$dbName = 'haris7ya_crm';
+$dbName = 'haris7ya_crm';*/
+
+$dbHost = 'localhost';
+$dbUsername = 'root';
+$dbPassword = '';
+$dbName = 'contactdata';
 
 //Connect and select the database
 $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
