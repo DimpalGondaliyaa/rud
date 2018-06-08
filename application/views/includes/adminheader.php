@@ -92,6 +92,7 @@
               <li><a href="<?php echo base_url(); ?>Add_Contact">Add Contact</a></li>
               <li><a href="<?php echo base_url(); ?>Home">Home</a></li>
               <li><a href="<?php echo base_url(); ?>AssignUser">Assign</a></li>
+              <li><a href="<?php echo base_url(); ?>docs">docs</a></li>
               <li><a href="<?php echo base_url(); ?>UploadFile">Upload File</a></li>
               <?php if($this->session->userdata("email")!=''){ ?>
               <li><a href="<?php echo base_url(); ?>Adminlogin/user_logout">LogOut</a></li>

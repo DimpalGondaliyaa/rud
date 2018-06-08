@@ -12,7 +12,7 @@ if(isset($_POST['func']) && !empty($_POST['func'])){
 			break;
 		//For Add Event
 		case 'addEvent':
-			addEvent($_POST['date'],$_POST['title']);
+			addEvent($_POST['date'],$_POST['title'],$_POST['desc']);
 			break;
 		default:
 			break;
@@ -43,7 +43,8 @@ function getCalender($year = '',$month = '')
         <!--For Add Event-->
         <div id="event_add" class="none">
         	<p>Add Event on <span id="eventDateView"></span></p>
-            <p><b>Event Title: </b><input type="text" id="eventTitle" value=""/></p>
+            <p><b>Event Title: </b><input type="text" id="eventTitle" placeholder="title" value=""/></p>
+             <p><b>Event Title: </b><input type="text" id="eventdes" name="desc" placeholder="description" value=""/></p>
             <input type="hidden" id="eventDate" value=""/>
             <input type="button" id="addEventBtn" value="Add"/>
         </div>
@@ -140,14 +141,16 @@ function getCalender($year = '',$month = '')
 			$('#addEventBtn').on('click',function(){
 				var date = $('#eventDate').val();
 				var title = $('#eventTitle').val();
+				var desc = $('#eventdes').val();
 				$.ajax({
 					type:'POST',
 					url:'functions.php',
-					data:'func=addEvent&date='+date+'&title='+title,
+					data:'func=addEvent&date='+date+'&title='+title+'&desc='+desc,
 					success:function(msg){
 						if(msg == 'ok'){
 							var dateSplit = date.split("-");
 							$('#eventTitle').val('');
+							$('#eventdes').val('');
 							alert('Event Created Successfully.');
 							getCalendar('calendar_div',dateSplit[0],dateSplit[1]);
 						}else{
@@ -217,12 +220,13 @@ function getEvents($date = ''){
 	$eventListHTML = '';
 	$date = $date?$date:date("Y-m-d");
 	//Get events based on the current date
-	$result = $db->query("SELECT title FROM events WHERE date = '".$date."' AND status = 1");
+	$result = $db->query("SELECT title,descp FROM events WHERE date = '".$date."' AND status = 1");
 	if($result->num_rows > 0){
 		$eventListHTML = '<h2>Events on '.date("l, d M Y",strtotime($date)).'</h2>';
 		$eventListHTML .= '<ul>';
 		while($row = $result->fetch_assoc()){ 
-            $eventListHTML .= '<li>'.$row['title'].'</li>';
+            $eventListHTML .= '<li><b>Title</b> :&nbsp; '.$row['title'].'</li></br>';
+            $eventListHTML .= '<li><b>description</b> :&nbsp; '.$row['descp'].'</li></br>';
         }
 		$eventListHTML .= '</ul>';
 	}
@@ -232,12 +236,12 @@ function getEvents($date = ''){
 /*
  * Add event to date
  */
-function addEvent($date,$title){
+function addEvent($date,$title,$desc){
 	//Include db configuration file
 	include 'dbConfig.php';
 	$currentDate = date("Y-m-d H:i:s");
 	//Insert the event data into database
-	$insert = $db->query("INSERT INTO events (title,date,created,modified) VALUES ('".$title."','".$date."','".$currentDate."','".$currentDate."')");
+	$insert = $db->query("INSERT INTO events (title,date,created,modified,descp) VALUES ('".$title."','".$date."','".$currentDate."','".$currentDate."','".$desc."')");
 	if($insert){
 		echo 'ok';
 	}else{
