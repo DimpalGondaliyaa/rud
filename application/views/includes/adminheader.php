@@ -85,6 +85,7 @@ nav.navone {
 }
 </style>          
 <!--=============================== end nav 1 ======================-->
+
 <!--=============================== nav 2 ======================-->
 <nav class="navtwo">
   <a href="#!"><img src="<?php echo base_url(); ?>html/images/l.png"></a>
@@ -92,6 +93,8 @@ nav.navone {
       <ul id="nav-mobile" class="hide-on-med-and-down nav2ul">
 
          <li><a href="<?php echo base_url(); ?>Guidelines" class="<?php if($this->uri->segment(1)=='Guidelines'){?> active <?php } ?>">Guidelines</a></li>
+
+        <li><a href="<?php echo base_url(); ?>Home" class="<?php if($this->uri->segment(1)=='Home'){?> active <?php } ?>"><img src="<?php echo base_url(); ?>html/images/dash-icon2.png" class="responsive-img"></a></li>
 
           <li><a href="<?php echo base_url(); ?>Home" class="<?php if($this->uri->segment(1)=='Home'){?> active <?php } ?>">Contact</a></li>
           <li><a href="<?php echo base_url(); ?>Calendar" class="<?php if($this->uri->segment(1)=='Calendar'){?> active <?php } ?>">calender</a></li>
@@ -107,6 +110,7 @@ nav.navtwo {
     background: #fff;
     width: 100% !important;
     height: auto !important;
+    padding: 0px 15px;
 }
 .nav-wrapper.navwaptwo {
     width: 100% !important;
@@ -122,17 +126,29 @@ nav.navtwo {
 }*/
 .nav2ul li a {
     background: #323232;
-    margin: 0px 2px;
-    border-radius:  10px;
-        z-index: 1;
+    margin: 0px 1px;
+    border-radius: 5px;
+    z-index: 1;
     position: relative;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    line-height: 35px !important;
+    border-top: 5px solid #323232;
 }
-.nav2ul li a {
-   /* height: 20;*/
-    height: 45px !important;
-   /* margin-top: 8px;*/
-    line-height: 45px;
+.nav2ul li a:hover {
+    background: #2e5890;
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    border-top: 5px solid #2e5890;
+    font-family: Arial, sans-serif;
 }
+.nav2ul li a.active{
+  background-color: rgb(221, 221, 221);
+  color: #2e5890;
+  border-top: 5px solid #213F66;
+}
+
 </style>
 <!--=============================== end nav 2 ======================-->        
         
