@@ -1,14 +1,20 @@
 /*global stysheet*/
 .cmdtitle {
-    position:  relative;
-    bottom:  18px;
-    width: 95% !important;
-    margin:  0 auto;
+    position: relative;
+    bottom: 18px;
+    width: 97% !important;
+    margin: 0 auto;
     color: grey !important;
+    line-height: 0;
 }
 .cmdtitle a {
+    text-transform: capitalize;
     color:  grey;
     font-size: 16px;
+}
+img.iconstyle {
+    position:  relative;
+    top: 3px;
 }
 nav.top-header {
     height: 40px !important;
@@ -63,10 +69,13 @@ nav.contactnav {
     font-size: 12px;
 }
 .nav-wrapper.connavwapp ul li a {
-    font-size:  13px;
-    text-transform:  capitalize;
+    font-size: 11px;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    font-family: sans-serif;
+    padding: 0px 7px;
+    text-decoration: underline;
 }
-
 /*div#example_length label {
     display: block !important;
     width: max-content;
@@ -316,6 +325,7 @@ span.badge-box {
 }
 
 .main-box {
+        min-height: 501px;
     position:  relative;
     padding-top:  65px;
     background: #d5d5d5d1;
@@ -353,4 +363,9 @@ nav ul a{
     background: #323232;
     line-height: 2.7 !important;
 
+}
+
+
+td, th{
+    padding: 5px 5px !important;
 }
