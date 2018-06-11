@@ -298,3 +298,12 @@ nav ul a:hover, nav ul a.active {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
+
+.nav2ul li a {
+    background: #323232;
+    margin: 0px 2px;
+    border-radius: 5px;
+    z-index: 1;
+    position: relative;
+    line-height: 2.7 !important;
+}
