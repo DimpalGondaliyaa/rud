@@ -9,7 +9,8 @@
 		    <div class="nav-wrapper connavwapp">
 		      <ul id="nav-mobile" class="hide-on-med-and-down">
 		        <li><a href="<?php echo base_url(); ?>uplode_pdf">create a new pdf document</a></li>
-		        <li><a href="badges.html">create a new html document</a></li>
+		        <li><a href="badges.html"><img src="<?php echo base_url() ?>html/images/icon-pdf.png">create a new html document</a></li>
+		        <li><a href="#"><img src="<?php echo base_url() ?>html/images/page_white_stack.png">Categories</a></li>
 		      </ul>
 		    </div>
 		  </nav>

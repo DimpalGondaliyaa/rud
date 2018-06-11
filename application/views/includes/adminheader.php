@@ -75,6 +75,7 @@ nav.navone {
     background: #213F66 !important;
     height: 30px !important;
     line-height: 28px !important;
+    overflow: hidden;
 }
 .navoneul li a {
     font-size: 12px;
@@ -84,23 +85,13 @@ nav.navone {
 }
 </style>          
 <!--=============================== end nav 1 ======================-->
-
-<!--=============================== logo nav  ======================-->
-<div class="logodiv">
-  <img src="<?php echo base_url(); ?>html/images/l.png">
-</div>
-<style type="text/css">
-.logodiv img {
-    z-index: -1 !important;
-    position: relative;
-}
-</style>
-<!--=============================== end logo ======================-->
-
 <!--=============================== nav 2 ======================-->
 <nav class="navtwo">
+  <a href="#!"><img src="<?php echo base_url(); ?>html/images/l.png"></a>
   <div class="nav-wrapper navwaptwo">
       <ul id="nav-mobile" class="hide-on-med-and-down nav2ul">
+
+         <li><a href="<?php echo base_url(); ?>Guidelines" class="<?php if($this->uri->segment(1)=='Guidelines'){?> active <?php } ?>">Guidelines</a></li>
 
           <li><a href="<?php echo base_url(); ?>Home" class="<?php if($this->uri->segment(1)=='Home'){?> active <?php } ?>">Contact</a></li>
           <li><a href="<?php echo base_url(); ?>Calendar" class="<?php if($this->uri->segment(1)=='Calendar'){?> active <?php } ?>">calender</a></li>

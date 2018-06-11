@@ -1,0 +1,48 @@
+.main-menu {
+    background:  #fff;
+    height:  100vh;
+}
+.cmdtitle {
+    position:  relative;
+    bottom:  18px;
+    width: 93% !important;
+    margin:  0 auto;
+    color: grey !important;
+}
+.cmdtitle a {
+    color:  grey;
+    font-size: 16px;
+}
+.col.s12.m3.textlab {
+	height: 70px;
+    position:  relative;
+    top: 18px;
+    border: 1px solid #dddddd;
+    left:  13px;
+}
+.col.s12.m8.textlab {
+	border-radius: 3px;
+	    height: 45px;
+    position:  relative;
+    top: 18px;
+    border: 1px solid #dddddd;
+    left:  31px;
+}
+.content {
+    font-size: 16px;
+    color: #213f66;
+ text-transform: capitalize;
+    font-weight:  bold;
+}
+
+label {
+    color: #323232;
+    font-weight:  bold;
+    text-transform:  capitalize;
+}
+
+input#first_name {
+	    width: 80% !important;
+    height: 20px;
+    border: 1px solid #32323269 !important;
+}

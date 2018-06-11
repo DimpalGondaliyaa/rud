@@ -21,7 +21,8 @@
 			    </div>
 
 		        <div class="input-field col s6 m3">
-		          <input placeholder="file" name="file" type="file" class="validate">
+		          <input placeholder="file" name="file" type="file" class="validate" style="display: none;" id="btnFile">
+		           <button class="btn-file" onclick="$('#btnFile').click();">Select File top Upload </button>
 		        </div>
 
 		         <div class="input-field col s6 m3">
@@ -136,5 +137,16 @@ a.filedltbtn.btn:hover, a.filedltbtn.btn:focus {
     padding: 25px;
     line-height: 0px;
     border-radius: 50px;
+}
+.btn-file {
+    background: linear-gradient(0deg,#317941,#37bd48e0);
+    width: max-content;
+    padding: 20px;
+    line-height: 0px;
+    color: ghostwhite;
+    text-transform: uppercase;
+}
+.row.conrow{
+	margin-bottom: 25px;
 }
 </style>
