@@ -16,20 +16,90 @@ $config['base_url1'] = 'http://localhost/cont/';
 
 </head>
 <body>
-	 <nav class="top-header">
-         <nav>
-          <div class="nav-wrapper">
-            <a href="#" class="brand-logo"><img src="http://freelancerprojectleads.com/crm/calendar/logo.png" class=responsive-img"></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="http://freelancerprojectleads.com/crm/UserDashboard">UserDashboard</a></li>
-               <li><a href="http://freelancerprojectleads.com/crm/calendar">calender</a></li>
-              <li><a href="http://freelancerprojectleads.com/crm/UserLogin/user_logout">Logout</a></li>
-            </ul>
-          </div>
-        </nav>
 
+    <!--===============================nav 1======================-->
+        <nav class="navone">
+            <div class="nav-wrapper navonewapp">
+              <ul id="nav-mobile" class="hide-on-med-and-down navoneul">
+                <li><a href="#">Logged In As: agoodman</a></li>
+                <li><a href="#">Recent Pages</a></li>
+                <li><a href="#">Logout</a></li>
+                <li><a href="#">Change Password</a></li>
+                <li><a href="#">My Settings</a></li>
+                <li><a href="#">Support</a></li>
+              </ul>
+            </div>
+          </nav>
+
+<style type="text/css">
+nav.navone {
+    background: #213F66 !important;
+    height: 30px !important;
+    line-height: 28px !important;
+}
+.navoneul li a {
+    font-size: 12px;
+    font-weight:  bold;
+    text-transform:  capitalize;
+    line-height:  29px;
+}
+</style>          
+<!--=============================== end nav 1 ======================-->
+
+<!--=============================== logo nav  ======================-->
+<div class="logodiv">
+  <img src="http://localhost/cont/html/images/l.png">
+</div>
+<style type="text/css">
+.logodiv img {
+    z-index: -1 !important;
+    position: relative;
+}
+</style>
+<!--=============================== end logo ======================-->
+
+<!--=============================== nav 2 ======================-->
+<nav class="navtwo">
+  <div class="nav-wrapper navwaptwo">
+      <ul id="nav-mobile" class="hide-on-med-and-down nav2ul">
+          <li><a href="http://freelancerprojectleads.com/crm/AssignUser">Contact</a></li>
+          <li><a href="http://freelancerprojectleads.com/crm/calendar">calender</a></li>
+          <li><a href="http://freelancerprojectleads.com/crm/Home">Home</a></li>
+          <li><a href="http://freelancerprojectleads.com/crm/CreateCompany">Create Company</a></li>
+      </ul>
+  </div>
+</nav>
+<style type="text/css">
+nav.navtwo {
+  box-shadow: none;
+    background: #fff;
+    width: 100% !important;
+    height: 35px !important;
+}
+.nav-wrapper.navwaptwo {
+    width:  100% !important;
+    margin:  0px 15px;
+}
+.nav2ul li a {
+    background: #323232;
+    margin: 0px 2px;
+    border-radius:  10px;
+        z-index: 1;
+    position: relative;
+}
+.nav2ul li a {
+   /* height: 20;*/
+    height: 45px !important;
+   /* margin-top: 8px;*/
+    line-height: 45px;
+}
+</style>
+<!--=============================== end nav 2 ======================-->   
+
+<div class=".main-box">
 <div id="calendar_div">
 	<?php echo getCalender(); ?>
+</div>
 </div>
 
 </body>
@@ -41,6 +111,11 @@ $config['base_url1'] = 'http://localhost/cont/';
     line-height: 40px !important;
     background: #746382;
     box-shadow: none;
+}
+.main-box {
+    position: relative;
+    padding-top: 80px;
+    background: #d5d5d5d1;
 }
 
 /*global stysheet*/

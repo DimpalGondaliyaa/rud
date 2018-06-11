@@ -17,12 +17,12 @@ button.mdl-button.mdl-button--raised.mdl-button--colored{
     color: ghostwhite;
 }
 button.mdl-button{
-    background: #35174c;
+    background: #f4f4f4;
     /*padding: 7.5px 10px !important;*/
     padding: 15px 15px !important;
     font-weight: 500;
     border: none;
-    color:#f8f8ff65;   
+    color: black;   
 }
 
 /*div#example_length label {
@@ -266,23 +266,12 @@ span.badge-box {
     background-color: rgba(0, 0, 0, 0.20);
 }
 
-
 .main-box {
-    position: relative;
-    min-height: 500px;
-    display: block;
-    overflow: hidden;
-    max-width: 1280px;
-    padding: 15px;
-    margin: 0 auto;
+    position:  relative;
+    padding-top:  80px;
+    background: #d5d5d5d1;
+  
 }
-.max-width {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 15px;
-    position: relative;
-}
-
 a.brand-logo img {
     height: 80px;
     padding: 10px;
@@ -292,4 +281,8 @@ input {
     border: 1px solid #ddd !important;
     padding-left: 15px !important;
     width: calc(100% - 15px) !important;
+}
+.main-menu {
+    width: 95%;
+    margin:  0 auto;
 }

@@ -66,6 +66,15 @@
             </ul>
             </div>
         </nav> -->
+
+        
+
+
+
+
+
+
+  
       <nav>
           <div class="nav-wrapper">
             <a href="<?php echo base_url(); ?>home" class="brand-logo"><img src="<?php echo base_url(); ?>html/images/logo.png" class=responsive-img"></a>

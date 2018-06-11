@@ -56,19 +56,87 @@
     <?php if($this->session->userdata('email')!='' | $this->session->userdata('admin')!=''){ ?>
 
     <header>
-        <nav class="top-header">
-          <div class="nav-wrapper">
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="<?php echo base_url(); ?>Add_Contact">Add Contact</a></li>
-              <li><a href="<?php echo base_url(); ?>Home">Home</a></li>
-              <li><a href="<?php echo base_url(); ?>CreateCompany">Create Company</a></li>
-              
+<!--===============================nav 1======================-->
+        <nav class="navone">
+            <div class="nav-wrapper navonewapp">
+              <ul id="nav-mobile" class="hide-on-med-and-down navoneul">
+                <li><a href="#">Logged In As: agoodman</a></li>
+                <li><a href="#">Recent Pages</a></li>
+                <li><a href="#">Logout</a></li>
+                <li><a href="#">Change Password</a></li>
+                <li><a href="#">My Settings</a></li>
+                <li><a href="#">Support</a></li>
               </ul>
             </div>
-        </nav>
+          </nav>
+
+<style type="text/css">
+nav.navone {
+    background: #213F66 !important;
+    height: 30px !important;
+    line-height: 28px !important;
+}
+.navoneul li a {
+    font-size: 12px;
+    font-weight:  bold;
+    text-transform:  capitalize;
+    line-height:  29px;
+}
+</style>          
+<!--=============================== end nav 1 ======================-->
+
+<!--=============================== logo nav  ======================-->
+<div class="logodiv">
+  <img src="<?php echo base_url(); ?>html/images/l.png">
+</div>
+<style type="text/css">
+.logodiv img {
+    z-index: -1 !important;
+    position: relative;
+}
+</style>
+<!--=============================== end logo ======================-->
+
+<!--=============================== nav 2 ======================-->
+<nav class="navtwo">
+  <div class="nav-wrapper navwaptwo">
+      <ul id="nav-mobile" class="hide-on-med-and-down nav2ul">
+          <li><a href="<?php echo base_url(); ?>AssignUser">Contact</a></li>
+          <li><a href="<?php echo base_url(); ?>calendar">calender</a></li>
+          <li><a href="<?php echo base_url(); ?>Home">Home</a></li>
+          <li><a href="<?php echo base_url(); ?>CreateCompany">Create Company</a></li>
+      </ul>
+  </div>
+</nav>
+<style type="text/css">
+nav.navtwo {
+  box-shadow: none;
+    background: #fff;
+    width: 100% !important;
+    height: 35px !important;
+}
+.nav-wrapper.navwaptwo {
+    width:  100% !important;
+    margin:  0px 15px;
+}
+.nav2ul li a {
+    background: #323232;
+    margin: 0px 2px;
+    border-radius:  10px;
+        z-index: 1;
+    position: relative;
+}
+.nav2ul li a {
+   /* height: 20;*/
+    height: 45px !important;
+   /* margin-top: 8px;*/
+    line-height: 45px;
+}
+</style>
+<!--=============================== end nav 2 ======================-->        
         
   
-     
+    <!--  
         <nav>
           <div class="nav-wrapper">
             <a href="<?php echo base_url(); ?>home" class="brand-logo"><img src="<?php echo base_url(); ?>html/images/logo.png" class=responsive-img"></a>
@@ -93,23 +161,18 @@
               <li><a href="<?php echo base_url(); ?>AssignUser">Assign</a></li>
               <li><a href="<?php echo base_url(); ?>docs">docs</a></li>
               <li><a href="<?php echo base_url(); ?>UploadFile">Upload File</a></li>
+               <li><a href="<?php echo base_url(); ?>Add_Contact">Add Contact</a></li>
+              <li><a href="<?php echo base_url(); ?>Home">Home</a></li>
+              <li><a href="<?php echo base_url(); ?>CreateCompany">Create Company</a></li>
               <?php if($this->session->userdata("email")!=''){ ?>
               <li><a href="<?php echo base_url(); ?>Adminlogin/user_logout">LogOut</a></li>
               <?php } ?>
             </ul>
           </div>
-        </nav>
+        </nav> -->
     </header>
   <?php } else { } ?>
 </head>
 <body>
-<style type="text/css">
-.admnin-brand-logo h5 {
-    font-family: 'Aclonica', sans-serif;
-    text-shadow: 0px 2px 5px #0009;
-    color: ghostwhite;
-    line-height: 45px;
-}
-</style>
 
 

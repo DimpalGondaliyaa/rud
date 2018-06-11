@@ -10,12 +10,11 @@
     position: relative;
     top: 44px;
     margin-bottom: 95px;
-
-    border: 2px dashed #ddd;
+    border: 2px dashed #fff;
     border-radius: 7px;
     box-shadow: 0px 7px 23px -5px #00000047;
+    background: white;
 }
-
 
 .addcontactdata {
     background: linear-gradient(60deg,#a84cf1 0%,#601d96 50%,#a84cf1 100%);
