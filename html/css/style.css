@@ -319,7 +319,7 @@ span.badge-box {
     position:  relative;
     padding-top:  65px;
     background: #d5d5d5d1;
-        bottom: 20px;
+    top: -25px;
 }
 a.brand-logo img {
     height: 80px;
@@ -332,7 +332,7 @@ input {
     width: calc(100% - 15px) !important;
 }
 .main-menu {
-    width: 95%;
+    width: 97%;
     margin:  0 auto;
     background-image: #fff !important;
     overflow: hidden;
