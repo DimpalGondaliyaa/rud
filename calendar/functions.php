@@ -226,7 +226,7 @@ function getEvents($date = ''){
 		$eventListHTML .= '<ul>';
 		while($row = $result->fetch_assoc()){ 
             $eventListHTML .= '<li><b>Title</b> :&nbsp; '.$row['title'].'</li></br>';
-            $eventListHTML .= '<li><b>description</b> :&nbsp; '.$row['descp'].'</li></br>';
+            $eventListHTML .= '<li><b>Description</b> :&nbsp; '.$row['descp'].'</li></br>';
         }
 		$eventListHTML .= '</ul>';
 	}

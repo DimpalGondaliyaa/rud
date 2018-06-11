@@ -1,0 +1,142 @@
+$(function(){
+
+
+
+
+	// ===== Scroll to Top ==== 
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});
+
+
+
+
+
+
+
+	$(".hover").mouseleave(
+    	function () {
+      	$(this).removeClass("hover");
+    	}
+  	);
+
+	$('.bag-btn').hover(function(){ $('#cartBox').removeClass('bx');});
+	/*$('.bag-btn').hover(function(){ $('#cartBox').removeClass('bx');});*/
+	$('#cartBox').mouseleave(function(){ $('#cartBox').addClass('bx');});
+
+	/*$('.bag-btn').mouseover(function(){
+		$('#badge-box').removeClass('bx');
+		$('.bag-btn').hover(function(){ $('#cartBox').removeClass('bx');})
+	});
+*/
+	 /*$('#example').DataTable();
+	 */
+	 $('.collapsible').collapsible();
+	 $('.sidenav').sidenav();
+	 $('.carousel').carousel();
+	 $(".dropdown-trigger").dropdown();
+	 $('#note').val('');
+	 
+	 
+	 $('.modal').modal();
+
+	 var baseurl = $("#base_url").val();
+
+	$(".btn-login").on("click",function(){
+		var data = {
+			'email' : $("#email").val(),
+			'password' : $("#password").val()
+		};
+			/*$.post(baseurl+"login/dologin/",{data:data},function(data){*/
+			$.post(baseurl+"CreateAccount/userlog/",{data:data},function(data){
+
+				var check = jQuery.parseJSON(data);
+				if(check.status=='ok')
+				{
+					swal("Login Successfully!");
+					window.location.reload();
+					/*$('form[name=signinFrom]').html('');*/
+				}
+				else if(check.status=='fail')
+				{
+					alert("login fail");
+				}
+				else
+				{
+					swal("Please Check your Login Details!");
+					$('.swal-button--confirm').on('click',function(){
+					window.location.reload();
+					});
+					console.log(data);
+				}
+			});
+	});
+
+
+	$(".signupbtn").on("click",function()
+	{
+			$(".modal").modal();
+			$("#user_register").modal("open");
+	});
+
+	$(".userregbtn").on("click",function(){
+
+		var fname = document.forms["regfrm"]["fname"].value;
+
+		var lname = document.forms["regfrm"]["lname"].value;
+
+		var email = document.forms["regfrm"]["email"].value;
+
+		var password = document.forms["regfrm"]["password"].value;
+
+
+				var addCat = new FormData($("#regfrm")[0]);
+
+				if(fname==''){
+					alert('Please Enter Firstname');
+					return false;
+				}
+				else if(lname==''){
+					alert('Please Enter Lastname.');
+					return false;
+				}
+				else if(email==''){
+					alert('Please Enter Email.');
+					return false;
+				}
+				else if(password==''){
+					alert('Please Enter Password.');
+					return false;
+				}
+				else{
+				$.ajax({
+
+					url : baseurl+"Home/addregdata",
+					type :"POST",
+					data :addCat,	
+					contentType:false,
+					processData:false,
+					success:function(res)
+					{
+						swal("Good job!", "Signed Up Successfully!", "success");
+
+						$('.swal-button--confirm').on('click',function(){
+							window.location.reload();
+						});
+
+					}
+				});
+			}
+		});
+
+
+});

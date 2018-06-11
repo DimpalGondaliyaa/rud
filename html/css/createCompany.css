@@ -21,3 +21,11 @@ a.dltCompany.btn {
 a.dltCompany.btn:hover, a.dltCompany.btn:focus {
     background: #ab1d1d;
 }
+
+.create-company {
+    background: linear-gradient(0deg,#213f66,#3465a5);
+    width: 100%;
+    padding: 25px;
+    line-height: 0px;
+    border-radius: 50px;
+}

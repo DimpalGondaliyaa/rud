@@ -27,9 +27,9 @@
 		         <div class="input-field col s6 m3">
 		          <input placeholder="file name" name="file_name" type="text" class="validate">
 		        </div>
-
-		        <a class="waves-effect waves-light btn addfiledata">Save</a>
-
+		        <div class="input-field col s6 m3">
+		        	<a class="waves-effect waves-light btn addfiledata">Save</a>
+		    	</div>
 		       </div>
 		   </form>
 	    </div>
@@ -98,7 +98,7 @@ select {
     min-height: 250px;
     display: block;
     overflow: hidden;
-    max-width: 1280px;
+    /*max-width: 1280px;*/
     padding: 15px;
     margin: 0 auto;
 }
@@ -130,4 +130,11 @@ a.filedltbtn.btn:hover, a.filedltbtn.btn:focus {
     background: #ab1d1d;
 }
 
+.addfiledata{
+	background: linear-gradient(0deg,#213f66,#3465a5);
+    width: 100%;
+    padding: 25px;
+    line-height: 0px;
+    border-radius: 50px;
+}
 </style>

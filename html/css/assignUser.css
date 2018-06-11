@@ -59,7 +59,7 @@ button#example_next
 
 /*Navigation pagination*/
 button#example1_previous {
-    background: #35174c;
+    background: #f4f4f4;
     /*padding: 7.5px 10px !important;*/
     padding: 15px 15px !important;
     border: none;
@@ -69,7 +69,7 @@ button#example1_previous {
 }
 button#example1_next
 { 
-    background: #35174c;
+    background: #f4f4f4;
     /*padding: 7.5px 10px !important;*/
     padding: 15px 15px !important;
     border: none;
@@ -80,7 +80,7 @@ button#example1_next
 
 /*Navigation pagination*/
 button#example2_previous {
-    background: #35174c;
+    background: #f4f4f4;
     /*padding: 7.5px 10px !important;*/
     padding: 15px 15px !important;
     border: none;
@@ -90,7 +90,7 @@ button#example2_previous {
 }
 button#example2_next
 { 
-    background: #35174c;
+    background: #f4f4f4;
     /*padding: 7.5px 10px !important;*/
     padding: 15px 15px !important;
     border: none;
@@ -131,7 +131,7 @@ input.form-control.input-sm {
 
 
 .btn-asign {
-       background: linear-gradient(0deg,#213f66,#323232);
+    background: linear-gradient(0deg,#213f66,#3465a5);
     width: 100%;
     padding: 25px;
     line-height: 0px;
