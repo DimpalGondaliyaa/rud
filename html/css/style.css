@@ -285,4 +285,16 @@ input {
 .main-menu {
     width: 95%;
     margin:  0 auto;
+    overflow: hidden;
+}
+nav ul a{
+    border-top: 3px solid #000000;
+}
+nav ul a:hover, nav ul a.active {
+    background-color: rgb(221, 221, 221);
+    color: #2e5890;
+    font-weight: bold;
+    border-top: 3px solid #000;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }

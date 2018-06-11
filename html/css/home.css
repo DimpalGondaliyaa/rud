@@ -28,13 +28,13 @@ a.condltbtn.btn
     padding: 25px;
     border-radius: 7px;
     box-shadow: 0px 7px 23px -5px #00000047;
-    top: 25px;
+    background-color: #fff;
 }
 
 
 /*Navigation pagination*/
 button#example_previous {
-    background: #35174c;
+    background: #f4f4f4;
     /*padding: 7.5px 10px !important;*/
     padding: 15px 15px !important;
     border: none;
@@ -44,7 +44,7 @@ button#example_previous {
 }
 button#example_next
 { 
-    background: #35174c;
+    background: #f4f4f4;
     /*padding: 7.5px 10px !important;*/
     padding: 15px 15px !important;
     border: none;

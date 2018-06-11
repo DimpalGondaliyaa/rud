@@ -101,10 +101,10 @@ nav.navone {
 <nav class="navtwo">
   <div class="nav-wrapper navwaptwo">
       <ul id="nav-mobile" class="hide-on-med-and-down nav2ul">
-          <li><a href="<?php echo base_url(); ?>AssignUser">Contact</a></li>
-          <li><a href="<?php echo base_url(); ?>calendar">calender</a></li>
-          <li><a href="<?php echo base_url(); ?>Home">Home</a></li>
-          <li><a href="<?php echo base_url(); ?>CreateCompany">Create Company</a></li>
+          <li><a href="<?php echo base_url(); ?>Home" class="<?php if($this->uri->segment(1)=='Home'){?> active <?php } ?>">Contact</a></li>
+          <li><a href="<?php echo base_url(); ?>Calendar" class="<?php if($this->uri->segment(1)=='Calendar'){?> active <?php } ?>">calender</a></li>
+          <li><a href="<?php echo base_url(); ?>Docs" class="<?php if($this->uri->segment(1)=='Docs' || $this->uri->segment(1)=='uplode_pdf') { ?> active <?php } ?>">Docs</a></li>
+          <li><a href="<?php echo base_url(); ?>UploadFile" class="<?php if($this->uri->segment(1)=='UploadFile'){?> active <?php } ?>">Files</a></li>
       </ul>
   </div>
 </nav>
@@ -113,12 +113,20 @@ nav.navtwo {
   box-shadow: none;
     background: #fff;
     width: 100% !important;
-    height: 35px !important;
+    height: auto !important;
 }
 .nav-wrapper.navwaptwo {
+    width: 100% !important;
+    margin: 0px 15px;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    bottom: 0;
+}
+/*.nav-wrapper.navwaptwo {
     width:  100% !important;
     margin:  0px 15px;
-}
+}*/
 .nav2ul li a {
     background: #323232;
     margin: 0px 2px;
