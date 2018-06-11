@@ -16,6 +16,21 @@ button.mdl-button.mdl-button--raised.mdl-button--colored{
     border: none;
     color: ghostwhite;
 }
+nav.contactnav {
+    background: #213f66;
+}
+
+.connavwapp
+{
+    width: 100%;
+    margin: 0px !important;
+}
+
+nav.contactnav {
+    background: #213f66;
+    height: 55px !important;
+    line-height: 53px !important;
+}
 button.mdl-button{
     background: #f4f4f4;
     /*padding: 7.5px 10px !important;*/
@@ -23,6 +38,14 @@ button.mdl-button{
     font-weight: 500;
     border: none;
     color: black;   
+}
+nav.contactnav {
+    background: #213f66;
+}
+nav.contactnav {
+    background: #213f66;
+    height: 55px !important;
+    line-height: 53px !important;
 }
 
 /*div#example_length label {
@@ -285,4 +308,5 @@ input {
 .main-menu {
     width: 95%;
     margin:  0 auto;
+    background-image: #fff !important;
 }

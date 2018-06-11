@@ -101,9 +101,10 @@ nav.navone {
 <nav class="navtwo">
   <div class="nav-wrapper navwaptwo">
       <ul id="nav-mobile" class="hide-on-med-and-down nav2ul">
-          <li><a href="<?php echo base_url(); ?>AssignUser">Contact</a></li>
+          <li><a href="<?php echo base_url(); ?>home">Contact</a></li>
           <li><a href="<?php echo base_url(); ?>calendar">calender</a></li>
           <li><a href="<?php echo base_url(); ?>Home">Home</a></li>
+          <li><a href="<?php echo base_url(); ?>docs">docs</a></li>
           <li><a href="<?php echo base_url(); ?>CreateCompany">Create Company</a></li>
       </ul>
   </div>

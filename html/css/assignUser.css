@@ -56,19 +56,6 @@ button#example_next
     border-top-right-radius: 15px;
     font-weight: 500;
 }
-nav.contactnav {
-    background: #213f66;
-}
-nav.contactnav {
-    background: #213f66;
-    height: 55px !important;
-    line-height: 53px !important;
-}
-.connavwapp
-{
-    width: 100%;
-    margin: 0px !important;
-}
 
 /*Navigation pagination*/
 button#example1_previous {

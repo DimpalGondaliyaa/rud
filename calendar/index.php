@@ -96,7 +96,7 @@ nav.navtwo {
 </style>
 <!--=============================== end nav 2 ======================-->   
 
-<div class=".main-box">
+<div class="main-boxx">
 <div id="calendar_div">
 	<?php echo getCalender(); ?>
 </div>
@@ -112,10 +112,11 @@ nav.navtwo {
     background: #746382;
     box-shadow: none;
 }
-.main-box {
-    position: relative;
-    padding-top: 80px;
-    background: #d5d5d5d1;
+.main-boxx {
+    background: #DDDDDD;
+    height: 100vh;
+    position:  relative;
+    bottom:  44px;
 }
 
 /*global stysheet*/
@@ -442,5 +443,15 @@ li.date_cell span {
 }
 .date_window a {
     color: rebeccapurple !important;
+}
+#calender_section {
+    width: 700px;
+    margin: 30px auto 0;
+    position: relative;
+    top: 90px;
+    background: #fff !important;
+    height: 800px;
+    width: 50%;
+    padding: 29px;
 }
 </style>

@@ -58,23 +58,6 @@
     
     <?php if($this->session->userdata('email')!='') {?>
     <header>
-       <!--  <nav class="top-header hide-on-med-and-down">
-          <div class="nav-wrapper">
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a class="waves-effect" href="<?php //echo base_url(); ?>UserDashboard">UserDashboard</a></li>
-              <li><a class="waves-effect" href="<?php //echo base_url(); ?>UserDashboard">UserDashboard</a></li>
-            </ul>
-            </div>
-        </nav> -->
-
-        
-
-
-
-
-
-
-  
       <nav>
           <div class="nav-wrapper">
             <a href="<?php echo base_url(); ?>home" class="brand-logo"><img src="<?php echo base_url(); ?>html/images/logo.png" class=responsive-img"></a>
