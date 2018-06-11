@@ -106,4 +106,28 @@ select {
 {
 	overflow:none;
 }
+a.edtfiledata.btn {
+    background: #00800059;
+    border-radius: 50px;
+    line-height: 50px;
+    height: 50px;
+    width: 50px;
+}
+
+a.edtfiledata.btn:hover, a.edtfiledata.btn:focus {
+    background: #008000;
+}
+
+a.filedltbtn.btn {
+    background:#cd5c5c75;
+    border-radius: 50px;
+    line-height: 50px;
+    height: 50px;
+    width: 50px;
+}
+
+a.filedltbtn.btn:hover, a.filedltbtn.btn:focus {
+    background: #ab1d1d;
+}
+
 </style>

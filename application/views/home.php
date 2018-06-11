@@ -52,7 +52,7 @@ echo timespan($post_date, $now) . ' ago';
 					<td><?php echo $i++; ?></td>
 					<td><?php echo $value['f_name']; ?></td>
 					<td><?php echo $value['l_name'] ?></td>
-					<td><a href="mailto:<?php echo $value['u_email']; ?>"><i class="fas fa-envelope grey-text"></i></a></td>
+					<td><a href="mailto:<?php echo $value['u_email']; ?>"><i class="fas fa-envelope grey-text"><?php echo $value['u_email']; ?></i></a></td>
 					<td><?php echo $value['password']; ?></td>
 					<td><?php if($value['gender']==0){ echo  'Male';} else if($value['gender']==1){ echo 'Female';} else { echo 'Other';}; ?></td>
 					<td><?php echo $value['phone']; ?></td>
