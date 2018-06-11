@@ -7,8 +7,13 @@
     color: grey !important;
 }
 .cmdtitle a {
+    text-transform: capitalize;
     color:  grey;
     font-size: 16px;
+}
+img.iconstyle {
+    position:  relative;
+    top: 3px;
 }
 nav.top-header {
     height: 40px !important;
@@ -316,6 +321,7 @@ span.badge-box {
 }
 
 .main-box {
+        min-height: 501px;
     position:  relative;
     padding-top:  65px;
     background: #d5d5d5d1;
