@@ -1,4 +1,13 @@
- <div class="max-width">
+ <div class="main-box">
+ 	<div class="main-menu">
+
+ 		  <nav class="contactnav">
+		    <div class="nav-wrapper connavwapp">
+		      <ul id="nav-mobile" class="hide-on-med-and-down">
+		        <li><a class="uppdf">Save document</a></li>
+		      </ul>
+		    </div>
+		  </nav>
   <div class="row pdfrow">
     <form class="col s12" id="pdffrm">
       <div class="row">
@@ -157,14 +166,27 @@
 	   </div>
       </div>
       <div class="pdfbtn">
-	   		<a href="#" class="uppdf btn">uplode</a>
+	   		<!-- <a href="#" class="uppdf btn">uplode</a> -->
 	   </div>
     </form>
+</div>
 </div>
 </div>
 
 <style type="text/css">
 	select {
     display: none !important;
+}
+.main-menu {
+    background:  #fff;
+    ,margin-bottom: 40px;
+  
+}
+.row.pdfrow {
+    padding: 30px 60px;
+}
+input.validate {
+    height: 46px;
+    padding-top: 11px;
 }
 </style>

@@ -1,11 +1,6 @@
 <div class="main-box">
 <div class="main-menu">
 
-
-  
-
-
-
 <div id="container">
 	<div class="assign-box">
 		<h5>Select User to Assign with</h5>

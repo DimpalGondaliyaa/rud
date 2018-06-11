@@ -106,7 +106,7 @@ nav.navone {
           <li><a href="<?php echo base_url(); ?>Calendar" class="<?php if($this->uri->segment(1)=='Calendar'){?> active <?php } ?>">calender</a></li>
           <li><a href="<?php echo base_url(); ?>Docs" class="<?php if($this->uri->segment(1)=='Docs' || $this->uri->segment(1)=='uplode_pdf') { ?> active <?php } ?>">Docs</a></li>
           <li><a href="<?php echo base_url(); ?>UploadFile" class="<?php if($this->uri->segment(1)=='UploadFile'){?> active <?php } ?>">Files</a></li>
-
+           <li><a href="<?php echo base_url(); ?>AssignUser" class="<?php if($this->uri->segment(1)=='AssignUser'){?> active <?php } ?>">Admin</a></li>
       </ul>
   </div>
 </nav>

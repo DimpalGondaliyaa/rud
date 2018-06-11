@@ -8,8 +8,8 @@
 		 <nav class="contactnav">
 		    <div class="nav-wrapper connavwapp">
 		      <ul id="nav-mobile" class="hide-on-med-and-down">
-		        <li><a href="<?php echo base_url(); ?>uplode_pdf">uplode pdf file</a></li>
-		        <li><a href="badges.html">uplode html file</a></li>
+		        <li><a href="<?php echo base_url(); ?>uplode_pdf">create a new pdf document</a></li>
+		        <li><a href="badges.html">create a new html document</a></li>
 		      </ul>
 		    </div>
 		  </nav>

@@ -293,7 +293,7 @@ span.badge-box {
     position:  relative;
     padding-top:  80px;
     background: #d5d5d5d1;
-  
+        bottom: 20px;
 }
 a.brand-logo img {
     height: 80px;

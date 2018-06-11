@@ -21,10 +21,15 @@ echo timespan($post_date, $now) . ' ago';
 
 <div class="main-box">
 	<div class="main-menu">
+
+		 <nav class="contactnav">
+		    <div class="nav-wrapper connavwapp">
+		      <ul id="nav-mobile" class="hide-on-med-and-down">
+		        <li><a href="<?php echo base_url(); ?>Add_Contact">add contact</a></li>
+		    </div>
+		  </nav>
 			<div class="max-width">
-				<div>
-					
-				</div>
+			
 				<div class="table-box">
 				<h5>List of Contact Details Inserted by Admin</h5>
 				<table id="example" class="ui celled table responsive nowrap" style="width:100%">
