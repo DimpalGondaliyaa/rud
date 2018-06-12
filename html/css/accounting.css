@@ -1,0 +1,47 @@
+strong {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+p.statnum {
+    font-size: 16px;
+    color: #213f66;
+    font-weight:  bold;
+    margin:  0px;
+}
+
+p {
+    margin: 8px 0px;
+}
+
+h3.theme {
+    font-size: 17px;
+    margin: 10px 0px;
+    color: #213f66;
+    font-weight:  bold;
+}
+
+.left.w15.formsection_light {
+    background: #FAFAFA;
+    position:  relative;
+    top: 21px;
+    border:  1px solid #dddd;
+    border-radius:  10px;
+    padding-left:  25px;
+}
+
+ul.settlist_small li a {
+    font-size:  13px;
+    color: grey;
+    /* border-bottom:  1px dotted grey; */
+}
+
+ul.settlist_small li {
+    border-bottom: 1px dashed #cccccc;
+    padding-bottom:  9px;
+    padding-top:  9px;
+}
+.acctitlee {
+    position:  relative;
+    top: 17px;
+}

@@ -61,12 +61,28 @@ nav.navone {
 <!--=============================== nav 2 ======================-->
 <nav class="navtwo">
   <div class="nav-wrapper navwaptwo">
-      <ul id="nav-mobile" class="hide-on-med-and-down nav2ul">
-          <li><a href="http://freelancerprojectleads.com/crm/AssignUser">Contact</a></li>
-          <li><a href="http://freelancerprojectleads.com/crm/calendar">calender</a></li>
-          <li><a href="http://freelancerprojectleads.com/crm/Home">Home</a></li>
-          <li><a href="http://freelancerprojectleads.com/crm/CreateCompany">Create Company</a></li>
+
+     <ul id="nav-mobile" class="hide-on-med-and-down nav2ul">
+        <li><a href="http://freelancerprojectleads.com/crm/Dashboard" ><img src="http://freelancerprojectleads.com/crm/html/images/dash-icon2.png" class="responsive-img"></a></li>
+         <li><a href="http://freelancerprojectleads.com/crm/Guidelines" >Guidelines</a></li>
+
+          <li><a href="http://freelancerprojectleads.com/crm/Home"> contact</a></li>
+          <li><a href="http://freelancerprojectleads.com/crm/Calendar" >calender</a></li>
+          <li><a href="http://freelancerprojectleads.com/crm/Enrollments">Enrollments</a></li>
+
+           <li><a href="http://freelancerprojectleads.com/crm/Accounting" >Accounting</a></li>
+
+          <li><a href="http://freelancerprojectleads.com/crm/Docs">Docs</a></li>
+          <li><a href="http://freelancerprojectleads.com/crm/UploadFile"  >Files</a></li>
+
+            <li><a href="http://freelancerprojectleads.com/crm/E_marketing" >E-Marketing</a></li>
+
+               <li><a href="http://freelancerprojectleads.com/crm/Report" >Report</a></li>
+
+
+           <li><a href="http://freelancerprojectleads.com/crm/AssignUser" >Admin</a></li>
       </ul>
+    
   </div>
 </nav>
 <style type="text/css">
@@ -82,16 +98,28 @@ nav.navtwo {
 }
 .nav2ul li a {
     background: #323232;
-    margin: 0px 2px;
-    border-radius:  10px;
-        z-index: 1;
+    margin: 0px 1px;
+    border-radius: 5px;
+    z-index: 1;
     position: relative;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    line-height: 35px !important;
+    border-top: 5px solid #323232;
 }
-.nav2ul li a {
-   /* height: 20;*/
-    height: 45px !important;
-   /* margin-top: 8px;*/
-    line-height: 45px;
+.nav2ul li a:hover {
+    background: #2e5890;
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    border-top: 5px solid #2e5890;
+    font-family: Arial, sans-serif;
+}
+.nav2ul li a.active{
+  background-color: rgb(221, 221, 221);
+  color: #2e5890;
+  border-top: 5px solid #213F66;
+  font-weight: bold !important;
 }
 </style>
 <!--=============================== end nav 2 ======================-->   

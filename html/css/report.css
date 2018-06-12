@@ -1,0 +1,33 @@
+.rbox {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 35px;
+    margin-top: 24px;
+    height: 140px !important;
+}
+
+.rtitle {
+    /* font-size:  15px; */
+    text-transform:  capitalize;
+}
+.ricon i {
+    font-size:  33px;
+    color: #213f66;
+}
+.rbox:hover {
+    color:  #fff;
+    background: #213f66;
+    box-shadow: 5px 5px 5px #888282c7;
+}
+.rbox:hover i {
+    color: white;
+}
+.secrch {
+    width: 99%;
+    margin: 0 auto;
+}
+
+.secrch input {
+    height:  40px !important;
+}
+
