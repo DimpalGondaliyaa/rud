@@ -38,7 +38,6 @@ echo timespan($post_date, $now) . ' ago';
 			<div class="max-width">
 			
 				<div class="table-box">
-				<h5>List of Contact Details Inserted by Admin</h5>
 				<table id="example" class="ui celled table responsive nowrap striped highlight" style="width:100%">
 		        <thead>
 		            <tr>
