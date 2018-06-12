@@ -111,6 +111,7 @@ nav.navone {
 
           <li><a href="<?php echo base_url(); ?>Home" class="<?php if($this->uri->segment(1)=='Home'){?> active <?php } ?>">Contact</a></li>
           <li><a href="<?php echo base_url(); ?>Calendar" class="<?php if($this->uri->segment(1)=='Calendar'){?> active <?php } ?>">calender</a></li>
+          <li><a href="<?php echo base_url(); ?>Enrollments" class="<?php if($this->uri->segment(1)=='Enrollments'){?> active <?php } ?>">Enrollments</a></li>
           <li><a href="<?php echo base_url(); ?>Docs" class="<?php if($this->uri->segment(1)=='Docs' || $this->uri->segment(1)=='uplode_pdf') { ?> active <?php } ?>">Docs</a></li>
           <li><a href="<?php echo base_url(); ?>UploadFile" class="<?php if($this->uri->segment(1)=='UploadFile'){?> active <?php } ?>">Files</a></li>
 
@@ -164,6 +165,7 @@ nav.navtwo {
   background-color: rgb(221, 221, 221);
   color: #2e5890;
   border-top: 5px solid #213F66;
+  font-weight: bold !important;
 }
 nav ul a {
   padding: 0 10px;

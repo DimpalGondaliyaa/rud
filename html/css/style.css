@@ -29,6 +29,7 @@ body{
     text-transform: capitalize;
     color:  grey;
     font-size: 16px;
+    letter-spacing: 0;
 }
 img.iconstyle {
     position:  relative;
@@ -430,4 +431,7 @@ div#example_filter {
 table#example1 {
     position: relative;
     top: 20px;
+}
+nav.contactnav img {
+    margin-right: 5px;
 }
