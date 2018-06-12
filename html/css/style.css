@@ -1,4 +1,14 @@
+
 /*global stysheet*/
+body{
+    font-size: var(--base-font, 11px);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    min-height: 95vh;
+    font-weight: 400;
+}
 .cmdtitle {
     position: relative;
     bottom: 18px;
@@ -63,10 +73,19 @@ nav.contactnav {
     background: #213f66;
 }
 nav.contactnav {
-    background: #213f66;
+        background: #213f66;
+    height: auto !important;
+    font-size: 12px;
+    position: relative;
+    overflow: hidden;
+    padding: 15px;
+    border-radius: 5px;
+    line-height: 2rem !important;
+
+/*    background: #213f66;
     height: 43px !important;
     line-height: 39px !important;
-    font-size: 12px;
+    font-size: 12px;*/
 }
 .nav-wrapper.connavwapp ul li a {
     font-size: 11px;
@@ -75,6 +94,7 @@ nav.contactnav {
     font-family: sans-serif;
     padding: 0px 7px;
     text-decoration: underline;
+    border: none;
 }
 /*div#example_length label {
     display: block !important;
@@ -325,11 +345,13 @@ span.badge-box {
 }
 
 .main-box {
-        min-height: 501px;
+    min-height: 501px;
+    height: auto;
     position:  relative;
     padding-top:  65px;
     background: #d5d5d5d1;
     top: -25px;
+    padding-bottom: 25px;
 }
 a.brand-logo img {
     height: 80px;

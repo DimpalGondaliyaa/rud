@@ -24,14 +24,22 @@ echo timespan($post_date, $now) . ' ago';
 	 <nav class="contactnav">
 		    <div class="nav-wrapper connavwapp">
 		      <ul id="nav-mobile" class="hide-on-med-and-down">
-		        <li><a class="valign-wrapper" href="<?php echo base_url(); ?>Add_Contact"> <img src="<?php echo base_url(); ?>html/images/add.png" class="responsive-img">  add contact</a></li>
+		        <li>
+		        	<select>
+		        		<option>--Select--</option>
+		        		<option>-My Contact</option>
+		        	</select>
+		        </li>
+		        <li>
+		        	<a class="valign-wrapper" href="<?php echo base_url(); ?>Add_Contact"> <img src="<?php echo base_url(); ?>html/images/add.png" class="responsive-img" style="margin-right: 5px;">  add contact</a>
+		        </li>
 		    </div>
 		  </nav>
 			<div class="max-width">
 			
 				<div class="table-box">
 				<h5>List of Contact Details Inserted by Admin</h5>
-				<table id="example" class="ui celled table responsive nowrap" style="width:100%">
+				<table id="example" class="ui celled table responsive nowrap striped highlight" style="width:100%">
 		        <thead>
 		            <tr>
 		            	<th>#</th>
@@ -59,7 +67,7 @@ echo timespan($post_date, $now) . ' ago';
 					<td><?php echo $i++; ?></td>
 					<td><?php echo $value['f_name']; ?></td>
 					<td><?php echo $value['l_name'] ?></td>
-					<td><a href="mailto:<?php echo $value['u_email']; ?>"><i class="fas fa-envelope grey-text"><?php echo $value['u_email']; ?></i></a></td>
+					<td><a href="mailto:<?php echo $value['u_email']; ?>"><i class="fas fa-envelope grey-text"></i></a></td>
 					<td><?php echo $value['password']; ?></td>
 					<td><?php if($value['gender']==0){ echo  'Male';} else if($value['gender']==1){ echo 'Female';} else { echo 'Other';}; ?></td>
 					<td><?php echo $value['phone']; ?></td>
@@ -70,7 +78,14 @@ echo timespan($post_date, $now) . ' ago';
 					<td><?php echo $value['city']; ?></td>
 					<td><?php echo $value['zipcode']; ?></td>
 					<td><?php echo $value['state']; ?></td>
-					<td><a data-id="<?php echo $value['c_id']; ?>" class="conedtbtn btn" href="#!"><i class="fas fa-edit"></i></a> | <a href="#!" data-id="<?php echo $value['c_id']; ?>"  class="condltbtn btn"><i class="fas fa-trash"></i></a> </td>
+					<td class="valign-wrapper">
+						<a href="#!"><img src="<?php echo base_url(); ?>html/images/color_swatch.png"></a>
+						<a data-id="<?php echo $value['c_id']; ?>" class="conedtbtn btn" href="#!"><img src="<?php echo base_url(); ?>html/images/vcard.png"></a> 
+						<a href="#!"><img src="<?php echo base_url(); ?>html/images/note_add.png"><a href="#!" data-id="<?php echo $value['c_id']; ?>"  class="condltbtn btn"><i class="fas fa-trash"></i></a> 
+						<a href="#!"><img src="<?php echo base_url(); ?>html/images/calendar_add.png"></a>
+						<a href="#!"><img src="<?php echo base_url(); ?>html/images/page_white_get.png"></a>
+						<a href="#!"><img src="<?php echo base_url();?>html/images/bullet_go.png"></a>
+					</td>
 				</tr>
 				<?php } ?>
 				</tbody>
