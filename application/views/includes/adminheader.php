@@ -60,7 +60,7 @@
         <nav class="navone">
             <div class="nav-wrapper navonewapp">
               <ul id="nav-mobile" class="hide-on-med-and-down navoneul">
-                <li><a href="#">Logged In As: agoodman</a></li>
+                <li><a href="#">Logged In As: <?= $this->session->userdata('email'); ?></a></li>
                 <li><a href="#">Recent Pages</a></li>
                 <li><a href="#">Logout</a></li>
                 <li><a href="#">Change Password</a></li>
@@ -77,25 +77,36 @@ nav.navone {
     line-height: 28px !important;
     overflow: hidden;
 }
+.navone ul{
+  left: 25px;
+  position: relative;
+}
 .navoneul li a {
-    font-size: 12px;
-    font-weight:  bold;
-    text-transform:  capitalize;
-    line-height:  29px;
+    font-size: 11px;
+    text-transform: capitalize;
+    line-height: 25px;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0px 5px;
+    letter-spacing: 0;
+    color: #ffffffdb;
+}
+.navoneul li a:hover {
+    color: #ffffff8a;
+    background: #00000029;
 }
 </style>          
 <!--=============================== end nav 1 ======================-->
 
 <!--=============================== nav 2 ======================-->
 <nav class="navtwo">
-  <a href="#!"><img src="<?php echo base_url(); ?>html/images/l.png"></a>
+  <a href="#!"><img src="<?php echo base_url(); ?>html/images/l.png" style="top: 15px;
+    position: relative;
+    left: 9px;"></a>
   <div class="nav-wrapper navwaptwo">
       <ul id="nav-mobile" class="hide-on-med-and-down nav2ul">
-
-        
-
         <li><a href="<?php echo base_url(); ?>Home" class="<?php if($this->uri->segment(1)=='Home'){?> active <?php } ?>"><img src="<?php echo base_url(); ?>html/images/dash-icon2.png" class="responsive-img"></a></li>
-
          <li><a href="<?php echo base_url(); ?>Guidelines" class="<?php if($this->uri->segment(1)=='Guidelines'){?> active <?php } ?>">Guidelines</a></li>
 
           <li><a href="<?php echo base_url(); ?>Home" class="<?php if($this->uri->segment(1)=='Home'){?> active <?php } ?>">Contact</a></li>
@@ -112,7 +123,7 @@ nav.navtwo {
     background: #fff;
     width: 100% !important;
     height: auto !important;
-    padding: 0px 15px;
+    padding: 0px 10px;
 }
 .nav-wrapper.navwaptwo {
     width: 100% !important;
@@ -149,6 +160,9 @@ nav.navtwo {
   background-color: rgb(221, 221, 221);
   color: #2e5890;
   border-top: 5px solid #213F66;
+}
+nav ul a {
+  padding: 0 10px;
 }
 
 </style>

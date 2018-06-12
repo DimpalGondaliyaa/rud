@@ -21,11 +21,10 @@ echo timespan($post_date, $now) . ' ago';
 
 <div class="main-box">
 	<div class="main-menu">
-
-		 <nav class="contactnav">
+	 <nav class="contactnav">
 		    <div class="nav-wrapper connavwapp">
 		      <ul id="nav-mobile" class="hide-on-med-and-down">
-		        <li><a href="<?php echo base_url(); ?>Add_Contact">add contact</a></li>
+		        <li><a class="valign-wrapper" href="<?php echo base_url(); ?>Add_Contact"> <img src="<?php echo base_url(); ?>html/images/add.png" class="responsive-img">  add contact</a></li>
 		    </div>
 		  </nav>
 			<div class="max-width">

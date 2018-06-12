@@ -12,7 +12,7 @@
 
 		 <nav class="contactnav">
 		    <div class="nav-wrapper connavwapp">
-		      <ul id="nav-mobile" class="hide-on-med-and-down">
+		      <ul id="nav-mobile" class="hide-on-med-and-down" style="position: relative;left: 5px;}">
 		        <li><a href="<?php echo base_url(); ?>Html_document"><img class="iconstyle" src="<?php echo base_url() ?>html/images/add.png">create a new html document</a>create a new pdf document</a></li>
 		        <li><a href="<?php echo base_url(); ?>uplode_pdf"><img class="iconstyle" src="<?php echo base_url() ?>html/images/icon-pdf.png">create a new pdf document</a></li>
 		        <li><a href="#"><img class="iconstyle" src="<?php echo base_url() ?>html/images/page_white_stack.png">Categories</a></li>

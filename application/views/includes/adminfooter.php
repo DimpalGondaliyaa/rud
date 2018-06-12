@@ -15,7 +15,7 @@
 }
 }
 </style>
-<div id="return-to-top" class="scrollTop">
+<!-- <div id="return-to-top" class="scrollTop">
     <span><a href="#" class="go-to-top btn btn-flat"><i class="fa fa-angle-up"></i></a></span>
   </div>
 
@@ -32,7 +32,7 @@
             <a class="grey-text text-lighten-4 right" href="#!"></a>
             </div>
           </div>
-        </footer>
+        </footer> -->
             
 
 
