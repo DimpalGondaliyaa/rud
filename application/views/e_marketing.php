@@ -72,8 +72,41 @@
 		        </thead>
 		        <tbody>
 				
-				<tr role="row" class="odd"><td class="sorting_1">Debt PayPro</td><td>Trigger</td><td>Payment Returned to Client</td><td>Your Payment Has Been Returned</td><td><a href="index.php?module=ecampaign&amp;page=new&amp;action=showEdit&amp;id=94094" class="fa fa-arrow-circle-right fa-lg" style="text-decoration:none" data-id="94094"></a></td></tr><tr role="row" class="even"><td class="sorting_1">Debt PayPro</td><td>Notifications</td><td>E-Sign Declined</td><td>A Client Has Declined an E-Sign Document - {ID} {DOC_TYPE} {DOC_TITLE}</td><td><a href="index.php?module=ecampaign&amp;page=new&amp;action=showEdit&amp;id=94097" class="fa fa-arrow-circle-right fa-lg" style="text-decoration:none" data-id="94097"></a></td></tr><tr role="row" class="odd"><td class="sorting_1">Debt PayPro</td><td>Notifications</td><td>E-Sign Completed</td><td>A Client Has Signed an E-Sign Document - {ID} {DOC_TYPE} {DOC_TITLE}</td><td><a href="index.php?module=ecampaign&amp;page=new&amp;action=showEdit&amp;id=94100" class="fa fa-arrow-circle-right fa-lg" style="text-decoration:none" data-id="94100"></a></td></tr><tr role="row" class="even"><td class="sorting_1">Debt PayPro</td><td>Notifications</td><td>Client Submitted</td><td>Client File Has Been Submitted - {ID}</td><td><a href="index.php?module=ecampaign&amp;page=new&amp;action=showEdit&amp;id=94103" class="fa fa-arrow-circle-right fa-lg" style="text-decoration:none" data-id="94103"></a></td></tr><tr role="row" class="odd"><td class="sorting_1">Debt PayPro</td><td>Notifications</td><td>Client Approved</td><td>A Client File Has Been Approved - {ID}</td><td><a href="index.php?module=ecampaign&amp;page=new&amp;action=showEdit&amp;id=94106" class="fa fa-arrow-circle-right fa-lg" style="text-decoration:none" data-id="94106"></a></td></tr>
-				
+				<tr role="row" class="odd">
+					<td class="sorting_1">Debt PayPro</td>
+					<td>Trigger</td>
+					<td>Payment Returned to Client</td>
+					<td>Your Payment Has Been Returned</td>
+					<td><a href="#!" class="fa fa-arrow-circle-right fa-lg" style="text-decoration:none" data-id="94094"></a></td>
+				</tr>
+				<tr role="row" class="even">
+					<td class="sorting_1">Debt PayPro</td>
+					<td>Notifications</td>
+					<td>E-Sign Declined</td>
+					<td>A Client Has Declined an E-Sign Document </td>
+					<td><a href="#!" class="fa fa-arrow-circle-right fa-lg" style="text-decoration:none" data-id="94097"></a></td>
+				</tr>
+				<tr role="row" class="odd">
+					<td class="sorting_1">Debt PayPro</td>
+					<td>Notifications</td><td>E-Sign Completed</td>
+					<td>A Client Has Signed an E-Sign Document </td>
+					<td><a href="#!" class="fa fa-arrow-circle-right fa-lg" style="text-decoration:none" data-id="94100"></a></td>
+				</tr>
+				<tr role="row" class="even">
+					<td class="sorting_1">Debt PayPro</td>
+					<td>Notifications</td>
+					<td>Client Submitted</td>
+					<td>Client File Has Been Submitted </td>
+					<td><a href="#!" class="fa fa-arrow-circle-right fa-lg" style="text-decoration:none" data-id="94103"></a></td>
+				</tr>
+				<tr role="row" class="odd">
+					<td class="sorting_1">Debt PayPro</td>
+					<td>Notifications</td>
+					<td>Client Approved</td>
+					<td>A Client File Has Been Approved </td>
+					<td><a href="#!" class="fa fa-arrow-circle-right fa-lg" style="text-decoration:none" data-id="94106"></a>
+					</td>
+				</tr>
 				</tbody>
 			</table>
 			</div> 
