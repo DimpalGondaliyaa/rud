@@ -149,4 +149,7 @@ a.filedltbtn.btn:hover, a.filedltbtn.btn:focus {
 .row.conrow{
 	margin-bottom: 25px;
 }
+.main-menu{
+	background: transparent;
+}
 </style>
