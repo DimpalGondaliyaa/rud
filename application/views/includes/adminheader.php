@@ -106,7 +106,7 @@ nav.navone {
     left: 9px;"></a>
   <div class="nav-wrapper navwaptwo">
       <ul id="nav-mobile" class="hide-on-med-and-down nav2ul">
-        <li><a href="<?php echo base_url(); ?>Home" class="<?php if($this->uri->segment(1)=='Home'){?> active <?php } ?>"><img src="<?php echo base_url(); ?>html/images/dash-icon2.png" class="responsive-img"></a></li>
+        <li><a href="<?php echo base_url(); ?>Dashboard" class="<?php if($this->uri->segment(1)=='Dashboard'){?> active <?php } ?>"><img src="<?php echo base_url(); ?>html/images/dash-icon2.png" class="responsive-img"></a></li>
          <li><a href="<?php echo base_url(); ?>Guidelines" class="<?php if($this->uri->segment(1)=='Guidelines'){?> active <?php } ?>">Guidelines</a></li>
 
           <li><a href="<?php echo base_url(); ?>Home" class="<?php if($this->uri->segment(1)=='Home'){?> active <?php } ?>">Contact</a></li>
