@@ -1,0 +1,18 @@
+.testtitle {
+    font-size: 16px;
+    text-transform:  capitalize;
+    font-weight:  bold;
+    margin-top:  16px;
+    color: #213f66;
+}
+input {
+    height: 25px !important;
+    position:  relative;
+    top: 11px;
+}
+label {
+    color: black;
+    font-weight: bold;
+    margin-top: 6px;
+    font-size: 15px;
+}
