@@ -7,6 +7,14 @@
     color: grey !important;
     line-height: 0;
 }
+.main-menu
+{
+    background-color: #fff;
+    height: 100vh;
+}
+.checklab {
+    font-size: 12px !important;
+}
 .cmdtitle a {
     text-transform: capitalize;
     color:  grey;
@@ -22,6 +30,28 @@ nav.top-header {
     line-height: 40px !important;
     background: #746382;
     box-shadow: none;
+}
+input {
+    height: 25px !important;
+    position:  relative;
+    top: 11px;
+}
+input.select-dropdown.dropdown-trigger {
+    font-size: 12px;
+}
+label {
+    color: black !important;
+    font-weight: bold;
+    margin-top: 6px;
+    font-size: 15px;
+}
+label.active {
+    color:  black;
+    text-transform:  capitalize;
+    padding-bottom:  !important;
+}
+option {
+    font-size:  10px !important;
 }
 
 button.mdl-button.mdl-button--raised.mdl-button--colored{

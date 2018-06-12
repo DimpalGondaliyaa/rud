@@ -10,9 +10,25 @@ input {
     position:  relative;
     top: 11px;
 }
+
+
+option {
+    font-size:  10px;
+}
+
+input#first_name {
+    height:  20px !important;
+    width:  50% !important;
+    border: 1px solid #323232ad !important;
+    margin-top:  8px;
+}
+input.select-dropdown.dropdown-trigger {
+    display:  none;
+}
 label {
-    color: black;
-    font-weight: bold;
-    margin-top: 6px;
-    font-size: 15px;
+    color: black !important;
+}
+
+.input-field.boxxx {
+    margin-top:  26px;
 }

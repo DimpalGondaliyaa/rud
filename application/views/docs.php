@@ -15,8 +15,8 @@
 		      <ul id="nav-mobile" class="hide-on-med-and-down" style="position: relative;left: 5px;}">
 		        <li><a href="<?php echo base_url(); ?>Html_document"><img class="iconstyle" src="<?php echo base_url() ?>html/images/add.png">create a new html document</a>create a new pdf document</a></li>
 		        <li><a href="<?php echo base_url(); ?>uplode_pdf"><img class="iconstyle" src="<?php echo base_url() ?>html/images/icon-pdf.png">create a new pdf document</a></li>
-		        <li><a href="#"><img class="iconstyle" src="<?php echo base_url() ?>html/images/page_white_stack.png">Categories</a></li>
-		         <li><a href="#"><img class="iconstyle" src="<?php echo base_url() ?>html/images/page_white_edit.png">document type</a></li>
+		        <li><a href="<?php echo base_url(); ?>categories"><img class="iconstyle" src="<?php echo base_url() ?>html/images/page_white_stack.png">Categories</a></li>
+		         <li><a href="<?php echo base_url(); ?>Document_type"><img class="iconstyle" src="<?php echo base_url() ?>html/images/page_white_edit.png">document type</a></li>
 		      </ul>
 		    </div>
 		  </nav>

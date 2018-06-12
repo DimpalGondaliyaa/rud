@@ -31,4 +31,9 @@ CKEDITOR.replace( ckEditorID,
           }
         ]
     })
+
+ $(document).ready(function(){
+    $('select').formSelect();
+  });
+ 
 });
