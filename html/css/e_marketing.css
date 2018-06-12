@@ -1,0 +1,40 @@
+.etitle {
+    font-size: 14px;
+    font-weight:  bold;
+    margin:  14px;
+    color: #213f66;
+    text-transform:  capitalize;
+}
+
+.eborder {
+    border:  1px solid #ddd;
+    width:  75%;
+    height:  16px;
+}
+
+.condcont {
+    border:  1px solid #ddd;
+    width:  88%;
+    padding-left:  14px;
+}
+
+p.notation {
+    font-size:  12px;
+}
+.econtent {
+    border:  1px solid #ddd;
+   
+    font-size:  10px;
+    padding:  11px;
+}
+td {
+    font-size:  12px;
+    padding: 14px !important;
+}
+
+th {
+    font-size:  13px;
+}
+td.sorting_1 {
+    padding: 15px !important;
+}

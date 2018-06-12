@@ -427,3 +427,7 @@ div#example_filter {
     width: max-content;
     top: 0;
 }
+table#example1 {
+    position: relative;
+    top: 20px;
+}
