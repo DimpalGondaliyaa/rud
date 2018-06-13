@@ -32,17 +32,18 @@ class User_model extends CI_Model{
         $d=$q->result_array();
 
         foreach ($d as $key => $value) {
-          $e=$value['u_email'];
+          $ee=$value['u_email'];
         }
 
         $this->db->select('*');
         $this->db->from('contactdetails');
-        $this->db->where('contactdetails.u_email',$e);
+        /*$this->db->where('contactdetails.u_email',$ee);*/
         $q=$this->db->join('assigned_user', 'assigned_user.user_email = contactdetails.u_email','left');
 
         $query = $this->db->get();
         $data=$query->result_array();
         return $data;
+
     
        /* $e=$this->session->userdata("email");
         $q=$this->db->query("SELECT * FROM contactdetails ORDER BY c_id DESC");

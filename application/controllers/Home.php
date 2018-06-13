@@ -95,6 +95,24 @@ class Home extends CI_Controller {
 	}
 
 
+	/*Change Status*/
+
+	public function fetchStatus($id)
+	{
+		$t = $this->db->query("SELECT * FROM contactdetails WHERE c_id='".$id."'");
+		$y = $t->row_array();
+		$this->load->view("editcontactdataStatus",$y);
+	}
+
+	public function edtcontactStatus(){
+		$id = $_POST['c_id'];
+		$data=array('stage'=>$_POST['stage'],'status'=>$_POST['status']);
+		$this->db->where("c_id",$id);
+		$this->db->update("contactdetails",$data);
+	
+	}
+
+
 }
 
 ?>

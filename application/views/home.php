@@ -72,7 +72,7 @@ echo timespan($post_date, $now) . ' ago';
 					<td><?php echo $value['createdOn']; ?></td>
 					<td><?php 
 						$asn=$value['asgn_email']; 
-						$aa=$this->db->query("SELECT * FROM contactdetails WHERE u_email='".$asn."'");
+						$aa=$this->db->query("SELECT * FROM users WHERE u_email='".$asn."'"); //contactdetails
 						$a=$aa->row_array();
 						echo $a['f_name'].' '.$a['l_name'];
 						?>
@@ -94,7 +94,7 @@ echo timespan($post_date, $now) . ' ago';
 					<td><?php  //echo $value['zipcode']; ?></td> -->
 					
 					<td class="valign-wrapper">
-						<a href="#!"><img src="<?php echo base_url(); ?>html/images/color_swatch.png"></a>
+						<a data-id="<?php echo $value['c_id']; ?>" class="changeStatus" href="#!"><img src="<?php echo base_url(); ?>html/images/color_swatch.png"></a>
 						<a data-id="<?php echo $value['c_id']; ?>" class="conedtbtn btn" href="#!"><img src="<?php echo base_url(); ?>html/images/vcard.png"></a> 
 						<!-- <a href="#!"><img src="<?php //echo base_url(); ?>html/images/note_add.png"><a href="#!" data-id="<?php // echo $value['c_id']; ?>"  class="condltbtn btn"><i class="fas fa-trash"></i></a>  -->
 						<a href="#!"><img src="<?php echo base_url(); ?>html/images/calendar_add.png"> </a>&nbsp;
@@ -117,5 +117,16 @@ echo timespan($post_date, $now) . ' ago';
 	      <a href="#!" class="modal-close waves-effect waves-green btn-flat editcontact">Agree</a>
 	    </div>
 	  </div>
+
+	  <!-- Modal Structure -->
+	  <div id="statusChanged" class="modal">
+	    <div class="modal-content">
+	    	
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-close valign-wrapper waves-effect waves-green btn-flat editStatus"><img src="<?php echo base_url(); ?>html/images/accept.png"> Update Status</a>
+	    </div>
+	  </div>
+
 	</div>
 </div>

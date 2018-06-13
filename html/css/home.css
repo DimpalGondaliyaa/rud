@@ -136,3 +136,39 @@ span.badges {
     background-color: #777;
     border-radius: 10px;
 }
+th {
+    padding: 25px 10px !important;
+    position: relative;
+    background: #F5F7F9;
+    border-radius: 0px;
+}
+
+
+.editStatus{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    text-decoration: none;
+    background-color: #eaeaea;
+    border: 1px solid #cccccc;
+    text-decoration: underline;
+    padding: 0px 15px;
+    background-position: 6px 6px;
+    width: 150px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto !important;
+    margin-top: 0 !important;
+    text-align: center;
+}
+
+.modal {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 25px;
+}
+.modal .modal-content {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px;
+}
