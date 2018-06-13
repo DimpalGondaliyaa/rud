@@ -44,6 +44,7 @@ class Add_Contact extends CI_Controller {
 		$time = time();
 		$better_date= mdate($datestring, $time);
 			$c_date=date("Y-m-d H:i:s");
+			$created_date=date("d-m-Y H:i: a");
 
 
 		$current_Date=date('y-m-d',time());
@@ -60,7 +61,8 @@ class Add_Contact extends CI_Controller {
 		'address' => $_POST['address'] ,
 		'city' => $_POST['city'] ,
 		'zipcode' => $_POST['zipcode'] ,
-		'state' => $_POST['state'] ,
+		'state' => $_POST['state'],
+		'createdOn'=>$created_date,
 		'timeofresidency' => $c_date);
 
 		$this->db->insert("contactdetails",$data);

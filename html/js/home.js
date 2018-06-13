@@ -1,6 +1,6 @@
 $(function(){
 
-	$('#example').DataTable();
+	$('#example').DataTable({ "pageLength": 100});
 	var baseurl = $("#base_url").val();
 
 	 $('.modal').modal();

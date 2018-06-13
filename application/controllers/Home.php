@@ -12,6 +12,7 @@ class Home extends CI_Controller {
 
 		$this->load->model('User_model');
 		$data=$this->User_model->getDetails();
+
 		$headerData = array(
 			"pageTitle" => "Home",
 			"stylesheet" => array("home.css")
