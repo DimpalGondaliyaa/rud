@@ -116,7 +116,7 @@ nav.navone {
            <li><a href="<?php echo base_url(); ?>Accounting" class="<?php if($this->uri->segment(1)=='Accounting'){?> active <?php } ?>">Accounting</a></li>
 
           <li><a href="<?php echo base_url(); ?>Docs" class="<?php if($this->uri->segment(1)=='Docs' || $this->uri->segment(1)=='uplode_pdf') { ?> active <?php } ?>">Docs</a></li>
-          <li><a href="<?php echo base_url(); ?>UploadFile" class="<?php if($this->uri->segment(1)=='UploadFile'){?> active <?php } ?>">Files</a></li>
+          <li><a href="<?php echo base_url(); ?>Files" class="<?php if($this->uri->segment(1)=='Files'){?> active <?php } ?>">Files</a></li>
 
             <li><a href="<?php echo base_url(); ?>E_marketing" class="<?php if($this->uri->segment(1)=='E_marketing'){?> active <?php } ?>">E-Marketing</a></li>
 

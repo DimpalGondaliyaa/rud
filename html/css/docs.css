@@ -12,12 +12,7 @@ th
 {
 	text-transform: capitalize;
 }
-table#example1 {
-	border: 1px solid #dddddd;
-    width: 98% !important;
-    margin: 0 auto;
-        margin-bottom: 40px;
-}
+
 tr:nth-child(even) {
     background-color: #dddddd 
     !important;

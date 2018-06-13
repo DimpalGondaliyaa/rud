@@ -1,0 +1,93 @@
+ul.enull {
+    display: inline-flex;
+}
+
+ul.enull li {
+    border:  1px solid black;
+    padding: 8px;
+}
+ul.enull li a {
+    font-family:  "Open Sans","Helvetica",Arial,sans-serif;
+    color:  black;
+    font-size: 11px;
+    text-transform:  capitalize;
+        letter-spacing: 0px;
+    font-weight: bold;
+}
+
+ul.enull {
+    float:  right;
+}
+ul.enull li:hover {
+    background: #213f66;
+    color: #fff !important;
+}
+ul.enull li a:hover {
+   
+    color: #fff !important;
+}
+select {
+    position:  relative;
+    top: -29px;
+    text-align:  center;
+}
+.fbox {
+    background: #FAFAFA;
+    height: 67px;
+    position:  relative;
+    top: 56px;
+    border: 1px solid #ddd;
+    width: 99%;
+    margin: 0 auto;
+    border-radius:  5px;
+}
+
+.entitle {
+    padding: 20px 0px;
+    color: #213f66;
+    font-family:  "Open Sans","Helvetica",Arial,sans-serif;
+    font-weight:  bold;
+}
+.input-field.col.s12.m4.sbox {
+    position:  relative;
+    /* top: 17px; */
+    bottom:  90px;
+}
+select {
+    position: relative;
+    top: 38px;
+    text-align: center;
+    height: 27px;
+    font-size: 8px;
+}
+label {
+    text-transform:  capitalize;
+    font-size:  12px !important;
+    font-weight:  bold;
+}
+.toolbox {
+    position:  relative;
+    top: 40px;
+    margin:  37px;
+    float:  right;
+    color:  black;
+}
+ul.tolul li a {
+    color: #000000d4;
+    font-size:  12px;
+    letter-spacing:  0px;
+}
+
+ul.tolul li {
+    display:  -webkit-inline-box;
+    padding-right:  10px;
+}
+
+li.sec input {
+    position:  relative;
+    background: red;
+    position:  relative;
+    top: 2px;
+    height: 19px !important;
+    background: #ffffffe6 !important;
+}

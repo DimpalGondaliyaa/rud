@@ -1,6 +1,83 @@
-
-
 <div class="main-box">
+	<div class="cmdtitle">
+		<a href="<?php echo base_url(); ?>UploadFile">File & media library</a>><a href="<?php echo base_url(); ?>UploadFile">uplode new file</a>
+	</div>
+	<div class="main-menu">
+
+		 <form class="col s12 m12" id="filefrm">
+		      <div class="row">
+
+		      	  <div class="input-field col s6 m2">
+				    <select name="file_type">
+				      <option value="" disabled selected>Choose your category</option>
+				      <option value="document">document</option>
+				      <option value="image">image</option>
+				      <option value="misc">misc</option>
+				      <option value="video">video</option>
+				    </select>
+				    <label>ftp server</label>
+			    </div>
+
+			     <div class="input-field col s6 m2">
+				    <select name="file_type">
+				      <option value="" disabled selected>Choose your category</option>
+				      <option value="document">document</option>
+				      <option value="image">image</option>
+				      <option value="misc">misc</option>
+				      <option value="video">video</option>
+				    </select>
+				     <label>file type</label>
+			    </div>
+
+		        <div class="input-field col s6 m2">
+		        	<input type="file" name="file">
+		        	   <label class="flab">browse for the file </label> 
+		         <!--  <input placeholder="file" name="file" type="file" class="validate" style="display: none;" id="btnFile">
+		           <button class="btn-file" onclick="$('#btnFile').click();">Select File top Upload </button>
+		            <label>browse for the file </label> -->
+		        </div>
+
+		         <div class="input-field col s6 m2">
+		          <input placeholder="file name" name="file_name" type="text" class="validate">
+		           <label>name of file </label>
+		        </div>
+		        <div class="input-field col s6 m2">
+		        	<a class="waves-effect waves-light btn addfiledata">add another</a>
+		    	</div>
+		       </div>
+		   </form>
+
+	</div>
+</div>
+
+
+<style type="text/css">
+	select {
+    display: none !important;
+}
+label.flab {
+    position:  relative;
+    top: -37px;
+    font-size:  12px;
+    text-transform:  capitalize;
+}
+a.waves-effect.waves-light.btn.addfiledata {
+    background: #dddddd59;
+    color:  grey;
+    font-size:  12px;
+    height:  30px;
+    line-height:  30px;
+    font-weight:  bold;
+    width:  99px;
+    box-shadow:  none;
+    border: 1px solid #ddd;
+}
+</style>
+
+<!-- <div class="main-box">
+	<div class="cmdtitle">
+		<a href="<?php echo base_url(); ?>UploadFile">File & media library</a>><a href="<?php echo base_url(); ?>UploadFile">File List</a>
+	</div>
 	<div class="main-menu">
 
 		 <div class="row conrow">
@@ -74,7 +151,7 @@
 			</div> 
 		</div>
 
-	  <!-- Modal Structure -->
+	 
 	  <div id="fileedtmodel" class="modal">
 	    <div class="modal-content">
 	    	
@@ -94,15 +171,7 @@ select {
 	{
 		text-transform: capitalize;
 	}
-	.main-box {
-    position: relative;
-    min-height: 250px;
-    display: block;
-    overflow: hidden;
-    /*max-width: 1280px;*/
-    padding: 15px;
-    margin: 0 auto;
-}
+	
 .row.conrow
 {
 	overflow:none;
@@ -152,4 +221,13 @@ a.filedltbtn.btn:hover, a.filedltbtn.btn:focus {
 .main-menu{
 	background: transparent;
 }
-</style>
+.cmdtitle {
+    position: relative;
+    bottom: 18px;
+    width: 97% !important;
+    margin: 0 auto;
+    color: grey !important;
+    line-height: 0;
+   
+}
+</style> -->

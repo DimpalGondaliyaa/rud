@@ -14,7 +14,7 @@ class Enrollments extends CI_Controller {
 /*		$data=$this->User_model->getDetails();
 */		$headerData = array(
 			"pageTitle" => "Enrollments",
-			"stylesheet" => array()
+			"stylesheet" => array("enrollments.css")
 		);
 		$footerData = array(
 			"jsFiles" => array("home.js")
