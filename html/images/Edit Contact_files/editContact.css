@@ -1,0 +1,118 @@
+.action-box {
+    position: relative;
+    padding: 10px;
+}
+
+.action-box ul li{
+    position: relative;
+    display: inline-block;
+}
+.action-box ul li a{
+	font-family: Arial,sans-serif;
+    transition: 0.2s ease all;
+    color: #666666 !important;
+    padding: 3px;
+    font-size: 16px;
+}
+.leftSide-container .col.m3 {
+    background: #EAEAEA;
+    height: 100vh;
+    padding: 0;
+}
+.left-top {
+    padding: 15px;
+}
+.btn-savensty {
+    padding: 3px 20px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: "Open Sans","Helvetica",Arial,sans-serif;
+    color: white;
+    text-transform: capitalize;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    margin: 0;
+    opacity: 0.85;
+    height: auto;
+    font-weight: 100 !important;
+    letter-spacing: 0;
+}
+.btn-save{
+    padding: 3px 20px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: "Open Sans","Helvetica",Arial,sans-serif;
+    color: white;
+    text-transform: capitalize;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    margin: 0;
+    opacity: 0.85;
+    height: auto;
+    font-weight: 100 !important;
+    letter-spacing: 0;
+}
+.bottom-box ul li {
+    font-size: 12px;
+    text-decoration: none;
+    width: 100%;
+    padding: 5px;
+    display: block;
+    border-bottom: 1px solid #aaaaaa70;
+}
+.bottom-box ul li:hover {
+	background: #ffffff50;	
+}
+.bottom-box ul li:hover a{
+	color: #213f66 !important;	
+}
+.bottom-box ul li.active{
+	background: #213f66 !important;	
+}
+.bottom-box ul li.active a{
+	color: #fff !important;
+}
+.bottom-box ul li a{
+    font-family: Arial,sans-serif;
+    font-size: 12px;
+    color: #848484;
+    text-transform: capitalize;
+}
+.tb{
+	display: none;
+}
+.btn-box {
+    padding: 15px;
+    margin-top: 25px;
+}
+
+
+div#contact-details {
+    position: relative;
+    top: 0;
+    display: block;
+    overflow: hidden;
+}
+.statsbar ul li {
+    display: inline;
+    position: relative;
+    overflow: hidden;
+}
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: absolute;
+    opacity: 1;
+    pointer-events: auto;
+    top: 10px;
+    margin-left: 5px;
+    overflow: hidden;
+    width: 15px !important;
+}
+ul.tBox p {
+    line-height: 0;
+}
+ul.tBox{
+	overflow: hidden;
+}
