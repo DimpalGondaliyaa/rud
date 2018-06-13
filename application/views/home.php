@@ -38,23 +38,28 @@ echo timespan($post_date, $now) . ' ago';
 			<div class="max-width">
 			
 				<div class="table-box">
+					<h5>My Contacts <span class="badges"><?php echo sizeof($data); ?></span></h5>
 				<table id="example" class="ui celled table responsive nowrap striped highlight" style="width:100%">
 		        <thead>
 		            <tr>
 		            	<th>#</th>
-		            	<th>First Name</th>
-		            	<th>Last Name</th>
+		            	<th>Created</th>
+		            	<th>Assigned To</th>
+		            	<th>Full Name</th>
+		            	<th>HomePhone</th>
 		            	<th>Email</th>
-		            	<th>Password</th>
-		            	<th>Gender</th>
-		            	<th>Phone</th>
+		            	<th>State</th>
+		            	<th>Stage</th>
+		            	<th>Status</th>
+		            	<th>Last Call Activity</th>
+		            	<th>Time In Status </th>
+		            	<!-- <th>Phone</th>
 		            	<th>Mobile</th>
 		            	<th>Income</th>
 		            	<th>DOB</th>
 		            	<th>Address</th>
 		            	<th>City</th>
-		            	<th>Zipcode</th>
-		            	<th>State</th>
+		            	<th>Zipcode</th> -->
 		            	<th>Action</th>
 		            </tr>
 		        </thead>
@@ -64,25 +69,36 @@ echo timespan($post_date, $now) . ' ago';
 				foreach ($data as $key => $value) { ?>
 				<tr>
 					<td><?php echo $i++; ?></td>
-					<td><?php echo $value['f_name']; ?></td>
-					<td><?php echo $value['l_name'] ?></td>
-					<td><a href="mailto:<?php echo $value['u_email']; ?>"><i class="fas fa-envelope grey-text"></i></a></td>
-					<td><?php echo $value['password']; ?></td>
-					<td><?php if($value['gender']==0){ echo  'Male';} else if($value['gender']==1){ echo 'Female';} else { echo 'Other';}; ?></td>
+					<td><?php echo $value['createdOn']; ?></td>
+					<td><?php 
+						$asn=$value['asgn_email']; 
+						$aa=$this->db->query("SELECT * FROM users WHERE u_email='".$asn."'"); //contactdetails
+						$a=$aa->row_array();
+						echo $a['f_name'].' '.$a['l_name'];
+						?>
+					</td>
+					<td><?php echo $value['f_name']; ?> <?php echo $value['l_name'] ?></td>
 					<td><?php echo $value['phone']; ?></td>
-					<td><?php echo $value['mobile']; ?></td>
-					<td><?php echo $value['income']; ?></td>
-					<td><?php echo $value['dob']; ?></td>
-					<td><?php echo $value['address']; ?></td>
-					<td><?php echo $value['city']; ?></td>
-					<td><?php echo $value['zipcode']; ?></td>
+					<td><a href="mailto:<?php echo $value['u_email']; ?>"><i class="fas fa-envelope grey-text"></i></a></td>
 					<td><?php echo $value['state']; ?></td>
+					<td><?php echo $value['stage']; ?></td>
+					<td><?php echo $value['status'] ?></td>
+					<td><?php if($value['last_call_activity']==''){ echo "N/A";} ?></td>
+					<td>9 days</td>
+				<!--<td><?php  //echo $value['phone']; ?></td>
+					<td><?php  //echo $value['mobile']; ?></td>
+					<td><?php  //echo $value['income']; ?></td>
+					<td><?php  //echo $value['dob']; ?></td>
+					<td><?php  //echo $value['address']; ?></td>
+					<td><?php  //echo $value['city']; ?></td>
+					<td><?php  //echo $value['zipcode']; ?></td> -->
+					
 					<td class="valign-wrapper">
-						<a href="#!"><img src="<?php echo base_url(); ?>html/images/color_swatch.png"></a>
+						<a data-id="<?php echo $value['c_id']; ?>" class="changeStatus" href="#!"><img src="<?php echo base_url(); ?>html/images/color_swatch.png"></a>
 						<a data-id="<?php echo $value['c_id']; ?>" class="conedtbtn btn" href="#!"><img src="<?php echo base_url(); ?>html/images/vcard.png"></a> 
-						<a href="#!"><img src="<?php echo base_url(); ?>html/images/note_add.png"><a href="#!" data-id="<?php echo $value['c_id']; ?>"  class="condltbtn btn"><i class="fas fa-trash"></i></a> 
-						<a href="#!"><img src="<?php echo base_url(); ?>html/images/calendar_add.png"></a>
-						<a href="#!"><img src="<?php echo base_url(); ?>html/images/page_white_get.png"></a>
+						<!-- <a href="#!"><img src="<?php //echo base_url(); ?>html/images/note_add.png"><a href="#!" data-id="<?php // echo $value['c_id']; ?>"  class="condltbtn btn"><i class="fas fa-trash"></i></a>  -->
+						<a href="#!"><img src="<?php echo base_url(); ?>html/images/calendar_add.png"> </a>&nbsp;
+						<a href="#!"><img src="<?php echo base_url(); ?>html/images/page_white_get.png"> </a>&nbsp;
 						<a href="#!"><img src="<?php echo base_url();?>html/images/bullet_go.png"></a>
 					</td>
 				</tr>
@@ -101,5 +117,16 @@ echo timespan($post_date, $now) . ' ago';
 	      <a href="#!" class="modal-close waves-effect waves-green btn-flat editcontact">Agree</a>
 	    </div>
 	  </div>
+
+	  <!-- Modal Structure -->
+	  <div id="statusChanged" class="modal">
+	    <div class="modal-content">
+	    	
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-close valign-wrapper waves-effect waves-green btn-flat editStatus"><img src="<?php echo base_url(); ?>html/images/accept.png"> Update Status</a>
+	    </div>
+	  </div>
+
 	</div>
 </div>

@@ -1,6 +1,6 @@
 $(function(){
 
-	$('#example').DataTable();
+	$('#example').DataTable({ "pageLength": 100});
 	var baseurl = $("#base_url").val();
 
 	 $('.modal').modal();
@@ -70,5 +70,44 @@ $(function(){
 			  }
 			});
     }); 
+
+
+
+	/*Change Status*/
+
+	
+
+	$("#example").on("click",".changeStatus", function()
+	{
+		$(".modal").modal();
+		$("#statusChanged").modal("open");
+		 $("#statusChanged .modal-content").html("");
+		  var id = $(this).data("id");
+		$.post(baseurl+"Home/fetchStatus/"+id,function(id){
+	    	 $("#statusChanged .modal-content").html(id);
+
+	    }); 
+	});
+
+
+	$(".editStatus").on("click", function()
+	{
+		var edtcontactfrm = new FormData($("#edtStatusfrm")[0]); 
+		$.ajax({
+			url : baseurl+"Home/edtcontactStatus",
+			type :"POST",
+			data :edtcontactfrm,	
+			contentType:false,
+			processData:false,
+			success:function(res)
+			{
+				swal("Good job!", "Stage/Status has been Updated Successfully!", "success")
+				$('.swal-button--confirm').on('click',function(){
+					window.location.reload();
+				});
+			}
+		 });
+    });
+
 });
 	

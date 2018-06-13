@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2018 at 08:04 AM
+-- Generation Time: Jun 13, 2018 at 11:54 AM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -60,14 +60,8 @@ CREATE TABLE `assigned_user` (
 --
 
 INSERT INTO `assigned_user` (`asgn_id`, `user_email`, `asgn_email`, `assignedOn`, `status`) VALUES
-(2, 'test@me.com', 'Test@me.com', '2018-05-23 15:16:40', 0),
-(4, 'test@me.com', 's@me.com', '2018-05-23 19:00:12', 0),
-(5, 'test1@me.com', 'user@me.com', '2018-05-23 19:01:26', 0),
-(6, 'test@me.com', 'uesr@test.com', '2018-05-23 19:01:44', 0),
-(7, 'test@me.com', 'user@me.com', '2018-05-23 19:02:05', 0),
-(8, 'fgh', 's@me.com', '2018-05-24 15:15:48', 0),
-(9, 'test13@me.com', 's@me.com', '2018-05-24 15:16:01', 0),
-(10, 'test1@me.com', 'Test@me.com', '2018-05-24 15:16:08', 0);
+(1, 'ag@test.com', 's@me.com', '2018-06-13 14:54:27', 0),
+(2, 'test@me.com', 'uesr@test.com', '2018-06-13 14:55:33', 0);
 
 -- --------------------------------------------------------
 
@@ -87,9 +81,9 @@ CREATE TABLE `companies` (
 --
 
 INSERT INTO `companies` (`c_id`, `c_name`, `c_status`, `createdOn`) VALUES
-(2, 'Hariskyline', 'active', '2018-06-08 11:50:24'),
+(2, 'company Test', 'active', '2018-06-08 11:50:24'),
 (3, 'Company Name', 'active', '2018-06-08 11:53:51'),
-(4, 'hari Skyline', 'active', '2018-06-08 11:26:00');
+(4, 'compa', 'active', '2018-06-08 11:26:00');
 
 -- --------------------------------------------------------
 
@@ -102,6 +96,7 @@ CREATE TABLE `contactdetails` (
   `f_name` varchar(255) NOT NULL,
   `l_name` varchar(255) NOT NULL,
   `u_email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `gender` int(1) NOT NULL,
   `phone` bigint(20) NOT NULL,
   `mobile` bigint(15) NOT NULL,
@@ -111,31 +106,20 @@ CREATE TABLE `contactdetails` (
   `city` varchar(255) NOT NULL,
   `zipcode` bigint(10) NOT NULL,
   `state` varchar(255) NOT NULL,
+  `stage` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL,
+  `createdOn` varchar(255) NOT NULL,
   `timeofresidency` datetime NOT NULL,
-  `password` varchar(255) NOT NULL
+  `last_call_activity` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `contactdetails`
 --
 
-INSERT INTO `contactdetails` (`c_id`, `f_name`, `l_name`, `u_email`, `gender`, `phone`, `mobile`, `income`, `dob`, `address`, `city`, `zipcode`, `state`, `timeofresidency`, `password`) VALUES
-(4, 'dimpal011', 'gondaliya', 'test@me.com', 0, 987987676878, 787878786876, 8000, 'May 30, 2018', 'addresss', '', 777766, 's', '2018-06-07 18:47:52', 'ggfgggg'),
-(5, 'dimpal', 'gondaliya', 'test1@me.com', 0, 987987676878, 787878786876, 8000, '0000-00-00', 'addresss', 'cccccc', 777766, 'sssssss', '2018-05-14 10:39:40', ''),
-(6, 'dimpal', 'gondaliya', 'tes2t@me.com', 0, 987987676878, 787878786876, 8000, '0000-00-00', 'addresss', 'cccccc', 777766, 'sssssss', '2018-05-14 10:39:40', ''),
-(7, 'dimpal', 'gondaliya', 'test3@me.com', 0, 987987676878, 787878786876, 8000, '0000-00-00', 'addresss', 'cccccc', 777766, 'sssssss', '2018-05-14 10:39:40', ''),
-(8, 'dimpal', 'gondaliya', 'test4@me.com', 0, 987987676878, 787878786876, 8000, '0000-00-00', 'addresss', 'cccccc', 777766, 'sssssss', '2018-05-14 10:39:40', ''),
-(9, 'dimpal', 'gondaliya', 'test5@me.com', 0, 987987676878, 787878786876, 8000, '0000-00-00', 'addresss', 'cccccc', 777766, 'sssssss', '2018-05-14 10:39:40', ''),
-(10, 'dimpal', 'gondaliya', 'test6@me.com', 0, 987987676878, 787878786876, 8000, '0000-00-00', 'addresss', 'cccccc', 777766, 'sssssss', '2018-05-14 10:39:40', ''),
-(11, 'dimpal', 'gondaliya', 'test7@me.com', 0, 987987676878, 787878786876, 8000, '0000-00-00', 'addresss', 'cccccc', 777766, 'sssssss', '2018-05-14 10:39:40', ''),
-(12, 'dimpal', 'gondaliya', 'test8@me.com', 0, 987987676878, 787878786876, 8000, '0000-00-00', 'addresss', 'cccccc', 777766, 'sssssss', '2018-05-14 10:39:40', ''),
-(13, 'dimpal', 'gondaliya', 'test9@me.com', 0, 987987676878, 787878786876, 8000, '0000-00-00', 'addresss', 'cc', 777766, 'sssssss', '2018-05-24 10:31:54', ''),
-(14, 'dimpal', 'gondaliya', 'test10@me.com', 0, 987987676878, 787878786876, 8000, '0000-00-00', 'addresss', 'cc', 777766, 'sssssss', '2018-05-24 10:31:35', ''),
-(15, 'dimpal', 'gondaliya', 'test11@me.com', 0, 987987676878, 787878786876, 8000, '0000-00-00', 'addresss', 'cccccc', 777766, 'sssssss', '2018-05-14 10:39:40', ''),
-(16, 'dimpal', 'gondaliya', 'test12@me.com', 0, 987987676878, 787878786876, 8000, '0000-00-00', 'addresss', 'cccccc', 777766, 'sssssss', '2018-05-14 10:39:40', ''),
-(17, 'dimpal', 'gondaliya', 'test13@me.com', 0, 987987676878, 787878786876, 8000, '0000-00-00', 'addresss', 'cccccc', 777766, 'sssssss', '2018-05-14 10:39:40', ''),
-(18, 'gh', 'fgh', 'fgh', 1, 0, 0, 0, 'May 30, 2018', 'fgh', 'fgh', 0, 'fgh', '2018-05-22 10:54:52', ''),
-(19, 'asd', 'asd', 'sda', 0, 0, 1541651, 465165, 'as', 'as', 'asd', 0, 'asd', '2018-05-24 18:32:45', '');
+INSERT INTO `contactdetails` (`c_id`, `f_name`, `l_name`, `u_email`, `password`, `gender`, `phone`, `mobile`, `income`, `dob`, `address`, `city`, `zipcode`, `state`, `stage`, `status`, `createdOn`, `timeofresidency`, `last_call_activity`) VALUES
+(1, 'John', 'doe', 'test@me.com', '', 0, 9999999999, 7979797979, 5000, 'Jun 13, 1995', 'New Tower, City palace', 'Ahmedabad', 98454964, 'Gujarat', 'Lead', 'New Lead', '13-06-2018 10:43:am', '2018-06-13 10:43:17', ''),
+(2, 'Alexander ', 'Goodman', 'ag@test.com', '', 0, 979797979, 8564985897, 7000, 'Jan 11, 1998', 'Golden Tower, Nr. Grand hotel', 'Mumbai', 684645, 'mp', 'Lead', 'Follow Up', '13-06-2018 10:45:am', '2018-06-13 10:45:44', '');
 
 -- --------------------------------------------------------
 
@@ -192,20 +176,7 @@ INSERT INTO `events` (`id`, `title`, `descp`, `date`, `created`, `modified`, `st
 (7, 'sdsdd', '', '2018-05-22', '2018-05-14 10:42:34', '2018-05-14 10:42:34', 1),
 (8, 'xzxzxz', '', '2018-04-10', '2018-05-21 09:10:16', '2018-05-21 09:10:16', 1),
 (9, 'event on', '', '2018-05-23', '2018-05-22 07:17:21', '2018-05-22 07:17:21', 1),
-(10, 'yytytyy', '', '2018-08-08', '2018-06-07 12:20:11', '2018-06-07 12:20:11', 1),
-(11, 'yytytyy', '', '2018-08-08', '2018-06-07 12:20:15', '2018-06-07 12:20:15', 1),
-(12, 'dffdf', '', '2018-06-07', '2018-06-07 12:20:24', '2018-06-07 12:20:24', 1),
-(13, 'dffdf', '', '2018-06-07', '2018-06-07 12:20:37', '2018-06-07 12:20:37', 1),
-(14, 'dffdf', '', '2018-06-06', '2018-06-07 12:21:12', '2018-06-07 12:21:12', 1),
-(15, 'ghgh', '', '2018-06-05', '2018-06-07 12:25:23', '2018-06-07 12:25:23', 1),
-(16, 'dsdsd', '', '2018-06-07', '2018-06-08 11:06:14', '2018-06-08 11:06:14', 1),
-(17, 'dsdsd', '', '2018-06-07', '2018-06-08 11:06:22', '2018-06-08 11:06:22', 1),
-(18, 'fdfdfd', '', '2018-06-06', '2018-06-08 11:07:49', '2018-06-08 11:07:49', 1),
-(19, 'dfdfdf', 'dfdf', '2018-06-09', '2018-06-08 11:13:08', '2018-06-08 11:13:08', 1),
-(20, 'fdfdfdfdf', 'dfdfdfdfdfdfddddddddddddddddddd', '2018-06-10', '2018-06-08 11:16:24', '2018-06-08 11:16:24', 1),
-(21, 'ghgh1', 'ghghghgh1', '2018-06-11', '2018-06-08 11:47:41', '2018-06-08 11:47:41', 1),
-(22, 'wewewwe2', 'dsdsds2', '2018-06-11', '2018-06-08 11:47:51', '2018-06-08 11:47:51', 1),
-(23, 'hjhjbhbbjnnm,m', '5578784884', '2018-06-12', '2018-06-08 12:15:23', '2018-06-08 12:15:23', 1);
+(10, 'Events', 'This is Events', '2018-06-07', '2018-06-08 14:46:12', '2018-06-08 14:46:12', 1);
 
 -- --------------------------------------------------------
 
@@ -225,7 +196,8 @@ CREATE TABLE `up_files` (
 --
 
 INSERT INTO `up_files` (`id`, `file_type`, `file`, `file_name`) VALUES
-(2, 'image', '2_files.png', 'hghgghhh');
+(2, 'image', '2_files.png', 'hghgghhh'),
+(3, 'image', '3_files.', 'file');
 
 -- --------------------------------------------------------
 
@@ -257,9 +229,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`u_id`, `f_name`, `l_name`, `u_email`, `gender`, `phone`, `mobile`, `income`, `dob`, `address`, `city`, `zipcode`, `state`, `timeofresidency`, `passwords`) VALUES
 (1, 'gfgf', 'gfgf', 'Test@me.com', 'female', 0, 0, 0, 'May 24, 2018', 'f', 'fgf', 0, 'fgfg', '0000-00-00 00:00:00', 'test'),
-(3, 'John', 'Doe', 'user@me.com', 'male', 9999999999, 8989898989, 15000, 'May 23, 2018', 'Science City Road, sola, ahmedabad', 'Ahmedabad', 380015, 'Gujarat', '2018-05-24 11:30:38', 'user'),
-(4, 'User', 'Test', 'uesr@test.com', 'male', 7777777777, 9999999999, 100000, 'May 19, 2018', 'Science City Road, sola, ahmedabad', 'Ahmedabad', 380015, 'Gujarat', 'May 23, 2018', 'test'),
-(5, 'Scarlet', 'Doe', 's@me.com', 'male', 9878998448, 7946511894, 12000, 'May 05, 2018', 'Science City Road, sola, ahmedabad', 'Ahmedabad', 380015, 'Gujarat', 'May 24, 2018', 's@1233');
+(3, 'John', 'Doe', 'user@me.com', 'male', 9999999999, 8989898989, 15000, 'May 23, 2018', 'address', 'mumbai', 380015, 'mp', '2018-05-24 11:30:38', 'user'),
+(4, 'User', 'Test', 'uesr@test.com', 'male', 7777777777, 9999999999, 100000, 'May 19, 2018', 'address', 'mumbai', 380015, 'mp', 'May 23, 2018', 'test'),
+(5, 'Scarlet', 'Doe', 's@me.com', 'male', 9878998448, 7946511894, 12000, 'May 05, 2018', 'address', 'mumbai', 380015, 'mp', 'May 24, 2018', 's@1233');
 
 --
 -- Indexes for dumped tables
@@ -327,7 +299,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `assigned_user`
 --
 ALTER TABLE `assigned_user`
-  MODIFY `asgn_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `asgn_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `companies`
@@ -339,7 +311,7 @@ ALTER TABLE `companies`
 -- AUTO_INCREMENT for table `contactdetails`
 --
 ALTER TABLE `contactdetails`
-  MODIFY `c_id` bigint(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `c_id` bigint(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `docs`
@@ -351,13 +323,13 @@ ALTER TABLE `docs`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `up_files`
 --
 ALTER TABLE `up_files`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
