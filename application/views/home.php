@@ -31,10 +31,41 @@ echo timespan($post_date, $now) . ' ago';
 		        	</select>
 		        </li>
 		        <li>
-		        	<a class="valign-wrapper" href="<?php echo base_url(); ?>Add_Contact"> <img src="<?php echo base_url(); ?>html/images/add.png" class="responsive-img" style="margin-right: 5px;">  add contact</a>
+		        	<a class="valign-wrapper" href="#">new list</a></li>
+		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>Add_Contact"> <img src="<?php echo base_url(); ?>html/images/add.png" class="responsive-img" style="margin-right: 5px;">  add contact</a></li>
+
+		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>Add_Contact"> <img src="<?php echo base_url(); ?>html/images/calculator.png" class="responsive-img" style="margin-right: 5px;">  Quick Quote</a></li>
+		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>Add_Contact"> <img src="<?php echo base_url(); ?>html/images/textfield.png" class="responsive-img" style="margin-right: 5px;"> Custom Fields</a></li>
+		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>Add_Contact"> <img src="<?php echo base_url(); ?>html/images/icon-settings.jpg" class="responsive-img" style="margin-right: 5px;">Workflow</a></li>
+		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>Add_Contact"> <img src="<?php echo base_url(); ?>html/images/database_connect.png" class="responsive-img" style="margin-right: 5px;">Data Sources</a>
 		        </li>
 		    </div>
 		  </nav>
+
+		   <nav class="contactnav1">
+		    <div class="nav-wrapper connavwapp">
+		      <ul id="nav-mobile" class="hide-on-med-and-down">
+		        <li class="liin">
+		        	<input type="text" name="">
+		        </li>
+		        <li class="lis">search mail record</li>
+		      
+		    </ul>
+
+		    <ul class="recul">
+		    	<li>Recently Viewed:</li>
+		    	<li><a href="#">John Dragonetti</a></li>
+		    	<li><a href="#">Elizabeth Bennefield</a></li>
+		    	<li><a href="#">Taylor Test</a></li>
+		    	<li><a href="#">Carrie Young</a></li>
+		    	<li><a href="#">Ben Polk</a></li>
+		    	<li><a href="#">Joseph Parker</a></li>
+		    </ul>
+		        	
+		    </div>
+		  </nav>
+
+
 			<div class="max-width">
 			
 				<div class="table-box">
