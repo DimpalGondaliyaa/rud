@@ -1,5 +1,19 @@
+body {
+    background: -webkit-radial-gradient(#3d698e 0%,#08192d 75%);
+     background: -webkit-radial-gradient(#3d698e 0%,#08192d 75%); 
+}
 .adminBox {
     position: relative;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: 0px 1px 0px #ffffff;
+    max-width: 500px;
+    margin: 0 auto;
+    height: auto !important;
+    padding: 50px 25px;
+    color: #fff;
+    padding-bottom: 0px;
+/*    position: relative;
     overflow: hidden;
     background: #fff;
     border: 2px solid #ddd;
@@ -7,10 +21,43 @@
     max-width: 500px;
     margin: 0 auto;
     height: 250px;
-    padding: 50px 25px;
+    padding: 50px 25px;*/
 }
 .btn_admin_login {
+    -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9) );
+    background: -moz-linear-gradient( center top, #f9f9f9 5%, #e9e9e9 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9');
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    text-indent: 0;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    color: #666666;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    height: 28px;
+    width: 63px;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 0px #ffffff;
+    cursor: pointer;
+
+    font-family: ProximaNova, Arial, sans-serif;
+    letter-spacing: 0;
+
+    width: max-content !important;
+    height: 28px !important;
+
     position: relative;
+    left: 5px;
+    float: left;
+    line-height: 0;
+
+/*    position: relative;
     background: linear-gradient(60deg,#720ece,#9246da,#7f1ed6);
     margin: 15px 0px;
     box-shadow: 0px 5px 18px #6420a08f;
@@ -19,11 +66,11 @@
     -o-transition:all 0.2s ease-in-out;
     transition:all 0.2s ease-in-out;
     letter-spacing: 3px;
-    height: auto !important;
+    height: auto !important;*/
 }
 .btn_admin_login:hover,.btn_admin_login:focus {
     position: relative;
-    background: linear-gradient(60deg,#7f1ed6,#9246da,#720ece);
+    background: linear-gradient(0deg,#ffffff,#d6d6d6);
     box-shadow: 0px 3px 10px #6420a08f;
     -webkit-transition:all 0.2s ease-in-out;
     -moz-transition:all 0.2s ease-in-out;
@@ -43,4 +90,42 @@
     min-height: 65vh;
     padding: 25px;
     margin-top: 150px;
+}
+
+
+
+
+
+input[type=text] {
+    border: 1px solid #cccccc !important;
+    padding-left: 40px !important;
+    width: 200px !important;
+    border-radius: 50px !important;
+    background-color:white !important;
+}
+.bx{
+    height: 35px !important;
+    border-radius: 50px;
+    padding-left: 50px !important;
+    color: #aaa !important;
+}
+.chk{
+        opacity: 1 !important;
+    position: relative !important;
+    top: -30px;
+    right: 0px;
+    pointer-events: bounding-box !important;
+    height: 15px !important;
+}
+
+.btm-link a {
+    color: #babfc3;
+    font-family: sans-serif;
+    letter-spacing: 0;
+    font-size: 12px;
+}
+.btm-link a:hover {
+    color: #666;
+    font-family: sans-serif;
+    letter-spacing: 0;
 }
