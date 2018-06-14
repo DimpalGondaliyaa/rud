@@ -2,10 +2,8 @@ $(function()
 {
 	 var baseurl = $("#base_url").val();
 	  $('.materialboxed').materialbox();
-	 $(document).ready(function(){
-	    $('select').formSelect();
-	  });
-
+	 /*	    $('select').formSelect();*/
+	 
 	
 	  $('.addfiledata').on("click",function()
 	  {

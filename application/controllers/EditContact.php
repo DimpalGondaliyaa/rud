@@ -12,6 +12,9 @@ class EditContact extends CI_Controller {
 
 		$this->load->model('User_model');
 		$data=$this->User_model->getDetails();
+		$id='';
+		$q=$this->db->query("SELECT * FROM contactdetails WHERE c_id='".$id."'");
+		$get=$q->row_array();
 
 		$headerData = array(
 			"pageTitle" => "Edit Contact",
@@ -22,7 +25,7 @@ class EditContact extends CI_Controller {
 		);
 		$viewData = array(
 			"viewName" => "editContact",
-            "viewData" => array('data'=>$data),
+            "viewData" => array('data'=>$data,'get'=>$get),
 			"headerData" => $headerData,
 			"footerData" => $footerData	
 		);

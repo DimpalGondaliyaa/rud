@@ -8,9 +8,9 @@
 		  <nav class="contactnav">
 		    <div class="nav-wrapper connavwapp">
 		      <ul id="nav-mobile" class="hide-on-med-and-down">
-		        <li><a href="<?php echo base_url(); ?>Add_Contact"><img class="iconstyle" src="<?php echo base_url() ?>html/images/accept.png">save document</a></li>
-		        <li><a href="<?php echo base_url(); ?>Add_Contact"><img class="iconstyle" src="<?php echo base_url() ?>html/images/eye.png">preview document</a></li>
-		        <li><a href="<?php echo base_url(); ?>Add_Contact"><img class="iconstyle" src="<?php echo base_url() ?>html/images/bug.png">debug html</a></li>
+		        <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/accept.png">save document</a></li>
+		        <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/eye.png">preview document</a></li>
+		        <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/bug.png">debug html</a></li>
 		    </div>
 		  </nav>
 

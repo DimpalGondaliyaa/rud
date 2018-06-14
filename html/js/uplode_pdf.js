@@ -1,11 +1,8 @@
 $(function()
 {
-	 var baseurl = $("#base_url").val();
-
-	 $(document).ready(function(){
-	    $('select').formSelect();
-	  });
-
+    var baseurl = $("#base_url").val();
+    /*$('select').formSelect();*/
+	 
 	  $('.uppdf').on("click",function()
 	  {
 	  	 var condata = new FormData($("#pdffrm")[0]);
