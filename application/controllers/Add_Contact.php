@@ -28,7 +28,7 @@ class Add_Contact extends CI_Controller {
 
 	public function add_contactt()
 	{
-			$this->load->helper('date');
+		$this->load->helper('date');
 		date_default_timezone_set("UTC");
     	$date=gmdate("F j, Y");
 		if (function_exists('date_default_timezone_set'))
