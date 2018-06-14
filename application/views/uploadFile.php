@@ -4,6 +4,15 @@
 	</div>
 	<div class="main-menu">
 
+		<nav class="contactnav">
+		    <div class="nav-wrapper connavwapp">
+		      <ul id="nav-mobile" class="hide-on-med-and-down" style="position: relative;left: 5px;}">
+		        <li><a href="#"><img class="iconstyle" src="<?php echo base_url() ?>html/images/accept.png">uplode</a></li>
+		        <li><a href="#"><img class="iconstyle" src="<?php echo base_url() ?>html/images/cross.png">cancel</a></li>
+		      </ul>
+		    </div>
+		  </nav>
+
 		 <form class="col s12 m12" id="filefrm">
 		      <div class="row">
 

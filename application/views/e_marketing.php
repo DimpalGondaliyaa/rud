@@ -77,34 +77,34 @@
 					<td>Trigger</td>
 					<td>Payment Returned to Client</td>
 					<td>Your Payment Has Been Returned</td>
-					<td><a href="#!" class="fa fa-arrow-circle-right fa-lg" style="text-decoration:none" data-id="94094"></a></td>
+					<td><a href="<?php echo base_url(); ?>E_marketing_details" class="fa fa-arrow-circle-right fa-lg" style="text-decoration:none" data-id="94094"></a></td>
 				</tr>
 				<tr role="row" class="even">
 					<td class="sorting_1">Debt PayPro</td>
 					<td>Notifications</td>
 					<td>E-Sign Declined</td>
 					<td>A Client Has Declined an E-Sign Document </td>
-					<td><a href="#!" class="fa fa-arrow-circle-right fa-lg" style="text-decoration:none" data-id="94097"></a></td>
+					<td><a href="<?php echo base_url(); ?>E_marketing_details" class="fa fa-arrow-circle-right fa-lg" style="text-decoration:none" data-id="94097"></a></td>
 				</tr>
 				<tr role="row" class="odd">
 					<td class="sorting_1">Debt PayPro</td>
 					<td>Notifications</td><td>E-Sign Completed</td>
 					<td>A Client Has Signed an E-Sign Document </td>
-					<td><a href="#!" class="fa fa-arrow-circle-right fa-lg" style="text-decoration:none" data-id="94100"></a></td>
+					<td><a href="<?php echo base_url(); ?>E_marketing_details" class="fa fa-arrow-circle-right fa-lg" style="text-decoration:none" data-id="94100"></a></td>
 				</tr>
 				<tr role="row" class="even">
 					<td class="sorting_1">Debt PayPro</td>
 					<td>Notifications</td>
 					<td>Client Submitted</td>
 					<td>Client File Has Been Submitted </td>
-					<td><a href="#!" class="fa fa-arrow-circle-right fa-lg" style="text-decoration:none" data-id="94103"></a></td>
+					<td><a href="<?php echo base_url(); ?>E_marketing_details" class="fa fa-arrow-circle-right fa-lg" style="text-decoration:none" data-id="94103"></a></td>
 				</tr>
 				<tr role="row" class="odd">
 					<td class="sorting_1">Debt PayPro</td>
 					<td>Notifications</td>
 					<td>Client Approved</td>
 					<td>A Client File Has Been Approved </td>
-					<td><a href="#!" class="fa fa-arrow-circle-right fa-lg" style="text-decoration:none" data-id="94106"></a>
+					<td><a href="<?php echo base_url(); ?>E_marketing_details" class="fa fa-arrow-circle-right fa-lg" style="text-decoration:none" data-id="94106"></a>
 					</td>
 				</tr>
 				</tbody>

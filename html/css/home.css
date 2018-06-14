@@ -18,6 +18,44 @@ a.conedtbtn.btn {
     color: #3e1e56;
     border: 1px solid;*/
 }
+ul.recul {
+    background:  red;
+}
+
+ul.recul li {
+    background: white;
+    padding: 4px;
+    color: grey;
+    font-weight: bold;
+    margin-top: 6px;
+}
+li.liin input {
+    background: white !important;
+    position:  relative;
+    bottom:  24px;
+}
+li.lis {
+    position:  relative;
+    top: -1px;
+    padding:  12px;
+    color:  grey;
+    font-weight:  bold;
+    text-transform:  capitalize;
+}
+ul.recul li a {
+    color:  grey;
+    text-transform:  capitalize;
+}
+nav.contactnav1 {
+    background: #b7b5b5a8;
+    height: auto !important;
+    font-size: 12px;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 5px;
+    line-height: 1rem !important;
+}
 a.condltbtn.btn
 {
     background: transparent;
