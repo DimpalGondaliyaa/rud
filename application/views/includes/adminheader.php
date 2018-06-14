@@ -62,7 +62,7 @@
               <ul id="nav-mobile" class="hide-on-med-and-down navoneul">
                 <li><a href="#">Logged In As: <?= $this->session->userdata('email'); ?></a></li>
                 <li><a href="#">Recent Pages</a></li>
-                <li><a href="#">Logout</a></li>
+                <li><a href="<?php echo base_url(); ?>Adminlogin/user_logout">Logout</a></li>
                 <li><a href="#">Change Password</a></li>
                 <li><a href="#">My Settings</a></li>
                 <li><a href="#">Support</a></li>

@@ -126,7 +126,8 @@ echo timespan($post_date, $now) . ' ago';
 					
 					<td class="valign-wrapper">
 						<a data-id="<?php echo $value['c_id']; ?>" class="changeStatus" href="#!"><img src="<?php echo base_url(); ?>html/images/color_swatch.png"></a>
-						<a data-id="<?php echo $value['c_id']; ?>" class="conedtbtn btn" href="#!"><img src="<?php echo base_url(); ?>html/images/vcard.png"></a> 
+						<a data-id="<?php echo $value['c_id']; ?>" class="" href="<?= base_url(); ?>EditContact/editData/<?php echo $value['c_id'];?>"><img src="<?php echo base_url(); ?>html/images/vcard.png"></a> &nbsp;
+						<!-- <a data-id="<?php // echo $value['c_id']; ?>" class="conedtbtn btn" href="#!"><img src="<?php // echo base_url(); ?>html/images/vcard.png"></a>  -->
 						<!-- <a href="#!"><img src="<?php //echo base_url(); ?>html/images/note_add.png"><a href="#!" data-id="<?php // echo $value['c_id']; ?>"  class="condltbtn btn"><i class="fas fa-trash"></i></a>  -->
 						<a href="#!"><img src="<?php echo base_url(); ?>html/images/calendar_add.png"> </a>&nbsp;
 						<a href="#!"><img src="<?php echo base_url(); ?>html/images/page_white_get.png"> </a>&nbsp;

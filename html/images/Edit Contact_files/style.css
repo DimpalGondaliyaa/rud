@@ -84,7 +84,8 @@ option {
 
 button.mdl-button.mdl-button--raised.mdl-button--colored{
     background: #35174c;
-   padding: 15px 15px !important;
+    /*padding: 7.5px 10px !important;*/
+    padding: 15px 15px !important;
     font-weight: 500;
     border: none;
     color: ghostwhite;
@@ -105,9 +106,12 @@ nav.contactnav {
 
 nav.contactnav {
     background: #213f66;
+  /*  height: 55px !important;
+    line-height: 53px !important;*/
 }
 button.mdl-button{
     background: #f4f4f4;
+    /*padding: 7.5px 10px !important;*/
     padding: 15px 15px !important;
     font-weight: 500;
     border: none;
@@ -125,6 +129,11 @@ nav.contactnav {
     padding: 15px;
     border-radius: 5px;
     line-height: 1rem !important;
+
+/*    background: #213f66;
+    height: 43px !important;
+    line-height: 39px !important;
+    font-size: 12px;*/
 }
 .nav-wrapper.connavwapp ul li a {
     font-size: 11px;
@@ -135,11 +144,25 @@ nav.contactnav {
     text-decoration: underline;
     border: none;
 }
-
+/*div#example_length label {
+    display: block !important;
+    width: max-content;
+}*/
 select {
     display: block !important;
 }
-
+/*div#example_filter label {
+    position: relative;
+    float: right;
+    top: 0;
+    margin-top: -50px;
+}*/
+/*input.form-control.input-sm {
+    width: auto !important;
+    position: relative;
+    right: 0;
+    float: right;
+}*/
 
 
 .sidenav-overlay{
