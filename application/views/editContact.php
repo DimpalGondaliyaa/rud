@@ -82,9 +82,22 @@
 							</ul>
                         </div>
 
- 			</div>
- 		</div>
- 	</div>
+			 			</div>
+			 		</div>
+			 	</div>
+
+			 	<div class="row"></div>
+cgdnklfgdsfngdfign
+			 	<div class="from-container">
+			 		<div class="form-top-box"></div>
+			 		<div class="form-Box">
+			 			<div class="frmBox activeBox" id="tab_1">first</div>
+			 			<div class="frmBox" id="tab_2">secondf</div>
+			 			<div class="frmBox" id="tab_3">thiosdnf</div>
+			 			<div class="frmBox" id="tab_4">fommmp	</div>
+			 			<div class="frmBox" id="tab_5">fiveeeee</div>
+			 		</div>
+			 	</div>
  	</div>
   </div>
 </div>	

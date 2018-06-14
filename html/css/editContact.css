@@ -146,3 +146,10 @@ span.ttl-g {
     font-weight: bold;
     font-size: 20px;
 }
+
+.frmBox{
+	display: none;
+}
+.activeBox{
+	display: block;
+}

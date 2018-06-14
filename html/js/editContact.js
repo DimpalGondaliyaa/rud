@@ -3,7 +3,11 @@ $(function(){
 		/*$(this).data('id').addClass('active');*/
 		$('li').removeClass("active");
     	$(this).addClass("active");
-    	$(this).data('id').show();
-	});
+    	var i=$(this).data('id');
+    	
+    	$('#'+i).addClass('activeBox');
+    	$('.form-Box div').removeClass('frmBox');
+    	
+   });
 	
 })
