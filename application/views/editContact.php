@@ -2,6 +2,7 @@
 <div class="main-box">
  <div class="main-menu">
  	<div class="row">
+ 		<form name="fromContact">
  	<div class="edit-contactBox">
  			<div class="leftSide-container">
  				<div class="col s12 m3">
@@ -53,7 +54,7 @@
                     <div id="contact-details">
                         <div class="col s12 m7 left ttl">
                             <p><span class="ttl-g" style=" font-size: 20px !important;letter-spacing: 0 !important;font-family: sans-serif;"><?php echo $get['f_name'].''.$get['l_name']; ?> > </span><span class="infobox" id="infobox">Contact Info</span></p>
-                            <p style="    font-size: 12px;line-height: 0;letter-spacing: 0;font-family: sans-serif;">Lead > Follow Up</p>
+                            <p style="font-size: 12px;line-height: 0;letter-spacing: 0;font-family: sans-serif;">Lead > Follow Up</p>
                         </div>
                         <div class="col s12 m5 right-top-box">
                         <div class="statsbar">
@@ -103,7 +104,7 @@
 			 					<input type="text" name="f_name" value="<?php echo $get['f_name']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="l_name"  value="<?php echo $get['f_name']; ?>">
+			 					<input type="text" name="c_f_name"  value="<?php echo $get['c_f_name']; ?>">
 			 				</div>
 			 			  </div>
 			 			  <div class="row valign-wrapper">
@@ -111,10 +112,10 @@
 			 					<span class="lbl">Middle Name</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="middle_name" value="">
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="l_name" value="">
+			 					<input type="text" name="c_middle_name" value="">
 			 				</div>
 			 			  </div>
 			 			  <div class="row valign-wrapper">
@@ -122,10 +123,10 @@
 			 					<span class="lbl">Last Name</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="<?php echo $get['l_name']; ?>">
+			 					<input type="text" name="l_name" value="<?php echo $get['l_name']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="l_name" value="<?php echo $get['l_name']; ?>">
+			 					<input type="text" name="c_l_name" value="<?php echo $get['c_l_name']; ?>">
 			 				</div>
 			 			  </div>
 			 			  <div class="row valign-wrapper">
@@ -133,10 +134,10 @@
 			 					<span class="lbl">Maiden Name</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="maiden_name" value="<?php echo $get['maiden_name']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="l_name"  value="">
+			 					<input type="text" name="c_maiden_name"  value="<?php echo $get['c_maiden_name']; ?>">
 			 				</div>
 			 			  </div>
 			 			  <div class="row valign-wrapper">
@@ -144,10 +145,10 @@
 			 					<span class="lbl">SSN</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="274548322">
+			 					<input type="text" name="ssn" value="<?php echo $get['ssn']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="l_name"  value="">
+			 					<input type="text" name="c_ssn"  value="<?php echo $get['c_ssn']; ?>">
 			 				</div>
 			 			  </div>
 			 			  <div class="row valign-wrapper">
@@ -156,7 +157,7 @@
 			 				</div>
 			 				<div class="col s5 m5" style="padding: 0px;">
 			 					<div class="col s4 m5" style="padding: 0px;width: calc(41% - 15px) !important;">
-			 						<select id="month_dob" name="month_dob" class="" style="display: none;">
+			 						<select id="month_dob" name="dob_m" class="" style="display: none;">
 										<option value="">--Select--</option><option value="01">January</option>
 										<option value="02">February</option>
 										<option value="03">March</option>
@@ -172,10 +173,10 @@
 									</select>
 			 					</div>
 			 					<div class="col s4 m2">
-			 						<input type="text" name="" style="width: calc(100% - 27px) !important;margin-top:-1px;height: 13px !important; border: 1px solid #ccc !important;border-radius: 3px !important;position: relative;left: -12.5px;" placeholder="Day" value="14">
+			 						<input type="text" name="dob_d" style="width: calc(100% - 27px) !important;margin-top:-1px;height: 13px !important; border: 1px solid #ccc !important;border-radius: 3px !important;position: relative;left: -12.5px;" placeholder="Day" value="14">
 			 					</div>
 			 					<div class="col s4 m5" style="padding: 0;width: calc(45% - 20px) !important;">
-			 						<select id="year_dob" name="year_dob" class="" style="display: none;">
+			 						<select id="year_dob" name="dob_y" class="" style="display: none;">
 										<option value="">--Select--</option>
 										<option value="1900">1900</option>
 										<option value="1901">1901</option>
@@ -302,7 +303,7 @@
 			 				</div>
 			 				<div class="col s5 m5">
 			 					<div class="col s4 m5" style="padding: 0px;width: calc(41% - 15px) !important;width: calc(45% - 10px) !important;margin-left: -15px;">
-			 						<select id="month_dob" name="month_dob" class="" style="display: none;">
+			 						<select id="month_dob" name="c_dob_m" class="" style="display: none;">
 										<option value="">--Select--</option><option value="01">January</option>
 										<option value="02">February</option>
 										<option value="03">March</option>
@@ -318,10 +319,10 @@
 									</select>
 			 					</div>
 			 					<div class="col s4 m2">
-			 						<input type="text" name="" style="width: calc(100% - 27px) !important;margin-top:-1px;height: 13px !important; border: 1px solid #ccc !important;border-radius: 3px !important;position: relative;left: -12.5px;" placeholder="Day">
+			 						<input type="text" name="c_dob_d" style="width: calc(100% - 27px) !important;margin-top:-1px;height: 13px !important; border: 1px solid #ccc !important;border-radius: 3px !important;position: relative;left: -12.5px;" placeholder="Day">
 			 					</div>
 			 					<div class="col s4 m5" style="padding: 0;width: calc(45% - 20px) !important;">
-			 						<select id="year_dob" name="year_dob" class="" style="display: none;">
+			 						<select id="year_dob" name="c_dob_y" class="" style="display: none;">
 										<option value="">--Select--</option>
 										<option value="1900">1900</option>
 										<option value="1901">1901</option>
@@ -453,11 +454,11 @@
 			 				</div>
 			 				<div class="col s5 m5">
 			 					<span class="prefix"><i class="fas fa-phone"></i></span>
-			 					<input type="text" name="f_name" value="<?php echo $get['phone']; ?>">
+			 					<input type="text" name="phone" value="<?php echo $get['phone']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 					<span class="prefix"><i class="fas fa-phone"></i></span>
-			 					<input type="text" name="l_name"  value="<?php echo $get['mobile']; ?>">
+			 					<input type="text" name="c_phone"  value="<?php echo $get['c_phone']; ?>">
 			 				</div>
 			 			  </div>
 
@@ -467,11 +468,11 @@
 			 				</div>
 			 				<div class="col s5 m5">
 			 					<span class="prefix ml"><i class="fas fa-envelope"></i></span>
-			 					<input type="text" name="f_name" value="<?php echo $get['u_email']; ?>">
+			 					<input type="text" name="u_email" value="<?php echo $get['u_email']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 					<span class="prefix ml"><i class="fas fa-envelope"></i></span>
-			 					<input type="text" name="l_name"  value="">
+			 					<input type="text" name="c_email"  value="<?php echo $get['c_email']; ?>">
 			 				</div>
 			 			  </div>
 
@@ -491,7 +492,7 @@
 			 					<span class="lbl">Address 1</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="address" value="<?php echo $get['address']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -501,7 +502,7 @@
 			 					<span class="lbl">Address 1</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="address2" value="<?php echo $get['address2']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -511,7 +512,7 @@
 			 					<span class="lbl">City</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="city" value="<?php echo $get['city'];?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -521,7 +522,7 @@
 			 					<span class="lbl">State</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="state" value="<?php echo $get['state']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -531,7 +532,7 @@
 			 					<span class="lbl">Zip</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="zipcode" value="<?php echo $get['zipcode']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -551,10 +552,10 @@
 			 					<span class="lbl">Occupation</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="occupation" value="<?php echo $get['occupation']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="l_name"  value="">
+			 					<input type="text" name="c_occupation"  value="<?php echo $get['c_occupation']; ?>">
 			 				</div>
 			 			  </div>
 			 			  <div class="row valign-wrapper">
@@ -562,10 +563,10 @@
 			 					<span class="lbl">Employer</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="employer" value="<?php echo $get['employer']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="l_name" value="">
+			 					<input type="text" name="c_employer" value="<?php echo $get['c_employer']; ?>">
 			 				</div>
 			 			  </div>
 			 			  <div class="row valign-wrapper">
@@ -573,10 +574,10 @@
 			 					<span class="lbl">Position</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="position" value="<?php echo $get['position']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="l_name" value="">
+			 					<input type="text" name="c_position" value="<?php echo $get['position']; ?>">
 			 				</div>
 			 			  </div>
 			 			  <div class="row valign-wrapper">
@@ -584,10 +585,10 @@
 			 					<span class="lbl">Length of Employment</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="length_of_employmen" value="<?php echo $get['length_of_employmen']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="l_name"  value="">
+			 					<input type="text" name="c_length_of_employmen"  value="<?php echo $get['length_of_employmen']; ?>">
 			 				</div>
 			 			  </div>
 			 			  <div class="row valign-wrapper">
@@ -595,10 +596,10 @@
 			 					<span class="lbl">Employer Address</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="employer_address" value="<?php echo $get['employer_address']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="l_name"  value="">
+			 					<input type="text" name="c_employer_address"  value="<?php echo $get['c_employer_address']; ?>">
 			 				</div>
 			 			  </div>
 			 			   <div class="row valign-wrapper">
@@ -606,10 +607,10 @@
 			 					<span class="lbl">Employer Address 2</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="employer_address2" value="<?php echo $get['employer_address2']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="l_name"  value="">
+			 					<input type="text" name="c_employer_address2"  value="<?php echo $get['c_employer_address2']; ?>">
 			 				</div>
 			 			  </div>
 			 			   <div class="row valign-wrapper">
@@ -617,10 +618,10 @@
 			 					<span class="lbl">Employer City</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="emp_city" value="<?php echo $get['emp_city']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="l_name"  value="">
+			 					<input type="text" name="c_emp_city"  value="<?php echo $get['emp_city']; ?>">
 			 				</div>
 			 			  </div>
 			 			  <div class="row valign-wrapper">
@@ -628,12 +629,12 @@
 			 					<span class="lbl">Employer State</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<select id="f_294923" name="f_294923" class="" style="display: none;">
+			 					<select id="f_294923" name="emp_state" class="" style="display: none;">
 <option value="">--Select--</option><optgroup label="US"><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AS">American Samoa</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="GU">Guam</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="PR">Puerto Rico</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="VI">U.S. Virgin Islands</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></optgroup><optgroup label="AF"><option value="AA">AA-Armed Forces Americas</option><option value="AE">AE-Armed Forces Other</option><option value="AP">AP-Armed Forces Pacific</option></optgroup><optgroup label="CA"><option value="AB">Canada-Alberta</option><option value="BC">Canada-British Columbia</option><option value="MB">Canada-Manitoba</option><option value="NB">Canada-New Brunswick</option><option value="NL">Canada-Newfoundland</option><option value="NT">Canada-Northwest Territories</option><option value="NS">Canada-Nova Scotia</option><option value="NU">Canada-Nunavet</option><option value="ON">Canada-Ontario</option><option value="PE">Canada-Prince Edward Island</option><option value="QC">Canada-Quebec</option><option value="SK">Canada-Saskatchewan</option><option value="YT">Canada-Yukon</option></optgroup><optgroup label="AU"><option value="NSW">AU-New South Wales</option><option value="ANT">AU-Northern Territory</option><option value="QLD">AU-Queensland</option><option value="SA">AU-South Australia</option><option value="TAS">AU-Tasmania</option><option value="VIC">AU-Victoria</option><option value="WAU">AU-Western Australia</option></optgroup>
 </select>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<select id="coapp_f_294923" name="coapp_f_294923" class="" style="display: none;">
+			 					<select id="coapp_f_294923" name="c_emp_state" class="" style="display: none;">
 <option value="">--Select--</option><optgroup label="US"><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AS">American Samoa</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="GU">Guam</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="PR">Puerto Rico</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="VI">U.S. Virgin Islands</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></optgroup><optgroup label="AF"><option value="AA">AA-Armed Forces Americas</option><option value="AE">AE-Armed Forces Other</option><option value="AP">AP-Armed Forces Pacific</option></optgroup><optgroup label="CA"><option value="AB">Canada-Alberta</option><option value="BC">Canada-British Columbia</option><option value="MB">Canada-Manitoba</option><option value="NB">Canada-New Brunswick</option><option value="NL">Canada-Newfoundland</option><option value="NT">Canada-Northwest Territories</option><option value="NS">Canada-Nova Scotia</option><option value="NU">Canada-Nunavet</option><option value="ON">Canada-Ontario</option><option value="PE">Canada-Prince Edward Island</option><option value="QC">Canada-Quebec</option><option value="SK">Canada-Saskatchewan</option><option value="YT">Canada-Yukon</option></optgroup><optgroup label="AU"><option value="NSW">AU-New South Wales</option><option value="ANT">AU-Northern Territory</option><option value="QLD">AU-Queensland</option><option value="SA">AU-South Australia</option><option value="TAS">AU-Tasmania</option><option value="VIC">AU-Victoria</option><option value="WAU">AU-Western Australia</option></optgroup>
 </select>
 			 				</div>
@@ -643,10 +644,10 @@
 			 					<span class="lbl">Employer Zip</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="emp_zip" value="<?php echo $get['emp_zip']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="l_name"  value="">
+			 					<input type="text" name="c_emp_zip"  value="<?php echo $get['c_emp_zip']; ?>">
 			 				</div>
 			 			  </div>
 			 			  <div class="row valign-wrapper">
@@ -655,11 +656,11 @@
 			 				</div>
 			 				<div class="col s5 m5">
 			 					<span class="prefix"><i class="fas fa-phone"></i></span>
-			 					<input type="text" name="f_name" value="<?php echo $get['phone']; ?>">
+			 					<input type="text" name="emp_home_phone" value="<?php echo $get['emp_home_phone']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 					<span class="prefix"><i class="fas fa-phone"></i></span>
-			 					<input type="text" name="l_name"  value="<?php echo $get['mobile']; ?>">
+			 					<input type="text" name="c_emp_home_phone"  value="<?php echo $get['c_emp_home_phone']; ?>">
 			 				</div>
 			 			  </div>
 			 			</div>
@@ -677,7 +678,7 @@
 			 					<span class="lbl">Adjusted Gross Income</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="l_name"  value="">
+			 					<input type="text" name="gross_income"  value="<?php echo $get['gross_income']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -687,7 +688,7 @@
 			 					<span class="lbl">Adjusted Gross Income (Spouse)</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="income_spouse" value="<?php echo $get['income_spouse']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -697,7 +698,7 @@
 			 					<span class="lbl">Current Status of Loans</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<select name="f_294902" id="f_294902" style="display: none;"><option value="">--select--</option><option value="Grace Period">Grace Period</option><option value="Deferment">Deferment</option><option value="Defaulted">Defaulted</option><option value="Late">Late</option><option value="Current">Current</option><option value="Making Payments">Making Payments</option><option value="Multiple Statuses">Multiple Statuses</option><option value="Forbearance">Forbearance</option><option value="Garnishment">Garnishment</option></select>
+			 					<select name="status_of_loans" id="f_294902" style="display: none;"><option value="">--select--</option><option value="Grace Period">Grace Period</option><option value="Deferment">Deferment</option><option value="Defaulted">Defaulted</option><option value="Late">Late</option><option value="Current">Current</option><option value="Making Payments">Making Payments</option><option value="Multiple Statuses">Multiple Statuses</option><option value="Forbearance">Forbearance</option><option value="Garnishment">Garnishment</option></select>
 			 				</div>
 			 				<div class="col s5 m5">
 			 					
@@ -708,7 +709,7 @@
 			 					<span class="lbl">Taxable Income</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<select name="f_295091" id="f_295091" style="display: none;"><option value="">--select--</option><option value="Yes">Yes</option><option value="No">No</option></select>
+			 					<select name="taxable_income" id="f_295091" style="display: none;"><option value="">--select--</option><option value="Yes">Yes</option><option value="No">No</option></select>
 			 				</div>
 			 				<div class="col s5 m5">
 			 					
@@ -719,7 +720,7 @@
 			 					<span class="lbl">Spouse Indebtedness Amount</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="indebtedness_amoun" value="<?php echo $get['indebtedness_amoun']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 					
@@ -730,7 +731,7 @@
 			 					<span class="lbl">Family Size</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="family_size" value="<?php echo $get['family_size']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 					
@@ -741,7 +742,7 @@
 			 					<span class="lbl">Filing Status</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<select name="f_294941" id="f_294941" style="display: none;"><option value="">--select--</option><option value="Married Filing Jointly">Married Filing Jointly</option><option value="Married Filing Separately">Married Filing Separately</option><option value="Single">Single</option><option value="Head of Household">Head of Household</option></select>
+			 					<select name="filing_status" id="f_294941" style="display: none;"><option value="">--select--</option><option value="Married Filing Jointly">Married Filing Jointly</option><option value="Married Filing Separately">Married Filing Separately</option><option value="Single">Single</option><option value="Head of Household">Head of Household</option></select>
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -751,7 +752,7 @@
 			 					<span class="lbl">File Taxes</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<select name="f_294935" id="f_294935" style="display: none;"><option value="">--select--</option><option value="Yes">Yes</option><option value="No">No</option></select>
+			 					<select name="file_taxes" id="f_294935" style="display: none;"><option value="">--select--</option><option value="Yes">Yes</option><option value="No">No</option></select>
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -761,7 +762,7 @@
 			 					<span class="lbl">DL Number</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="dl_number" value="<?php echo $get['dl_number']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -771,7 +772,7 @@
 			 					<span class="lbl">DL State</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<select id="f_294908" name="f_294908" class="" style="display: none;">
+			 					<select id="f_294908" name="dl_state" class="" style="display: none;">
 <option value="">--Select--</option><optgroup label="US"><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AS">American Samoa</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="GU">Guam</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="PR">Puerto Rico</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="VI">U.S. Virgin Islands</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></optgroup><optgroup label="AF"><option value="AA">AA-Armed Forces Americas</option><option value="AE">AE-Armed Forces Other</option><option value="AP">AP-Armed Forces Pacific</option></optgroup><optgroup label="CA"><option value="AB">Canada-Alberta</option><option value="BC">Canada-British Columbia</option><option value="MB">Canada-Manitoba</option><option value="NB">Canada-New Brunswick</option><option value="NL">Canada-Newfoundland</option><option value="NT">Canada-Northwest Territories</option><option value="NS">Canada-Nova Scotia</option><option value="NU">Canada-Nunavet</option><option value="ON">Canada-Ontario</option><option value="PE">Canada-Prince Edward Island</option><option value="QC">Canada-Quebec</option><option value="SK">Canada-Saskatchewan</option><option value="YT">Canada-Yukon</option></optgroup><optgroup label="AU"><option value="NSW">AU-New South Wales</option><option value="ANT">AU-Northern Territory</option><option value="QLD">AU-Queensland</option><option value="SA">AU-South Australia</option><option value="TAS">AU-Tasmania</option><option value="VIC">AU-Victoria</option><option value="WAU">AU-Western Australia</option></optgroup>
 </select>
 			 				</div>
@@ -783,7 +784,7 @@
 			 					<span class="lbl">Wages Garnished</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<select name="f_295097" id="f_295097" style="display: none;"><option value="">--select--</option><option value="Yes">Yes</option><option value="No">No</option></select>
+			 					<select name="wages_garnished" id="f_295097" style="display: none;"><option value="">--select--</option><option value="Yes">Yes</option><option value="No">No</option></select>
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -793,7 +794,7 @@
 			 					<span class="lbl">PSLF</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<select name="f_295025" id="f_295025" style="display: none;"><option value="">--select--</option><option value="Yes">Yes</option><option value="No">No</option></select>
+			 					<select name="pslf" id="f_295025" style="display: none;"><option value="">--select--</option><option value="Yes">Yes</option><option value="No">No</option></select>
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -803,7 +804,7 @@
 			 					<span class="lbl">FSA PIN</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="fsa_pin" value="<?php echo $get['fsa_pin']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -822,7 +823,7 @@
 			 					<span class="lbl">REF1 First Name</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="ref_f_name" value="<?php echo $get['ref_f_name']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -832,7 +833,7 @@
 			 					<span class="lbl">REF1 Last Name</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="ref_l_name" value="<?php echo $get['ref_l_name']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -842,7 +843,7 @@
 			 					<span class="lbl">REF1 Relationship</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="ref_relationship" value="<?php echo $get['ref_relationship']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -852,7 +853,7 @@
 			 					<span class="lbl">REF1 Address</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="ref_addr" value="<?php echo $get['ref_addr']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -862,7 +863,7 @@
 			 					<span class="lbl">REF1 City</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="ref_city" value="<?php echo $get['ref_city']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -872,7 +873,7 @@
 			 					<span class="lbl">REF1 State</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<select id="f_295046" name="f_295046" class="" style="display: none;">
+			 					<select id="f_295046" name="ref_state" class="" style="display: none;">
 <option value="">--Select--</option><optgroup label="US"><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AS">American Samoa</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="GU">Guam</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="PR">Puerto Rico</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="VI">U.S. Virgin Islands</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></optgroup><optgroup label="AF"><option value="AA">AA-Armed Forces Americas</option><option value="AE">AE-Armed Forces Other</option><option value="AP">AP-Armed Forces Pacific</option></optgroup><optgroup label="CA"><option value="AB">Canada-Alberta</option><option value="BC">Canada-British Columbia</option><option value="MB">Canada-Manitoba</option><option value="NB">Canada-New Brunswick</option><option value="NL">Canada-Newfoundland</option><option value="NT">Canada-Northwest Territories</option><option value="NS">Canada-Nova Scotia</option><option value="NU">Canada-Nunavet</option><option value="ON">Canada-Ontario</option><option value="PE">Canada-Prince Edward Island</option><option value="QC">Canada-Quebec</option><option value="SK">Canada-Saskatchewan</option><option value="YT">Canada-Yukon</option></optgroup><optgroup label="AU"><option value="NSW">AU-New South Wales</option><option value="ANT">AU-Northern Territory</option><option value="QLD">AU-Queensland</option><option value="SA">AU-South Australia</option><option value="TAS">AU-Tasmania</option><option value="VIC">AU-Victoria</option><option value="WAU">AU-Western Australia</option></optgroup>
 </select>
 			 				</div>
@@ -884,7 +885,7 @@
 			 					<span class="lbl">REF1 Zip</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="ref_zip" value="<?php echo $get['ref_zip']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -894,7 +895,7 @@
 			 					<span class="lbl">REF1 Phone</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="ref_phone" value="<?php echo $get['ref_phone']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -911,7 +912,7 @@
 			 					<span class="lbl">REF2 First Name</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="ref2_f_name" value="<?php echo $get['ref2_f_name']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -921,7 +922,7 @@
 			 					<span class="lbl">REF2 Last Name</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="ref2_l_name" value="<?php echo $get['ref2_l_name'] ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -931,7 +932,7 @@
 			 					<span class="lbl">REF2 Relationship</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="ref2_relationship" value="<?php echo $get['ref2_relationship']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -941,7 +942,7 @@
 			 					<span class="lbl">REF2 Address</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="ref2_addr" value="<?php echo $get['ref2_addr']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -951,7 +952,7 @@
 			 					<span class="lbl">REF2 City</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="ref2_city" value="<?php echo $get['ref2_city']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -961,7 +962,7 @@
 			 					<span class="lbl">REF2 State</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<select id="f_295046" name="f_295046" class="" style="display: none;">
+			 					<select id="f_295046" name="ref2_state" class="" style="display: none;">
 <option value="">--Select--</option><optgroup label="US"><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AS">American Samoa</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="GU">Guam</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="PR">Puerto Rico</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="VI">U.S. Virgin Islands</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></optgroup><optgroup label="AF"><option value="AA">AA-Armed Forces Americas</option><option value="AE">AE-Armed Forces Other</option><option value="AP">AP-Armed Forces Pacific</option></optgroup><optgroup label="CA"><option value="AB">Canada-Alberta</option><option value="BC">Canada-British Columbia</option><option value="MB">Canada-Manitoba</option><option value="NB">Canada-New Brunswick</option><option value="NL">Canada-Newfoundland</option><option value="NT">Canada-Northwest Territories</option><option value="NS">Canada-Nova Scotia</option><option value="NU">Canada-Nunavet</option><option value="ON">Canada-Ontario</option><option value="PE">Canada-Prince Edward Island</option><option value="QC">Canada-Quebec</option><option value="SK">Canada-Saskatchewan</option><option value="YT">Canada-Yukon</option></optgroup><optgroup label="AU"><option value="NSW">AU-New South Wales</option><option value="ANT">AU-Northern Territory</option><option value="QLD">AU-Queensland</option><option value="SA">AU-South Australia</option><option value="TAS">AU-Tasmania</option><option value="VIC">AU-Victoria</option><option value="WAU">AU-Western Australia</option></optgroup>
 </select>
 			 				</div>
@@ -973,7 +974,7 @@
 			 					<span class="lbl">REF2 Zip</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="ref2_zip" value="<?php echo $get['ref2_zip']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
@@ -983,7 +984,7 @@
 			 					<span class="lbl">REF2 Phone</span>
 			 				</div>
 			 				<div class="col s5 m5">
-			 					<input type="text" name="f_name" value="">
+			 					<input type="text" name="ref2_phone" value="<?php echo $get['ref2_phone']; ?>">
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
