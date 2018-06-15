@@ -46,11 +46,11 @@
 		         <tr>
 				
 					<td><?php echo $value['file_type']; ?></td>
-					<td>5-7-19</td>
-					<td>patel meet</td>
+					<td><?php echo $value['createdOn']; ?></td>
+					<td><?php echo $value['createdBy']; ?></td>
 					<td><?php echo $value['file_name']; ?></td>
-					<td>patel meet</td>
-					<td><i class="fas fa-search-plus"></i></td>
+					<td><?php echo $value['file']; ?></td>
+					<td><a href="<?php echo base_url(); ?>html/images/files/<?php echo $value['file']; ?>" target="_page"><i class="fas fa-search-plus" onclick="$('.imgBox').click();"></i></td>
 				</tr>
 				<?php } ?>
 				</tbody>
@@ -63,3 +63,8 @@
 
 	</div>
 </div>
+<script type="text/javascript">
+	$(function(){
+		 $('.materialboxed').materialbox();
+		});
+</script>

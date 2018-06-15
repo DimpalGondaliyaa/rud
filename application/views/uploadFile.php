@@ -8,21 +8,21 @@
 		    <div class="nav-wrapper connavwapp">
 		      <ul id="nav-mobile" class="hide-on-med-and-down" style="position: relative;left: 5px;}">
 		        <li><a href="#"><img class="iconstyle" src="<?php echo base_url() ?>html/images/accept.png">uplode</a></li>
-		        <li><a href="#"><img class="iconstyle" src="<?php echo base_url() ?>html/images/cross.png">cancel</a></li>
+		        <li><a href="<?php echo base_url(); ?>Files"><img class="iconstyle" src="<?php echo base_url() ?>html/images/cross.png">cancel</a></li>
 		      </ul>
 		    </div>
 		  </nav>
 
 		 <form class="col s12 m12" id="filefrm">
-		      <div class="row">
+		      <div class="row" style="padding: 15px;">
 
 		      	  <div class="input-field col s6 m2">
 				    <select name="file_type">
 				      <option value="" disabled selected>Choose your category</option>
-				      <option value="document">document</option>
+				      <!-- <option value="document">document</option>
 				      <option value="image">image</option>
 				      <option value="misc">misc</option>
-				      <option value="video">video</option>
+				      <option value="video">video</option> -->
 				    </select>
 				    <label>ftp server</label>
 			    </div>

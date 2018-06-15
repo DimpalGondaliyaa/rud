@@ -28,8 +28,24 @@ class UploadFile extends CI_Controller {
 
 	public function add_file()
 	{
+
+
+		$this->load->helper('date');
+		date_default_timezone_set("UTC");
+    	$date=gmdate("F j, Y");
+		if (function_exists('date_default_timezone_set'))
+		{
+		  date_default_timezone_set('Asia/Kolkata');
+		}
+
+		date_default_timezone_set('Asia/Kolkata');
+		$created_date=date("F j, Y H:i: a");
+		$ee=$this->session->userdata('email');
+		
 		$data = array('file_type' => $_POST['file_type'] ,
 		'file_name' => $_POST['file_name'] ,
+		'createdBy'=>$ee,
+		'createdOn'=>$created_date
 	   );
 
 		$this->db->insert("up_files",$data);

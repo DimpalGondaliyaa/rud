@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2018 at 11:54 AM
+-- Generation Time: Jun 15, 2018 at 11:23 AM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -119,7 +119,7 @@ CREATE TABLE `contactdetails` (
 
 INSERT INTO `contactdetails` (`c_id`, `f_name`, `l_name`, `u_email`, `password`, `gender`, `phone`, `mobile`, `income`, `dob`, `address`, `city`, `zipcode`, `state`, `stage`, `status`, `createdOn`, `timeofresidency`, `last_call_activity`) VALUES
 (1, 'John', 'doe', 'test@me.com', '', 0, 9999999999, 7979797979, 5000, 'Jun 13, 1995', 'New Tower, City palace', 'Ahmedabad', 98454964, 'Gujarat', 'Lead', 'New Lead', '13-06-2018 10:43:am', '2018-06-13 10:43:17', ''),
-(2, 'Alexander ', 'Goodman', 'ag@test.com', '', 0, 979797979, 8564985897, 7000, 'Jan 11, 1998', 'Golden Tower, Nr. Grand hotel', 'Mumbai', 684645, 'mp', 'Lead', 'Follow Up', '13-06-2018 10:45:am', '2018-06-13 10:45:44', '');
+(2, 'Alexander ', 'Goodman', 'ag@test.com', '', 0, 979797979, 8564985897, 7000, 'Jan 11, 1998', 'Golden Tower, Nr. Grand hotel', 'Mumbai', 684645, 'mp', '', '', '13-06-2018 10:45:am', '2018-06-13 10:45:44', '');
 
 -- --------------------------------------------------------
 
@@ -181,6 +181,27 @@ INSERT INTO `events` (`id`, `title`, `descp`, `date`, `created`, `modified`, `st
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `notes`
+--
+
+CREATE TABLE `notes` (
+  `id` int(5) NOT NULL,
+  `u_id` int(5) NOT NULL,
+  `note_type` varchar(255) NOT NULL,
+  `note` text NOT NULL,
+  `createdOn` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `notes`
+--
+
+INSERT INTO `notes` (`id`, `u_id`, `note_type`, `note`, `createdOn`) VALUES
+(1, 2, 'Call', 'this is Note.', '2018-06-15 11:02:57');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `up_files`
 --
 
@@ -188,16 +209,17 @@ CREATE TABLE `up_files` (
   `id` int(11) NOT NULL,
   `file_type` varchar(255) NOT NULL,
   `file` text NOT NULL,
-  `file_name` varchar(255) NOT NULL
+  `file_name` varchar(255) NOT NULL,
+  `createdBy` varchar(255) NOT NULL,
+  `createdOn` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `up_files`
 --
 
-INSERT INTO `up_files` (`id`, `file_type`, `file`, `file_name`) VALUES
-(2, 'image', '2_files.png', 'hghgghhh'),
-(3, 'image', '3_files.', 'file');
+INSERT INTO `up_files` (`id`, `file_type`, `file`, `file_name`, `createdBy`, `createdOn`) VALUES
+(1, 'image', '1_files.png', 'Heart', 'a', 'June 14, 2018 17:09: pm');
 
 -- --------------------------------------------------------
 
@@ -232,6 +254,47 @@ INSERT INTO `users` (`u_id`, `f_name`, `l_name`, `u_email`, `gender`, `phone`, `
 (3, 'John', 'Doe', 'user@me.com', 'male', 9999999999, 8989898989, 15000, 'May 23, 2018', 'address', 'mumbai', 380015, 'mp', '2018-05-24 11:30:38', 'user'),
 (4, 'User', 'Test', 'uesr@test.com', 'male', 7777777777, 9999999999, 100000, 'May 19, 2018', 'address', 'mumbai', 380015, 'mp', 'May 23, 2018', 'test'),
 (5, 'Scarlet', 'Doe', 's@me.com', 'male', 9878998448, 7946511894, 12000, 'May 05, 2018', 'address', 'mumbai', 380015, 'mp', 'May 24, 2018', 's@1233');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_event`
+--
+
+CREATE TABLE `user_event` (
+  `e_id` int(5) NOT NULL,
+  `u_id` int(5) NOT NULL,
+  `e_title` varchar(255) NOT NULL,
+  `e_date` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `u_events`
+--
+
+CREATE TABLE `u_events` (
+  `e_id` int(5) NOT NULL,
+  `u_id` int(5) NOT NULL,
+  `e_title` varchar(255) NOT NULL,
+  `e_date` varchar(255) NOT NULL,
+  `e_time` varchar(255) NOT NULL,
+  `e_timezone` varchar(255) NOT NULL,
+  `e_public` varchar(255) NOT NULL,
+  `e_event_type` varchar(255) NOT NULL,
+  `e_assign_to` varchar(255) NOT NULL,
+  `e_location` varchar(255) NOT NULL,
+  `e_desc` varchar(255) NOT NULL,
+  `createdOn` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `u_events`
+--
+
+INSERT INTO `u_events` (`e_id`, `u_id`, `e_title`, `e_date`, `e_time`, `e_timezone`, `e_public`, `e_event_type`, `e_assign_to`, `e_location`, `e_desc`, `createdOn`) VALUES
+(1, 2, 'Title', 'Jun 12, 2018', '11:00 pm', 'US/Mountain', 'Private', 'Meeting', '7', 'Mumbai', 'This is Note about Events', '2018-06-15 14:17:18');
 
 --
 -- Indexes for dumped tables
@@ -274,6 +337,12 @@ ALTER TABLE `events`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `notes`
+--
+ALTER TABLE `notes`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `up_files`
 --
 ALTER TABLE `up_files`
@@ -284,6 +353,18 @@ ALTER TABLE `up_files`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`u_id`);
+
+--
+-- Indexes for table `user_event`
+--
+ALTER TABLE `user_event`
+  ADD PRIMARY KEY (`e_id`);
+
+--
+-- Indexes for table `u_events`
+--
+ALTER TABLE `u_events`
+  ADD PRIMARY KEY (`e_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -326,16 +407,34 @@ ALTER TABLE `events`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
+-- AUTO_INCREMENT for table `notes`
+--
+ALTER TABLE `notes`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `up_files`
 --
 ALTER TABLE `up_files`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `u_id` bigint(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `user_event`
+--
+ALTER TABLE `user_event`
+  MODIFY `e_id` int(5) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `u_events`
+--
+ALTER TABLE `u_events`
+  MODIFY `e_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

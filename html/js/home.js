@@ -1,5 +1,7 @@
 $(function(){
 
+	$('.datepicker').datepicker();
+
 	$('#example').DataTable({ "pageLength": 100});
 	var baseurl = $("#base_url").val();
 
@@ -102,6 +104,75 @@ $(function(){
 			success:function(res)
 			{
 				swal("Good job!", "Stage/Status has been Updated Successfully!", "success")
+				$('.swal-button--confirm').on('click',function(){
+					window.location.reload();
+				});
+			}
+		 });
+    });
+
+
+	/*Add Note*/
+
+	$("#example").on("click",".addNote", function()
+	{
+		$(".modal").modal();
+		$("#addNotee").modal("open");
+		 $("#addNotee .modal-content").html("");
+		  var id = $(this).data("id");
+		$.post(baseurl+"Home/NoteModal/"+id,function(id){
+	    	 $("#addNotee .modal-content").html(id);
+
+	    }); 
+	});
+
+	$(".saveNote").on("click", function()
+	{
+		var addNote = new FormData($("#addNote")[0]); 
+		$.ajax({
+			url : baseurl+"Home/addNote",
+			type :"POST",
+			data :addNote,	
+			contentType:false,
+			processData:false,
+			success:function(res)
+			{
+				swal("Good job!", "Stage/Status has been Updated Successfully!", "success")
+				$('.swal-button--confirm').on('click',function(){
+					window.location.reload();
+				});
+			}
+		 });
+    });
+
+
+    /*Add Events*/
+
+	$("#example").on("click",".addEvnt", function()
+	{
+
+		$(".modal").modal();
+		$("#addEventss").modal("open");
+		 $("#addEventss .modal-content").html("");
+		  var id = $(this).data("id");
+		$.post(baseurl+"Home/eventsModal/"+id,function(id){
+	    	 $("#addEventss .modal-content").html(id);
+
+	    }); 
+	});
+
+	$(".addEvents").on("click", function()
+	{
+		var addNote = new FormData($("#addEvent")[0]); 
+		$.ajax({
+			url : baseurl+"Home/addEvent",
+			type :"POST",
+			data :addNote,	
+			contentType:false,
+			processData:false,
+			success:function(res)
+			{
+				swal("Good job!", "Event Created Successfully!", "success")
 				$('.swal-button--confirm').on('click',function(){
 					window.location.reload();
 				});

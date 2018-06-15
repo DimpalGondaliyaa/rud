@@ -5,7 +5,11 @@ class Adminlogin extends CI_Controller {
 
 
 	public function index()
-	{		
+	{	
+		if($this->session->userdata('email')!='' | $this->session->userdata('admin')!=''){
+			header('Location:'.base_url().'Home');
+		}
+			
 		$headerData = array(
 			"pageTitle" => "Login",
 			"stylesheet" => array("admin_login.css","style.css")

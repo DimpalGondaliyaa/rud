@@ -1,3 +1,8 @@
+<style type="text/css">
+	.main-menu{
+		overflow: auto;
+	}
+</style>
 <div class="main-box">
 <div class="main-menu">
 

@@ -32,12 +32,22 @@ echo timespan($post_date, $now) . ' ago';
 		        </li>
 		        <li>
 		        	<a class="valign-wrapper" href="#">new list</a></li>
-		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>Add_Contact"> <img src="<?php echo base_url(); ?>html/images/add.png" class="responsive-img" style="margin-right: 5px;">  add contact</a></li>
+		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>editContact"> <img src="<?php echo base_url(); ?>html/images/add.png" class="responsive-img" style="margin-right: 5px;">  add contact</a></li>
 
-		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>Add_Contact"> <img src="<?php echo base_url(); ?>html/images/calculator.png" class="responsive-img" style="margin-right: 5px;">  Quick Quote</a></li>
+
+		        	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/calculator.png" class="responsive-img" style="margin-right: 5px;">  Quick Quote</a></li>
+
 		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>Custom_Fields"> <img src="<?php echo base_url(); ?>html/images/textfield.png" class="responsive-img" style="margin-right: 5px;"> Custom Fields</a></li>
+
 		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>workflow"> <img src="<?php echo base_url(); ?>html/images/icon-settings.jpg" class="responsive-img" style="margin-right: 5px;">Workflow</a></li>
-		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>Add_Contact"> <img src="<?php echo base_url(); ?>html/images/database_connect.png" class="responsive-img" style="margin-right: 5px;">Data Sources</a>
+
+		        	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/database_connect.png" class="responsive-img" style="margin-right: 5px;">Data Sources</a>
+
+		        <!-- 	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/calculator.png" class="responsive-img" style="margin-right: 5px;">  Quick Quote</a></li>
+		        	<li><a class="valign-wrapper" href="#!> <img src="<?php echo base_url(); ?>html/images/textfield.png" class="responsive-img" style="margin-right: 5px;"> Custom Fields</a></li>
+		        	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/icon-settings.jpg" class="responsive-img" style="margin-right: 5px;">Workflow</a></li>
+		        	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/database_connect.png" class="responsive-img" style="margin-right: 5px;">Data Sources</a>
+ -->
 		        </li>
 		    </div>
 		  </nav>
@@ -129,7 +139,9 @@ echo timespan($post_date, $now) . ' ago';
 						<a data-id="<?php echo $value['c_id']; ?>" class="" href="<?= base_url(); ?>EditContact/editData/<?php echo $value['c_id'];?>"><img src="<?php echo base_url(); ?>html/images/vcard.png"></a> &nbsp;
 						<!-- <a data-id="<?php // echo $value['c_id']; ?>" class="conedtbtn btn" href="#!"><img src="<?php // echo base_url(); ?>html/images/vcard.png"></a>  -->
 						<!-- <a href="#!"><img src="<?php //echo base_url(); ?>html/images/note_add.png"><a href="#!" data-id="<?php // echo $value['c_id']; ?>"  class="condltbtn btn"><i class="fas fa-trash"></i></a>  -->
-						<a href="#!"><img src="<?php echo base_url(); ?>html/images/calendar_add.png"> </a>&nbsp;
+						<a data-id="<?php echo $value['c_id']; ?>" class="addNote" href="#!"><img src="<?php echo base_url(); ?>html/images/note_add.png"> </a>&nbsp;
+
+						<a data-id="<?php echo $value['c_id']; ?>" class="addEvnt" href="#!"><img src="<?php echo base_url(); ?>html/images/calendar_add.png"> </a>&nbsp;
 						<a href="#!"><img src="<?php echo base_url(); ?>html/images/page_white_get.png"> </a>&nbsp;
 						<a href="#!"><img src="<?php echo base_url();?>html/images/bullet_go.png"></a>
 					</td>
@@ -159,6 +171,31 @@ echo timespan($post_date, $now) . ' ago';
 	      <a href="#!" class="modal-close valign-wrapper waves-effect waves-green btn-flat editStatus"><img src="<?php echo base_url(); ?>html/images/accept.png"> Update Status</a>
 	    </div>
 	  </div>
+
+
+<!-- ============= Add Note ===============-->
+
+	   <!-- Modal Structure -->
+	  <div id="addNotee" class="modal">
+	    <div class="modal-content">
+	    	
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-close valign-wrapper waves-effect waves-green btn-flat saveNote"><img src="<?php echo base_url(); ?>html/images/accept.png"> Save Note</a>
+	    </div>
+	  </div>
+
+<!-- ============= Add Events ===============-->
+
+	   <!-- Modal Structure -->
+	  <div id="addEventss" class="modal" style="max-width: 800px !important;">
+	    <div class="modal-content">
+	    	
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-close valign-wrapper waves-effect waves-green btn-flat addEvents"><img src="<?php echo base_url(); ?>html/images/accept.png"> Save Events</a>
+	    </div>
+	  </div>	  
 
 	</div>
 </div>

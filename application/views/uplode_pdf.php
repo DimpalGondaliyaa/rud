@@ -9,7 +9,7 @@
 		    </div>
 		  </nav>
 		  <div class="row pdfrow">
-		    <form class="col s12 m4" id="pdffrm">
+		    <form class="col s12 m2" id="pdffrm">
 		      <div class="row">
 		        <div class="input-field col s12 m12">
 		          <input placeholder="pfd_file" name="pfd_file" type="file" class="validate">
@@ -189,7 +189,7 @@
   
 }
 .row.pdfrow {
-    padding: 30px 60px;
+    padding: 15px;
 }
 
 form#pdffrm {

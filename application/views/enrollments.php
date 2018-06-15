@@ -14,14 +14,14 @@
 		    <div class="nav-wrapper connavwapp">
 		      <ul id="nav-mobile" class="hide-on-med-and-down" style="position: relative;left: 5px;}">
 		      	<li class="sec"><input type="text" name=""></li>
-		        <li><a href="<?php echo base_url(); ?>Html_document"><img class="iconstyle" src="<?php echo base_url() ?>html/images/application_side_list.png">plans</a></li>
-		        <li><a href="<?php echo base_url(); ?>uplode_pdf"><img class="iconstyle" src="<?php echo base_url() ?>html/images/magnifier.png">Preview Plans</a></li>
-		        <li><a href="<?php echo base_url(); ?>categories"><img class="iconstyle" src="<?php echo base_url() ?>html/images/report.png">report</a></li>
-		         <li><a href="<?php echo base_url(); ?>Document_type"><img class="iconstyle" src="<?php echo base_url() ?>html/images/chart_line.png">Statistics</a></li>
+		        <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/application_side_list.png">plans</a></li>
+		        <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/magnifier.png">Preview Plans</a></li>
+		        <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/report.png">report</a></li>
+		         <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/chart_line.png">Statistics</a></li>
 
-		         <li><a href="<?php echo base_url(); ?>Document_type"><img class="iconstyle" src="<?php echo base_url() ?>html/images/money.png">Transactions</a></li>
+		         <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/money.png">Transactions</a></li>
 
-		         <li><a href="<?php echo base_url(); ?>Document_type"><img class="iconstyle" src="<?php echo base_url() ?>html/images/page_white_gear.png">Settings</a></li>
+		         <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/page_white_gear.png">Settings</a></li>
 
 		      </ul>
 		    </div>
