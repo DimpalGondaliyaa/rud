@@ -1,0 +1,30 @@
+.cftitle {
+    font-size: 17px;
+    text-transform:  capitalize;
+    font-weight: bold;
+    padding:  23px;
+}
+a#savebtn {
+    background: #c2b6b6;
+    padding:  6px;
+    position:  relative;
+    top: 28px;
+    color:  #fff;
+    width:  82px;
+}
+a#edtsavebtn {
+    background: #c2b6b6;
+    padding:  6px;
+    position:  relative;
+    top: 28px;
+    color:  #fff;
+    width:  82px;
+}
+.cfboxx {
+    background: #FAFAFA;
+    width:  99%;
+    margin:  0 auto;
+    border-radius: 4px;
+    border: 1px solid #ddddddb8;
+    padding: 8px 24px;
+}

@@ -1,0 +1,56 @@
+.wtitle {
+    padding: 23px;
+    font-size: 17px;
+    text-transform:  capitalize;
+    font-weight:  bold;
+}
+ul.wul li {
+    background: #EFEFD1;
+    width: 70%;
+        margin-top: 17px;
+}
+
+ul.wul li a {
+  color: #848484;
+    padding-left: 12px;
+    text-transform: capitalize;
+    font-size: 12px;
+    line-height: 0px !important;
+}
+
+span {
+    float:  right;
+  
+    color: white;
+    width:  99px;
+    padding-left:  10px;
+}
+input.jscolor {
+    position:  relative;
+    /* bottom:  28px !important; */
+    top: -3px;
+    height: 20px !important;
+    font-size:  12px;
+}
+.wtitlee {
+    font-size: 17px;
+    text-transform:  capitalize;
+    font-weight:  bold;
+    border-bottom: 1px solid #213f66;
+    width:  45px;
+}
+.col.s12.m4.wbox {
+    width:  26%;
+    margin: 0 auto;
+    position:  relative;
+    left:  65px;
+}
+ul.wul {
+    border-bottom:  1px dotted;
+    /* margin-top: 59px !important; */
+    padding-bottom: 28px;
+}
+.main-menu {
+    background-color: #fff;
+    min-height: 500px !important;
+}
