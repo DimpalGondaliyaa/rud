@@ -112,6 +112,68 @@ class Home extends CI_Controller {
 	
 	}
 
+/*add Note*/
+
+	public function NoteModal($id)
+	{
+		$t = $this->db->query("SELECT * FROM contactdetails WHERE c_id='".$id."'");
+		$y = $t->row_array();
+		$this->load->view("addNotePage",$y);
+	}
+
+	public function addNote(){
+
+		$this->load->helper('date');
+		date_default_timezone_set("UTC");
+		if (function_exists('date_default_timezone_set'))
+		{
+		  date_default_timezone_set('Asia/Kolkata');
+		}
+
+		$c_date=date("Y-m-d H:i:s");
+		$id = $_POST['c_id'];
+		$data=array('u_id'=>$id,'note_type'=>$_POST['note_type'],'note'=>$_POST['note'],'createdOn'=>$c_date);
+		$this->db->insert("notes",$data);
+	
+	}
+
+
+
+/*add Events*/
+
+	public function eventsModal($id)
+	{
+		$t = $this->db->query("SELECT * FROM contactdetails WHERE c_id='".$id."'");
+		$y = $t->row_array();
+		$this->load->view("addEventsPage",$y);
+	}
+
+	public function addEvent(){
+
+		$this->load->helper('date');
+		date_default_timezone_set("UTC");
+		if (function_exists('date_default_timezone_set'))
+		{
+		  date_default_timezone_set('Asia/Kolkata');
+		}
+
+		$c_date=date("Y-m-d H:i:s");
+		$id = $_POST['c_id'];
+		$data=array('u_id'=>$id,
+			'e_title'=>$_POST['e_title'],
+			'e_date'=>$_POST['e_date'],
+			'e_time'=>$_POST['e_time'],
+			'e_timezone'=>$_POST['e_timezone'],
+			'e_public'=>$_POST['e_public'],
+			'e_event_type'=>$_POST['e_event_type'],
+			'e_assign_to'=>$_POST['e_assign_to'],
+			'e_location'=>$_POST['e_location'],
+			'e_desc'=>$_POST['e_desc'],
+			'createdOn'=>$c_date
+		);
+		$this->db->insert("u_events",$data);
+	
+	}
 
 }
 
