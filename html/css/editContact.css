@@ -237,6 +237,7 @@ span.prefix {
     font-size: 12px;
     transform: rotate(90deg);
     margin-left: -8px;
+    margin-top: -5px;
 }
 
 .ml {
@@ -289,4 +290,13 @@ select#f_295025{
 select#f_295046{
     position: relative;
     margin-left: -15px;
+}
+
+
+
+.row .col.m3 span.prefix {
+    position: absolute;
+    padding-top: 15px;
+    margin-top: 10px;
+    transform: rotate(0deg);
 }
