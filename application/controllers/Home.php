@@ -46,6 +46,31 @@ class Home extends CI_Controller {
 		 $this->load->view("editcontactdata",$y);
 	}
 
+	public function addconfilee()
+	{
+		$data = array('type' => $_POST['type'],
+		'description' => $_POST['description']);
+
+		$this->db->insert("contact_file",$data);
+		$id = $this->db->insert_id();
+
+
+		 $userImage=$id."_files.".pathinfo($_FILES['file']['name'],PATHINFO_EXTENSION);
+   
+		$adduserimgg=array('file'=>$userImage);
+		$this->db->where('id',$id);
+		$this->db->update("contact_file",$adduserimgg);
+		$config["upload_path"]='html/images';
+		$config["allowed_types"]='gif|png|jpg|jpeg';
+		$config["file_name"]=$id."_files";
+		$config["remove_spaces"]=TRUE;
+		$config["encrypt_name"]=FALSE;
+		$config['overwrite']=TRUE;
+
+		$this->load->library('upload',$config);
+		$this->upload->do_upload('file');
+	}
+
 	public function edtcontactdata()
 	{
 		$this->load->helper('date');

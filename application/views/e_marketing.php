@@ -7,9 +7,9 @@
 		  <nav class="contactnav">
 		    <div class="nav-wrapper connavwapp">
 		      <ul id="nav-mobile" class="hide-on-med-and-down">
-		        <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/add.png">Schedule A New Campaign</a></li>
-		        <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/icon-event.jpg">Create Email Template</a></li>
-		        <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/icon-settings.jpg">Setup Senders</a></li>
+		        <li><a href="<?= base_url(); ?>Schedule_E_marketing"><img class="iconstyle" src="<?php echo base_url() ?>html/images/add.png">Schedule A New Campaign</a></li>
+		        <li><a href="<?php echo base_url(); ?>E_marketing_details"><img class="iconstyle" src="<?php echo base_url() ?>html/images/icon-event.jpg">Create Email Template</a></li>
+		        <li><a href="<?php  echo base_url(); ?>setup_sender"><img class="iconstyle" src="<?php echo base_url() ?>html/images/icon-settings.jpg">Setup Senders</a></li>
 		    </div>
 		  </nav>
 

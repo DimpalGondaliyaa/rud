@@ -59,5 +59,11 @@ class Docs_details extends CI_Controller {
 		$this->db->where("id",$id);
 		$this->db->update("docs",$data);
 	}
+
+	public function deletedoc($id)
+	{
+		$this->db->where("id",$id);
+		$this->db->delete("docs");
+	}
 }
 ?>

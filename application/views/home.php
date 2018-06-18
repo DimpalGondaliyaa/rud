@@ -94,13 +94,7 @@ echo timespan($post_date, $now) . ' ago';
 		            	<th>Status</th>
 		            	<th>Last Call Activity</th>
 		            	<th>Time In Status </th>
-		            	<!-- <th>Phone</th>
-		            	<th>Mobile</th>
-		            	<th>Income</th>
-		            	<th>DOB</th>
-		            	<th>Address</th>
-		            	<th>City</th>
-		            	<th>Zipcode</th> -->
+		            	
 		            	<th>Action</th>
 		            </tr>
 		        </thead>
@@ -142,7 +136,7 @@ echo timespan($post_date, $now) . ' ago';
 						<a data-id="<?php echo $value['c_id']; ?>" class="addNote" href="#!"><img src="<?php echo base_url(); ?>html/images/note_add.png"> </a>&nbsp;
 
 						<a data-id="<?php echo $value['c_id']; ?>" class="addEvnt" href="#!"><img src="<?php echo base_url(); ?>html/images/calendar_add.png"> </a>&nbsp;
-						<a href="#!"><img src="<?php echo base_url(); ?>html/images/page_white_get.png"> </a>&nbsp;
+						<a href="#" class="upfiless"><img src="<?php echo base_url(); ?>html/images/page_white_get.png"> </a>&nbsp;
 						<a href="#!"><img src="<?php echo base_url();?>html/images/bullet_go.png"></a>
 					</td>
 				</tr>
@@ -151,6 +145,17 @@ echo timespan($post_date, $now) . ' ago';
 			</table>
 			</div> 
 		</div>
+
+
+		  <!-- Modal Structure -->
+	  <div id="upcon_file" class="modal">
+	    <div class="modal-content">
+	    	<?php $this->load->view("uplode_contact_file"); ?>
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-close waves-effect waves-green btn-flat addconfile ">Agree</a>
+	    </div>
+	  </div>
 
 	  <!-- Modal Structure -->
 	  <div id="contactedit" class="modal">

@@ -25,6 +25,25 @@ $(function(){
 			}
 		 });
     });
+
+    $(".addconfile").on("click", function()
+	{
+		var edtcontactfrm = new FormData($("#addconfilefrm")[0]); 
+		$.ajax({
+			url : baseurl+"Home/addconfilee",
+			type :"POST",
+			data :edtcontactfrm,	
+			contentType:false,
+			processData:false,
+			success:function(res)
+			{
+				swal("Added Successfully!", "success")
+				$('.swal-button--confirm').on('click',function(){
+					window.location.reload();
+				});
+			}
+		 });
+    });
 	
 	$("#example").on("click",".conedtbtn", function()
 	{
@@ -37,6 +56,15 @@ $(function(){
 
 	    }); 
 	});
+
+
+	$(".upfiless").on("click",function()
+	{
+		$(".modal").modal();
+		$("#upcon_file").modal("open");
+		 
+	});
+
 
 	$("#example").on("click",".condltbtn", function()
 	{

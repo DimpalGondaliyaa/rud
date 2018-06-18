@@ -1,0 +1,66 @@
+.sendtitle {
+ text-transform: uppercase;
+    padding:  23px 10px;
+    font-weight: bold;
+}
+.setupbtnn {
+    background-color: var(--fruit-salad, #50ad50) !important;
+    border: 1px solid var(--fruit-salad, #50ad50);
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: "Open Sans","Helvetica",Arial,sans-serif;
+    font-weight: 300;
+    color: white;
+    text-transform: capitalize;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    margin: 0;
+    opacity: 0.85;
+    outline: none;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    color:  #fff !impoertant;
+    float: right;
+}
+.setupbtnn a
+{
+	color: #fff;
+}
+.alert.inline.caution {
+    background: #FFF9C3;
+    border:  1px solid red;
+    border-radius:  5px;
+    padding:  0px 21px;
+}
+.message p {
+    font-size: 13px;
+    letter-spacing:  0px;
+}
+.sesstionbtn
+{
+	background-color: #213F66;
+    border: 1px solid #213F66;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-family: "Open Sans","Helvetica",Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+    text-transform: capitalize;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0;
+    opacity: 0.85;
+    outline: none;
+    transition: all 0.2s ease;
+    float: right;
+}
+.sesstionbtn a
+{
+	color: #fff;
+	text-transform: capitalize;
+}

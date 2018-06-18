@@ -21,4 +21,13 @@ $(function(){
 		 });
 
 	});
+
+	$(".docdel").on("click",function()
+	{
+		var data=$(this).data('id');
+		if(confirm("are you sure to delete this?")){
+		$.post(baseurl+"Docs_details/deletedoc/"+data,function(data){
+		});
+	}
+	});
 });

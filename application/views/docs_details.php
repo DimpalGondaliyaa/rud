@@ -166,8 +166,8 @@
       </div>
       <div class="ppdfbtn">
 	   		<a href="#"  class="edttuppdf btn">save file </a>
-	   		<a href="#" class="edttuppdf btn">delete file </a>
-	   		<a href="#" class="edttuppdf btn">preview document</a>
+	   		<a href="#" data-id='<?php echo $tt['id']; ?>'  style="background-color: red;" class="docdel btn">delete file </a>
+	   		<a href="#" style="background-color: grey;" class="btn">preview document</a>
 	   </div>
     </form>
 
