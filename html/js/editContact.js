@@ -69,5 +69,48 @@ $(function(){
         }
     	
    });
+
+    var baseurl=$('#base_url').val();
+
+    $('.saveBtn').on("click",function()
+      {
+         var condata = new FormData($("#fromContact")[0]);
+            $.ajax({
+            url : baseurl+"EditContact/add_contactt/",
+              type :"POST",
+              data :condata, 
+              contentType:false,
+              processData:false,
+              success:function(res)
+              {
+                swal('Inserted Record Successfully!');
+               /*alert("Project Added Successfully.");*/
+               $("#fromContact")[0].reset();
+                /*$("form").trigger("reset");*/
+               //window.location.reload();
+              }
+            });
+      });
+
+    $('.updateData').on("click",function()
+      {
+         var condata = new FormData($("#fromContact")[0]);
+            $.ajax({
+            url : baseurl+"EditContact/upp_contactt/",
+              type :"POST",
+              data :condata, 
+              contentType:false,
+              processData:false,
+              success:function(res)
+              {
+                swal('Updated Record Successfully!');
+               /*alert("Project Added Successfully.");*/
+               /*$("#fromContact")[0].reset();*/
+               $(document.body).load(location.href);
+                /*$("form").trigger("reset");*/
+               //window.location.reload();
+              }
+            });
+      });
 	
 })

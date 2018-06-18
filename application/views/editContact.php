@@ -2,7 +2,7 @@
 <div class="main-box">
  <div class="main-menu">
  	<div class="row">
- 		<form name="fromContact">
+ 		<form name="fromContact" id="fromContact" method="POST">
  	<div class="edit-contactBox">
  			<div class="leftSide-container">
  				<div class="col s12 m3">
@@ -12,6 +12,7 @@
 							<option value="">--Select--</option><option value="11855" selected="selected">In-Take Form</option>
 						</select>
  					</div>
+ 					<?php if($get['c_id']>0){?>
  					<div class="action-box">
  						<ul class="iconfarm">
                 			<li><a href="#!"><i class="fas fa-sticky-note"></i></a></li>
@@ -23,6 +24,7 @@
                 			<li><a href="#!"><i class="fas fa-th"></i></a></li>
                 		</ul>
  					</div>
+ 				<?php } else { } ?>
  				</div>
  				<div class="bottom-box">
  					<div>
@@ -35,8 +37,8 @@
  							<li data-id="tab_5" class="noicon tb"><a href="#!" class="tab_5">Reference #2</a></li>
 				            <div class="row valign-wrapper btn-box">
 				                <div class="col s12 m8">
-				                  <button type="button" name="lowsave" class="btn green btn-savensty" id="savebtn">Save and Exit</button>
-				                  <button type="button" name="savenstay" class="btn green btn-save" id="savestay">Save</button>
+				                  <button type="button" name="lowsave"  class="btn green btn-savensty" id="savebtn">Save and Exit</button>
+				                  <button type="button" name="savenstay" onclick="$('#saveBtn').click();" class="btn green btn-save" id="savestay">Save</button>
 				                </div>
 				                <div class="col s12 m4">
 				                    <a class="txt-btn" href="#" onclick="updateview();">Switch Layout</a>
@@ -49,10 +51,10 @@
  		</div>
  		<div class="rightSide-container">
  			<div class="col s12 m9">
- 				
  				<div class="row no-gutter">
                     <div id="contact-details">
                         <div class="col s12 m7 left ttl">
+                        	<input type="hidden" name="c_id" value="<?php echo $get['c_id']; ?>">
                             <p><span class="ttl-g" style=" font-size: 20px !important;letter-spacing: 0 !important;font-family: sans-serif;"><?php echo $get['f_name'].''.$get['l_name']; ?> > </span><span class="infobox" id="infobox">Contact Info</span></p>
                             <p style="font-size: 12px;line-height: 0;letter-spacing: 0;font-family: sans-serif;">Lead > Follow Up</p>
                         </div>
@@ -988,12 +990,20 @@
 			 				</div>
 			 				<div class="col s5 m5">
 			 				</div>
-			 			  </div> </div>
+			 			  </div> 
+			 			</div>
 			 		</div>
 			 	</div>
- 	</div>
-  </div>
-</div>	
+			 </div>
+			</div>
+		</div>
+		<button type="button" class="hide<?php if($get['c_id']>0){ ?> updateData <?php  } else { ?> saveBtn <?php } ?>" id="saveBtn"></button>
+	</form>
+</div>
+</div>
+</div>
+
+			 		
 
 <style type="text/css">
 	.frmBox{
