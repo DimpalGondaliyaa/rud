@@ -15,13 +15,13 @@
  					<?php if($get['c_id']>0){?>
  					<div class="action-box">
  						<ul class="iconfarm">
-                			<li><a href="#!"><i class="fas fa-sticky-note"></i></a></li>
+                			<li><a data-id="<?php echo $get['c_id']; ?>" class="addNote" href="#!"><i class="fas fa-sticky-note"></i></a></li>
                 			<li><a href="#!"><i class="fas fa-envelope"></i></a></li>
                 			<li><a href="#!"><i class="fas fa-phone"></i></a></li>
-                			<li><a href="#!"><i class="fas fa-calendar"></i></a></li>
+                			<li><a data-id="<?php echo $get['c_id']; ?>" class="addEvnt" href="#!"><i class="fas fa-calendar"></i></a></li>
                 			<li><a href="#!"><i class="fas fa-tasks"></i></a></li>
                 			<li><a href="#!"><i class="fas fa-upload"></i></a></li>
-                			<li><a href="#!"><i class="fas fa-th"></i></a></li>
+                			<li><a data-id="<?php echo $get['c_id']; ?>" class="changeStatus" href="#!"><i class="fas fa-th"></i></a></li>
                 		</ul>
  					</div>
  				<?php } else { } ?>
@@ -1003,6 +1003,42 @@
 </div>
 </div>
 
+
+
+<!-- ============= Change Status ===============-->
+
+	  <div id="statusChanged" class="modal">
+	    <div class="modal-content">
+	    	
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-close valign-wrapper waves-effect waves-green btn-flat editStatus"><img src="<?php echo base_url(); ?>html/images/accept.png"> Update Status</a>
+	    </div>
+	  </div>
+
+<!-- ============= Add Note ===============-->
+
+	   <!-- Modal Structure -->
+	  <div id="addNotee" class="modal">
+	    <div class="modal-content">
+	    	
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-close valign-wrapper waves-effect waves-green btn-flat saveNote"><img src="<?php echo base_url(); ?>html/images/accept.png"> Save Note</a>
+	    </div>
+	  </div>
+
+<!-- ============= Add Events ===============-->
+
+	   <!-- Modal Structure -->
+	  <div id="addEventss" class="modal" style="max-width: 800px !important;">
+	    <div class="modal-content">
+	    	
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-close valign-wrapper waves-effect waves-green btn-flat addEvents"><img src="<?php echo base_url(); ?>html/images/accept.png"> Save Events</a>
+	    </div>
+	  </div>	
 			 		
 
 <style type="text/css">
