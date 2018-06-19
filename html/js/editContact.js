@@ -70,6 +70,205 @@ $(function(){
     	
    });
 
+
+  $('.tab_btn').on('click',function(){
+    var val = $(this).data('id');
+    $('li').removeClass("active");
+    $(this).addClass('active');
+
+    if(val=='tab_1'){
+      $('.'+val).addClass('active');
+      
+      $('.tab_2').removeClass('active');
+      $('.tab_3').removeClass('active');
+      $('.tab_4').removeClass('active');
+      $('.tab_5').removeClass('active');
+      $('.tab_6').removeClass('active');
+      $('.tab_7').removeClass('active');
+      $('.tab_8').removeClass('active');
+      $('.tab_9').removeClass('active');
+      $('.tab_10').removeClass('active');
+      $('.tab_11').removeClass('active');
+      $('.tab_12').removeClass('active');
+    } 
+    else if(val=='tab_2'){
+      $('.'+val).addClass('active');
+      $('.tab_1').removeClass('active');
+      $('.tab_3').removeClass('active');
+      $('.tab_4').removeClass('active');
+      $('.tab_5').removeClass('active');
+      $('.tab_6').removeClass('active');
+      $('.tab_7').removeClass('active');
+      $('.tab_8').removeClass('active');
+      $('.tab_9').removeClass('active');
+      $('.tab_10').removeClass('active');
+      $('.tab_11').removeClass('active');
+      $('.tab_12').removeClass('active');
+    }
+    else if(val=='tab_3'){
+      $('.'+val).addClass('active');
+      $('.tab_1').removeClass('active');
+      $('.tab_2').removeClass('active');
+      $('.tab_4').removeClass('active');
+      $('.tab_5').removeClass('active');
+      $('.tab_6').removeClass('active');
+      $('.tab_7').removeClass('active');
+      $('.tab_8').removeClass('active');
+      $('.tab_9').removeClass('active');
+      $('.tab_10').removeClass('active');
+      $('.tab_11').removeClass('active');
+      $('.tab_12').removeClass('active');
+    }
+    else if(val=='tab_4'){
+      $('.'+val).addClass('active');
+      $('.tab_1').removeClass('active');
+      $('.tab_2').removeClass('active');
+      $('.tab_3').removeClass('active');
+      $('.tab_5').removeClass('active');
+      $('.tab_6').removeClass('active');
+      $('.tab_7').removeClass('active');
+      $('.tab_8').removeClass('active');
+      $('.tab_9').removeClass('active');
+      $('.tab_10').removeClass('active');
+      $('.tab_11').removeClass('active');
+      $('.tab_12').removeClass('active');
+    }
+    else if(val=='tab_5'){
+      $('.'+val).addClass('active');
+      $('.tab_1').removeClass('active');
+      $('.tab_2').removeClass('active');
+      $('.tab_3').removeClass('active');
+      $('.tab_4').removeClass('active');
+      $('.tab_6').removeClass('active');
+      $('.tab_7').removeClass('active');
+      $('.tab_8').removeClass('active');
+      $('.tab_9').removeClass('active');
+      $('.tab_10').removeClass('active');
+      $('.tab_11').removeClass('active');
+      $('.tab_12').removeClass('active');
+    }
+    else if(val=='tab_6'){
+      $('.'+val).addClass('active');
+      $('.tab_1').removeClass('active');
+      $('.tab_2').removeClass('active');
+      $('.tab_3').removeClass('active');
+      $('.tab_4').removeClass('active');
+      $('.tab_5').removeClass('active');
+      $('.tab_7').removeClass('active');
+      $('.tab_8').removeClass('active');
+      $('.tab_9').removeClass('active');
+      $('.tab_10').removeClass('active');
+      $('.tab_11').removeClass('active');
+      $('.tab_12').removeClass('active');
+    }
+    else if(val=='tab_7'){
+      $('.'+val).addClass('active');
+      $('.tab_1').removeClass('active');
+      $('.tab_2').removeClass('active');
+      $('.tab_3').removeClass('active');
+      $('.tab_4').removeClass('active');
+      $('.tab_5').removeClass('active');
+      $('.tab_6').removeClass('active');
+      $('.tab_8').removeClass('active');
+      $('.tab_9').removeClass('active');
+      $('.tab_10').removeClass('active');
+      $('.tab_11').removeClass('active');
+      $('.tab_12').removeClass('active');
+    }
+    else if(val=='tab_8'){
+      $('.'+val).addClass('active');
+      $('.tab_1').removeClass('active');
+      $('.tab_2').removeClass('active');
+      $('.tab_3').removeClass('active');
+      $('.tab_4').removeClass('active');
+      $('.tab_5').removeClass('active');
+      $('.tab_6').removeClass('active');
+      $('.tab_7').removeClass('active');
+      $('.tab_9').removeClass('active');
+      $('.tab_10').removeClass('active');
+      $('.tab_11').removeClass('active');
+      $('.tab_12').removeClass('active');
+    }
+    else if(val=='tab_9'){
+      $('.'+val).addClass('active');
+      $('.tab_1').removeClass('active');
+      $('.tab_2').removeClass('active');
+      $('.tab_3').removeClass('active');
+      $('.tab_4').removeClass('active');
+      $('.tab_5').removeClass('active');
+      $('.tab_6').removeClass('active');
+      $('.tab_7').removeClass('active');
+      $('.tab_8').removeClass('active');
+      $('.tab_10').removeClass('active');
+      $('.tab_11').removeClass('active');
+      $('.tab_12').removeClass('active');
+    }
+    else if(val=='tab_10'){
+      $('.'+val).addClass('active');
+      $('.tab_1').removeClass('active');
+      $('.tab_2').removeClass('active');
+      $('.tab_3').removeClass('active');
+      $('.tab_4').removeClass('active');
+      $('.tab_5').removeClass('active');
+      $('.tab_6').removeClass('active');
+      $('.tab_7').removeClass('active');
+      $('.tab_8').removeClass('active');
+      $('.tab_9').removeClass('active');
+      $('.tab_11').removeClass('active');
+      $('.tab_12').removeClass('active');
+    }
+    else if(val=='tab_11'){
+      $('.'+val).addClass('active');
+      $('.tab_1').removeClass('active');
+      $('.tab_2').removeClass('active');
+      $('.tab_3').removeClass('active');
+      $('.tab_4').removeClass('active');
+      $('.tab_5').removeClass('active');
+      $('.tab_6').removeClass('active');
+      $('.tab_7').removeClass('active');
+      $('.tab_8').removeClass('active');
+      $('.tab_9').removeClass('active');
+      $('.tab_10').removeClass('active');
+      $('.tab_12').removeClass('active');
+    }
+    else if(val=='tab_12'){
+      $('.'+val).addClass('active');
+      $('.tab_1').removeClass('active');
+      $('.tab_2').removeClass('active');
+      $('.tab_3').removeClass('active');
+      $('.tab_4').removeClass('active');
+      $('.tab_5').removeClass('active');
+      $('.tab_6').removeClass('active');
+      $('.tab_7').removeClass('active');
+      $('.tab_8').removeClass('active');
+      $('.tab_9').removeClass('active');
+      $('.tab_10').removeClass('active');
+      $('.tab_11').removeClass('active');
+    }
+
+    else{
+      $('.tab_1').addClass('active');
+      $('.tab_2').removeClass('active');
+      $('.tab_3').removeClass('active');
+      $('.tab_4').removeClass('active');
+      $('.tab_5').removeClass('active');
+      $('.tab_6').removeClass('active');
+      $('.tab_7').removeClass('active');
+      $('.tab_8').removeClass('active');
+      $('.tab_9').removeClass('active');
+      $('.tab_10').removeClass('active');
+      $('.tab_11').removeClass('active');
+      $('.tab_12').removeClass('active');
+    }
+  });
+
+
+  $('.btn-tgl-add').on('click',function(){
+    $('.add-prog-container').toggle();
+  });
+
+
+
     var baseurl=$('#base_url').val();
 
     $('.saveBtn').on("click",function()
