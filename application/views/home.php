@@ -136,8 +136,12 @@ echo timespan($post_date, $now) . ' ago';
 						<a data-id="<?php echo $value['c_id']; ?>" class="addNote" href="#!"><img src="<?php echo base_url(); ?>html/images/note_add.png"> </a>&nbsp;
 
 						<a data-id="<?php echo $value['c_id']; ?>" class="addEvnt" href="#!"><img src="<?php echo base_url(); ?>html/images/calendar_add.png"> </a>&nbsp;
+
 						<a href="#" class="upfiless"><img src="<?php echo base_url(); ?>html/images/page_white_get.png"> </a>&nbsp;
-						<a href="#!"><img src="<?php echo base_url();?>html/images/bullet_go.png"></a>
+						
+						<a data-id="<?php echo $value['c_id']; ?>" class="" href="<?= base_url(); ?>EditContact/Details/<?php echo $value['c_id'];?>"><img src="<?php echo base_url();?>html/images/bullet_go.png"></a> &nbsp;
+						<!-- <a href="#!"><img src="<?php echo base_url();?>html/images/bullet_go.png"></a> -->
+
 					</td>
 				</tr>
 				<?php } ?>

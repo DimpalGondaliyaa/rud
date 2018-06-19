@@ -116,8 +116,6 @@ $(function(){
 
     /*Change Status*/
 
-    
-
     $(".changeStatus").on("click", function()
     {
         $(".modal").modal();
@@ -126,7 +124,6 @@ $(function(){
           var id = $(this).data("id");
         $.post(baseurl+"Home/fetchStatus/"+id,function(id){
              $("#statusChanged .modal-content").html(id);
-
         }); 
     });
 

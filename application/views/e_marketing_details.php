@@ -8,8 +8,8 @@
 		    <div class="nav-wrapper connavwapp">
 		      <ul id="nav-mobile" class="hide-on-med-and-down">
 		        <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/accept.png">save design</a></li>
-		        <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/accept.png">save as new</a></li>
-		        <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/cross.png">delete design</a></li>
+		       <!--  <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/accept.png">save as new</a></li>
+		        <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/cross.png">delete design</a></li> -->
 		      </ul>  
 		    </div>
 		  </nav>
