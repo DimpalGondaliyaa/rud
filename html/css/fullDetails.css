@@ -1,0 +1,334 @@
+body{
+    letter-spacing: 0;
+    font-family: Arial, sans-serif;
+}
+.main-menu{
+	overflow: auto;
+	height: auto;
+}
+div#csubnav li{
+	display: inline-block;position: relative;
+	    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    border: 1px solid #D9D9D9;
+    margin: 2px;
+    padding: 0;
+    background: #D9D9D9;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+div#csubnav li:hover{
+	border: 1px solid #D9D9D9;
+    margin: 2px;
+    padding: 0;
+    background: #d9d9d970;
+}
+div#csubnav li.active a {
+    border: 1px solid #213f66;
+    margin: 0;
+    border-radius: 5px;
+    color: #fff !important;
+    background: #213f66;
+    text-decoration: none;
+    padding: 5px;
+    cursor: pointer;
+    letter-spacing: 0px;
+
+}
+div#csubnav li a {
+	display: inline-block;
+	color: #414141;
+	text-decoration: none;
+	padding: 5px;
+	cursor: pointer;
+	letter-spacing: 0px;
+}
+input.top-srch {
+    position: relative;
+    top: 3px;
+    background: #ffffffb5 !important;
+    width: 250px !important;
+    height: 20px !important;
+    padding-left: 25px !important;
+}
+i.fas.fa-search {
+    position: relative;
+    font-size: 12px;
+    color: #213f66;
+}
+span.pre-srch {
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 10px;
+    z-index: 1;
+}
+.details-container {
+    position: relative;
+    padding: 15px;
+}
+.detailsBox {
+    position: relative;
+    background: #dddddd;
+    overflow: hidden;
+    border-radius: 7px;
+    padding: 10px;
+}
+.top-box {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 25px;
+}
+button.btn-up-st {
+	height: 30px;
+    line-height: normal;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+    border-radius: 5px;
+    margin-left: -10px;
+    padding: 5px 7px;
+    margin-top: 15px;
+}
+.lead-box p {
+    line-height: 4px;
+    position: relative;
+}
+.top-box {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #00000038;
+}
+.second-hdr p {
+    line-height: 0px;
+}
+.second-hdr p {
+    line-height: 0px;
+    letter-spacing: 0;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+.second-hdr {
+    border-bottom: 1px dashed #0000002e;
+    overflow: hidden;
+}
+.third-Box a {
+    position: relative;
+    color: #213f66;
+    font-size: 11px;
+    line-height: 5;
+}
+.details-usr p {
+    position: relative;
+    font-size: 12px;
+}
+.third-Box p {
+    line-height: 0px;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0;
+    font-size: 12px;
+}
+.col.s12.m12.spcbox {
+    padding-bottom: 5px;
+}
+.orangeBox {
+    position: relative;
+    padding: 5px;
+    border: 1px solid #ddd;
+    margin: 15px 0px;
+}
+.condcont {
+    position: relative;
+    background-color: #eb6134;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid #eb6134;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    padding: 6px;
+    cursor: pointer;
+}
+.infoBox {
+    position: relative;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+.infoBox p {
+    line-height: 0px;
+    font-size: 11px;
+    letter-spacing: 0;
+    display: inline-block;
+    font-weight: bold;
+}
+.infoBox .col.s12.m6:nth-child(even){
+	color: #929288;
+}
+.addinfo-ttl h6 {
+    color: #213f66;
+    font-weight: bold;
+    padding: 0px 5px 7px;
+    font-size: 16px;
+}
+.xbox{
+	display: none;
+	position: relative;
+}
+.xbox.active{
+	display: block;
+}
+
+span.pre-srch-icon {
+    position: absolute;
+    padding: 10px;
+}
+input.srch-bx {
+    position: relative;
+    margin-top: 0px;
+}
+.col.s12.m3.btn-bx {
+    padding: 0;
+}
+button.btn-xport-task {
+    position: relative;
+    background: #eaeaea;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 2px;
+    text-decoration: none;
+    font-size: 12px;
+    height: initial;
+    overflow: hidden;
+    padding: 5px;
+    top: 12px;
+}
+a.add-task {
+    position: relative;
+    margin-top: 0;
+    padding: 3px;
+    top: 15px;
+}
+button.btn-add-program {
+    background: #eaeaea;
+    padding: 3px 6px 3px 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: Arial,sans-serif;
+    font-size: var(--base-font, 11px);
+    transition: 0.2s ease all;
+    color: #848484;
+}
+
+.add-box .col {
+    padding: 0px;
+    display: inline-block;
+    position: relative;
+}
+select#stu_program {
+    position: relative;
+    top: 11px;
+    font-size: 12px;
+    height: 27px !important;
+}
+select#stu_program option {
+    position: relative;
+    top: 11px;
+    font-size: 12px !important;
+    height: 27px !important;
+}
+button.btn-save-loan.green.white-text.btn {
+    position: relative;
+    margin-top: 27px;
+    font-size: 12px;
+    height: 26px;
+    line-height: 0;
+    font-weight: bold;
+    width: 100%;
+    letter-spacing: 0;
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+
+.add-prog-container {
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    background: var(--alabaster, #fafafa);
+    border: 1px solid var(--subtle-gray, #eaeaea);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    display: none;
+}
+
+.tab_10.xbox label {
+    position: relative;
+    line-height: 21px !important;
+    top: 10px !important;
+}
+.tab_10.xbox select {
+    height: 30px !important;
+    margin: 5px 0px;
+    margin-top: 10px;
+    font-size: 12px;
+}
+.tab_10.xbox option {
+    height: 30px !important;
+    margin: 5px 0px;
+    margin-top: 10px;
+    font-size: 12px !important;
+}
+.tab_10.xbox input {
+    height: 27px !important;
+    margin: 5px 0px;
+    margin-top: 0px;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.xbox h6 {
+    color: #213f66;
+    font-weight: bold;
+    letter-spacing: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+.small-ttl h6 {
+    font-size: 12px;
+}
+.xbox h5 {
+    font-weight: normal;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    color: #213f66;
+}
+.pnl-ttl h6 {
+    color: #838383;
+    font-size: 15px;
+}
+
+.Credit-Card-Box {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.Credit-Card-Box label {
+    color: #414141 !important;
+    font-size: 12px;
+    font-weight: bold !important;
+}
+.xbox p {
+    font-size: 11px;
+    font-weight: bold;
+}

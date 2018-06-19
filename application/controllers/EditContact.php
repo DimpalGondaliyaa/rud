@@ -283,7 +283,7 @@ class EditContact extends CI_Controller {
 
 		$headerData = array(
 			"pageTitle" => "Edit Contact",
-			"stylesheet" => array("home.css","editContact.css")
+			"stylesheet" => array("home.css","editContact.css","fullDetails.css")
 		);
 		$footerData = array(
 			"jsFiles" => array("home.js","editContact.js")
