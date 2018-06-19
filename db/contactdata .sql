@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 18, 2018 at 09:01 AM
+-- Generation Time: Jun 19, 2018 at 06:46 AM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -187,7 +187,32 @@ CREATE TABLE `contactdetails` (
 --
 
 INSERT INTO `contactdetails` (`c_id`, `f_name`, `c_f_name`, `l_name`, `c_l_name`, `middle_name`, `c_middle_name`, `maiden_name`, `c_maiden_name`, `u_email`, `c_email`, `password`, `gender`, `phone`, `c_phone`, `mobile`, `income`, `dob`, `address`, `address2`, `city`, `state`, `zipcode`, `stage`, `status`, `createdOn`, `timeofresidency`, `last_call_activity`, `ssn`, `c_ssn`, `dob_m`, `c_dob_m`, `dob_d`, `c_dob_d`, `dob_y`, `c_dob_y`, `c_mobile`, `occupation`, `c_occupation`, `employer`, `c_employer`, `position`, `c_position`, `length_of_employmen`, `c_length_of_employmen`, `employer_address`, `c_employer_address`, `employer_address2`, `c_employer_address2`, `emp_city`, `c_emp_city`, `add_emp_city`, `add_c_emp_city`, `emp_state`, `c_emp_state`, `emp_zip`, `c_emp_zip`, `emp_home_phone`, `c_emp_home_phone`, `gross_income`, `income_spouse`, `status_of_loans`, `taxable_income`, `indebtedness_amoun`, `family_size`, `filing_status`, `file_taxes`, `dl_number`, `dl_state`, `wages_garnished`, `pslf`, `fsa_pin`, `ref_f_name`, `ref2_f_name`, `ref_l_name`, `ref2_l_name`, `ref_relationship`, `ref2_relationship`, `ref_state`, `ref2_state`, `ref_zip`, `ref2_zip`, `ref_phone`, `ref2_phone`, `ref_addr`, `ref2_addr`, `ref_city`, `ref2_city`) VALUES
-(1, 'Applicant', 'co_aplicant', 'Last Name', 'c_Last Name', '', '', 'Maiden Name', 'c_Maiden Name', 'u@email.com', 'c_email@.com', '', 0, 1234567890, 987654321, 0, 0, '', 'Address 1', 'Address 2', 'City', 'State', 380015, '', '', '18-06-2018 12:20: pm', '2018-06-18 12:20:17', '', 'ssn', 'c_ssn', '08', '08', '14', '', '1961', '1961', 0, 'Occupation', 'c_Occupation', 'Employer', 'c_Employer', 'Position', 'Position', 'Length of Employment', 'Length of Employment', 'Employer Address', 'Employer Address', 'Employer Address 2', 'Employer Address 2', 'Employer City', 'Employer City', '', '', '', '', '888888', '999999', 789456123, 321654987, 12500, 10000, '', 0, 10000, 5, 0, '', '789456', '', '', '', '79531681561', 'REF1 First Name', 'REF2 First Name', 'REF1 Last Name', 'REF2 Last Name', 'REF1 Relationship', 'REF2 Relationship', '', '', 'REF1 Zip', 'REF2 Zip', 0, 7896325412, 'REF1 Address', 0, 'REF1 City', 'REF2 City');
+(1, 'Applicant', 'co_aplicant', 'Last Name', 'c_Last Name', '', '', 'Maiden Name', 'c_Maiden Name', 'u@email.com', 'c_email@.com', '', 0, 1234567890, 987654321, 0, 0, '', 'Address 1', 'Address 2', 'City', 'State', 380015, 'Lead', 'Follow Up', '18-06-2018 12:20: pm', '2018-06-18 12:20:17', '', 'ssn', 'c_ssn', 'June', 'June', '14', '', '1961', '1961', 0, 'Occupation', 'c_Occupation', 'Employer', 'c_Employer', 'Position', 'Position', 'Length of Employment', 'Length of Employment', 'Employer Address', 'Employer Address', 'Employer Address 2', 'Employer Address 2', 'Employer City', 'Employer City', '', '', '', '', '888888', '999999', 789456123, 321654987, 12500, 10000, '', 0, 10000, 5, 0, '', '789456', '', '', '', '79531681561', 'REF1 First Name', 'REF2 First Name', 'REF1 Last Name', 'REF2 Last Name', 'REF1 Relationship', 'REF2 Relationship', '', '', 'REF1 Zip', 'REF2 Zip', 0, 7896325412, 'REF1 Address', 0, 'REF1 City', 'REF2 City');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact_file`
+--
+
+CREATE TABLE `contact_file` (
+  `id` int(11) NOT NULL,
+  `file` text NOT NULL,
+  `type` varchar(245) NOT NULL,
+  `description` text NOT NULL,
+  `createdOn` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `contact_file`
+--
+
+INSERT INTO `contact_file` (`id`, `file`, `type`, `description`, `createdOn`) VALUES
+(1, '1_files.png', '3', 'fdfdfdf', '0000-00-00 00:00:00'),
+(2, '2_files.png', 'Power Of Attorney', 'sasas', '0000-00-00 00:00:00'),
+(3, '3_files.png', 'General / Misc.', 'this is uploaded file.', '0000-00-00 00:00:00'),
+(4, '4_files.png', 'General / Misc.', '', '0000-00-00 00:00:00'),
+(5, '5_files.jpg', 'General / Misc.', 'This is Simple file Uploading.', '19-06-2018 10:15: am');
 
 -- --------------------------------------------------------
 
@@ -289,7 +314,9 @@ CREATE TABLE `notes` (
 --
 
 INSERT INTO `notes` (`id`, `u_id`, `note_type`, `note`, `createdOn`) VALUES
-(1, 2, 'Call', 'this is Note.', '2018-06-15 11:02:57');
+(1, 2, 'Call', 'this is Note.', '2018-06-15 11:02:57'),
+(2, 1, 'Creditor', 'This is Noteeeeee', '2018-06-18 12:44:24'),
+(3, 1, 'Creditor', 'This is Noteeeeee', '2018-06-18 12:44:24');
 
 -- --------------------------------------------------------
 
@@ -417,6 +444,12 @@ ALTER TABLE `contactdetails`
   ADD PRIMARY KEY (`c_id`);
 
 --
+-- Indexes for table `contact_file`
+--
+ALTER TABLE `contact_file`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `custom_fields`
 --
 ALTER TABLE `custom_fields`
@@ -490,7 +523,13 @@ ALTER TABLE `companies`
 -- AUTO_INCREMENT for table `contactdetails`
 --
 ALTER TABLE `contactdetails`
-  MODIFY `c_id` bigint(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `c_id` bigint(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `contact_file`
+--
+ALTER TABLE `contact_file`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `custom_fields`
@@ -514,7 +553,7 @@ ALTER TABLE `events`
 -- AUTO_INCREMENT for table `notes`
 --
 ALTER TABLE `notes`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `up_files`

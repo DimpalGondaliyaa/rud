@@ -48,8 +48,19 @@ class Home extends CI_Controller {
 
 	public function addconfilee()
 	{
+		$this->load->helper('date');
+		date_default_timezone_set("UTC");
+		if (function_exists('date_default_timezone_set'))
+		{
+		  date_default_timezone_set('Asia/Kolkata');
+		}
+		date_default_timezone_set('Asia/Kolkata');
+		$created_date=date("d-m-Y H:i: a");
+
 		$data = array('type' => $_POST['type'],
-		'description' => $_POST['description']);
+					'description' => $_POST['description'],
+					'createdOn'=>$created_date
+				);
 
 		$this->db->insert("contact_file",$data);
 		$id = $this->db->insert_id();
