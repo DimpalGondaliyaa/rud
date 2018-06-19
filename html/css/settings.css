@@ -1,0 +1,53 @@
+.chantitlw {
+    font-weight:  bold;
+    color: #213f66;
+    padding:  18px;
+    letter-spacing:  0px;
+}
+
+.labeltitle {
+    font-weight:  bold;
+    position:  relative;
+    top: 6px;
+    font-size: 13px;
+}
+
+select {
+    width:  14%;
+    height: 28px;
+    font-size:  11px;
+    font-weight:  bold;
+    color:  grey;
+    margin-bottom: 10px;
+}
+.main-menu {
+    width: 97%;
+    margin: 0 auto;
+    background-image: #fff !important;
+    overflow: hidden;
+    height: auto !important;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: relative;
+     opacity: 1; 
+   
+    left: inherit;
+    right: 49%;
+        margin-bottom: 15px;
+   
+    height: 13px !important;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: relative;
+    opacity: 1;
+    pointer-events: all;
+}
+.seccc {
+    position:  relative;
+    left:  18px;
+    bottom:  25px;
+}
+.seccc select 
+{
+    margin-bottom: 0px;
+}

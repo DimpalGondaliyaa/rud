@@ -8,8 +8,8 @@
 		    <div class="nav-wrapper connavwapp">
 		      <ul id="nav-mobile" class="hide-on-med-and-down">
 		        <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/add.png">Create New Report</a></li>
-		        <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/money.png">Pipeline</a></li>
-		        <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/timeline_marker.png">Summaries</a></li>
+		        <li><a href="<?php echo base_url(); ?>Pipeline"><img class="iconstyle" src="<?php echo base_url() ?>html/images/money.png">Pipeline</a></li>
+		        <li><a href="<?php echo base_url(); ?>Summaries"><img class="iconstyle" src="<?php echo base_url() ?>html/images/timeline_marker.png">Summaries</a></li>
 		    </div>
 		  </nav>
 

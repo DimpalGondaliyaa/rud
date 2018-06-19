@@ -21,7 +21,7 @@
 
 		         <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/money.png">Transactions</a></li>
 
-		         <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/page_white_gear.png">Settings</a></li>
+		         <li><a href="<?php echo base_url(); ?>Settings"><img class="iconstyle" src="<?php echo base_url() ?>html/images/page_white_gear.png">Settings</a></li>
 
 		      </ul>
 		    </div>
