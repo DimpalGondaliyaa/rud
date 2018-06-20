@@ -1,0 +1,47 @@
+h4 {
+    font-size: 12px;
+    color: capitalize;
+    color:  black;
+    font-weight:  bold;
+    margin-bottom:  -12px;
+    text-transform: capitalize;
+}
+.main-menu {
+    width: 97%;
+    margin: 0 auto;
+    background-image: #fff !important;
+    overflow: hidden;
+ height: auto !important;
+}
+.btbnbn a {
+    background:  #6DBD6D;
+    height: 26px;
+    font-size:  12px;
+    width:  100%;
+    margin-bottom:  13px;
+    line-height: 27px;
+    font-weight:  bold;
+    text-transform:  capitalize;
+}
+.rebox {
+    background: #AD2323;
+    height:  56px;
+    color:  #fff;
+    text-align:  center;
+    position:  relative;
+    line-height: normal;
+    padding: 15px;
+    font-weight:  bold;
+}
+.yellowbox {
+    background: #FFF8C4;
+    height:  53px;
+    margin-top:  26px;
+    padding-top:  18px;
+    padding: 19px;
+    font-size: 12px;
+    color: #ad2323;
+    font-weight:  bold;
+    border: 1px solid #ff000040;
+    border-radius:  4px;
+}

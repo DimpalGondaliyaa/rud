@@ -9,7 +9,7 @@
 		      <ul id="nav-mobile" class="hide-on-med-and-down" style="position: relative;left: 5px;}">
 		      	<li class="sec"><input type="text" name=""></li>
 		        <li><a href="<?php echo base_url(); ?>UploadFile"><img class="iconstyle" src="<?php echo base_url() ?>html/images/add.png">uplode new file</a></li>
-		        <li><a href="#"><img class="iconstyle" src="<?php echo base_url() ?>html/images/icon-server.png">Servers</a></li>
+		        <li><a href="<?= base_url(); ?>Servers"><img class="iconstyle" src="<?php echo base_url() ?>html/images/icon-server.png">Servers</a></li>
 		       </ul>
 		    </div>
 		  </nav>

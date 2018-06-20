@@ -393,6 +393,7 @@ input {
     margin:  0 auto;
     background-image: #fff !important;
     overflow: hidden;
+        min-height: auto;
 }
 nav ul a{
     border-top: 3px solid #000000;

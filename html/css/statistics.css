@@ -1,0 +1,21 @@
+.left h4 {
+    font-weight:  bold;
+    font-size: 13px;
+}
+
+.left {
+    padding-left:  25px;
+}
+
+select {
+    height: 27px;
+    font-size: 12px;
+}
+input[type="submit"] {
+    width: 56px !important;
+    position:  relative;
+    top: 0;
+}
+body{
+	font-family: Arial,sans-serif !important;
+}
