@@ -301,6 +301,7 @@ button.btn-save-loan.green.white-text.btn {
     letter-spacing: 0;
     font-family: Arial, sans-serif;
     font-size: 16px;
+    padding-bottom: 15px;
 }
 .small-ttl h6 {
     font-size: 12px;
@@ -331,4 +332,38 @@ button.btn-save-loan.green.white-text.btn {
 .xbox p {
     font-size: 11px;
     font-weight: bold;
+}
+
+
+
+.marketing-summery-box {
+    border: 1px solid gainsboro;
+    padding: 0px 5px;
+}
+.task-box {
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+    padding: 0px 10px;
+}
+table.table {
+    border: 1px solid gainsboro;
+    padding-bottom: 10px;
+    position: relative;
+    border-radius: 3px;
+}
+
+.table-body {
+    padding: 10px 0px;
+}
+.credit-ttl {
+    border-bottom: 1px solid gainsboro;
+}
+
+.btn-save-credit {
+    position: relative;
+    margin-top: 15px;
+    left: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: capitalize;
 }
