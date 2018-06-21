@@ -8,11 +8,11 @@
 		        	<input type="search" name="srch" class="top-srch">
 		        </li>
 		        <li>
-		        	<a class="valign-wrapper" href="#">new list</a></li>
-		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>editContact"> <img src="<?php echo base_url(); ?>html/images/add.png" class="responsive-img" style="margin-right: 5px;">  add contact</a></li>
+		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>EditContact/editData/<?= $get['c_id'];?>"> <img src="<?php echo base_url(); ?>html/images/user_edit.png" class="responsive-img" style="margin-right: 5px;">  Edit Contact</a></li>
 
+		        	<li><a class="valign-wrapper condltbtn" href="#!"  data-id="<?php echo $get['c_id']; ?>"><img src="<?php echo base_url(); ?>html/images/user_delete.png" class="responsive-img" style="margin-right: 5px;">  Delete Contact</a></li>
 
-		        	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/calculator.png" class="responsive-img" style="margin-right: 5px;">  Quick Quote</a></li>
+		        	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/calculator.png" class="responsive-img" style="margin-right: 5px;">  Budget Analysis</a></li>
 
 		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>Custom_Fields"> <img src="<?php echo base_url(); ?>html/images/textfield.png" class="responsive-img" style="margin-right: 5px;"> Custom Fields</a></li>
 

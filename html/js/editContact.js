@@ -416,6 +416,42 @@ $(function(){
     });
 
     
+    /*Delete Contact*/
+
+    $(".condltbtn").on("click", function()
+  {
+     var id = $(this).data("id");
+
+     swal({
+          title: "Are you sure?",
+          text: "Once deleted, you will not be able to recover this Product!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        })
+        .then((willDelete) => {
+          if (willDelete) {
+        $.ajax({
+
+        url : baseurl+"home/deletecon/"+id,
+        type :"POST",
+        contentType:false,
+        processData:false,
+        success:function(res)
+        {
+          swal("Poof! Your Data has been deleted!", {
+                    icon: "success",
+              });
+          $('.swal-button').on('click',function(){
+              window.location.href=baseurl+'Home';
+            });       
+        }
+      });
+      } else {
+            swal("Your Data is safe!");
+        }
+      });
+    }); 
 
 
 
