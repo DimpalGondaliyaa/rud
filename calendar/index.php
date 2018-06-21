@@ -384,6 +384,7 @@ nav .nav-wrapper {
     height: 100%;
     max-width: 1280px;
     margin: 0 auto;
+    overflow: hidden;
 }
 nav .dropdown-content {
     margin-top: 0px !important;

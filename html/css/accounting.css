@@ -45,3 +45,128 @@ ul.settlist_small li {
     position:  relative;
     top: 17px;
 }
+body{
+    font-family: Arial, sans-serif !important;
+}
+.actitlee {
+    font-size: 16px;
+    text-transform:  capitalize;
+    font-weight:  bold;
+    color: #213f66;
+    padding: 20px 0px;
+    padding-bottom: 8px;
+    letter-spacing:  0px;
+}
+
+.acsubtitle {
+    font-size: 15px;
+    text-transform:  capitalize;
+    color:  grey;
+    font-weight:  bold;
+    letter-spacing:  0px;
+}ul.ulac {
+    display:  inline-flex;
+    float:  right;
+}
+
+ul.ulac li a {
+    color:  grey;
+    margin-right: 11px;
+    font-size:  12px;
+    letter-spacing:  0px;
+}
+
+ul.ulac li a i {
+    margin-right:  3px;
+}
+.titleeecp {
+    color: grey;
+    font-size:  14px;
+    font-weight:  bold;
+    padding-top:  22px;
+    text-transform:  capitalize;
+}
+a.btn.spbtn {
+    background: #70c470;
+    height:  30px;
+    font-size:  12px;
+    line-height: 32px;
+    text-transform:  capitalize;
+    border-radius: 4px;
+}
+select {
+    height: 27px;
+    font-size: 12px;
+    top: 11px;
+    position:  relative;
+
+}
+.left h4 {
+    font-size:  12px;
+    margin-bottom:  0px;
+    font-weight:  bold;
+    text-transform:  capitalize;
+}
+.titlebox {
+    position:  relative;
+    top: 19px;
+    text-transform:  capitalize;
+    font-size:  13px;
+    font-weight:  bold;
+    color:  grey;
+}
+.sstyle {
+    width:  30%;
+    margin-bottom:  10px;
+}
+select.hhh {
+    height:  65px;
+}
+input.datepicker {
+    width:  30% !important;
+    height: 21px !important;
+}
+.main-menu {
+    width: 97%;
+    margin: 0 auto;
+    background-image: #fff !important;
+    overflow: hidden;
+  height: auto !important;
+}
+.contentbox.checkboxx {
+        position: relative;
+    margin-top: 5px;
+    top: 12px;
+}
+[type="checkbox"].filled-in:not(:checked)+span:not(.lever):after {
+    height: 17px;
+    width: 17px;
+    background-color: transparent;
+    border: 2px solid #5a5a5a;
+    top: 0px;
+    z-index: 0;
+}
+[type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    z-index: 0;
+    border: 2px solid #5a5a5a;
+    border-radius: 1px;
+    margin-top: 3px;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+.alltypebox P {
+    margin-bottom: -7px !important;
+    background: #EFEFD1;
+    padding-left:  9px;
+    font-size:  12px !important;
+}
+.col.s12.m12 {
+    border-bottom: 1px solid #52575e7a;
+    padding-bottom: 28px;
+}

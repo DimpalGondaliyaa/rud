@@ -1,0 +1,45 @@
+.borderr.col.s12.m12 {
+    margin-bottom: 38px !important;
+    border: 01px solid #ddd;
+    width:  99%;
+    margin: 0 auto;
+    padding: 12px;
+    position:  relative;
+    left:  10px;
+    top: 15px;
+    border-radius:  4px;
+}
+body{
+	font-family: Arial, sans-serif !important;
+}
+.titlee {
+    font-weight:  bold;
+    color: black;
+    padding-left:  14px;
+
+}
+a.btn.memosavebtnnnn {
+    background:  grey;
+    height:  28px;
+    font-size:  12px;
+    line-height:  28px;
+    position:  relative;
+    top: 9px;
+    box-shadow:  none;
+}
+.hhh {
+    height: 10px;
+    background-color: white;
+    position: relative;
+    top: 100px;
+    border: 1px solid #ddd;
+    width: 99%;
+    position: relative;
+    left: 8px;
+    border-radius: 4px;
+}
+select {
+    height:  28px;
+    font-size:  12px;
+    margin-top:  10px;
+}

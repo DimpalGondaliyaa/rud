@@ -15,11 +15,11 @@
 		      <ul id="nav-mobile" class="hide-on-med-and-down" style="position: relative;left: 5px;}">
 		      	<li class="sec"><input type="text" name=""></li>
 		        <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/application_side_list.png">plans</a></li>
-		        <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/magnifier.png">Preview Plans</a></li>
+		        <li><a href="<?= base_url(); ?>Preview_Plans"><img class="iconstyle" src="<?php echo base_url() ?>html/images/magnifier.png">Preview Plans</a></li>
 		        <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/report.png">report</a></li>
-		         <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/chart_line.png">Statistics</a></li>
+		         <li><a href="<?= base_url(); ?>Statistics"><img class="iconstyle" src="<?php echo base_url() ?>html/images/chart_line.png">Statistics</a></li>
 
-		         <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/money.png">Transactions</a></li>
+		         <li><a href="<?= base_url(); ?>Transactions"><img class="iconstyle" src="<?php echo base_url() ?>html/images/money.png">Transactions</a></li>
 
 		         <li><a href="<?php echo base_url(); ?>Settings"><img class="iconstyle" src="<?php echo base_url() ?>html/images/page_white_gear.png">Settings</a></li>
 
