@@ -1,0 +1,146 @@
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: relative;
+    opacity: 1;
+    pointer-events: all;
+    height: 16px !important;
+  
+}
+.left h4 {
+      padding-right: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-left: 10px;
+}
+select {
+    height: 29px;
+    display: block !important;
+    position:  relative;
+    top: 10px;
+    font-size:  12px;
+}
+
+.condcont {
+    border:  1px solid #ddd;
+    height: 122px;
+    margin:  10px;
+    border-radius:  13px;
+}
+.condcont1 {
+    border:  1px solid #ddd;
+    height: 216px;
+    margin:  10px;
+    border-radius:  13px;
+}
+.ptitle {
+    font-size: 17px;
+    font-weight: bold;
+    text-transform:  capitalize;
+    padding:  14px;
+}
+
+.subcon {
+    font-size:  16px;
+    padding-left: 13px;
+   
+    font-weight:  bold;
+    color: #213f66;
+}
+.main-menu {
+    width: 97%;
+    margin: 0 auto;
+    background-image: #fff !important;
+    overflow: hidden;
+   height: 2000px !important;
+}
+.titlee {
+    position:  relative;
+    left: 46px;
+    bottom:  10px;
+    text-transform:  capitalize;
+    font-size:  12px;
+    font-weight:  bold;
+}
+.checkssss
+{
+	width: 7% !important;
+    height: 20px !important;
+    position: relative;
+    bottom: top;
+    top: 0;
+}
+select#states {
+    width: 26%;
+    height: 89px;
+    position: relative;
+    right: 11px;
+}
+select#fee_profile {
+    width: 26%;
+  
+    position: relative;
+    right: 11px;
+}
+.condcont1 {
+    padding-top:  21px;
+    margin-left:  10px;
+    height: 253px;
+}
+select#companies {
+    height:  112px;
+    width: 53%;
+    /* margin:  0 auto; */
+    margin-left:  10px;
+    border:  1px solid #ddd;
+}
+
+select#roles {
+    height:  112px;
+    width: 53%;
+    /* margin:  0 auto; */
+    margin-left:  10px;
+    border:  1px solid #ddd;
+}
+.left h5 {
+    font-size:  14px;
+}
+input.textboxxx {
+      position: relative;
+    top: -12px;
+    left: 18px;
+    height: 19px !important;
+}
+select.ssssss {
+    position:  relative;
+    top: 7px;
+    height: 24px;
+    font-size:  10px;
+    /* line-height: 1px !important; */
+}
+
+
+.Fees-container {
+    position: relative;
+    overflow: hidden;
+}
+.Fees-container .col {
+    padding: 0;
+    width: max-content;
+}
+.Fees-container .row .col.m2{
+	width: 10%;
+}
+.Fees-container select{
+	width: max-content;
+}
+.Fees-box label {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0;
+    font-family: Arial,sans-serif;
+}
+
+.Fees-box input[type="text"] {
+    max-width: 80px;
+
+}

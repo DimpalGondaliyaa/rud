@@ -1,0 +1,76 @@
+   
+=> CRM Details  :
+
+
+     => In Pending 
+
+          1) Enrollment
+                    -> Report Section
+
+          2) Calender Section
+
+          3) Contact Section 
+                    ->new list 
+                    ->DATA SOURCE
+
+          4) Contact Section inner Page
+                    -> Budget Analysis section
+                    -> creditors section
+                    -> enrollment section
+                    -> retrive loans and programs
+
+          5) Reports Section
+                    - > Report Details Section    
+
+          6) Admin Section   
+
+
+     ==============================================================
+
+     => Done
+
+          1) HOME PAGE DONE
+          2) Guidelines page  DONE
+          3) Contact
+                -> Add CONTACT 
+                -> QUICK QUOTE
+                -> CUSTOM FIELD
+                -> WORKFLOW 
+
+                -> CHANGE STATUS/STAGE
+                -> ADD NOTE
+                -> ADD EVENT
+                -> UPLODE FILE
+
+                -> EDIT CONTACT PAGE INNER PAGE
+
+                         -> ADD NOTE
+                         -> ADD EVENT
+                         -> STAGE STATUS
+
+                -> ADD CONTACT PAGE  
+                -> FULL DETAILS PAGE  USER 
+
+                         -> EDIT STATUS
+
+          4) ACCOUNTING SECTION DONE
+          5) DOC SECTION DONE 
+          6) FILE SECTION DONE   
+          7) E-MARKETING SECTION DONE  
+
+     ==========================================================
+
+
+     => Redesign & Develope Again
+
+          1) File Section
+                 -> Servers Section
+
+          2) Account Section
+                    -> Create New Report Section
+
+          3) Enrollment
+                   -> Plans Section
+                   -> Preview Plans Section
+                   -> Statistics Section
+                   -> Transactions Section
