@@ -1,0 +1,15 @@
+.left a img {
+    position:  relative;
+    top: 30px;
+}
+.tttt {
+    position:  relative;
+    top: 31px;
+    font-weight: bold;
+    font-size: 17px;
+    padding-left:  10px;
+}
+table#example1 {
+    position:  relative;
+    top: 100px !important;
+}
