@@ -14,11 +14,11 @@
 
 		        	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/calculator.png" class="responsive-img" style="margin-right: 5px;">  Budget Analysis</a></li>
 
-		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>Custom_Fields"> <img src="<?php echo base_url(); ?>html/images/textfield.png" class="responsive-img" style="margin-right: 5px;"> Custom Fields</a></li>
+		        	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/book_edit.png" class="responsive-img" style="margin-right: 5px;">  Creditors</a></li>
 
-		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>workflow"> <img src="<?php echo base_url(); ?>html/images/icon-settings.jpg" class="responsive-img" style="margin-right: 5px;">Workflow</a></li>
+		        	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/report_add.png" class="responsive-img" style="margin-right: 5px;">  Enrollment</a></li>
 
-		        	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/database_connect.png" class="responsive-img" style="margin-right: 5px;">Data Sources</a>
+		        	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/add.png" class="responsive-img" style="margin-right: 5px;">  Retrieve Loans and Programs</a></li>
 
 		        <!-- 	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/calculator.png" class="responsive-img" style="margin-right: 5px;">  Quick Quote</a></li>
 		        	<li><a class="valign-wrapper" href="#!> <img src="<?php echo base_url(); ?>html/images/textfield.png" class="responsive-img" style="margin-right: 5px;"> Custom Fields</a></li>
@@ -209,7 +209,7 @@
 					<div class="right-body">
 						<div class="col s12 m12">
 							<div class="tab_1 xbox active">
-								First
+								<h6>History</h6>
 							</div>
 							<div class="tab_2 xbox">
 								<h6>Call Activity</h6>
@@ -222,7 +222,124 @@
 								</div>
 							</div>
 							<div class="tab_4 xbox">
-								4
+								<div class="note-Box">
+									<div class="noteBox">
+										<form name="formNote" id="formNote">
+											<input type="hidden" name="c_id" value="<?php echo $get['c_id']; ?>">
+										<div class="col s4 m4">
+											<label>Note Type</label>
+											<select id="note_type" name="note_type">
+												<option value="General">General</option>
+												<option value="Call">Call</option>
+												<option value="Creditor">Creditor</option>
+												<option value="Settlement">Settlement</option>
+												<option value="Attorney">Attorney</option>
+												<option value="Compliance">Compliance</option>
+												<option value="Sales">Sales</option>
+												<option value="Legal">Legal</option>
+												<option value="Document">Document</option>
+												<option value="Payment">Payment</option>
+												<option value="Accounting">Accounting</option>
+												<option value="Cal Event">Cal Event</option>
+												<option value="Email">Email</option>
+												<option value="Schedule Change">Schedule Change</option>
+												<option value="Customer Portal">Customer Portal</option>
+											</select>
+										</div>
+										<div class="col s8 m8">
+										  <label>Template</label>
+										  <select id="note_template" name="note_template" class="" style="width: 99%; display: none;">
+										  <option value="">--Select--</option>
+										  </select>
+										</div>
+										<div class="col s12 m12">
+											<label>Note</label>
+											<textarea name="note" id="note" style="height: 100px;"></textarea>
+										</div>
+										<div class="col s6 m6">
+											<label>Notify Users</label>
+											<select id="notifyusers" name="notifyusers[]">
+												<option value="">--Select--</option><option value="3142430">Alex Vargas</option>
+												<option value="Alexander Goodman">Alexander Goodman</option>
+												<option value="3166850">Anthony Harrison</option>
+												<option value="3133547">Debt PayPro</option>
+												<option value="3167522">Devin Lee</option>
+												<option value="3177659">Greg Smith</option>
+												<option value="3187583">Jacob Parker</option>
+												<option value="3170984">James Morris</option>
+												<option value="3177071">Jeff Cannon</option>
+												<option value="3177239">Jennie Kelly</option>
+												<option value="3177254">Khalil Rashad</option>
+												<option value="3193601">Raymond Richardson</option>
+												<option value="3204459">Richard Anderson</option>
+												<option value="3177203">Samantha Williams</option>
+											</select>
+										</div>
+										<div class="col s6 m6">
+											<label>CC Emails <small>separate by comma</small></label>
+											<span class="cc_pre"><i class="fas fa-envelope"></i></span>
+											<input name="email" id="email" type="email" name="">
+										</div>
+										<div class="col s12 m12">
+											<button type="button" class="btn green white-text btn-save-note">Save Note</button>
+										</div>
+										<div class="row"><br></div>
+										<div class="col s8 m8">
+											<label>Existing Notes</label>
+											<input type="text" name="" placeholder="Search Notes">
+										</div>
+										</form>
+										<div class="col s4 m4">
+											<label><br></label>
+											<select id="snote_type" name="snote_type" class="w100" onchange="searchNotes($('snotes').value)" style="display: none;">
+												<option value="">--All Types--</option>
+												<option value="1">General</option>
+												<option value="2">Call</option>
+												<option value="3">Creditor</option>
+												<option value="4">Settlement</option>
+												<option value="5">Attorney</option>
+												<option value="6">Compliance</option>
+												<option value="7">Sales</option>
+												<option value="8">Legal</option>
+												<option value="10">Document</option>
+												<option value="11">Payment</option>
+												<option value="16">Accounting</option>
+												<option value="17">Cal Event</option>
+												<option value="25">Email</option>
+												<option value="103">Schedule Change</option>
+												<option value="277">Customer Portal</option>
+											</select>
+										</div>
+										<div class="noteBox-container">
+											<div class="allNotes-box">
+												<?php 
+													foreach ($allNotes as $key => $value) {
+												?>
+												<div class="note_row row">
+													<div class="b1">
+														<div class="box1">
+															<p><b><?= $value['note_type']; ?></b></p>
+															<P><?= $value['createdOn']; ?></P>
+															<p><?= $value['notify_user'];?></p>
+														</div>
+													</div>
+													<div class="b2">
+														<div class="box2">
+															<p><?= $value['note']; ?></p>
+															<p>Notified: <?= $value['notify_user']; ?>@unitedstudentsofamerica.us, <?= $value['email'];?> </p>
+														</div>
+													</div>
+													<div class="b3">
+														<div class="box3">
+															<a href="#!" class="dlt_note" data-id="<?= $value['id']; ?>"><i class="fas fa-trash grey-text"></i></a>
+														</div>
+													</div>
+												</div>
+											<?php } ?>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="tab_5 xbox">
 								<div class="marketing-summery-box">
@@ -231,7 +348,7 @@
 								</div>
 							</div>
 							<div class="tab_6 xbox">
-								6
+								<h6>Client Documents</h6>
 							</div>
 							<div class="tab_7 xbox">
 								<div class="marketing-summery-box">
@@ -396,6 +513,8 @@
 							</div>
 							<div class="tab_10 xbox">
 								<div class="Credit-Card-Box">
+									<form name="formCard" id="formCard" method="POST">
+										<input type="hidden" name="c_id" value="<?= $get['c_id'];?>">
 									<div class="credit-ttl">
 										<h6>Credit Card Account</h6>
 									</div>
@@ -406,7 +525,7 @@
 											</div>
 											<div>
 												<label>Debit / Credit</label>
-												<select id="debit_credit" name="debit_credit" class="">
+												<select id="debit_credit" name="card" class="">
 													<option value="">--Select--</option><option value="DC">Debit Card</option>
 													<option value="CC">Credit Card</option>
 													<option value="PP">Pre-Paid Card</option>
@@ -415,7 +534,8 @@
 											<div>
 												<label>Card Type *</label>
 												<select id="card_type" name="card_type" class="">
-													<option value="0">--Select--</option><option value="visa">Visa</option>
+													<option value="">--Select--</option>
+													<option value="visa">Visa</option>
 													<option value="mc">Mastercard</option>
 													<option value="amex">American Express</option>
 													<option value="disc">Discover</option>
@@ -423,15 +543,15 @@
 											</div>
 											<div>
 												<label>Card Issuer</label>
-												<input type="text" name="">
+												<input type="text" name="card_issuer" id="card_issuer">
 											</div>
 											<div>
 												<label>Name on Card *</label>
-												<input type="text" name="">
+												<input type="text" name="name_on_card" id="name_on_card">
 											</div>
 											<div>
 												<label>Card Number *</label>
-												<input type="text" name="">
+												<input type="text" name="card_number" id="card_number">
 											</div>
 											<div>
 												<label class="col s12" style="padding: 0;">Expiration Date *</label>
@@ -481,7 +601,7 @@
 											</div>
 											<div>
 												<label>CVV</label>
-												<input type="text" name="">
+												<input type="text" name="cvv" id="cvv">
 											</div>
 										</div>
 										<div class="col s6 m6">
@@ -490,19 +610,19 @@
 											</div>
 											<div>
 												<label>Address</label>
-												<input type="text" name="">
+												<input type="text" name="address" id="address">
 											</div>
 											<div>
 												<label>Address 2</label>
-												<input type="text" name="">
+												<input type="text" name="address2" id="address2">
 											</div>
 											<div>
 												<label>City</label>
-												<input type="text" name="">
+												<input type="text" name="city" id="city">
 											</div>
 											<div>
 												<label>State</label>
-												<select id="billing_state" name="billing_state" class="">
+												<select id="billing_state" name="state" class="">
 													<option value="">--Select--</option>
 													<option value="AA">AA-Armed Forces Americas</option>
 													<option value="AE">AE-Armed Forces Other</option>
@@ -586,20 +706,21 @@
 											</div>
 											<div>
 												<label>Zip</label>
-												<input type="text" name="">
+												<input type="text" name="zip">
 											</div>
 										</div>
 									</div>
 									<div class="col s12 m12">
-										<button type="button" class="btn-save-credit green white-text btn">Save Card</button>
+										<button type="button" class="btn-save-card green white-text btn">Save Card</button>
 									</div>
+									</form>
 								</div>
 							</div>
 							<div class="tab_11 xbox">
-								11
+								<h6>Bank Account</h6>
 							</div>
 							<div class="tab_12 xbox">
-								12
+								<h6>Enrolled Debts</h6>
 							</div>
 						</div>
 					</div>

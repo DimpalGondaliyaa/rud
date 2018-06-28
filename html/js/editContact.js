@@ -1,4 +1,9 @@
 $(function(){
+
+
+/*   $('#notifyusers select').formSelect();
+*/
+
 	$('.noicon').on('click',function(){
 		/*$(this).data('id').addClass('active');*/
 		$('li').removeClass("active");
@@ -372,7 +377,30 @@ $(function(){
             processData:false,
             success:function(res)
             {
-                swal("Good job!", "Stage/Status has been Updated Successfully!", "success")
+                swal("Good job!", "Note has been Saved Successfully!", "success")
+                $('.swal-button--confirm').on('click',function(){
+                    window.location.reload();
+                });
+            }
+         });
+    });
+
+
+    /*Add Note on Edit Full Page*/
+
+
+    $(".btn-save-note").on("click", function()
+    {
+        var addNote = new FormData($("#formNote")[0]); 
+        $.ajax({
+            url : baseurl+"EditContact/addNote",
+            type :"POST",
+            data :addNote,  
+            contentType:false,
+            processData:false,
+            success:function(res)
+            {
+                swal("Good job!", "Note has been Saved Successfully!", "success")
                 $('.swal-button--confirm').on('click',function(){
                     window.location.reload();
                 });
@@ -453,6 +481,142 @@ $(function(){
       });
     }); 
 
+
+
+
+    /*Delete Note From Full Details Page*/
+
+
+    $(".dlt_note").on("click", function()
+  {
+     var id = $(this).data("id");
+     swal({
+          title: "Are you sure?",
+          text: "Once deleted, you will not be able to recover this Note!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        })
+        .then((willDelete) => {
+          if (willDelete) {
+        $.ajax({
+
+        url : baseurl+"EditContact/deleteNote/"+id,
+        type :"POST",
+        contentType:false,
+        processData:false,
+        success:function(res)
+        {
+          $('')
+          $(".noteBox-container").reload(" .noteBox-container > *");
+          /*      $(document.body).load(location.href);*/
+          /*swal("Poof! Note has been deleted!", {
+                    icon: "success",
+              });
+          $('.swal-button').on('click',function(){
+               $(document.body).load(location.href);
+            });*/       
+        }
+      });
+      } else {
+            swal("Your Note is safe!");
+        }
+      });
+    }); 
+
+
+
+    /*Add Card Details */
+
+
+    $(".btn-save-card").on("click", function()
+    {
+      
+      var card = document.forms["formCard"]["card"].value;
+      var card_type = document.forms["formCard"]["card_type"].value;
+      var card_issuer = document.forms["formCard"]["card_issuer"].value;
+      var name_on_card = document.forms["formCard"]["name_on_card"].value;
+      var card_number = document.forms["formCard"]["card_number"].value;
+
+      var exp_mo = document.forms["formCard"]["exp_mo"].value;
+      var exp_yr = document.forms["formCard"]["exp_yr"].value;
+      var cvv = document.forms["formCard"]["cvv"].value;
+      var address = document.forms["formCard"]["address"].value;
+      var address2= document.forms["formCard"]["address2"].value;
+      var city = document.forms["formCard"]["city"].value;
+      var state = document.forms["formCard"]["state"].value;
+      var zip = document.forms["formCard"]["zip"].value;
+
+        if(card==''){
+          swal('Please Select any Card!');
+          return false;
+        }
+        if(card_type==''){
+          swal('Please Select any Card Type!');
+          return false;
+        }
+        if(card_issuer==''){
+          swal('Please Fill Input!');
+          return false;
+        }
+        if(name_on_card==''){
+          swal('Please Enter Name on Card!');
+          return false;
+        }
+        if(card_number==''){
+          swal('Please Enter Card Number!');
+          return false;
+        }
+        if(exp_mo==''){
+          swal('Please Select any Month!');
+          return false;
+        }if(exp_yr==''){
+          swal('Please Select any Year!');
+          return false;
+        }
+        if(cvv==''){
+          swal('Please Enter CVV!');
+          return false;
+        }
+        if(address==''){
+          swal('Please Enter Address!');
+          return false;
+        }
+        if(address2==''){
+          swal('Please Enter Address 2!');
+          return false;
+        }
+        if(city==''){
+          swal('Please Enter City!');
+          return false;
+        }
+        if(state==''){
+          swal('Please Enter State!');
+          return false;
+        }
+
+        if(zip==''){
+          swal('Please Eneter Zip!');
+          return false;
+        }
+        else{
+        var addNote = new FormData($("#formCard")[0]); 
+        $.ajax({
+            url : baseurl+"EditContact/addCard",
+            type :"POST",
+            data :addNote,  
+            contentType:false,
+            processData:false,
+            success:function(res)
+            {
+                swal("Good job!", "Card has been saved Successfully!", "success")
+                $('.swal-button--confirm').on('click',function(){
+                    window.location.reload();
+                });
+            }
+         });
+      }
+    });
 
 
 
