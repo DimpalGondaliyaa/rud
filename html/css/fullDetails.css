@@ -370,3 +370,146 @@ table.table {
 
 
 
+
+
+/*Note*/
+
+.note-Box {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+    padding: 10px 0px;
+}
+.note-Box label {
+    padding-bottom: 6px;
+    color: #414141 !important;
+    font-size: 12px !important;
+    position: relative;
+    display: block;
+    margin-top: 10px;
+}
+.btn-save-note {
+    height: 30px;
+    line-height: normal;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin-top: 15px;
+}
+span.cc_pre {
+    position: absolute;
+    padding: 10px;
+}
+.note-Box input[type=email] {
+    top: 0;
+    height: 32px !important;
+    padding-left:30px !important;
+}
+
+
+
+
+
+
+
+#formNote option{font-size: 12px !important;}
+.b1 {
+    position: relative;
+    float: left;
+    padding: 10px;
+    min-width: 20%;
+}
+.b2 {
+    position: relative;
+    float: left;
+    padding: 10px;
+    min-width: 70%;
+}
+.b3 {
+    position: relative;
+    float: left;
+    padding: 10px;
+    min-width: 10%;
+    text-align: right;
+}
+
+.note_row {
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    background: #E9F0EF;
+    width: calc(100% - 10px);
+    margin: 0 auto !important;
+    margin-top: 5px !important;
+}
+
+.note_row:last-child {
+    width: calc(100% - 10px);
+    margin-top: 5px !important;
+    margin-bottom: 20px !important;
+}
+.noteBox-container {
+    position: relative;
+    top: 25px;
+}
+.note_row p {
+    line-height: 5px;
+}
+
+
+.bank-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.bank-box {
+    position: relative;
+    width: 700px;
+    overflow: hidden;
+}
+
+.bank-box label {
+    text-transform: capitalize !important;
+    color: #000000c9 !important;
+    font-weight: bold;
+    top: 5px;
+    position: relative;
+}
+
+.bank-box select{
+    height: 28px !important;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding: 0px !important;
+
+}
+
+.bank-box option {
+    font-size: 12px !important;
+}
+
+.chk{
+    position: relative !important;
+    top: 0px !important;
+}
+
+.btn-bank {
+    position: relative;
+    border-radius: 10px;
+    height: 30px;
+    line-height: 0;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+.btn-bank-box {
+    padding: 15px;
+    margin-top: 10px;
+    padding-left: 0px;
+}

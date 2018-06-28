@@ -281,6 +281,13 @@ class EditContact extends CI_Controller {
 		$q=$this->db->query("SELECT * FROM contactdetails WHERE c_id='".$id."'");
 		$get=$q->row_array();
 
+		$note=$this->db->query("SELECT * FROM notes WHERE u_id='".$id."' ORDER BY id DESC ");
+		$allNotes=$note->result_array();
+
+		$iidd=$this->db->query("SELECT * FROM banks WHERE u_id='".$id."'");
+		$bankDetails=$iidd->row_array();
+
+
 		$headerData = array(
 			"pageTitle" => "Edit Contact",
 			"stylesheet" => array("home.css","editContact.css","fullDetails.css")
@@ -290,12 +297,120 @@ class EditContact extends CI_Controller {
 		);
 		$viewData = array(
 			"viewName" => "fullDetails",
-            "viewData" => array('get'=>$get),
+            "viewData" => array('get'=>$get,'allNotes'=>$allNotes,'bankDetails'=>$bankDetails),
 			"headerData" => $headerData,
 			"footerData" => $footerData	
 		);
 		$this->load->view('admintemplate',$viewData);
 	}
+
+
+
+
+	public function addNote(){
+
+		$this->load->helper('date');
+		date_default_timezone_set("UTC");
+		if (function_exists('date_default_timezone_set'))
+		{
+		  date_default_timezone_set('Asia/Kolkata');
+		}
+
+		$nu=implode(',', $_POST['notifyusers']);
+
+		$c_date=date("Y-m-d H:i:s");
+		$id = $_POST['c_id'];
+		$data=array('u_id'=>$id,
+			'note_type'=>$_POST['note_type'],
+			'note'=>$_POST['note'],
+			'email'=>$_POST['email'],
+			'notify_user'=>$nu,
+			'createdOn'=>$c_date);
+		$this->db->insert("notes",$data);
+	
+	}
+
+
+	public function deleteNote($id)
+	{
+		$this->db->where("id",$id);
+		$this->db->delete("notes");
+	}
+
+
+/*========= Add Card Details
+============================*/
+
+	public function addCard(){
+
+		$this->load->helper('date');
+		date_default_timezone_set("UTC");
+		if (function_exists('date_default_timezone_set'))
+		{
+		  date_default_timezone_set('Asia/Kolkata');
+		}
+
+		$c_date=date("Y-m-d H:i:s");
+		$id = $_POST['c_id'];
+
+		$xpr_date=$_POST['exp_mo'].'/'.$_POST['exp_yr'];
+		$data=array('u_id'=>$id,
+			'card'=>$_POST['card'],
+			'card_type'=>$_POST['card_type'],
+			'card_issuer'=>$_POST['card_issuer'],
+			'name_on_card'=>$_POST['name_on_card'],
+			'card_number'=>$_POST['card_number'],
+			'expiration_date'=>$xpr_date,
+			'cvv'=>$_POST['cvv'],
+			'address'=>$_POST['address'],
+			'address2'=>$_POST['address2'],
+			'city'=>$_POST['city'],
+			'state'=>$_POST['state'],
+			'zip'=>$_POST['zip'],
+			'createdOn'=>$c_date);
+		$this->db->insert("cards",$data);
+	
+	}
+
+
+/*========= Add Bank Details
+============================*/
+
+	public function addBank(){
+
+		$this->load->helper('date');
+		date_default_timezone_set("UTC");
+		if (function_exists('date_default_timezone_set'))
+		{
+		  date_default_timezone_set('Asia/Kolkata');
+		}
+
+		$c_date=date("Y-m-d H:i:s");
+		$id = $_POST['c_id'];
+		$data=array('u_id'=>$id,
+			'routing_number'=>$_POST['routing_number'],
+			'bank_name'=>$_POST['bank_name'],
+			'account_number'=>$_POST['account_number'],
+			'address'=>$_POST['address'],
+			'account_type'=>$_POST['account_type'],
+			'bank_city'=>$_POST['bank_city'],
+			'bank_state'=>$_POST['bank_state'],
+			'bank_postal_code'=>$_POST['bank_postal_code'],
+			'name_on_account'=>$_POST['name_on_account'],
+			'bank_phone'=>$_POST['bank_phone'],
+			'createdOn'=>$c_date);
+		$this->db->insert("banks",$data);
+	
+	}	
+
+	/*Delete Bank*/
+
+	public function deleteBank($id)
+	{
+		$this->db->where("id",$id);
+		$this->db->delete("banks");
+	}
+
 
 }
 ?>

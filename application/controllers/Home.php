@@ -10,6 +10,15 @@ class Home extends CI_Controller {
 			header('Location:'.base_url().'Adminlogin');
 		}
 
+
+/*		$x=$this->db->query("SELECT * FROM contactdetails ORDER BY gross_income DESC LIMIT 1,1");
+		$qq=$x->result_array();
+
+		echo '<pre>';
+		print_r($qq);
+*/
+
+
 		$this->load->model('User_model');
 		$data=$this->User_model->getDetails();
 
