@@ -459,3 +459,57 @@ span.cc_pre {
 .note_row p {
     line-height: 5px;
 }
+
+
+.bank-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.bank-box {
+    position: relative;
+    width: 700px;
+    overflow: hidden;
+}
+
+.bank-box label {
+    text-transform: capitalize !important;
+    color: #000000c9 !important;
+    font-weight: bold;
+    top: 5px;
+    position: relative;
+}
+
+.bank-box select{
+    height: 28px !important;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding: 0px !important;
+
+}
+
+.bank-box option {
+    font-size: 12px !important;
+}
+
+.chk{
+    position: relative !important;
+    top: 0px !important;
+}
+
+.btn-bank {
+    position: relative;
+    border-radius: 10px;
+    height: 30px;
+    line-height: 0;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+.btn-bank-box {
+    padding: 15px;
+    margin-top: 10px;
+    padding-left: 0px;
+}

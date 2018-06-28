@@ -717,7 +717,72 @@
 								</div>
 							</div>
 							<div class="tab_11 xbox">
-								<h6>Bank Account</h6>
+								<h6>Bank Account</h6><br>
+								<span class="valign-wrapper"><input type="checkbox" class="chk" name="check_paying_client">&nbsp;  Check Paying Client</span>
+								<hr>
+								<div class="row">
+									<div class="bank-container">
+										<form class="form" name="formBank" id="formBank" method="POST">
+											<input type="hidden" name="c_id" value="<?= $get['c_id']; ?>">
+										<div class="bank-box">
+											<div class="col s12 m6">
+												<label>Routing Number *</label>
+												<input type="text" name="routing_number" value="<?= $bankDetails['routing_number'];?>">
+											</div>
+											<div class="col s12 m6">
+												<label>Bank Name *</label>
+												<input type="text" name="bank_name" value="<?= $bankDetails['bank_name']; ?>">
+											</div>
+											<div class="col s12 m6">
+												<label>Account Number *</label>
+											   <input type="text" name="account_number" value="<?= $bankDetails['account_number']; ?>">
+											</div>
+											<div class="col s12 m6">
+												<label>Address</label>
+												<input type="text" name="address" value="<?= $bankDetails['address']; ?>">
+											</div>
+											<div class="col s12 m6">
+												<label>Account Type</label>
+												<select id="account_type" name="account_type" class="">
+													<option value="">--Select--</option>
+													<option value="1" <?php if($bankDetails['account_type']==1) { ?>selected="selected" <?php } ?>>Checking</option>
+													<option value="2" <?php if($bankDetails['account_type']==2){ ?>selected="selected" <?php } ?>>Savings</option>
+												</select>
+											</div>
+											<div class="col s12 m6">
+												<div class="row" style="margin: 0;padding-left: 2px;"><label>City, State Postal Code</label></div>
+												<div class="col s12 m4" style="padding: 0px;">
+												<input type="text" name="bank_city" value="<?= $bankDetails['bank_city'];?>">
+												</div>
+												<div class="col s12 m4">
+												<select id="bank_state" name="bank_state" class="">
+<option value="">--Select--</option><optgroup label="US"><option value="AL" selected="selected">Alabama</option><option value="AK">Alaska</option><option value="AS">American Samoa</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="GU">Guam</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="PR">Puerto Rico</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="VI">U.S. Virgin Islands</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></optgroup><optgroup label="AF"><option value="AA">AA-Armed Forces Americas</option><option value="AE">AE-Armed Forces Other</option><option value="AP">AP-Armed Forces Pacific</option></optgroup><optgroup label="CA"><option value="AB">Canada-Alberta</option><option value="BC">Canada-British Columbia</option><option value="MB">Canada-Manitoba</option><option value="NB">Canada-New Brunswick</option><option value="NL">Canada-Newfoundland</option><option value="NT">Canada-Northwest Territories</option><option value="NS">Canada-Nova Scotia</option><option value="NU">Canada-Nunavet</option><option value="ON">Canada-Ontario</option><option value="PE">Canada-Prince Edward Island</option><option value="QC">Canada-Quebec</option><option value="SK">Canada-Saskatchewan</option><option value="YT">Canada-Yukon</option></optgroup><optgroup label="AU"><option value="NSW">AU-New South Wales</option><option value="ANT">AU-Northern Territory</option><option value="QLD">AU-Queensland</option><option value="SA">AU-South Australia</option><option value="TAS">AU-Tasmania</option><option value="VIC">AU-Victoria</option><option value="WAU">AU-Western Australia</option></optgroup>
+</select>
+											</div>
+											<div class="col s12 m4" style="padding: 0px;">
+											<input type="text" name="bank_postal_code" value="<?= $bankDetails['bank_postal_code'];?>">
+											</div>
+											</div>
+
+											<div class="col s12 m6">
+												<label>Name On Account *</label>
+												<input type="text" name="name_on_account" value="<?= $bankDetails['name_on_account'];?>">
+											</div>
+											<div class="col s12 m6">
+												<label>Phone</label>
+												<input type="text" name="bank_phone" value="<?= $bankDetails['bank_phone'];?>">
+											</div>
+											<div class="col s12 m12 gsp-row"></div>
+											<div class="col s12 m12">
+												<div class="btn-bank-box">
+													<button type="button" class="btn btn-bank btn-save-bank green white-text">Save Bank</button>
+													<button type="button" data-id="<?= $bankDetails['id'];?>" class="btn btn-bank btn-delete-bank red white-text">Delete Bank</button>
+												</div>
+											</div>
+										</div>
+									</form>
+									</div>
+								</div>
 							</div>
 							<div class="tab_12 xbox">
 								<h6>Enrolled Debts</h6>

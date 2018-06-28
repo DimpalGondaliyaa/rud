@@ -284,6 +284,10 @@ class EditContact extends CI_Controller {
 		$note=$this->db->query("SELECT * FROM notes WHERE u_id='".$id."' ORDER BY id DESC ");
 		$allNotes=$note->result_array();
 
+		$iidd=$this->db->query("SELECT * FROM banks WHERE u_id='".$id."'");
+		$bankDetails=$iidd->row_array();
+
+
 		$headerData = array(
 			"pageTitle" => "Edit Contact",
 			"stylesheet" => array("home.css","editContact.css","fullDetails.css")
@@ -293,7 +297,7 @@ class EditContact extends CI_Controller {
 		);
 		$viewData = array(
 			"viewName" => "fullDetails",
-            "viewData" => array('get'=>$get,'allNotes'=>$allNotes),
+            "viewData" => array('get'=>$get,'allNotes'=>$allNotes,'bankDetails'=>$bankDetails),
 			"headerData" => $headerData,
 			"footerData" => $footerData	
 		);
@@ -367,6 +371,46 @@ class EditContact extends CI_Controller {
 		$this->db->insert("cards",$data);
 	
 	}
+
+
+/*========= Add Bank Details
+============================*/
+
+	public function addBank(){
+
+		$this->load->helper('date');
+		date_default_timezone_set("UTC");
+		if (function_exists('date_default_timezone_set'))
+		{
+		  date_default_timezone_set('Asia/Kolkata');
+		}
+
+		$c_date=date("Y-m-d H:i:s");
+		$id = $_POST['c_id'];
+		$data=array('u_id'=>$id,
+			'routing_number'=>$_POST['routing_number'],
+			'bank_name'=>$_POST['bank_name'],
+			'account_number'=>$_POST['account_number'],
+			'address'=>$_POST['address'],
+			'account_type'=>$_POST['account_type'],
+			'bank_city'=>$_POST['bank_city'],
+			'bank_state'=>$_POST['bank_state'],
+			'bank_postal_code'=>$_POST['bank_postal_code'],
+			'name_on_account'=>$_POST['name_on_account'],
+			'bank_phone'=>$_POST['bank_phone'],
+			'createdOn'=>$c_date);
+		$this->db->insert("banks",$data);
+	
+	}	
+
+	/*Delete Bank*/
+
+	public function deleteBank($id)
+	{
+		$this->db->where("id",$id);
+		$this->db->delete("banks");
+	}
+
 
 }
 ?>

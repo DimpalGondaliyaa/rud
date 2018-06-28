@@ -619,5 +619,122 @@ $(function(){
     });
 
 
+    /*Save Bank*/
+
+    $(".btn-save-bank").on("click", function()
+    {
+      
+      var routing_number = document.forms["formBank"]["routing_number"].value;
+      var bank_name = document.forms["formBank"]["bank_name"].value;
+      var account_number = document.forms["formBank"]["account_number"].value;
+      var address = document.forms["formBank"]["address"].value;
+      var account_type = document.forms["formBank"]["account_type"].value;
+
+      var bank_city = document.forms["formBank"]["bank_city"].value;
+      var bank_state = document.forms["formBank"]["bank_state"].value;
+      var bank_postal_code = document.forms["formBank"]["bank_postal_code"].value;
+      var name_on_account = document.forms["formBank"]["name_on_account"].value;
+      var bank_phone = document.forms["formBank"]["bank_phone"].value;
+
+     
+
+        if(routing_number==''){
+          swal('Please Eneter Routing Number!');
+          return false;
+        }
+        if(bank_name==''){
+          swal('Please Enter Bank Name!');
+          return false;
+        }
+        if(account_number==''){
+          swal('Please Fill Account Number!');
+          return false;
+        }
+        if(address==''){
+          swal('Please Enter Address!');
+          return false;
+        }
+        if(account_type==''){
+          swal('Please Select Account Type!');
+          return false;
+        }
+        if(bank_city==''){
+          swal('Please Eneter Bank City');
+          return false;
+
+        }if(bank_state==''){
+          swal('Please Select any State!');
+          return false;
+        }
+        if(bank_postal_code==''){
+          swal('Please Enter Bank Postal Code!');
+          return false;
+        }
+        if(name_on_account==''){
+          swal('Please Enter Name on Account!');
+          return false;
+        }
+        if(bank_phone==''){
+          swal('Please Enter Phone!');
+          return false;
+        }
+        else{
+        var formBank = new FormData($("#formBank")[0]); 
+        $.ajax({
+            url : baseurl+"EditContact/addBank",
+            type :"POST",
+            data :formBank,  
+            contentType:false,
+            processData:false,
+            success:function(res)
+            {
+                swal("Good job!", "Bank has been saved Successfully!", "success")
+                $('.swal-button--confirm').on('click',function(){
+                    window.location.reload();
+                });
+            }
+         });
+      }
+    });
+
+    /*Delete Bank*/
+
+  $(".btn-delete-bank").on("click", function()
+  {
+     var id = $(this).data("id");
+     swal({
+          title: "Are you sure?",
+          text: "Once deleted, you will not be able to See this Details!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        })
+        .then((willDelete) => {
+          if (willDelete) {
+        $.ajax({
+
+        url : baseurl+"EditContact/deleteBank/"+id,
+        type :"POST",
+        contentType:false,
+        processData:false,
+        success:function(res)
+        {
+          $('')
+          /*$(".noteBox-container").reload(" .noteBox-container > *");*/
+          /*      $(document.body).load(location.href);*/
+          swal("Poof! Bank has been deleted!", {
+                    icon: "success",
+              });
+          $('.swal-button').on('click',function(){
+               $(document.body).load(location.href);
+            });       
+        }
+      });
+      } else {
+            swal("Your Note is safe!");
+        }
+      });
+    }); 
+
 
 })
