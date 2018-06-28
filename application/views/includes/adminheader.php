@@ -121,9 +121,10 @@ nav.navone {
             <li><a href="<?php echo base_url(); ?>E_marketing" class="<?php if($this->uri->segment(1)=='E_marketing'){?> active <?php } ?>">E-Marketing</a></li>
 
                <li><a href="<?php echo base_url(); ?>Report" class="<?php if($this->uri->segment(1)=='Report'){?> active <?php } ?>">Report</a></li>
+               <li><a href="<?php echo base_url(); ?>Administration" class="<?php if($this->uri->segment(1)=='Administration'){?> active <?php } ?>">Admin</a></li>
 
-
-           <li><a href="<?php echo base_url(); ?>AssignUser" class="<?php if($this->uri->segment(1)=='AssignUser'){?> active <?php } ?>">Admin</a></li>
+<!-- 
+           <li><a href="<?php echo base_url(); ?>AssignUser" class="<?php if($this->uri->segment(1)=='AssignUser'){?> active <?php } ?>">Admin</a></li> -->
       </ul>
   </div>
 </nav>

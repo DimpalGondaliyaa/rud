@@ -1,0 +1,52 @@
+.adduserbox.row {
+    width: 35%;
+    background: #EAEAEA;
+    border: 1px solid #aba5a557;
+    position:  relative;
+    top: 100px;
+    padding: 27px;
+    /* height:  300px !important; */
+}
+
+.addusertitle {
+    text-transform:  capitalize;
+    font-size: 16px;
+    font-weight:  bold;
+    text-align:  center;
+    padding-bottom:  18px;
+    color: #213f66;
+}
+
+select {
+    height:  30px;
+    font-size:  12px;
+}
+
+::placeholder {
+    text-transform:  capitalize;
+    font-size:  13px;
+}
+
+body {
+    font-family:  Arial, sans-serif !important;
+}
+a.addusaerBTN.btn {
+    background:  transparent;
+    color:  black;
+    font-size:  12px;
+    box-shadow:  none;
+    border: 1px solid #c7bfbf;
+}
+
+a.addusaerBTN.btn img {
+    position:  relative;
+    top: 4px;
+}
+
+.col.s12.m12.btncol {
+    text-align:  center;
+}
+
+input.validate {
+    background: white !important;
+}
