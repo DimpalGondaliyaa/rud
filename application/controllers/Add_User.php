@@ -31,6 +31,7 @@ class Add_User extends CI_Controller {
 		 );
 
 		$this->db->insert("add_user",$data);
+		
 	}
 }
 ?>

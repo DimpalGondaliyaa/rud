@@ -13,8 +13,8 @@ $(function()
 	          processData:false,
 	          success:function(res)
 	          {
-	           $(document.body).load(location.href);
-	           window.location.href=baseurl+"Edit_User";
+	          /* $(document.body).load(location.href);*/
+	           window.location.href=baseurl+"Administration";
 	          /* window.location.reload();*/
 	          }
 	        });

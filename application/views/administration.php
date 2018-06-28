@@ -18,21 +18,39 @@
 		        </ul>
 		    </div>
 		  </nav>
+<?php 
+$d = $this->db->query("select * from add_user");
+$t = $d->result_array();
 
+?>
 		  	<div class="table-box">
 					
 				<table id="example" class="ui celled table responsive nowrap striped highlight" style="width:100%">
 		        <thead>
 		            <tr>
-		            	<th>#</th>
+		            	<th>status</th>
+		            	<th>username</th>
+		            	<th>full name</th>
+		            	<th>email</th>
+		            	<th>role</th>
+		            	<th>company</th>
+		            	<th>last login</th>
+		            	<th></th>
 		            </tr>
 		        </thead>
 		        <tbody>
-			
+			<?php foreach ($t as $key => $v) { ?>
 				<tr>
-					<td>sdsds</td>
+					<td><?php echo $v['status']; ?></td>
+					<td><?php echo $v['username']; ?></td>
+					<td><?php echo $v['f_name']; ?><?php echo $v['l_name']; ?></td>
+					<td><?php echo $v['email']; ?></td>
+					<td><?php echo $v['role']; ?></td>
+					<td><?php echo $v['company']; ?></td>
+					<td><?php echo $v['last_login']; ?></td>
+					<td><a href="<?php echo base_url(); ?>Edit_User/edituserdata/<?php echo $v['id']; ?>" ><i class="fas fa-arrow-right"></i></a></td>
 				</tr>
-				
+			<?php } ?>	
 				</tbody>
 			</table>
 			</div> 
