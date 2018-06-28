@@ -513,3 +513,22 @@ span.cc_pre {
     margin-top: 10px;
     padding-left: 0px;
 }
+
+/*Debts*/
+
+.top-gry {
+    position: relative;
+    overflow: hidden;
+    padding: 5px;
+}
+.top-gry ul li {
+    position: relative;
+    display: inline-block;
+    margin: 0px 10px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: gray;
+}
+.top-gry ul li span {
+    
+}

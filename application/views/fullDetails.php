@@ -785,7 +785,35 @@
 								</div>
 							</div>
 							<div class="tab_12 xbox">
-								<h6>Enrolled Debts</h6>
+								<div class="row">
+									<div class="Debts-Container">
+										<div class="Debts-box">
+											<div class="enr-ttl">
+												<h6>Enrolled Debts</h6>
+											</div>
+											<!-- <div class="top-gry">
+												<ul>
+													<li><span># ENROLLED <span class="bdg-gry">0</span></span></li>
+													<li><span> CURRENT <span class="bdg-gry">0</span></span></li>
+													<li><span> AVERAGE <span class="bdg-gry">0</span></span></li>
+												</ul>
+											</div>
+											<div class="top-small-menu">
+												<ul>
+													<li><span>Creditor</span></li>
+													<li><span>Account #</span></li>
+													<li><span>Current</span></li>
+													<li><span>Whose Debt</span></li>
+													<li><span>Current Payment</span></li>
+													<li><span>New Payment</span></li>
+													<li><span>Type</span></li>
+													<li><span>Status Date</span></li>
+												</ul>
+											</div>
+										</div> -->
+										
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
