@@ -1,0 +1,32 @@
+.mydiv {
+    width: 60%;
+    margin:  0 auto;
+}
+
+.boxx h4 {
+    font-size: 12px;
+    text-transform:  capitalize;
+    font-weight:  bold;
+}
+
+a.ib.wp100.bsb.greenbtn {
+    background: #52c452;
+    height: 32px !important;
+    font-size:  12px;
+    font-weight:  bold;
+    text-transform:  capitalize;
+    line-height:  30px;
+}
+h4.et {
+    text-transform: capitalize;
+    font-size:  19px;
+    font-weight:  bold;
+}
+
+p.notation {
+    font-size:  12px;
+}
+
+.condcont {
+    border:  1px solid #ddd;
+}

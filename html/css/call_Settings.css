@@ -1,0 +1,50 @@
+.callbox p {
+    position:  relative;
+    left:  45px;
+    top: -8px;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: relative;
+    opacity: 1;
+    pointer-events: all;
+    right: 48%;
+    height: 18px !important;
+    top: 29px;
+}
+h2.title.theme {
+       font-size: 18px;
+    margin: 0px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #213f66;
+
+}
+.sbox.s12.m4 {
+    width:  30%;
+}
+.main-menu
+{
+	height: auto !important;
+}
+.reletitle
+{
+	   font-size: 18px;
+    margin: 0px;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #213f66;
+}
+select {
+	    margin-bottom: 10px;
+    height:  105px;
+}
+body
+{
+	font-family: Arial, sans-serif !important;
+}
+h4.sl {
+    font-size:  14px;
+    font-weight:  bold;
+    text-transform:  capitalize;
+}

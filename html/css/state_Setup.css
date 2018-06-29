@@ -1,0 +1,39 @@
+h6 {}
+
+.left h6 {
+    font-size:  12px;
+    text-transform:  capitalize;
+    font-weight:  bold;
+    position:  relative;
+    top: 6px;
+}
+.ssbox {
+    height: 52px;
+    border-bottom: 1px dotted;
+    padding-top: 7px;
+}
+
+select {
+    height: 27px;
+    font-size:  12px;
+    position:  relative;
+    top: 10px;
+}
+.main-menu {
+    width: 97%;
+    margin: 0 auto;
+    background-image: #fff !important;
+    overflow: hidden;
+   height: auto !important;
+}
+.myyy {
+    border: 1px solid #ddd;
+    margin:  23px;
+    border-radius:  5px;
+}.titlee {
+    font-size: 16px;
+    padding-left:  27px;
+    padding-top:  12px;
+    color: #213f66;
+    font-weight:  bold;
+}

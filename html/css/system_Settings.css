@@ -1,0 +1,22 @@
+.titleee {
+    font-size: 16px;
+    text-transform: capitalize;
+    padding:  19px;
+    font-weight:  bold;
+    color: #213f66;
+}
+body{
+	font-family: Arial, sans-serif !important;
+}
+.ftitle {
+    font-size:  12px;
+    font-weight:  bold;
+    text-transform:  capitalize;
+    position:  relative;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: relative;
+    opacity: 1;
+        height: 15px !important;
+    pointer-events: all;
+}
