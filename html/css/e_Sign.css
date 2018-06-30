@@ -1,0 +1,34 @@
+.titleee {
+    font-size: 16px;
+    text-transform: capitalize;
+    padding:  19px;
+    font-weight:  bold;
+    color: #213f66;
+}
+body{
+	font-family: Arial, sans-serif !important;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: relative;
+    opacity: 1;
+        height: 15px !important;
+    pointer-events: all;
+        right: 23%;
+    top: 0;
+}
+.ftitle {
+    font-size:  12px;
+    font-weight:  bold;
+    text-transform:  capitalize;
+    position:  relative;
+}
+.nn {
+	    left: 26px;
+    position:  relative;
+    bottom:  12px;
+    text-transform: capitalize;
+    font-size: 11px;
+}
+.con input, select {
+    width: 48% !important;
+}
