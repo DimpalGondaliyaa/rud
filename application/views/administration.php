@@ -13,7 +13,7 @@
 		        <li><a href="<?= base_url(); ?>Teams"><img class="iconstyle" src="<?php echo base_url() ?>html/images/group.png">team</a></li>
 		        <li><a href="<?= base_url(); ?>System_Log"><img class="iconstyle" src="<?php echo base_url() ?>html/images/report.png">system log</a></li>
 		        <li><a href="<?= base_url(); ?>System_Settings"><img class="iconstyle" src="<?php echo base_url() ?>html/images/application_side_list.png">setting</a></li>
-		        <li><a href="#"><img class="iconstyle" src="<?php echo base_url() ?>html/images/chart_bar.png">usage</a></li>
+		        <li><a href="<?= base_url(); ?>usage"><img class="iconstyle" src="<?php echo base_url() ?>html/images/chart_bar.png">usage</a></li>
 		        
 		        </ul>
 		    </div>
