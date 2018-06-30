@@ -1,0 +1,81 @@
+/*budgetFields*/
+.body-box {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    padding: 25px 0px;
+}
+.body-box select {
+    width: 100% !important;
+    position: relative;
+    border: 1px solid gainsboro;
+    line-height: 0px;
+    height: 28px;
+    top: 10px;
+    padding: 0px 8px;
+}
+.btn-box {
+    position: relative;
+    padding: 20px 0px;
+}
+.btn-save-budget {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    text-decoration: none;
+    background-color: #eaeaea;
+    border: 1px solid #cccccc;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    padding: 0px 15px;
+    text-transform: capitalize;
+}
+.btn-save-budget:hover, .btn-save-budget:focus {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    text-decoration: none;
+    background-color: #e0e0e0;
+    border: 1px solid #cccccc;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    padding: 0px 15px;
+    text-transform: capitalize;
+}
+.main-menu{
+	overflow: auto !important;
+}
+
+.tabBox {
+    position: relative;
+    overflow: hidden;
+    background: #EFEFD1;
+    line-height: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.tab-box {
+    padding: 0px 15px;
+    padding-bottom: 10px;
+    margin-top: -10px;
+}
+
+.tBox {
+    border: 1px solid gainsboro !important;
+    padding: 3px !important;
+    overflow: hidden !important;
+    width: calc(100% - 30px) !important;
+    margin-left: 15px !important;
+    border-radius: 5px important;
+    box-shadow: 0px 3px 5px #dcdcdc73 !important;
+}
+
+.ndBox h6 {
+    font-size: 12px;
+    padding: 15px;
+    font-weight: bold;
+    letter-spacing: 0;
+    margin-top: 0px;
+    padding-top: 0px;
+}
