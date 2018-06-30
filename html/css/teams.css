@@ -1,0 +1,44 @@
+.ttitle {
+    font-size: 19px;
+    font-weight:  bold;
+    text-transform:  capitalize;
+    padding:  17px;
+}
+
+h4.ntem {
+    margin:  0px;
+    font-size:  14px;
+    padding-left:  16px;
+    text-transform:  capitalize;
+    font-weight:  bold;
+    color: black;
+}
+
+input#name {margin-left:  14px;font-size:  13px;}
+
+body {
+    font-family:  Arial, sans-serif !important;
+}
+ul.tlist {
+    padding-left:  16px;
+    color:  black;
+}
+
+ul.tlist li a {
+    letter-spacing: 0px;
+    color: grey;
+    font-size: 12px;
+    font-family: 13px;
+    text-transform:  capitalize;
+}
+p.myp {
+    font-size: 12px;
+    letter-spacing:  0px;
+    padding-left:  13px;
+}
+select {
+    width: 91% !important;
+    margin-left:  14px;
+    height:  125px;
+    border:  1px solid grey;
+}

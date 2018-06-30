@@ -1,0 +1,150 @@
+select#whatrole {
+    height: 29px;17px
+    height:  22px;
+    font-.:;
+    /* position:  relative; */
+    /* font-size:  10px; */
+}
+.fbox {
+    background: #FAFAFA;
+    height: 90px;
+    position: relative;
+    top: 56px;
+    border: 1px solid #ddd;
+    width: 99%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.left h4 {
+    font-size:  14px;
+    margin:  0px;
+    font-weight:  bold;
+    text-transform:  capitalize;
+}
+
+.left {
+    /* padding-left:  25px; */
+    padding: 14px;
+}
+
+input {
+    background: white !important;
+}
+select {
+    height:  31px;
+    /* position:  relative; */
+    /* top: 9px; */
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: relative;
+    opacity: 1;
+    pointer-events: all;
+    top: 4px;
+}
+div#moddivguidelines {
+    position:  relative;
+    top: 76px;
+  
+    width:  99%;
+    margin:  0 auto;
+    border-radius:  3px;
+    border:  1px solid #ddd;
+    height:  473px;
+}
+div#guid {
+    position:  relative;
+    top: 76px;
+  
+    width:  99%;
+    margin:  0 auto;
+    border-radius:  3px;
+    border:  1px solid #ddd;
+        height: 90px;
+    margin-bottom: 19px;
+}
+div#Creditors {
+    position:  relative;
+    top: 76px;
+  
+    width:  99%;
+    margin:  0 auto;
+    border-radius:  3px;
+    border:  1px solid #ddd;
+        height: 130px;
+    margin-top: 19px;
+}
+div#Calendar {
+    position:  relative;
+    top: 76px;
+  
+    width:  99%;
+    margin:  0 auto;
+    border-radius:  3px;
+    border:  1px solid #ddd;
+        height: 160px;
+    margin-top: 19px;
+}
+div#Enrollments
+ {
+    position:  relative;
+    top: 76px;
+  
+    width:  99%;
+    margin:  0 auto;
+    border-radius:  3px;
+    border:  1px solid #ddd;
+        height: 260px;
+    margin-top: 19px;
+}
+div#files {
+    position:  relative;
+    top: 76px;
+  
+    width:  99%;
+    margin:  0 auto;
+    border-radius:  3px;
+    border:  1px solid #ddd;
+        height: 100px;
+    margin-top: 19px;
+}
+div#admin {
+    position:  relative;
+    top: 76px;
+  
+    width:  99%;
+    margin:  0 auto;
+    border-radius:  3px;
+    border:  1px solid #ddd;
+        height: 200px;
+    margin-top: 19px;
+}
+
+
+body{
+	font-family: Arial, sans-serif !important;
+}
+li {
+    font-size: 12px;
+}
+.main-menu {
+    width: 97%;
+    margin: 0 auto;
+    background-image: #fff !important;
+    overflow: hidden;
+    height: 270vh !important;
+}
+input[type="checkbox"] {
+    width:  30px !important;
+}
+label.gui {
+    font-size:  12px;
+    color: grey !important;
+}
+input[type="checkbox"] {
+    height: 14px !important;
+}
+
+.col.s12.m12 p {
+ text-transform: capitalize;
+    font-size:  12px;
+}

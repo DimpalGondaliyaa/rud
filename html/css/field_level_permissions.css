@@ -1,0 +1,31 @@
+.left h1 {
+	margin: 0px;
+    font-size:  23px;
+}
+
+.fbox {
+    background: #ddddddc4 !important;
+    height:  150px;
+    position:  relative;
+    top: 40px;
+    width:  50%;
+    margin:  0 auto;
+    padding: 18px;
+    background:  black;
+}
+input#title {
+    background: #fff !important;
+}
+
+select#editfrm {
+   height:  25px;
+    position:  relative;
+    top: 12px;
+    font-size: 11px !important;
+    background-color: white;
+}
+a#savebtn img {
+    float:  right;
+    position:  relative;
+    top: 5px;
+}
