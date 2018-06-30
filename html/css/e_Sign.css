@@ -16,6 +16,12 @@ body{
         right: 23%;
     top: 0;
 }
+input[type="checkbox"] {
+    position:  relative;
+    left:  8%;
+    top: -45px;
+    bottom:  !important;
+}
 .ftitle {
     font-size:  12px;
     font-weight:  bold;

@@ -222,8 +222,20 @@
 
 		  	  <div class="row">
 		  	  	<div class="col s12 m12">
-		  	<div class="titleee">E-Signature Settings</div>
-		  </div>
+				  	<div class="titleee">Company Settings</div>
+				 </div>
+				 <div class="col s3 m3">
+				 	<label style="width:250px;">United Students Of America <input type="checkbox" name="comps[]" value="22493" checked="checked" style="border: none;"></label>
+				 </div>
+
+				 <div class="col s3 m3">
+				 	<label style="width:250px;">url <input type="text" name="comps[]" value="22493" checked="checked" style="border: none;"></label>
+				 </div>
+
+
+				 <div class="col s3 m3">
+				 	<label style="width:250px;">from address <input type="text" name="comps[]" value="22493" checked="checked" style="border: none;"></label>
+				 </div>
 		  </div>
 
 	</div>

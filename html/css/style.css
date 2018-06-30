@@ -6,7 +6,7 @@ body{
     margin: 0;
     padding: 0;
     line-height: normal;
-    min-height: 95vh;
+    height: 95vh;
     font-weight: 400;
 }
 .cmdtitle {
@@ -370,7 +370,7 @@ span.badge-box {
 }
 
 .main-box {
-    min-height: 501px;
+    height: auto;
     height: auto;
     position:  relative;
     padding-top:  65px;
@@ -393,7 +393,7 @@ input {
     margin:  0 auto;
     background-image: #fff !important;
     overflow: hidden;
-        min-height: auto;
+    height: auto;
 }
 nav ul a{
     border-top: 3px solid #000000;
