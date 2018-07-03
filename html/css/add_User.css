@@ -50,3 +50,7 @@ a.addusaerBTN.btn img {
 input.validate {
     background: white !important;
 }
+.main-menu
+{
+    height: 100vh !important;
+}

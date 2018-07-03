@@ -1,0 +1,58 @@
+.titleee {
+    font-size: 16px;
+    text-transform: capitalize;
+    padding:  19px;
+    font-weight:  bold;
+    color: #213f66;
+}
+body{
+    font-family: Arial, sans-serif !important;
+}
+.ftitle {
+    font-size:  12px;
+    font-weight:  bold;
+    text-transform:  capitalize;
+    position:  relative;
+        top: 17px;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: relative;
+    opacity: 1;
+        height: 15px !important;
+    pointer-events: all;
+}
+.col.s12.m4.leftbox {
+    background:  rgb(234, 234, 234);
+}
+
+input[type="text"] {
+    background:  #fff !important;
+}
+a.btn.savebtnbyn {
+    text-align:  center;
+    background: #1faa49;
+    height:  32px;
+}
+
+.col.s12.m12.btnbox {
+    text-align:  center;
+    margin:  20px;
+}
+.mtitle {
+    font-size: 15px;
+    text-transform:  capitalize;
+    padding-top: 20px;
+    color: #323232;
+    font-weight:  bold;
+}
+
+.mvalue {
+    font-size: 20px;
+    padding-top:  11px;
+    color: #213f66;
+    font-weight:  bold;
+}
+.borderbottom {
+    border-bottom: 1px solid #213f6657;
+    margin-top: 110px;
+}

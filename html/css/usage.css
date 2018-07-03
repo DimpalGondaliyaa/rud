@@ -1,7 +1,8 @@
 ul.usageul {
-    background: #dddddd;
+      background: #dddddd59;
     padding: 5px 0px;
-    margin:  0px;
+    margin: 0px;
+    height: 100vh;
 }
 
 ul.usageul li a {
@@ -9,11 +10,76 @@ ul.usageul li a {
     letter-spacing:  0px;
     color:  grey;
 }
+.col.s12.m3
+{
+    padding: 0px;
+}
 
 ul.usageul li {
     border-bottom:  1px solid grey;
     padding:  4px;
 }
-.col.s12.m3 {
-    padding:  2px;
+.utitle {
+    font-size:  30px;
+    text-transform:  capitalize;
+    padding:  23px;
+    color: #213f66;
+    font-weight:  bold;
+    border-bottom: 1px solid #8080807a;
+}
+
+h4 {}
+
+.left h4 {
+    font-size: 12px;
+    text-transform:  capitalize;
+    font-weight:  bold;
+}
+.col.s12.m1.myf {
+    position: relative;
+    top: 57px;
+    /* height:  10px !important; */
+}
+
+.col.s12.m1.myf a {
+    height:  28px;
+    font-size:  12px;
+    line-height:  27px;
+    background: #998b8b;
+}
+h4 {}
+
+.btitle h4 {
+    text-align:  center;
+    font-size:  26px;
+    text-transform:  capitalize;
+    color: #213f66;
+    font-weight:  bold;
+}
+
+.bp span {
+    color:  grey;
+    font-weight:  bold;
+    text-transform:  capitalize;
+}
+
+.bp p {
+    letter-spacing:  0px;
+}
+
+select {
+    height: 29px;
+    margin-top: 22px !important;
+    font-size:  11px;
+}
+.exlink {
+    margin-top: 14px;
+    border: 1px solid #8080807a;
+    padding: 3px;
+}
+
+.exlink a {
+    color: #000000d1;
+    text-transform:  capitalize;
+    font-size:  12px;
 }

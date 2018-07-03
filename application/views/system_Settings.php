@@ -16,7 +16,7 @@
 		         <li><a href="<?php echo base_url(); ?>Note_Templates"><img class="iconstyle" src="<?php echo base_url() ?>html/images/note.png">note template</a></li>
 		         <li><a href="<?php echo base_url(); ?>Clixsign"><img class="iconstyle" src="<?php echo base_url() ?>html/images/clixsign.png">clixsign</a></li>
 		         <li><a href="<?php echo base_url(); ?>E_Sign"><img class="iconstyle" src="<?php echo base_url() ?>html/images/email_edit.png">e-sing</a></li>
-		         <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/calculator.png">Budget Fields</a></li>
+		         <li><a href="<?php echo base_url(); ?>BudgetFields"><img class="iconstyle" src="<?php echo base_url() ?>html/images/calculator.png">Budget Fields</a></li>
 		        
 		      </ul>
 		    </div>

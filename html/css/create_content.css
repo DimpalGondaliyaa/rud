@@ -1,0 +1,13 @@
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: relative;
+    opacity: 1;
+    pointer-events: all;
+    height: 18px !important;
+    
+}
+.left h4 {
+    font-size: 14px;
+    font-weight:  bold;
+    text-transform:  capitalize;
+        margin-bottom: 0px;
+}

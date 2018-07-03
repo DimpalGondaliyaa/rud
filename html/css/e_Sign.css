@@ -18,7 +18,7 @@ body{
 }
 input[type="checkbox"] {
     position:  relative;
-    left:  8%;
+    left:  -22%;
     top: -45px;
     bottom:  !important;
 }

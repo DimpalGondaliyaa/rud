@@ -1,0 +1,55 @@
+.Guidelines-title {
+    padding:  19px;
+    font-size:  17px;
+    font-weight:  bold;
+}
+
+.left h4 {
+    margin:  0px;
+    font-size:  12px;
+    font-weight:  bold;
+}
+
+.left {
+    padding-left:  23px;
+}
+
+select {
+    height: 30px;
+    margin-top:  8px;
+}
+.btnboc a {
+    background: #aa9f9f;
+    margin:  14px;
+    height:  29px;
+    font-size:  12px;
+    line-height:  27px;
+    margin-top:  21px;
+}
+.gbox {
+    border: 1px solid #8080802e;
+    padding:  10px;
+    width:  99%;
+    margin:  0 auto;
+}
+.catlist {
+    padding:  20px;
+    font-size:  15px;
+    text-transform:  capitalize;
+}
+
+.catlist ul li a {
+    color:  grey;
+}
+
+.catlist ul li {
+    border-bottom:  1px dotted grey;
+        padding-bottom: 12px;
+}
+a.parcat {
+    background: #EFEFD1;
+    position:  relative;
+    left: 35px;
+    font-size:  12px;
+    text-transform:  capitalize;
+}

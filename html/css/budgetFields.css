@@ -40,6 +40,52 @@
     padding: 0px 15px;
     text-transform: capitalize;
 }
+
+.btn-update-budget {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    text-decoration: none;
+    background-color: #eaeaea;
+    border: 1px solid #cccccc;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    padding: 0px 15px;
+    text-transform: capitalize;
+}
+.btn-update-budget:hover, .btn-update-budget:focus {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    text-decoration: none;
+    background-color: #e0e0e0;
+    border: 1px solid #cccccc;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    padding: 0px 15px;
+    text-transform: capitalize;
+}
+
+.btn-delete-budget {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    text-decoration: none;
+    background-color: #eaeaea;
+    border: 1px solid #cccccc;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    padding: 0px 15px;
+    text-transform: capitalize;
+}
+.btn-delete-budget:hover, .btn-delete-budget:focus {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    text-decoration: none;
+    background-color: #e0e0e0;
+    border: 1px solid #cccccc;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    padding: 0px 15px;
+    text-transform: capitalize;
+}
 .main-menu{
 	overflow: auto !important;
 }

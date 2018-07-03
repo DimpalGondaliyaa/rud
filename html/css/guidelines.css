@@ -22,11 +22,12 @@
 }
 .col.s12.m8.textlab {
 	border-radius: 3px;
-	    height: 45px;
+	    height: auto;
     position:  relative;
     top: 18px;
     border: 1px solid #dddddd;
     left:  31px;
+    padding-bottom : 30px;
 }
 .content {
     font-size: 16px;
@@ -45,4 +46,20 @@ input#first_name {
 	    width: 80% !important;
     height: 20px;
     border: 1px solid #32323269 !important;
+}
+
+.fbox {
+    padding-top:  15px;
+    border-bottom:  1px dotted grey;
+    padding-bottom:  10px;
+}
+
+.ftitle  a{
+    text-transform:  capitalize;
+    font-weight:  bold;
+    color: #213f66;
+}
+
+.fcontent {
+    font-size:  12px;
 }

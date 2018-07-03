@@ -8,17 +8,17 @@
 		        	<input type="search" name="srch" class="top-srch">
 		        </li>
 		        <li>
-		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>EditContact/editData/<?= $get['c_id'];?>"> <img src="<?php echo base_url(); ?>html/images/user_edit.png" class="responsive-img" style="margin-right: 5px;">  Edit Contact</a></li>
+		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>EditContact/editData/<?= $get['c_id'];?>"> <img src="<?php echo base_url(); ?>html/images/user_edit.png" class="responsive-img" style="margin-right: 5px;">save budget</a></li>
 
-		        	<li><a class="valign-wrapper condltbtn" href="#!"  data-id="<?php echo $get['c_id']; ?>"><img src="<?php echo base_url(); ?>html/images/user_delete.png" class="responsive-img" style="margin-right: 5px;">  Delete Contact</a></li>
+		        	<li><a class="valign-wrapper condltbtn" href="#!"  data-id="<?php echo $get['c_id']; ?>"><img src="<?php echo base_url(); ?>html/images/user_delete.png" class="responsive-img" style="margin-right: 5px;">save budget</a></li>
 
-		        	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/calculator.png" class="responsive-img" style="margin-right: 5px;">  Budget Analysis</a></li>
+		        	<li><a class="valign-wrapper" href="<?= base_url(); ?>Budget_Analysis"> <img src="<?php echo base_url(); ?>html/images/calculator.png" class="responsive-img" style="margin-right: 5px;">  Budget Analysis</a></li>
 
-		        	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/book_edit.png" class="responsive-img" style="margin-right: 5px;">  Creditors</a></li>
+		        	<li><a class="valign-wrapper" href="<?= base_url(); ?>Creditors"> <img src="<?php echo base_url(); ?>html/images/book_edit.png" class="responsive-img" style="margin-right: 5px;">  Creditors</a></li>
 
-		        	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/report_add.png" class="responsive-img" style="margin-right: 5px;">  Enrollment</a></li>
+		        	<li><a class="valign-wrapper" href="<?= base_url(); ?>Contact_Enrollment"> <img src="<?php echo base_url(); ?>html/images/report_add.png" class="responsive-img" style="margin-right: 5px;">  Enrollment</a></li>
 
-		        	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/add.png" class="responsive-img" style="margin-right: 5px;">  Retrieve Loans and Programs</a></li>
+		        	<li><a class="valign-wrapper" href="<?= base_url(); ?>Preview_Plans"> <img src="<?php echo base_url(); ?>html/images/add.png" class="responsive-img" style="margin-right: 5px;">  Retrieve Loans and Programs</a></li>
 
 		        <!-- 	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/calculator.png" class="responsive-img" style="margin-right: 5px;">  Quick Quote</a></li>
 		        	<li><a class="valign-wrapper" href="#!> <img src="<?php echo base_url(); ?>html/images/textfield.png" class="responsive-img" style="margin-right: 5px;"> Custom Fields</a></li>

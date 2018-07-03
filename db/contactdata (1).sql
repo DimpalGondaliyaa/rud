@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 19, 2018 at 06:46 AM
+-- Generation Time: Jul 03, 2018 at 12:10 PM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -21,6 +21,50 @@ SET time_zone = "+00:00";
 --
 -- Database: `contactdata`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `add_user`
+--
+
+CREATE TABLE `add_user` (
+  `id` int(11) NOT NULL,
+  `username` varchar(222) NOT NULL,
+  `f_name` varchar(255) NOT NULL,
+  `l_name` varchar(255) NOT NULL,
+  `password` varchar(222) NOT NULL,
+  `confirm` varchar(222) NOT NULL,
+  `company` varchar(222) NOT NULL,
+  `full_name` varchar(222) NOT NULL,
+  `email` varchar(222) NOT NULL,
+  `role` varchar(222) NOT NULL,
+  `last_login` int(11) NOT NULL,
+  `report_to` varchar(222) NOT NULL,
+  `out_mail_server` varchar(222) NOT NULL,
+  `status` int(11) NOT NULL,
+  `payee` varchar(222) NOT NULL,
+  `port` int(11) NOT NULL,
+  `type` varchar(222) NOT NULL,
+  `t_email` varchar(222) NOT NULL,
+  `Userfield1` varchar(222) NOT NULL,
+  `Userfield2` varchar(222) NOT NULL,
+  `Userfield3` varchar(222) NOT NULL,
+  `Userfield4` varchar(222) NOT NULL,
+  `Userfield5` varchar(222) NOT NULL,
+  `Userfield6` varchar(222) NOT NULL,
+  `Suspend` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `add_user`
+--
+
+INSERT INTO `add_user` (`id`, `username`, `f_name`, `l_name`, `password`, `confirm`, `company`, `full_name`, `email`, `role`, `last_login`, `report_to`, `out_mail_server`, `status`, `payee`, `port`, `type`, `t_email`, `Userfield1`, `Userfield2`, `Userfield3`, `Userfield4`, `Userfield5`, `Userfield6`, `Suspend`) VALUES
+(1, 'test', 'fdfdffd', 'fdfdff', 'test', 'test', '1', '', '', '20381', 0, '3166835', '', 0, '', 0, 'ssl', 'a', '', '', '', '', '', '', 0),
+(2, 'testt', '', '', 'testt', 'testt', 'United Students Of America', '', '', '', 0, '', '', 0, '', 0, '', '', '', '', '', '', '', '', 0),
+(3, 'dsd', '', '', 'dd', 'dddd', 'United Students Of America', '', '', '', 0, '', '', 0, '', 0, '', '', '', '', '', '', '', '', 0),
+(4, 'rrr', '', '', 'rrr', 'rrr', 'United Students Of America', '', '', '', 0, '', '', 0, '', 0, '', '', '', '', '', '', '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -62,6 +106,64 @@ CREATE TABLE `assigned_user` (
 INSERT INTO `assigned_user` (`asgn_id`, `user_email`, `asgn_email`, `assignedOn`, `status`) VALUES
 (1, 'ag@test.com', 's@me.com', '2018-06-13 14:54:27', 0),
 (2, 'test@me.com', 'uesr@test.com', '2018-06-13 14:55:33', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `banks`
+--
+
+CREATE TABLE `banks` (
+  `id` int(5) NOT NULL,
+  `u_id` int(5) NOT NULL,
+  `routing_number` bigint(20) NOT NULL,
+  `bank_name` varbinary(255) NOT NULL,
+  `account_number` bigint(20) NOT NULL,
+  `address` text NOT NULL,
+  `account_type` varchar(255) NOT NULL,
+  `bank_city` varchar(255) NOT NULL,
+  `bank_state` varchar(255) NOT NULL,
+  `bank_postal_code` bigint(10) NOT NULL,
+  `name_on_account` varchar(255) NOT NULL,
+  `bank_phone` bigint(20) NOT NULL,
+  `createdOn` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `banks`
+--
+
+INSERT INTO `banks` (`id`, `u_id`, `routing_number`, `bank_name`, `account_number`, `address`, `account_type`, `bank_city`, `bank_state`, `bank_postal_code`, `name_on_account`, `bank_phone`, `createdOn`) VALUES
+(2, 1, 1234567890, 0x4943494349, 78965236415246, 'Ahmedabad', '2', 'Ahmedabad', 'GU', 380015, 'Test User', 7896541230, '2018-06-28 12:17:16');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `budgets`
+--
+
+CREATE TABLE `budgets` (
+  `id` int(5) NOT NULL,
+  `c_id` int(5) NOT NULL,
+  `item_name` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `hover_hint` varchar(255) NOT NULL,
+  `replace_tag` varchar(255) NOT NULL,
+  `createdOn` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `budgets`
+--
+
+INSERT INTO `budgets` (`id`, `c_id`, `item_name`, `type`, `hover_hint`, `replace_tag`, `createdOn`) VALUES
+(1, 0, 'Item Name', 'GI', ' Hover Hint', 'Replace Tag', '2018-06-30 17:47:36'),
+(2, 0, 'Item Name', 'I', ' Hover Hint', 'Replace Tag', '2018-06-30 17:47:40'),
+(3, 0, 'Item Name', 'E', 'Hover Hint', 'Replace Tag', '2018-06-30 15:25:09'),
+(4, 0, 'Item Name', 'LA', 'Hover Hint', 'Replace Tag', '2018-06-30 15:42:35'),
+(5, 0, 'Item Name', 'A', 'Hover Hint', 'Replace Tag', '2018-06-30 15:42:48'),
+(6, 0, 'Item Name', 'A', 'Hover Hint', 'Replace Tag', '2018-06-30 15:43:06'),
+(8, 0, 'User', 'GI', 'hintss', 'taggggg', '2018-06-30 18:08:44');
 
 -- --------------------------------------------------------
 
@@ -217,6 +319,29 @@ INSERT INTO `contact_file` (`id`, `file`, `type`, `description`, `createdOn`) VA
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `content`
+--
+
+CREATE TABLE `content` (
+  `id` int(11) NOT NULL,
+  `title` varchar(222) NOT NULL,
+  `category` varchar(112) DEFAULT NULL,
+  `description` text NOT NULL,
+  `share_with` varchar(222) NOT NULL,
+  `feature_page` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `content`
+--
+
+INSERT INTO `content` (`id`, `title`, `category`, `description`, `share_with`, `feature_page`) VALUES
+(1, 'fdfdf', NULL, 'dfdfd', 't_10562', 1),
+(2, 'xxcxcxc', NULL, 'cxcxcxc', 'Super Admins', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `custom_fields`
 --
 
@@ -298,6 +423,26 @@ INSERT INTO `events` (`id`, `title`, `descp`, `date`, `created`, `modified`, `st
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `gd_categories`
+--
+
+CREATE TABLE `gd_categories` (
+  `id` int(11) NOT NULL,
+  `cat_name` varchar(222) NOT NULL,
+  `paren_cat` varchar(222) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gd_categories`
+--
+
+INSERT INTO `gd_categories` (`id`, `cat_name`, `paren_cat`) VALUES
+(1, 'gfgfgfgf', ''),
+(2, 'dsdsds', 'gfgfgfgf');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `notes`
 --
 
@@ -317,6 +462,28 @@ INSERT INTO `notes` (`id`, `u_id`, `note_type`, `note`, `createdOn`) VALUES
 (1, 2, 'Call', 'this is Note.', '2018-06-15 11:02:57'),
 (2, 1, 'Creditor', 'This is Noteeeeee', '2018-06-18 12:44:24'),
 (3, 1, 'Creditor', 'This is Noteeeeee', '2018-06-18 12:44:24');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sender_setup`
+--
+
+CREATE TABLE `sender_setup` (
+  `id` int(11) NOT NULL,
+  `Sender_name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `r_address` text NOT NULL,
+  `b_address` text NOT NULL,
+  `Sent_Campaigns` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sender_setup`
+--
+
+INSERT INTO `sender_setup` (`id`, `Sender_name`, `email`, `r_address`, `b_address`, `Sent_Campaigns`) VALUES
+(2, 'wwwww', 'asas', 'ssasa', 'sas', 0);
 
 -- --------------------------------------------------------
 
@@ -420,6 +587,12 @@ INSERT INTO `u_events` (`e_id`, `u_id`, `e_title`, `e_date`, `e_time`, `e_timezo
 --
 
 --
+-- Indexes for table `add_user`
+--
+ALTER TABLE `add_user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `admin`
 --
 ALTER TABLE `admin`
@@ -430,6 +603,18 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `assigned_user`
   ADD PRIMARY KEY (`asgn_id`);
+
+--
+-- Indexes for table `banks`
+--
+ALTER TABLE `banks`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `budgets`
+--
+ALTER TABLE `budgets`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `companies`
@@ -447,6 +632,12 @@ ALTER TABLE `contactdetails`
 -- Indexes for table `contact_file`
 --
 ALTER TABLE `contact_file`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `content`
+--
+ALTER TABLE `content`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -468,9 +659,21 @@ ALTER TABLE `events`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `gd_categories`
+--
+ALTER TABLE `gd_categories`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `notes`
 --
 ALTER TABLE `notes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sender_setup`
+--
+ALTER TABLE `sender_setup`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -502,6 +705,12 @@ ALTER TABLE `u_events`
 --
 
 --
+-- AUTO_INCREMENT for table `add_user`
+--
+ALTER TABLE `add_user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
@@ -512,6 +721,18 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `assigned_user`
   MODIFY `asgn_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `banks`
+--
+ALTER TABLE `banks`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `budgets`
+--
+ALTER TABLE `budgets`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `companies`
@@ -532,6 +753,12 @@ ALTER TABLE `contact_file`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `content`
+--
+ALTER TABLE `content`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `custom_fields`
 --
 ALTER TABLE `custom_fields`
@@ -550,10 +777,22 @@ ALTER TABLE `events`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
+-- AUTO_INCREMENT for table `gd_categories`
+--
+ALTER TABLE `gd_categories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `notes`
 --
 ALTER TABLE `notes`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `sender_setup`
+--
+ALTER TABLE `sender_setup`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `up_files`

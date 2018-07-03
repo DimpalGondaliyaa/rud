@@ -1,7 +1,7 @@
 
 <div class="main-box">
 	<div class="cmdtitle">
-		<a href="<?php echo base_url(); ?>Docs">document creator</a>
+		<a href="<?php echo base_url(); ?>Administration">user administration</a> > <a href="<?php echo base_url(); ?>E_Sign">E-Signature Settings</a>  
 	</div>
 
 	<div class="main-menu row">
@@ -9,14 +9,6 @@
 		    <div class="nav-wrapper connavwapp">
 		      <ul id="nav-mobile" class="hide-on-med-and-down" style="position: relative;left: 5px;}">
 		        <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/accept.png">save settings</a></li>
-		        <li><a href="<?= base_url(); ?>Email_Trigger"><img class="iconstyle" src="<?php echo base_url() ?>html/images/email_open.png">Email Triggers</a></li>
-		        <li><a href="<?= base_url(); ?>State_Setup"><img class="iconstyle" src="<?php echo base_url() ?>html/images/flag_red.png">State Setup</a></li>
-		         <li><a href="<?php echo base_url(); ?>Call_Settings"><img class="iconstyle" src="<?php echo base_url() ?>html/images/phone.png">call setting</a></li>
-
-		         <li><a href="<?php echo base_url(); ?>Note_Templates"><img class="iconstyle" src="<?php echo base_url() ?>html/images/note.png">note template</a></li>
-		         <li><a href="<?php echo base_url(); ?>Clixsign"><img class="iconstyle" src="<?php echo base_url() ?>html/images/clixsign.png">clixsign</a></li>
-		         <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/email_edit.png">e-sing</a></li>
-		         <li><a href="#!"><img class="iconstyle" src="<?php echo base_url() ?>html/images/calculator.png">Budget Fields</a></li>
 		        
 		      </ul>
 		    </div>

@@ -1,0 +1,48 @@
+.stitle {
+    font-size:  20px;
+    padding:  23px;
+    color: #213f66;
+    font-weight:  bold;
+}
+
+.ybox {
+    width:  99%;
+    background: #EFEFD1;
+    padding-left:  22px;
+    padding-top:  12px;
+    padding-bottom:  12px;
+    margin:  0 auto;
+    margin-bottom:  12px;
+}
+
+.ybox p {
+    margin:  2px;
+    color: #33aa42;
+    font-weight:  bold;
+}
+
+.subtitle {
+    font-size:  16px;
+    text-transform:  capitalize;
+    font-weight:  bold;
+}
+.title.theme {
+    font-size:  19px;
+    padding-left:  10px;
+    color: #213f66;
+    font-weight:  bold;
+    text-transform:  capitalize;
+}
+
+.condcont {
+    /* border:  1px solid grey; */
+    /* height: 63px; */
+}
+
+label {
+    font-size:  11px !important;
+}
+select 
+{
+    height: 30px;
+}
