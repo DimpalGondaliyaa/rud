@@ -1,24 +1,3 @@
-<?php 
-/*
-$this->load->helper('date');
-$email=$this->session->userdata('email');
-
-$datestring = ('%Y-%m-%d - %h:%i %a');
-$time = time();
-$better_date= mdate($datestring, $time,strtotime("-1 day"));
-
-echo $c_date=date("Y-m-d H:i:s",strtotime("-24 hour"));
-
-echo '<br>';
-
-$post_date = ('%Y-%m-%d');
-$now = time();
-
-echo timespan($post_date, $now) . ' ago';
-*/
-?>
-
-
 <div class="main-box">
 	<div class="main-menu">
 	 <nav class="contactnav">

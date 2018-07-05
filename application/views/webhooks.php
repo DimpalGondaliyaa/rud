@@ -25,6 +25,7 @@ $g = $f->result_array();
 
 <h2>Create A WebHook</h2>
 <form id="webhookfrm">
+	<input type="hidden" name="id" value="<?= $w['id']; ?>">
 <div class="input-field col s12 m12">
           <input placeholder="Webhook Title*" name="title"  type="text" value="<?= $w['title']; ?>" class="validate">
           <label for="first_name">Webhook Title*</label>
@@ -75,7 +76,7 @@ $g = $f->result_array();
         </div>
 
         <div class="btnsec">
-        	<a href="#!" class="delete red-text">delete webhook</a>
+        	<a href="#!" data-id="<?=  $w['id']; ?>" class="deleteweb red-text">Delete Webhook</a>
         	<a href="#!" class="btn <?php if($w['id']==""){ ?> addwebb <?php }else{ ?>edtwebb <?php } ?> green">save webhook</a>
         </div>
 
