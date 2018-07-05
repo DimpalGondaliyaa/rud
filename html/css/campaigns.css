@@ -1,0 +1,66 @@
+.main-menu
+{
+	height: 100vh !important;
+}
+.ctitle {
+    font-size: 17px;
+    font-family: Arial, sans-serif;
+    padding:  10px;
+    font-weight:  bold;
+    color: #213f66;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: relative;
+    opacity: 1;
+    pointer-events: all;
+    top: 0;
+    height: 19px !important;
+    right: 165px;
+}
+body{
+	   font-family: Arial, sans-serif !important;
+}
+input[type="textbox"] {
+    margin-bottom:  8px;
+}
+input[type="textbox"] {
+    margin-bottom:  8px;
+}
+
+select {
+    height:  31px;
+    margin-top:  10px;
+    width: 99%;
+    border: 1px solid #dddddd;
+}
+a.savecampbtn.btn {
+    background: #dedede;
+    color:  black;
+    margin-top:  15px;
+    height:  30px;
+    width: 124px;
+    font-size: 11px;
+    text-transform:  capitalize;
+    line-height:  29px;
+}
+a.edtcampbtn.btn {
+    background: #dedede;
+    color:  black;
+    margin-top:  15px;
+    height:  30px;
+    width: 124px;
+    font-size: 11px;
+    text-transform:  capitalize;
+    line-height:  29px;
+}
+a.deletecampbtn.btn {
+    background: #dedede;
+    color:  black;
+    margin-top:  15px;
+    height:  30px;
+    width: 124px;
+    font-size: 11px;
+    text-transform:  capitalize;
+    line-height:  29px;
+}
+

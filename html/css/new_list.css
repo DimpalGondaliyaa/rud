@@ -1,0 +1,75 @@
+.left h3 {
+    font-size: 14px;
+    font-weight:  bold;
+    text-transform:  capitalize;
+    margin:  0px;
+}
+
+.left {
+    padding:  11px;
+}
+
+select {
+    height: 29px;
+    margin-top: 11px;
+    font-size:  12px;
+}
+
+h3.theme {
+    font-size:  16px;
+    margin-top:  23px;
+    text-transform:  capitalize;
+}
+h2.title.theme {
+    font-size: 18px;
+    margin:  0px;
+    text-transform:  capitalize;
+    font-weight:  bold;
+    color: #213f66;
+}
+a.greenbtn.btn {
+    background:  #50AD50;
+    height: 29px;
+    margin:  15px;
+    font-size:  12px;
+    line-height: 28px;
+}
+
+a.greenbtn.btn i {
+    font-size:  12px;
+}
+div#avail h3 {
+        margin: 0;
+    color: #213f66;
+    font-size: 20px;
+    text-transform:  capitalize;
+    font-weight:  bold;
+}
+div#showf h3 {
+        margin: 0;
+    color: #213f66;
+    font-size: 20px;
+    text-transform:  capitalize;
+    font-weight:  bold;
+}
+div#showfields {
+    background: #CCCCCC;
+    height: 252vh;
+    padding:  20px;
+}
+
+.dragelem {
+    background:  #fff;
+    margin-bottom:  10px;
+    font-size:  13px;
+    padding:  4px;
+    font-size:  12px;
+}
+#showf
+{
+    widows: 100%;
+    margin-top: 10px;
+      background: #CCCCCC;
+    height: 35vh;
+    padding:  20px;
+}

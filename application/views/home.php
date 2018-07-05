@@ -31,7 +31,7 @@ echo timespan($post_date, $now) . ' ago';
 		        	</select>
 		        </li>
 		        <li>
-		        	<a class="valign-wrapper" href="#">new list</a></li>
+		        	<a class="valign-wrapper" href="<?= base_url(); ?>new_list">new list</a></li>
 		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>editContact"> <img src="<?php echo base_url(); ?>html/images/add.png" class="responsive-img" style="margin-right: 5px;">  add contact</a></li>
 
 
@@ -41,14 +41,12 @@ echo timespan($post_date, $now) . ' ago';
 
 		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>workflow"> <img src="<?php echo base_url(); ?>html/images/icon-settings.jpg" class="responsive-img" style="margin-right: 5px;">Workflow</a></li>
 
-		        	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/database_connect.png" class="responsive-img" style="margin-right: 5px;">Data Sources</a>
+		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>Campaigns"> <img src="<?php echo base_url(); ?>html/images/chart_bar.png" class="responsive-img" style="margin-right: 5px;">Campaigns</a></li>
 
-		        <!-- 	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/calculator.png" class="responsive-img" style="margin-right: 5px;">  Quick Quote</a></li>
-		        	<li><a class="valign-wrapper" href="#!> <img src="<?php echo base_url(); ?>html/images/textfield.png" class="responsive-img" style="margin-right: 5px;"> Custom Fields</a></li>
-		        	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/icon-settings.jpg" class="responsive-img" style="margin-right: 5px;">Workflow</a></li>
-		        	<li><a class="valign-wrapper" href="#!"> <img src="<?php echo base_url(); ?>html/images/database_connect.png" class="responsive-img" style="margin-right: 5px;">Data Sources</a>
- -->
-		        </li>
+		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>Data_sources"> <img src="<?php echo base_url(); ?>html/images/database_connect.png" class="responsive-img" style="margin-right: 5px;">Data Sources</a>
+				  </li>
+				  <li><a class="valign-wrapper" href="<?php echo base_url(); ?>webhooks"> <img src="<?php echo base_url(); ?>html/images/world_go.png" class="responsive-img" style="margin-right: 5px;">webhooks</a>
+				  </li>
 		    </div>
 		  </nav>
 

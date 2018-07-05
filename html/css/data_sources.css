@@ -1,0 +1,110 @@
+select#dsources {
+        height: 28px;
+    position: relative;
+    /* bottom: 33px; */
+    top: 0px;
+}
+.leftt h2 {
+    font-size: 16px;
+    margin:  16px;
+    font-weight:  bold;
+    text-transform:  capitalize;
+    font-family:  sans-serif;
+}
+body
+{
+	font-family: sans-serif !important;
+}
+h3.title.theme {
+    font-size: 14px;
+    color: #213f66;
+    font-weight:  bold;
+    text-transform:  capitalize;
+}
+h3 {
+    font-size: 14px;
+    color: #213f66;
+    font-weight:  bold;
+    text-transform:  capitalize;
+}
+
+.genderform {
+    padding-left:  16px;
+}
+.left h3 {
+    font-size:  -webkit-xxx-large;
+    font-size:  12px;
+    font-weight:  bold;
+    margin:  0px;
+    position:  relative;
+}
+p.ppp {
+    position:  relative;
+    top: 19px;
+    font-size:  11px;
+}
+.leftt h4 {
+	margin-top: 22px !important;
+    font-size:  -webkit-xxx-large;
+    font-size:  12px;
+    font-weight:  bold;
+    margin:  0px;
+    position:  relative;
+}
+select#assigned_to {
+    height:  70px;
+}
+select {
+    height: 33px;
+    position:  relative;
+    top: 11px;
+    font-size:  12px;
+    background:  #fff;
+}
+h3.title.theme p {
+    color:  grey;
+    font-size: 11px;
+    letter-spacing: 0;
+}
+
+.formsection {
+    background: #EAEAEA;
+    height: 95px;
+    padding-top: 18px;
+    padding-left:  14px;
+    border: 1px solid #00000059;
+    margin-bottom:  5px;
+}
+.left.w40 label {
+    position:  relative;
+    top: 20px;
+    font-size:  12px;
+}
+select#notify_users {
+    margin-top:  13px;
+    height:  115px;
+}
+textarea
+{
+	background-color: #fff;
+}
+
+input#sourcename {
+    background:  #fff;
+    height: 32px !important;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: relative;
+    opacity: 1;
+    pointer-events: all;
+    height: 22px !important;
+    top: 23px;
+}
+.mylefty {
+    background: #EAEAEA;
+    height: 550px;
+    padding-top: 18px;
+    padding-left: 14px;
+    border: 1px solid #00000059;
+    margin-bottom: 5px;
+}

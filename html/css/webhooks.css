@@ -1,0 +1,38 @@
+ h2 {
+    font-size: 18px;
+    padding-left:  30px;
+    font-weight:  bold;
+    font-family:  sans-serif;
+}
+body
+{
+     font-family:  sans-serif !important;
+}
+ul.settlistthin {
+    padding-left:  26px;
+    border-bottom: 1px solid #80808094;
+    padding-bottom:  15px;
+}
+input{
+    height: 40px !important;
+    margin-bottom: 3px;
+    font-family: 12px;
+}
+::placeholder
+{
+    font-size: 12px;
+}
+
+ul.settlistthin li a {
+    color: black;
+    text-transform:  capitalize;
+}
+
+.p20 a {
+    padding-left: 16px;
+    color:  black;
+}
+.col.s12.m3 {
+    background: rgba(234, 234, 234, 0.78);
+    height:  100vh;
+}

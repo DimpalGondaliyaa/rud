@@ -32,7 +32,7 @@ $t= $r->result_array();
 <?php foreach ($t as $key => $f) { ?>
 	
 				<div class="fbox">
-				<div class="ftitle"><a href="#"><?php  echo  $f['title']; ?></a></div>
+				<div class="ftitle"><a href="<?php echo base_url(); ?>Create_content/edit_content/<?php echo $f['id']; ?>"><?php  echo  $f['title']; ?></a></div>
 				<div class="fcontent"><?php echo  $f['description']; ?></div>
 			    </div>
 
