@@ -8,9 +8,9 @@
 		        	<input type="search" name="srch" class="top-srch">
 		        </li>
 		        <li>
-		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>EditContact/editData/<?= $get['c_id'];?>"> <img src="<?php echo base_url(); ?>html/images/user_edit.png" class="responsive-img" style="margin-right: 5px;">save budget</a></li>
+		        	<li><a class="valign-wrapper" href="<?php echo base_url(); ?>EditContact/editData/<?= $get['c_id'];?>"> <img src="<?php echo base_url(); ?>html/images/user_edit.png" class="responsive-img" style="margin-right: 5px;">Edit Contacts</a></li>
 
-		        	<li><a class="valign-wrapper condltbtn" href="#!"  data-id="<?php echo $get['c_id']; ?>"><img src="<?php echo base_url(); ?>html/images/user_delete.png" class="responsive-img" style="margin-right: 5px;">save budget</a></li>
+		        	<li><a class="valign-wrapper condltbtn" href="#!"  data-id="<?php echo $get['c_id']; ?>"><img src="<?php echo base_url(); ?>html/images/user_delete.png" class="responsive-img" style="margin-right: 5px;">Delete Contacts</a></li>
 
 		        	<li><a class="valign-wrapper" href="<?= base_url(); ?>Budget_Analysis"> <img src="<?php echo base_url(); ?>html/images/calculator.png" class="responsive-img" style="margin-right: 5px;">  Budget Analysis</a></li>
 
@@ -396,7 +396,7 @@
 												<button type="button" class="btn-xport-task">Export Task</button>
 											</div>
 											<div class="col s12 m1">
-												<a href="#!" class="add-task"><img src="<?= base_url(); ?>html/images/add.png"></a>
+												<a href="#!" data-id="<?= $get['c_id']; ?>" class="add-task btn-addTask"><img src="<?= base_url(); ?>html/images/add.png"></a>
 											</div>
 										</div>
 										<div class="task-tbl-box">
@@ -417,21 +417,43 @@
 														</tr>
 													</thead>
 													<tbody>
+														<?php foreach ($tsk as $key => $t): 
+
+															/*$c=$this->db->query("SELECT f_name,l_name FROM contactdetails WHERE c_id='".$t['uu_id']."'");
+															$cccc=$ccc->row_array($ccc);
+
+															*/
+
+														?>
 														<tr><td></td>
 															<td>
-																<?= 'Returned Payment'; ?><br>
-																<label><?= 'This is Task.'; ?></label>
+																<?= $t['task']; ?><br>
+																<label><?= $t['note']; ?></label>
 															</td>
 															<td></td>
-															<td><?= 'Alexander Goodman'; ?></td>
-															<td><?= 'Alexander Goodman'; ?></td>
-															<td><?= '06/19/2018 2:07 am'; ?></td>
-															<td><?= '06/20/2018';?></td>
-															<td><?= '1'; ?></td>
+															<td><?= $t['assigned_to']; ?></td>
+															<td><?php 
+																$rr=$this->db->query("SELECT f_name,l_name FROM contactdetails WHERE c_id='".$t['uu_id']."'");
+																$r=$rr->row_array();
+																echo $r['f_name'].' '.$r['l_name'];
+																?>
+															</td>
+															<td><?= $t['createdOn']; ?></td>
+															<td><?= $t['task_date']; ?></td>
+															<td><?php
+
+															$from = strtotime('08-07-2018');
+															$today = time();
+															$difference = $from - $today ;
+															echo floor($difference / 86400);
+															
+															?></td>
 															<td><?= '10769305'; ?></td>
-															<td><a href="#!"><i class="fas fa-edit"></i></a> &nbsp; <a href="#!"><i class="fas fa-check-square green-text"></i></a></td>
+															<td><a href="#!" data-id="<?= $t['t_id'];?>" class="btn_upTask"><i class="fas fa-edit"></i></a> &nbsp; <a href="#!" data-id="<?= $t['t_id'];?>"
+															 data-value="<?= $r['f_name'].' '.$r['l_name'];?>" class="btn-up-c-status"><i class="fas fa-check-square green-text"></i></a></td>
 
 														</tr>
+														<?php endforeach ?>
 													</tbody>
 												</table>
 											</div>
@@ -526,76 +548,82 @@
 											<div>
 												<label>Debit / Credit</label>
 												<select id="debit_credit" name="card" class="">
-													<option value="">--Select--</option><option value="DC">Debit Card</option>
-													<option value="CC">Credit Card</option>
-													<option value="PP">Pre-Paid Card</option>
+													<option value="">--Select--</option>
+													<option value="DC" <?php if($getCard['card']=='DC') {?> selected <?php } ?>>Debit Card</option>
+													<option value="CC" <?php if($getCard['card']=='CC') {?> selected <?php } ?>>Credit Card</option>
+													<option value="PP" <?php if($getCard['card']=='PP') {?> selected <?php } ?>>Pre-Paid Card</option>
 												</select>
 											</div>
 											<div>
 												<label>Card Type *</label>
 												<select id="card_type" name="card_type" class="">
 													<option value="">--Select--</option>
-													<option value="visa">Visa</option>
-													<option value="mc">Mastercard</option>
-													<option value="amex">American Express</option>
+													<option value="visa" <?php if($getCard['card_type']=='visa') {?> selected <?php } ?>>Visa</option>
+													<option value="mc" <?php if($getCard['card_type']=='mc') {?> selected <?php } ?>>Mastercard</option>
+													<option value="amex" <?php if($getCard['card_type']=='amex') {?> selected <?php } ?>>American Express</option>
 													<option value="disc">Discover</option>
 												</select>
 											</div>
 											<div>
 												<label>Card Issuer</label>
-												<input type="text" name="card_issuer" id="card_issuer">
+												<input type="text" name="card_issuer" id="card_issuer" value="<?= $getCard['card_issuer'];?>">
 											</div>
 											<div>
 												<label>Name on Card *</label>
-												<input type="text" name="name_on_card" id="name_on_card">
+												<input type="text" name="name_on_card" id="name_on_card" value="<?= $getCard['name_on_card'];?>">
 											</div>
 											<div>
 												<label>Card Number *</label>
-												<input type="text" name="card_number" id="card_number">
+												<input type="text" name="card_number" id="card_number" value="<?= $getCard['card_number'];?>">
 											</div>
 											<div>
+												<?php 
+													$x=explode('/', $getCard['expiration_date']);
+												?>
+												
 												<label class="col s12" style="padding: 0;">Expiration Date *</label>
 												<div class="col s6 m6" style="padding: 0;">
 												<select id="exp_mo" name="exp_mo" class="notempty">
-													<option value="">--Select--</option><option value="01">01</option>
-													<option value="02">02</option>
-													<option value="03">03</option>
-													<option value="04">04</option>
-													<option value="05">05</option>
-													<option value="06">06</option>
-													<option value="07">07</option>
-													<option value="08">08</option>
-													<option value="09">09</option>
-													<option value="10">10</option>
-													<option value="11">11</option>
-													<option value="12">12</option>
+													<option value="">--Select--</option>
+													<option value="01" <?php if($x[0]=='01') {?> selected <?php } ?> >01</option>
+													<option value="02" <?php if($x[0]=='02') {?> selected <?php } ?>>02</option>
+													<option value="03" <?php if($x[0]=='03') {?> selected <?php } ?>>03</option>
+													<option value="04" <?php if($x[0]=='04') {?> selected <?php } ?>>04</option>
+													<option value="05" <?php if($x[0]=='05') {?> selected <?php } ?>>05</option>
+													<option value="06" <?php if($x[0]=='06') {?> selected <?php } ?>>06</option>
+													<option value="07" <?php if($x[0]=='07') {?> selected <?php } ?>>07</option>
+													<option value="08" <?php if($x[0]=='08') {?> selected <?php } ?>>08</option>
+													<option value="09" <?php if($x[0]=='09') {?> selected <?php } ?>>09</option>
+													<option value="10" <?php if($x[0]=='10') {?> selected <?php } ?>>10</option>
+													<option value="11" <?php if($x[0]=='11') {?> selected <?php } ?>>11</option>
+													<option value="12" <?php if($x[0]=='12') {?> selected <?php } ?>>12</option>
 												</select>
 												</div>
 												<div class="col s6 m6" style="padding: 0;">
 												<select id="exp_yr" name="exp_yr" class="notempty">
 													<option value="">--Select--</option><option value="2011">2011</option>
-													<option value="2012">2012</option>
-													<option value="2013">2013</option>
-													<option value="2014">2014</option>
-													<option value="2015">2015</option>
-													<option value="2016">2016</option>
-													<option value="2017">2017</option>
-													<option value="2018">2018</option>
-													<option value="2019">2019</option>
-													<option value="2020">2020</option>
-													<option value="2021">2021</option>
-													<option value="2022">2022</option>
-													<option value="2023">2023</option>
-													<option value="2024">2024</option>
-													<option value="2025">2025</option>
-													<option value="2026">2026</option>
-													<option value="2027">2027</option>
-													<option value="2028">2028</option>
-													<option value="2029">2029</option>
-													<option value="2030">2030</option>
-													<option value="2031">2031</option>
-													<option value="2032">2032</option>
-													<option value="2033">2033</option>
+													<option value="2012" <?php if($x[1]=='2012') {?> selected <?php } ?>>2012</option>
+													<option value="2013" <?php if($x[1]=='2013') {?> selected <?php } ?>>2013</option>
+													<option value="2014" <?php if($x[1]=='2014') {?> selected <?php } ?>>2014</option>
+													<option value="2015" <?php if($x[1]=='2015') {?> selected <?php } ?>>2015</option>
+													<option value="2016" <?php if($x[1]=='2016') {?> selected <?php } ?>>2016</option>
+													<option value="2017" <?php if($x[1]=='2017') {?> selected <?php } ?>>2017</option>
+													<option value="2018" <?php if($x[1]=='2018') {?> selected <?php } ?>>2018</option>
+													<option value="2019" <?php if($x[1]=='2019') {?> selected <?php } ?>>2019</option>
+													<option value="2020" <?php if($x[1]=='2020') {?> selected <?php } ?>>2020</option>
+													<option value="2021" <?php if($x[1]=='2021') {?> selected <?php } ?>>2021</option>
+													<option value="2022" <?php if($x[1]=='2022') {?> selected <?php } ?>>2022</option>
+													<option value="2023" <?php if($x[1]=='2023') {?> selected <?php } ?>>2023</option>
+													<option value="2024" <?php if($x[1]=='2024') {?> selected <?php } ?>>2024</option>
+													<option value="2025" <?php if($x[1]=='2025') {?> selected <?php } ?>>2025</option>
+													<option value="2026" <?php if($x[1]=='2026') {?> selected <?php } ?>>2026</option>
+													<option value="2027" <?php if($x[1]=='2027') {?> selected <?php } ?>>2027</option>
+													<option value="2028" <?php if($x[1]=='2028') {?> selected <?php } ?>>2028</option>
+													<option value="2029" <?php if($x[1]=='2029') {?> selected <?php } ?>>2029</option>
+													<option value="2030" <?php if($x[1]=='2030') {?> selected <?php } ?>>2030</option>
+													<option value="2031" <?php if($x[1]=='2031') {?> selected <?php } ?>>2031</option>
+													<option value="2032" <?php if($x[1]=='2032') {?> selected <?php } ?>>2032</option>
+													<option value="2033" <?php if($x[1]=='2033') {?> selected <?php } ?>>2033</option>
 												</select>
 											</div>
 											</div>
@@ -735,7 +763,7 @@
 											</div>
 											<div class="col s12 m6">
 												<label>Account Number *</label>
-											   <input type="text" name="account_number" value="<?= $bankDetails['account_number']; ?>">
+											   <input type="text" name="account_number" id="acc_no" value="<?= $bankDetails['account_number']; ?>">
 											</div>
 											<div class="col s12 m6">
 												<label>Address</label>
@@ -770,7 +798,7 @@
 											</div>
 											<div class="col s12 m6">
 												<label>Phone</label>
-												<input type="text" name="bank_phone" value="<?= $bankDetails['bank_phone'];?>">
+												<input type="text"  name="bank_phone" id="bank_phone" value="<?= $bankDetails['bank_phone'];?>">
 											</div>
 											<div class="col s12 m12 gsp-row"></div>
 											<div class="col s12 m12">
@@ -868,7 +896,31 @@
 	    <div class="modal-footer">
 	      <a href="#!" class="modal-close valign-wrapper waves-effect waves-green btn-flat addEvents"><img src="<?php echo base_url(); ?>html/images/accept.png"> Save Events</a>
 	    </div>
-	  </div>	  
+	  </div>	 
+
+<!-- ============= Add Task ===============-->
+
+	   <!-- Modal Structure -->
+	  <div id="addTask" class="modal" style="max-width: 800px !important;">
+	    <div class="modal-content">
+	    	
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-close valign-wrapper waves-effect waves-green btn-flat addTask"><img src="<?php echo base_url(); ?>html/images/accept.png"> Save Task</a>
+	    </div>
+	  </div>	
+
+<!-- ============= Update Task ===============-->
+
+	   <!-- Modal Structure -->
+	  <div id="updateTask" class="modal" style="max-width: 800px !important;">
+	    <div class="modal-content">
+	    	
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-close valign-wrapper waves-effect waves-green btn-flat up_Task"><img src="<?php echo base_url(); ?>html/images/accept.png"> Save Task</a>
+	    </div>
+	  </div>	 	   
 
 	</div>
 </div>

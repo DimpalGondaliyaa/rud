@@ -250,7 +250,7 @@ class EditContact extends CI_Controller {
 	}
 
 	public function editData($id){
-			if($this->session->userdata('email')=='' | $this->session->userdata('admin')==''){
+		if($this->session->userdata('email')=='' | $this->session->userdata('admin')==''){
 			header('Location:'.base_url().'Adminlogin');
 		}
 
@@ -287,6 +287,13 @@ class EditContact extends CI_Controller {
 		$iidd=$this->db->query("SELECT * FROM banks WHERE u_id='".$id."'");
 		$bankDetails=$iidd->row_array();
 
+		$q=$this->db->query("SELECT * FROM cards WHERE u_id='".$id."'");
+		$getCard=$q->row_array();
+
+		$t=$this->db->query("SELECT * FROM tasks WHERE uu_id='".$id."'");
+		$getTask=$t->result_array();
+
+
 
 		$headerData = array(
 			"pageTitle" => "Edit Contact",
@@ -297,7 +304,7 @@ class EditContact extends CI_Controller {
 		);
 		$viewData = array(
 			"viewName" => "fullDetails",
-            "viewData" => array('get'=>$get,'allNotes'=>$allNotes,'bankDetails'=>$bankDetails),
+            "viewData" => array('get'=>$get,'allNotes'=>$allNotes,'bankDetails'=>$bankDetails,'getCard'=>$getCard,'tsk'=>$getTask),
 			"headerData" => $headerData,
 			"footerData" => $footerData	
 		);

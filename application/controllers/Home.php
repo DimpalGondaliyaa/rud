@@ -220,6 +220,86 @@ class Home extends CI_Controller {
 	
 	}
 
+
+	/*=========================== Add Tasks
+	=======================================*/
+
+	public function eventsTask($id)
+	{
+		$t = $this->db->query("SELECT * FROM contactdetails WHERE c_id='".$id."'");
+		$y = $t->row_array();
+		$this->load->view("addTaskPage",$y);
+	}
+
+	public function addTask(){
+
+		$this->load->helper('date');
+		date_default_timezone_set("UTC");
+		if (function_exists('date_default_timezone_set'))
+		{
+		  date_default_timezone_set('Asia/Kolkata');
+		}
+
+		$c_date=date("Y-m-d H:i:a");
+		
+		$data=array('uu_id'=>$_POST['uu_id'],
+			'task'=>$_POST['task'],
+			'task_date'=>$_POST['task_date'],
+			'assigned_to'=>$_POST['assigned_to'],
+			'contact'=>$_POST['contact'],
+			'note'=>$_POST['note'],
+			'createdOn'=>$c_date
+		);
+		$this->db->insert("tasks",$data);
+	
+	}
+
+
+	/*========= Update Task =======================*/
+
+
+		public function getUpTask($id)
+		{
+			$t = $this->db->query("SELECT * FROM tasks JOIN contactdetails ON  contactdetails.c_id=tasks.uu_id AND  tasks.t_id='".$id."'");
+			$y = $t->row_array();
+			$this->load->view("updateTaskPage",$y);
+		}
+
+
+
+		public function updateTask(){
+
+		$this->load->helper('date');
+		date_default_timezone_set("UTC");
+		if (function_exists('date_default_timezone_set'))
+		{
+		  date_default_timezone_set('Asia/Kolkata');
+		}
+
+		$c_date=date("Y-m-d H:i:s");
+		$id = $_POST['t_id'];
+		$data=array('uu_id'=>$_POST['uu_id'],
+			'task'=>$_POST['task'],
+			'task_date'=>$_POST['task_date'],
+			'assigned_to'=>$_POST['assigned_to'],
+			'contact'=>$_POST['contact'],
+			'note'=>$_POST['note'],
+			'createdOn'=>$c_date
+		);
+
+		$this->db->where('t_id',$id);
+		$this->db->update('tasks', $data);
+	
+	}	
+
+
+	public function upTaskStatus($id,$v){
+		echo $id;
+		echo $v;
+		/*$data=array('complet'=>'1','')*/
+	}
+
+
 }
 
 ?>

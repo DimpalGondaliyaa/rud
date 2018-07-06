@@ -25,7 +25,7 @@ echo timespan($post_date, $now) . ' ago';
 		    <div class="nav-wrapper connavwapp">
 		      <ul id="nav-mobile" class="hide-on-med-and-down">
 		        <li>
-		        	<select>
+		        	<select style="height: 28px !important;line-height: 0 !important;">
 		        		<option>--Select--</option>
 		        		<option>-My Contact</option>
 		        	</select>

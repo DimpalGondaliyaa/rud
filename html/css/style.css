@@ -117,12 +117,12 @@ nav.contactnav {
     background: #213f66;
 }
 nav.contactnav {
-        background: #213f66;
+    background: #213f66;
     height: auto !important;
     font-size: 12px;
     position: relative;
     overflow: hidden;
-    padding: 15px;
+    padding:10px;
     border-radius: 5px;
     line-height: 1rem !important;
 }

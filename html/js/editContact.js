@@ -621,6 +621,29 @@ $(function(){
 
     /*Save Bank*/
 
+    $("#acc_no").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+        $("#errmsg").html("Numbers Only").show().fadeOut("slow");
+          return false;
+    }
+   });
+
+
+    $("#bank_phone").keypress(function (e) {
+     //if the letter is not digit then display error and don't type anything
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        //display error message
+        $("#errmsg").html("Numbers Only").show().fadeOut("slow");
+          return false;
+    }
+   });
+
+  
+
+
+
     $(".btn-save-bank").on("click", function()
     {
       
@@ -736,5 +759,129 @@ $(function(){
       });
     }); 
 
+
+
+  /*Add Tasks*/
+  
+    $(".btn-addTask").on("click", function()
+    {
+
+        $(".modal").modal();
+        $("#addTask").modal("open");
+        $("#addTask .modal-content").html("");
+        var id = $(this).data("id");
+  
+        $.post(baseurl+"Home/eventsTask/"+id,function(id){
+          $("#addTask .modal-content").html(id);
+        }); 
+    });
+
+    $(".addTask").on("click", function()
+    {
+        var t = $('#task').val();
+
+        if(t==''){
+          swal('Select Task');
+          return false;
+        }
+
+        var addTask = new FormData($("#addTasks")[0]); 
+        $.ajax({
+            url : baseurl+"Home/addTask",
+            type :"POST",
+            data :addTask,  
+            contentType:false,
+            processData:false,
+            success:function(res)
+            {
+                swal("Good job!", "Task Created Successfully!", "success")
+                $('.swal-button--confirm').on('click',function(){
+                    window.location.reload();
+                });
+            }
+         });
+    });
+
+
+    /*=========== Update Task
+    ======================== */
+
+      $(".btn_upTask").on("click", function()
+    {
+
+        $(".modal").modal();
+        $("#updateTask").modal("open");
+        $("#updateTask .modal-content").html("");
+        var id = $(this).data("id");
+  
+        $.post(baseurl+"Home/getUpTask/"+id,function(id){
+          $("#updateTask .modal-content").html(id);
+        }); 
+    });
+
+    $(".up_Task").on("click", function()
+    {
+        var t = $('#task').val();
+
+        if(t==''){
+          swal('Select Task');
+          return false;
+        }
+
+        var uTask = new FormData($("#updateeTasks")[0]); 
+        $.ajax({
+            url : baseurl+"Home/updateTask",
+            type :"POST",
+            data :uTask,  
+            contentType:false,
+            processData:false,
+            success:function(res)
+            {
+                swal("Good job!", "Task Updated Successfully!", "success")
+                $('.swal-button--confirm').on('click',function(){
+                    window.location.reload();
+                });
+            }
+         });
+    });
+
+    /*Update Comple Status */
+     $(".btn-up-c-status").on("click", function()
+      {
+         var id = $(this).data("id");
+         var v = $(this).data("value");
+         
+         swal({
+              title: "Are you sure?",
+              text: "Once Update, it can't be Updated Again!",
+              icon: "info",
+              buttons: true,
+              dangerMode: true,
+            })
+       .then((willDelete) => {
+              if (willDelete) {
+            $.ajax({
+
+            url : baseurl+"home/upTaskStatus/"+{id,v},
+            type :"POST",
+            contentType:false,
+            processData:false,
+            success:function(res)
+            {
+              /*$(".noteBox-container").reload(" .noteBox-container > *");*/
+              /*      $(document.body).load(location.href);*/
+              swal("Poof! Bank has been deleted!", {
+                        icon: "success",
+                  });
+              $('.swal-button').on('click',function(){
+                   $(document.body).load(location.href);
+                });       
+            }
+          });
+          } else {
+                swal("Your Note is safe!");
+            }
+          });
+        });
 
 })
