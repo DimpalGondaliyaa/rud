@@ -293,6 +293,12 @@ class EditContact extends CI_Controller {
 		$t=$this->db->query("SELECT * FROM tasks WHERE uu_id='".$id."'");
 		$getTask=$t->result_array();
 
+		$e=$this->db->query("SELECT * FROM u_events WHERE u_id='".$id."'");
+		$evnt=$e->result_array();
+
+		$c=$this->db->query("SELECT * FROM u_call_log WHERE u_id='".$id."'");
+		$callLogs=$c->result_array();
+
 
 
 		$headerData = array(
@@ -304,7 +310,7 @@ class EditContact extends CI_Controller {
 		);
 		$viewData = array(
 			"viewName" => "fullDetails",
-            "viewData" => array('get'=>$get,'allNotes'=>$allNotes,'bankDetails'=>$bankDetails,'getCard'=>$getCard,'tsk'=>$getTask),
+            "viewData" => array('get'=>$get,'allNotes'=>$allNotes,'bankDetails'=>$bankDetails,'getCard'=>$getCard,'tsk'=>$getTask,'e'=>$evnt,'u_call_log'=>$callLogs),
 			"headerData" => $headerData,
 			"footerData" => $footerData	
 		);

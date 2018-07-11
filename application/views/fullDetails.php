@@ -212,8 +212,43 @@
 								<h6>History</h6>
 							</div>
 							<div class="tab_2 xbox">
-								<h6>Call Activity</h6>
+								<h6>Call Activity</h6> <button type="button" class="btn-add-call" data-id="<?php echo $get['c_id']; ?>">Log a Call</button>
 								<p>There is no call activity for this contact</p>
+
+								<?php foreach($u_call_log as $key => $cl) {
+								?>
+
+								<div class="log-box row">
+									<div class="callLog-Box">
+										<div class="col s2 m1">
+											<span class="typ-box <?php 
+
+												if($cl['call_type']=='outgoing'){
+													?>outgoing<?php
+												}
+
+											?>"><i class="fas fa-share"></i></span>
+										</div>
+										<div class="col s6 m7">
+											<div class="roww"><span class="date-box"><?= $cl['createdOn']; ?></span> | <span class="callBy"> CXCXC <span disabled>By</span> Alex Vargas</span></div>
+											<div class="noteBox">
+												<span>This is about Incomming Note.</span>
+											</div>
+										</div>
+										<div class="col s2 m2">
+											<div class="dlt-box">
+												<a href="#!" class="dlt-call-log" data-id="<?= $cl['log_id'];?>"><i class="fas fa-trash-alt"></i></a>
+											</div>
+										</div>
+										<div class="col s12 m2">
+											<div class="log-box">
+												<span class="typee-lbl">DISCONNECTED</span>
+												<span class="dur-bold-lbl"><b>05:00:00</b></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<?php } ?>
 							</div>
 							<div class="tab_3 xbox">
 								<div class="mail-box">
@@ -293,21 +328,21 @@
 											<label><br></label>
 											<select id="snote_type" name="snote_type" class="w100" onchange="searchNotes($('snotes').value)" style="display: none;">
 												<option value="">--All Types--</option>
-												<option value="1">General</option>
-												<option value="2">Call</option>
-												<option value="3">Creditor</option>
-												<option value="4">Settlement</option>
-												<option value="5">Attorney</option>
-												<option value="6">Compliance</option>
-												<option value="7">Sales</option>
-												<option value="8">Legal</option>
-												<option value="10">Document</option>
-												<option value="11">Payment</option>
-												<option value="16">Accounting</option>
-												<option value="17">Cal Event</option>
-												<option value="25">Email</option>
-												<option value="103">Schedule Change</option>
-												<option value="277">Customer Portal</option>
+												<option value="General">General</option>
+												<option value="Call">Call</option>
+												<option value="Creditor">Creditor</option>
+												<option value="Settlement">Settlement</option>
+												<option value="Attorney">Attorney</option>
+												<option value="Compliance">Compliance</option>
+												<option value="Sales">Sales</option>
+												<option value="Legal">Legal</option>
+												<option value="Document">Document</option>
+												<option value="Payment">Payment</option>
+												<option value="Accounting">Accounting</option>
+												<option value="Cal Event">Cal Event</option>
+												<option value="Email">Email</option>
+												<option value="Schedule Change">Schedule Change</option>
+												<option value="Customer Portal">Customer Portal</option>
 											</select>
 										</div>
 										<div class="noteBox-container">
@@ -352,7 +387,7 @@
 							</div>
 							<div class="tab_7 xbox">
 								<div class="marketing-summery-box">
-									<h6>Calendar Events</h6>
+									<h6>Calendar Events</h6><span class="scdl-evnt"><button data-id="<?php echo $get['c_id']; ?>"  type="button" class="addEvnt">Schedule Event</button></span>
 									<div class="small-ttl">
 										<h6>Upcoming</h6>
 										<div class="t-box">
@@ -368,13 +403,23 @@
 													</tr>
 												</thead>
 												<tbody>
+													<?php foreach ($e as $key => $value) {?>
 													<tr>
-														<td><?= 'Events'; ?></td>
-														<td><?= 'Thursday, June 21 @ 2:00 am - 2:30 am, US/Pacific'; ?></td>
-														<td><?= 'Alexander Goodman'; ?></td>
-														<td><?= 'This is only for Test.'; ?></td>
+														<td><?= $value['e_title']; ?></td>
+														<td><?= $value['e_date'].'@'.$value['e_time'].', '.$value['e_timezone']; ?></td>
+														<td><?php
+
+														$u_id=$value['e_assign_to'];
+														$u=$this->db->query("SELECT f_name,l_name FROM contactdetails WHERE c_id='".$u_id."'");
+														$usr=$u->row_array();
+
+														echo $usr['f_name'].' '.$usr['l_name'];
+														?></td>
+														<td><?= $value['e_event_type']; ?></td>
+														<td><?= $value['e_desc']; ?></td>
 														<td><?= 'Completed'; ?></td>
 													</tr>
+													<?php } ?>
 												</tbody>
 											</table>
 										</div>
@@ -384,6 +429,9 @@
 							<div class="tab_8 xbox">
 								<div class="task-box">
 									<div class="task-body">
+
+										<script src="https://cdnjs.cloudflare.com/ajax/libs/TableExport/5.0.2/css/tableexport.min.css" type="text/javascript" charset="utf-8" async defer></script>
+										
 										<div  class="col s12 m9">
 										<h5>All Tasks <span class="task-bedge">0</span></h5>
 										</div>
@@ -393,7 +441,7 @@
 											<input type="search" name="srch">
 											</div>
 											<div class="col s12 m3 btn-bx">
-												<button type="button" class="btn-xport-task">Export Task</button>
+												<button type="button" class="btn-xport-task" onclick="exportTableToCSV1('members.csv')" id="exportCSV1">Export Task</button>
 											</div>
 											<div class="col s12 m1">
 												<a href="#!" data-id="<?= $get['c_id']; ?>" class="add-task btn-addTask"><img src="<?= base_url(); ?>html/images/add.png"></a>
@@ -401,10 +449,10 @@
 										</div>
 										<div class="task-tbl-box">
 											<div class="table-body">
-												<table class="table">
+												<table class="table dataTable" id="exampleTask">
 													<thead>
 														<tr>
-															<th>
+															<th></th>
 															<th>Task</th>
 															<th>Status</th>
 															<th>Assigned To</th>
@@ -425,10 +473,15 @@
 															*/
 
 														?>
-														<tr><td></td>
-															<td>
-																<?= $t['task']; ?><br>
-																<label><?= $t['note']; ?></label>
+														<tr><td>
+															<?php if($t['complet']=='1') { ?>
+															<span class="onDate"><?= $t['completedOn'];?></span>
+															<span class="by"><?= $t['completed_by'];?></span>
+															<?php } ?>
+															</td>
+															<td class="<?php if($t['complet']=='1') { ?>g<?php } else { ?> b <?php } ?>">
+																<span><?= $t['task']; ?><br></span>
+																<span><label><?= $t['note']; ?></label></span>
 															</td>
 															<td></td>
 															<td><?= $t['assigned_to']; ?></td>
@@ -449,9 +502,13 @@
 															
 															?></td>
 															<td><?= '10769305'; ?></td>
-															<td><a href="#!" data-id="<?= $t['t_id'];?>" class="btn_upTask"><i class="fas fa-edit"></i></a> &nbsp; <a href="#!" data-id="<?= $t['t_id'];?>"
-															 data-value="<?= $r['f_name'].' '.$r['l_name'];?>" class="btn-up-c-status"><i class="fas fa-check-square green-text"></i></a></td>
+															<td>
+																<?php if($t['complet']<'1') {?>
 
+																<a href="#!" data-id="<?= $t['t_id'];?>" class="btn_upTask"><i class="fas fa-edit"></i></a> &nbsp; <a href="#!" data-id="<?= $t['t_id'];?>"
+															 data-value="<?= $r['f_name'].' '.$r['l_name'];?>" class="btn-up-c-status"><i class="fas fa-check-square green-text"></i></a>
+															<?php } ?>
+															</td>
 														</tr>
 														<?php endforeach ?>
 													</tbody>
@@ -920,7 +977,85 @@
 	    <div class="modal-footer">
 	      <a href="#!" class="modal-close valign-wrapper waves-effect waves-green btn-flat up_Task"><img src="<?php echo base_url(); ?>html/images/accept.png"> Save Task</a>
 	    </div>
-	  </div>	 	   
+	  </div>	 
+
+
+<!-- ============= Add Call Log ===============-->
+<style type="text/css" media="screen">
+div#addCallLog {
+    max-width: 800px !important;
+    padding: 5px;
+    padding-bottom: 25px;
+    height: 75vh;
+}	
+</style>
+	   <!-- Modal Structure -->
+	  <div id="addCallLog" class="modal" style="max-width: 800px !important;">
+	  	<!-- <div class="modal-header">
+	      <a href="#!" class="modal-close valign-wrapper waves-effect waves-green btn-flat addCallLog"><img src="<?php // echo base_url(); ?>html/images/accept.png"> Save Task</a>
+	    </div> -->
+	    <div class="modal-content">
+	    </div>
+	  </div>	 	  	   
 
 	</div>
 </div>
+
+
+
+<script type="text/javascript">
+	function downloadCSV(csv, filename) {
+    var csvFile;
+    var downloadLink;
+
+    // CSV file
+    csvFile = new Blob([csv], {type: "text/csv"});
+
+    // Download link
+    downloadLink = document.createElement("a");
+
+    // File name
+    downloadLink.download = filename;
+
+    // Create a link to the file
+    downloadLink.href = window.URL.createObjectURL(csvFile);
+
+    // Hide download link
+    downloadLink.style.display = "none";
+
+    // Add the link to DOM
+    document.body.appendChild(downloadLink);
+
+    // Click download link
+    downloadLink.click();
+}
+
+
+
+	function exportTableToCSV(filename) {
+    var csv = [];
+    var rows = document.querySelectorAll(" #task > table tr");
+    
+    for (var i = 0; i < rows.length; i++) {
+        var row = [], cols = rows[i].querySelectorAll("td, th");
+        
+        for (var j = 0; j < cols.length; j++) 
+            row.push(cols[j].innerText);
+        
+        csv.push(row.join(","));        
+    }
+
+    // Download CSV file
+    downloadCSV(csv.join("\n"), filename);
+}
+
+
+$(function(){
+	$('.log-box.row').on('mouseover', function(){
+		$(this).find('.dlt-box').fadeIn(300);
+	});
+	$('.log-box.row').on('mouseleave', function(){
+		$(this).find('.dlt-box').fadeOut(300);
+	});
+});
+</script>

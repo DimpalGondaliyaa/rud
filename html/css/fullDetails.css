@@ -532,3 +532,201 @@ span.cc_pre {
 .top-gry ul li span {
     
 }
+
+
+
+
+
+
+td:nth-child(1) span {
+    display: block;
+    text-align: center;
+    margin: 15px;
+}
+
+tr {
+    border-bottom: 1px dashed rgba(0,0,0,0.12);
+}
+
+td.b {
+    border-left: 3px solid #0800FF;
+}
+
+td.g {
+    border-left: 3px solid #00FF08;
+}
+
+span.onDate {
+    text-align: center;
+    font-size: 9px;
+    color: #999999;
+    text-transform: uppercase;
+}
+span.by {
+    vertical-align: middle;
+    color: #666;
+    font-size: 1em;
+}
+
+
+
+
+
+button.addEvnt {
+    background: #eaeaea;
+    padding: 3px 6px 3px 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    color: gray;
+}
+
+span.scdl-evnt {
+    position: absolute;
+    padding: 6px;
+    right: 0;
+    top: 0;
+}
+
+
+
+
+button.btn-add-call {
+    background: #eaeaea;
+    padding: 3px 6px 3px 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.log-box.row {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid gainsboro;
+    padding: 1em;
+}
+
+.callLog-Box .col.m1 {
+    text-align: center;
+    max-width: max-content;
+    font-weight: 900;
+    background: #fafafa;
+    padding: 1em;
+    border-radius: 50%;
+    border: 1px solid var(--subtle-gray, #eaeaea);
+    display: inline-block;
+    transition: 0.2s ease all;
+}
+.typ-box{
+     color: #50ad50; 
+}
+
+.callLog-Box .col.s6{
+    padding-left: 25px;
+}
+
+span.date-box {
+    font-family: "Open Sans","Helvetica",Arial,sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+    display: inline-block;
+    padding: 0;
+    color: #414141;
+}
+
+span.callBy{
+    font-family: "Open Sans","Helvetica",Arial,sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+    display: inline-block;
+    padding: 0;
+    color: #414141;
+}
+
+.callLog-Box .col.s2.m2 {
+    text-align: right;
+    color: coral !important;
+}
+
+.callLog-Box .col.s2.m2 {
+    text-align: right;
+    color: coral !important;
+}
+
+.dlt-box a {
+    color: #a0270b;   
+}
+.dlt-box {
+    display: none;
+}
+
+
+.noteBox {
+    padding: 5px 0px;
+    font-weight: bold;
+}
+
+span.typee-lbl {
+    position: relative;
+    font-size: 11px;
+    font-weight: 600;
+    color: #8080809e;
+    display: block;
+}
+span.dur-bold-lbl {
+    font-weight: 700;
+    color: #333333d9;
+    font-size: 1.3em;
+}
+.log-box.row {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid gainsboro;
+    padding: 1em;
+    margin-bottom: 0px;
+}
+
+.log-box.row:not(:second-child){
+    border-top: none;
+    border-bottom: none;
+}
+.log-box.row:not(:last-child(-1)){
+    border-top: none;
+    border-bottom: none;
+}
+
+
+.outgoing i {
+    color: #2a9dc9;
+    transform: scaleX(-1) !important;
+}

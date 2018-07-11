@@ -43,7 +43,7 @@ class Home extends CI_Controller {
 		$data = array('fname' => $_POST['fname'],
 		'lname' => $_POST['lname'],
 		'email' => $_POST['email'],
-		'password' => $_POST['password'] );
+		'password' => $_POST['password']);
 
 		$this->db->insert("users",$data);
 	}
@@ -293,12 +293,71 @@ class Home extends CI_Controller {
 	}	
 
 
-	public function upTaskStatus($id,$v){
-		echo $id;
-		echo $v;
-		/*$data=array('complet'=>'1','')*/
+	public function upTaskStatus(){
+		
+		$this->load->helper('date');
+		date_default_timezone_set("UTC");
+		if (function_exists('date_default_timezone_set'))
+		{
+		  date_default_timezone_set('Asia/Kolkata');
+		}
+
+		$c_date=date("Y-m-d H:i:a");
+
+		$d = $_POST['data'];
+
+		$id=$d['t_id'];
+		$by=$d['completed_by'];
+
+		$data=array('complet'=>'1','completed_by'=>$by,'completedOn'=>$c_date);
+		$this->db->where('t_id',$id);
+		$this->db->update('tasks',$data);
 	}
 
+
+
+	/*Add addCallLogDetails*/
+
+	public function getCallLog($id)
+	{
+		$t = $this->db->query("SELECT * FROM contactdetails WHERE c_id='".$id."'");
+		$y = $t->row_array();
+		$this->load->view("getCallModal",$y);
+	}
+
+
+	public function addCallLogDetails(){
+
+		$this->load->helper('date');
+		date_default_timezone_set("UTC");
+		if (function_exists('date_default_timezone_set'))
+		{
+		  date_default_timezone_set('Asia/Kolkata');
+		}
+
+		$c_date=date("Y-m-d H:i:a");
+
+		$data=array('u_id'=>$_POST['u_id'],
+					'call_type'=>$_POST['call_type'],
+					'call_result'=>$_POST['call_result'],
+					'dur_hr'=>$_POST['dur_hr'],
+					'dur_mnt'=>$_POST['dur_mnt'],
+					'note'=>$_POST['note'],
+					'c_event'=>$_POST['c_event'],
+					'status'=>$_POST['status'],
+					'createdOn'=>$c_date
+					);
+
+		$this->db->insert('u_call_log', $data);
+
+	}
+
+
+	public function deleteCallLogs($id){
+
+		$this->db->where('log_id',$id);
+		$this->db->delete('u_call_log');
+	}
 
 }
 
