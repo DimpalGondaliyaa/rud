@@ -17,7 +17,7 @@ body{ font-family: sans-serif;}
 
 /*========== Hover Popup ===============*/
 li.grey.date_cell {
-    background: #5cde5c !important;
+    background:#d9d7d7 !important;
 }
 .date_cell { cursor: pointer; cursor: hand; }
 .date_cell:hover { background: #DDDDDD !important; }

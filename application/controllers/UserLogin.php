@@ -6,8 +6,7 @@ class UserLogin extends CI_Controller {
 
 	public function index()
 	{		
-		
-		
+	
 		$headerData = array(
 			"pageTitle" => "UserLogin",
 			"stylesheet" => array("userLogin.css","style.css")

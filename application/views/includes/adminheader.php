@@ -110,6 +110,10 @@ nav.navone {
          <li><a href="<?php echo base_url(); ?>Guidelines" class="<?php if($this->uri->segment(1)=='Guidelines'){?> active <?php } ?>">Guidelines</a></li>
 
           <li><a href="<?php echo base_url(); ?>Home" class="<?php if($this->uri->segment(1)=='Home'){?> active <?php } ?>">Contact</a></li>
+
+            <li><a href="<?php echo base_url(); ?>Ccreditors" class="<?php if($this->uri->segment(1)=='Ccreditors'){?> active <?php } ?>">Creditors</a></li>
+
+
           <li><a href="<?php echo base_url(); ?>Calendar" class="<?php if($this->uri->segment(1)=='Calendar'){?> active <?php } ?>">calender</a></li>
           <li><a href="<?php echo base_url(); ?>Enrollments" class="<?php if($this->uri->segment(1)=='Enrollments'){?> active <?php } ?>">Enrollments</a></li>
 

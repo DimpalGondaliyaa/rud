@@ -1,0 +1,70 @@
+.left.w15.formsection_light {
+       background: #dddddd9e;
+    padding-left: 13px;
+    width: 95%;
+    margin-top: 13px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+h3.theme {
+    font-size:  18px;
+    text0-tr: vc;
+    text-transform:  capitalize;
+    font-weight:  bold;
+    font-family:  sans-serif;
+}
+
+ul.settlist_small li a {
+    color: black;
+}
+.left h3 {
+    font-size:  15px;
+    font-weight:  bold;
+    font-family:  sans-serif;
+    text-transform:  capitalize;
+}
+.mycheck{    position: relative !important;
+    opacity: 1 !important;
+    pointer-events: all !important;
+    height: 16px !important;
+    right: 121px;
+    top: -14px;
+}
+li [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: relative;
+    opacity: 1;
+    pointer-events: all;
+    right: -4px;
+    height: 18px !important;
+    width: 20px !important;
+    top: 4px;
+}
+ul#smalllist li {
+    background: #EFEFD1;
+    margin-bottom:  10px;
+    padding-bottom:  3px;
+}
+.saverepbtn
+{
+    background-color: #5cb85c;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid #5cb85c;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    height: 27px;
+    line-height: 13px;
+    font-size: 10px;
+}
+.topbox {
+    margin-top:  12px;
+    border-bottom: 1px solid #808080ad;
+    padding-bottom:  90px;
+}

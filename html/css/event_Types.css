@@ -1,0 +1,21 @@
+.main-menu 
+{
+	height: 100vh !important;
+}
+form#etfrm {
+    padding:  18px;
+}
+
+label {
+    top: 14px;
+    position:  relative;
+}
+
+select {
+    height:  42px;
+    margin-bottom:  12px;
+}
+
+select#sharedwith {
+    height: 200px;
+}

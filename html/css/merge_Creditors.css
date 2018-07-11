@@ -1,0 +1,23 @@
+.main-menu
+{
+	height: 100vh !important;
+}
+form#creditorsListForm h2 {
+    font-size: 17px;
+    font-weight:  bold;
+}
+
+.left.w20 {
+    padding:  13px;
+}
+.mysele{
+	height: 300px !important;
+}
+input.checkbtn.btn {
+    width:  -21% !important;
+    background:  red;
+    height: 36px !important;
+    background: #b4b2b2;
+    width: 156px !important;
+    font-size:  12px;
+}

@@ -39,6 +39,21 @@ class Webhooks extends CI_Controller {
 		$this->db->insert("webhooks",$d);
 	}
 
+	public function edtt_Webhooks()
+	{
+		$i = $_POST['id'];
+		$d = array('title' => $_POST['title'] ,
+		'url' => $_POST['url'] ,
+		'port' => $_POST['port'] ,
+		'method' => $_POST['method'] ,
+		'username' => $_POST['username'] , 
+		'password' => $_POST['password'] ,
+		'type' => $_POST['type']);
+
+		$this->db->where("id",$i);
+		$this->db->update("webhooks",$d);
+	}
+
 	public function edt_Webhooks($id)
 	{
 		$f = $this->db->query("select * from webhooks where id = '$id'");
@@ -58,6 +73,12 @@ class Webhooks extends CI_Controller {
 			"footerData" => $footerData	
 		);
 		$this->load->view('admintemplate',$viewData);
+	}
+
+	public function dlt_Webhooks($id)
+	{
+		$this->db->where("id",$id);
+		$this->db->delete("webhooks");
 	}
 }
 ?>
