@@ -1,0 +1,29 @@
+div#pagecontent_inner {
+    padding:  23px;
+    height: 100vh;
+}
+
+form p {
+    margin:  0px;
+    letter-spacing:  0;
+}
+
+.left h5 {
+    margin-bottom:  0px;
+    font-size: 14px;
+    font-family:  sans-serif;
+    font-weight:  bold;
+    letter-spacing:  0;
+}
+
+input.bluebtn.ib.wp100 {
+    background-color: #3eaff0;
+    color: #fff;
+    position:  relative;
+    top: 30px;
+    width: 139% !important;
+}
+
+.left {
+    height: -13px !important;
+}

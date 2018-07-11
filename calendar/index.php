@@ -8,12 +8,9 @@ $config['base_url1'] = 'http://localhost/cont/';
 <title>PHP Event Calendar by CodexWorld</title>
 <link type="text/css" rel="stylesheet" href="style.css"/>
 <link type="text/css" rel="stylesheet" href="http://freelancerprojectleads.com/crm/html/css/style.css"/>
-
-
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-
 </head>
 <body>
 
@@ -124,10 +121,66 @@ nav.navtwo {
 </style>
 <!--=============================== end nav 2 ======================-->   
 
-<div class="main-boxx">
-<div id="calendar_div">
-	<?php echo getCalender(); ?>
-</div>
+
+
+
+
+
+
+<div class="main-box">
+    <div class="cmdtitle">
+        <a href='http://freelancerprojectleads.com/crm/Calendar'>Calendar</a>
+    </div>
+
+    <div class="main-menu row">
+          <nav class="contactnav">
+            <div class="nav-wrapper connavwapp">
+
+              <ul id="nav-mobile" class="hide-on-med-and-down">
+                 <li>
+            <select id="event_type" name="event_type" class="">
+<option value="">--Select--</option><option value="3122">Student Loans - Welcome Call</option>
+
+</select>
+        </li>
+        <li>
+            <select id="user" name="user" class="">
+<option value="">--anyone--</option><option value="3133547">PayPro, Debt</option>
+<option value="3142430" selected="selected">Vargas, Alex</option>
+<option value="3166850">Harrison, Anthony</option>
+<option value="3167522">Lee, Devin</option>
+<option value="3170984">Morris, James</option>
+<option value="3177071">Cannon, Jeff</option>
+<option value="3177203">Williams, Samantha</option>
+<option value="3177659">Smith, Greg</option>
+<option value="3193601">Richardson, Raymond</option>
+<option value="3204459">Anderson, Richard</option>
+<option value="3254259">Goodman, Alex</option>
+
+</select>
+        </li>
+                <li><a href="#!"><img class="iconstyle" src="calendar_add.png">Schedule Event</a></li>
+                <li><a href="#!"><img class="iconstyle" src="icon-settings.jpg">Event Types</a></li>
+                <li><a href="#!"><img class="iconstyle" src="clock_edit.png">Availability Schedule</a></li>
+                <li><a href="task.php"><img class="iconstyle" src="accept.png">Tasks</a></li>
+                <li><a href="#!"><img class="iconstyle" src="calendar_link.png">Subscribe</a></li>
+                </ul>
+            </div>
+          </nav>
+
+         <div class="col s12 m4">
+            <input type="text" name="" value="" placeholder="">
+            <p style="font-size: 11px;">example: today, tomorrow, next friday, jun 15</p>
+            <div class="uptitle">upcoming event</div>
+         </div>
+
+
+        <div class="col s12 m8">
+            <div id="calendar_div">
+            	<?php echo getCalender(); ?>
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>
@@ -140,12 +193,6 @@ nav.navtwo {
     background: #746382;
     box-shadow: none;
 }
-.main-boxx {
-    background: #DDDDDD;
-    height: 100vh;
-    position:  relative;
-    bottom:  44px;
-}
 
 /*global stysheet*/
 
@@ -156,7 +203,35 @@ nav.top-header {
     background: #746382;
     box-shadow: none;
 }
+.uptitle {
+    font-size: 17px;
+    text-transform:  capitalize;
+    color: #213f66;
+    font-weight:  bold;
+}
+ul {}
 
+div#calender_section_top ul {
+    background: #323232;
+    height:  19px;
+    margin-bottom:  -20px;
+    color:  #fff;
+}
+
+div#calender_section_top ul li {
+    color:  #fff !important;
+}
+select#event_type {
+    height: 28px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+select#user
+{
+  height: 28px;
+    font-size: 12px;
+
+}
 /*Navigation pagination*/
 button#example_previous {
     background: #35174c;
@@ -438,7 +513,7 @@ span.badge-box {
     min-height: 500px;
     display: block;
     overflow: hidden;
-    max-width: 1280px;
+ 
     margin: 0 auto;
 }
 .max-width {
@@ -474,13 +549,13 @@ li.date_cell span {
     color: rebeccapurple !important;
 }
 #calender_section {
-    width: 700px;
-    margin: 30px auto 0;
+     /* width: 700px; */
+    /* margin: 30px auto 0; */
     position: relative;
-    top: 90px;
+    /* top: 90px; */
     background: #fff !important;
     height: 800px;
-    width: 50%;
-    padding: 29px;
+    /* width: 50%; */
+    /* padding: 29px; */
 }
 </style>
